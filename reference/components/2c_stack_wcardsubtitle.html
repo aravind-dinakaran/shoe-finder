@@ -1,0 +1,233 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+<style>
+    #magellan-trending-outdoors {
+        --trending-card-gap: 24px;
+        --trending-title-gap: 16px;
+    }
+
+    #magellan-trending-outdoors .magellan-trending-heading {
+        color: #1946c8;
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(20px, 1.69vw, 28px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0 0 16px;
+    }
+
+    #magellan-trending-outdoors .magellan-trending-grid {
+        display: grid;
+        gap: var(--trending-card-gap);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #magellan-trending-outdoors .magellan-trending-card {
+        color: #000;
+        display: block;
+        min-width: 0;
+        text-decoration: none;
+    }
+
+    #magellan-trending-outdoors .magellan-trending-image {
+        aspect-ratio: 816 / 312;
+        border-radius: 8px;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    #magellan-trending-outdoors picture {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    #magellan-trending-outdoors img {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    #magellan-trending-outdoors .magellan-trending-title {
+        color: #000;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(16px, 1.21vw, 20px);
+        font-weight: 600;
+        line-height: 1.2;
+        margin-top: var(--trending-title-gap);
+        text-align: center;
+    }
+
+    #magellan-trending-outdoors .magellan-trending-card:hover .magellan-trending-title {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 767px) {
+        #magellan-trending-outdoors {
+            --trending-card-gap: 16px;
+            --trending-title-gap: 8.72px;
+        }
+
+        #magellan-trending-outdoors .magellan-trending-heading {
+            font-size: 20px;
+        }
+
+        #magellan-trending-outdoors .magellan-trending-grid {
+            grid-template-columns: 1fr;
+        }
+
+        #magellan-trending-outdoors .magellan-trending-image {
+            aspect-ratio: 343 / 130.58;
+            border-radius: 4px;
+        }
+
+        #magellan-trending-outdoors .magellan-trending-title {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<!-- Trending From Magellan Outdoors -->
+<div id="magellan-trending-outdoors" class="cont-1656 hp-margin hlp-content-margin">
+    <section data-cname="cs_2c_wtitle" data-pz-seg-name="cs_default" data-pz-seg-id="cs_default">
+        <h2 class="magellan-trending-heading">Trending From Magellan Outdoors</h2>
+
+        <div class="magellan-trending-grid">
+            <a href="https://www.academy.com/c/brands/magellan/laguna-madre"
+                data-omni="magellan_app_lagunamadre"
+                class="magellan-trending-card hp-hover"
+                aria-label="Shop Magellan Outdoors Laguna Madre for the family.">
+                <div class="magellan-trending-image">
+                    <picture>
+                        <source media="(min-width: 768px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfdc077e30abe55f6/69fa2ea4789064b87b813ba9/2card_1_lagunamadre.png">
+                        <source media="(max-width: 767px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfdc077e30abe55f6/69fa2ea4789064b87b813ba9/2card_1_lagunamadre.png">
+                        <img loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfdc077e30abe55f6/69fa2ea4789064b87b813ba9/2card_1_lagunamadre.png"
+                            alt="Person pulling a kayak along the edge of a lake with another person walking nearby while wearing Magellan Outdoors Laguna Madre shirts.">
+                    </picture>
+                </div>
+                <span class="magellan-trending-title">Laguna Madre</span>
+            </a>
+
+            <a href="https://www.academy.com/c/shops/mktg-offers/app-offer-11"
+                data-omni="magellan_mac_limitededitioncollections"
+                class="magellan-trending-card hp-hover"
+                aria-label="Shop limited-edition collection from Magellan Outdoors.">
+                <div class="magellan-trending-image">
+                    <picture>
+                        <source media="(min-width: 768px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8dd0a9a285791a72/69fa2ea4eca92e7c29f689ac/2card_2_limitededitioncollections.png">
+                        <source media="(max-width: 767px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8dd0a9a285791a72/69fa2ea4eca92e7c29f689ac/2card_2_limitededitioncollections.png">
+                        <img loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8dd0a9a285791a72/69fa2ea4eca92e7c29f689ac/2card_2_limitededitioncollections.png"
+                            alt="Group of people standing on a porch outdoors wearing limited-edition patriotic Magellan Outdoors, one holding a large Magellan-branded red, white and blue cooler.">
+                    </picture>
+                </div>
+                <span class="magellan-trending-title">Limited-Edition Collections</span>
+            </a>
+        </div>
+    </section>
+</div>

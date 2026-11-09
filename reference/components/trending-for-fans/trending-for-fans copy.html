@@ -1,0 +1,544 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+
+
+
+
+<!-- Trending for Fans -->
+<style>
+    #wk17-trending-for-fans {
+      --tff-blue: #1946c8;
+      --tff-card-gap: 24px;
+      --tff-title-gap: 24px;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: var(--tff-title-gap);
+    }
+  
+    #wk17-trending-for-fans .wk17-tff__title {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  
+    #wk17-trending-for-fans .svg-fanshop {
+      display: block;
+      height: auto;
+      width: clamp(260px, 36.78vw, 609px);
+    }
+  
+    #wk17-trending-for-fans .wk17-tff__grid {
+      display: grid;
+      gap: var(--tff-card-gap);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    #wk17-trending-for-fans .wk17-tff__card {
+      aspect-ratio: 816 / 475;
+      background-color: #333333;
+      border-radius: 8px;
+      color: #ffffff;
+      display: block;
+      min-width: 0;
+      overflow: hidden;
+      position: relative;
+      text-decoration: none;
+    }
+  
+    #wc-game .wc-disclaimer {
+      font-family: "Open Sans", Arial, sans-serif;
+      font-size: 12px;
+      line-height: 14px;
+      color: #333333;
+      text-align: center;
+      max-width: 1600px;
+      width: 100%;
+      margin: 0;
+    }
+  
+    @media (max-width: 767px) {
+      #wk17-trending-for-fans {
+        --tff-card-gap: 16px;
+        --tff-title-gap: 16px;
+      }
+  
+      #wk17-trending-for-fans .svg-fanshop {
+        width: clamp(260px, 80.53vw, 609px);
+      }
+  
+      #wk17-trending-for-fans .wk17-tff__grid {
+        grid-template-columns: 1fr;
+      }
+  
+      #wk17-trending-for-fans .wk17-tff__card {
+        aspect-ratio: 343 / 200;
+        border-radius: 4px;
+      }
+    }
+  </style>
+  
+  <section
+    data-cname="cs_2c_wtitle_stack"
+    data-pz-seg-name="cs_default"
+    data-pz-seg-id="cs_default"
+    aria-label="Trending for Fans"
+  >
+    <div id="wk17-trending-for-fans" class="cont-1656 my-3">
+      <div class="wk17-tff__title" aria-hidden="true">
+        <svg
+          class="svg-fanshop"
+          aria-label="fanshop"
+          viewBox="0 0 609 100"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1.81594 23.22H35.8959V35.22H25.4159V76.5H12.3759V35.22H1.81594V23.22ZM53.5578 57.94V76.5H40.5178V23.22H60.0378C69.1578 23.22 74.7578 28.66 74.7578 37.46V43.7C74.7578 49.3 72.4378 53.54 68.4378 55.86L75.8778 76.5H62.5178L55.9578 57.94H53.5578ZM53.5578 33.62V47.78H56.7578C60.2778 47.78 61.7178 46.1 61.7178 42.74V38.74C61.7178 35.3 60.2778 33.62 56.7578 33.62H53.5578ZM80.1866 23.22H109.947V34.98H92.9066V43.7H105.947V55.06H92.9066V64.74H109.947V76.5H80.1866V23.22ZM115.637 23.22H128.517L140.277 52.58H140.437L140.197 23.22H151.477V76.5H138.837L126.837 46.66H126.677L126.917 76.5H115.637V23.22ZM158.196 23.22H176.276C187.716 23.22 194.036 29.46 194.036 40.66V59.14C194.036 70.34 187.716 76.5 176.276 76.5H158.196V23.22ZM171.236 33.86V65.86H175.316C179.156 65.86 180.836 63.54 180.836 59.78V39.94C180.836 36.18 179.156 33.86 175.316 33.86H171.236ZM200.214 23.22H213.254V76.5H200.214V23.22ZM220.19 23.22H233.07L244.83 52.58H244.99L244.75 23.22H256.03V76.5H243.39L231.39 46.66H231.23L231.47 76.5H220.19V23.22ZM280.029 22.1C291.149 22.1 297.309 27.7 297.309 39.3V42.66H285.469V39.62C285.469 35.54 283.629 33.54 280.429 33.54C277.069 33.54 275.149 35.78 275.149 39.78V60.26C275.149 64.34 277.149 66.5 280.349 66.5C283.469 66.5 285.549 64.42 285.549 60.42V56.74H280.429V48.18H297.709V76.5H291.709L289.869 69.38C287.869 73.46 284.269 77.54 277.069 77.54C268.029 77.54 261.949 71.14 261.949 59.86V40.18C261.949 28.82 269.549 22.1 280.029 22.1Z"
+            fill="#1946C8"
+          ></path>
+          <path
+            d="M317.82 94.6801C315.266 94.8587 313.848 94.0757 313.126 92.9233C312.768 92.387 312.974 91.8914 313.419 91.3791C316.787 87.9358 318.056 85.4412 320.437 79.3403L330.284 53.8713L335.376 40.6839C340.194 28.1573 348.152 12.3638 358.048 11.6718C361.958 11.3983 363.904 13.9889 364.2 18.2186C364.914 28.4337 355.873 48.2326 340.906 58.9828C341.556 62.5461 343.211 65.558 347.201 65.279C354.064 64.7991 358.769 55.2476 360.211 51.7786C360.886 49.9671 364.418 51.1636 363.674 53.1403C361.031 60.0616 354.952 69.4685 346.812 70.0377C342.343 70.3503 339.365 67.912 337.774 64.6551L331.869 79.9843C329.02 87.4012 324.524 94.2114 317.82 94.6801ZM342.793 51.5531C354.129 40.4954 360.294 23.1431 359.925 17.8759C359.853 16.8385 359.489 16.2224 358.93 16.2614C355.818 16.4791 351.33 29.1429 347.473 39.3569L342.793 51.5531ZM369.295 71.5932C361.554 72.1345 357.867 67.5806 357.443 61.5154C356.701 50.9013 365.592 35.8444 378.84 34.918C386.581 34.3767 390.188 38.9362 390.618 45.0812C390.841 48.2734 390.209 51.8462 388.847 55.3097L389.086 55.2929C392.358 55.0641 395.205 53.3413 396.841 49.2171C397.517 47.4056 400.969 48.6077 400.305 50.5789C397.873 57.0844 393.007 59.7503 388.697 60.0516C387.899 60.1074 387.175 60.0779 386.531 60.0427C382.789 66.1587 376.797 71.0686 369.295 71.5932ZM373.45 64.4861C376.881 64.2461 379.804 61.3151 381.947 57.5564C381.241 56.6434 380.918 55.4631 380.835 54.266C380.611 51.0738 382.367 47.5027 385.315 46.0935C385.362 45.6091 385.334 45.2101 385.306 44.8111C385.099 41.8583 383.832 39.7817 381.198 39.9658C374.893 40.4067 368.559 53.0393 369.05 60.0622C369.24 62.7756 370.577 64.687 373.45 64.4861ZM413.346 68.5128C408.398 68.8588 405.028 66.5283 404.704 61.8996C404.564 59.9044 404.95 57.3914 406.111 54.5034L411.965 39.5787C408.954 40.11 406.629 40.1122 404.52 39.7785L400.304 50.5789C399.834 51.8949 396.085 51.0343 396.84 49.2172C399.718 42.1994 400.786 36.8318 400.531 32.0379C400.486 31.3995 400.692 30.9039 401.319 30.6997C404.832 29.3313 407.44 31.0736 406.597 35.0622C411.127 35.6275 416.817 34.4277 422.166 32.9309C422.793 32.7267 423.283 32.8528 423.641 33.3891L424.711 34.9183C425.069 35.4546 425.097 35.8536 424.896 36.429L418.997 51.838C417.978 54.4755 417.559 56.5097 417.66 57.9462C417.777 59.6221 418.636 60.4441 419.913 60.3549C422.627 60.1651 426.007 55.7586 429.56 46.9292C430.236 45.1177 433.768 46.3142 433.024 48.2909C428.326 60.2477 421.407 67.9492 413.346 68.5128Z"
+            fill="#1946C8"
+          ></path>
+          <path
+            d="M341.679 89.5049L334.13 82.295C333.66 81.7871 333.787 81.2648 334.375 81.1672C374.364 70.3029 403.324 71.7097 427.271 73.458C427.734 73.5343 427.937 73.9674 427.748 74.4896L427.243 76.0563C427.117 76.4864 426.92 76.7512 426.724 76.7597C406.995 75.2774 379.537 77.213 342.532 89.7585C342.203 89.8476 341.936 89.7728 341.67 89.5138L341.679 89.5049Z"
+            fill="#1946C8"
+          ></path>
+          <path
+            d="M460.48 23.22H489.84V35.06H473.36V45.14H485.68V56.66H473.36V76.5H460.48V23.22ZM514.93 76.5L513.17 67.62H501.09L499.33 76.5H487.49L499.73 22.98H515.41L527.57 76.5H514.93ZM507.17 37.62L503.09 57.94H511.33L507.33 37.62H507.17ZM530.833 23.22H543.713L555.473 52.58H555.633L555.393 23.22H566.673V76.5H554.033L542.033 46.66H541.873L542.113 76.5H530.833V23.22ZM589.232 22.1C600.992 22.1 605.952 28.5 605.952 37.3V40.34H593.872V37.54C593.872 34.58 592.512 32.58 589.312 32.58C586.192 32.58 584.752 34.34 584.752 36.58C584.752 39.46 586.592 41.14 593.792 44.9C602.592 49.54 606.352 53.38 606.352 61.78C606.352 71.46 600.432 77.62 588.672 77.62C576.192 77.62 571.552 71.06 571.552 62.42V58.66H583.872V61.22C583.872 64.74 585.152 67.14 588.752 67.14C592.112 67.14 593.632 65.3 593.632 62.74C593.632 59.62 591.872 58.18 584.512 54.26C575.792 49.62 572.032 45.3 572.032 37.46C572.032 28.9 577.872 22.1 589.232 22.1Z"
+            fill="#1946C8"
+          ></path>
+        </svg>
+      </div>
+  
+
+      <!-- NCAA Baseball Championship Banner - Oklahoma Sooners -->
+<style>
+    #ncaab-ou-sooners-event-banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    #ncaab-ou-sooners-event-banner .event_banner__link {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #ncaab-ou-sooners-event-banner .event_banner__card {
+        background: #ffffff;
+        overflow: hidden;
+    }
+
+    #ncaab-ou-sooners-event-banner .event_banner__image {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+
+    @media (max-width: 767px) {
+        #ncaab-ou-sooners-event-banner .event_banner__image {
+            border-radius: 0.25rem;
+        }
+    }
+
+</style>
+
+<section data-cname="cs_eb_1click" data-pz-seg-name="cs_default" data-pz-seg-id="cs_default">
+    <div id="ncaab-ou-sooners-event-banner" class="cont-1656 hp-margin my-3">
+        <a href="https://www.academy.com/c/fan-shop/ncaa/oklahoma-sooners"
+            data-omni="eb_app_NCAABchampsOUsooners"
+            class="event_banner__link hp-hover"
+            aria-label="Shop NCAA Baseball official championship Oklahoma University Sooners fan gear.">
+            <div class="event_banner__card">
+                <picture>
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc0fc80b7304d514/6a38096745496a68b6ecda40/banner_NCAAB_OUsooners-m.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt40c1233e3a362bd0/6a38462b146ad6a1967bcc03/banner_NCAAB_OUsooners.png"
+                        alt="Oklahoma crimson promotional banner promoting official NCAA baseball National Champion fan gear."
+                        class="event_banner__image" />
+                </picture>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+
+      <style>
+        /* Keep container as positioning context for the control */
+        .bleed-scroll-left-right {
+          position: relative;
+        }
+  
+        .video-control-group {
+          position: absolute;
+          top: 10%;
+          right: 2%;
+          display: flex;
+          gap: 0.5rem;
+          z-index: 10;
+        }
+  
+        /* Play/Pause and Mute/Unmute buttons */
+        .video-control-button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        @media (max-width: 767px) {
+          .video-control-group {
+            top: 5%;
+          }
+        }
+  
+        .play-pause-icon {
+          width: clamp(1.5rem, 2.17vw, 2.25rem);
+          height: clamp(1.5rem, 2.17vw, 2.25rem);
+          pointer-events: none;
+          /* ensure clicks land on button */
+        }
+  
+        #responsiveVideo {
+          margin-bottom: -0.4rem;
+        }
+      </style>
+  
+      <div class="cont-1656 hp-margin mb-3">
+        <div class="bleed-scroll-left-right">
+          <a
+            href="https://www.academy.com/c/fan-shop/soccer-shop/soccer-tournament-gear"
+          >
+            <video
+              id="responsiveVideo"
+              loop
+              autoplay=""
+              muted=""
+              playsinline=""
+              width="100%"
+              class="corners"
+            >
+              <source src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <!-- <div class="center tailgreatness-text-container" style="z-index: 1">
+          <div class="text-card-kicker color-white">
+            New Era Sideline Collection
+          </div>
+        </div> -->
+          </a>
+          <div class="video-control-group">
+            <button
+              id="wcToggleBtn"
+              class="video-control-button"
+              aria-label="Pause video"
+              aria-pressed="true"
+            >
+              <img
+                id="wcIcon"
+                class="play-pause-icon"
+                alt="Pause video"
+                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt92e415df0690b4e6/68b73a89e1265fb54bce17a5/button_pause_default.svg"
+              />
+            </button>
+            <!-- <button
+          id="wcMuteBtn"
+          class="video-control-button"
+          aria-label="Unmute video"
+          aria-pressed="false"
+        >
+          <img
+            id="wcMuteIcon"
+            class="play-pause-icon"
+            alt="Unmute video"
+            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt11e1486787923103/68b73a89c610791ab4d88744/button_unmuted_defaukt.svg"
+          />
+        </button> -->
+          </div>
+        </div>
+      </div>
+  
+      <script>
+        (function () {
+          const video = document.getElementById("responsiveVideo");
+          const source = video.querySelector("source");
+          const playPauseBtn = document.getElementById("wcToggleBtn");
+          const playPauseIcon = document.getElementById("wcIcon");
+  
+          // Video sources
+          const desktopSrc =
+            "https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltbab822af5580fc08/6a2c4ff5a71a311a09822fdb/banner_worldcup.mp4";
+          const mobileSrc =
+            "https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1e64aec3388ac562/6a2c4ff5a71a313a89822fd7/banner_worldcup-m.mp4";
+  
+          // Button assets
+          const icons = {
+            play: {
+              def: "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt97ea2e2b11d2fe55/68b73a89c42f68eba1c525a1/button_play_default.svg",
+              hov: "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt638806200117dc7b/68b73a89d740624de117247d/button_play_hover.svg",
+            },
+            pause: {
+              def: "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt92e415df0690b4e6/68b73a89e1265fb54bce17a5/button_pause_default.svg",
+              hov: "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4a66ad38a16772fc/68b73a89f82700608884e446/button_pause_hover.svg",
+            },
+          };
+  
+          // Track user intent to play
+          let userWantsPlay = true;
+  
+          function updatePlayPauseIcon(isHover) {
+            if (video.paused) {
+              playPauseIcon.src = isHover ? icons.play.hov : icons.play.def;
+              playPauseIcon.alt = "Play video";
+              playPauseBtn.setAttribute("aria-label", "Play video");
+              playPauseBtn.setAttribute("aria-pressed", "false");
+            } else {
+              playPauseIcon.src = isHover ? icons.pause.hov : icons.pause.def;
+              playPauseIcon.alt = "Pause video";
+              playPauseBtn.setAttribute("aria-label", "Pause video");
+              playPauseBtn.setAttribute("aria-pressed", "true");
+            }
+          }
+  
+          function chooseSrc() {
+            return window.innerWidth <= 768 ? mobileSrc : desktopSrc;
+          }
+  
+          function setVideoSource() {
+            const target = chooseSrc();
+            if (source.src !== target) {
+              source.src = target;
+              video.load();
+              if (userWantsPlay && isInViewport(video)) {
+                video.play().catch(() => {});
+              }
+              updatePlayPauseIcon(false);
+            }
+          }
+  
+          function isInViewport(el) {
+            const r = el.getBoundingClientRect();
+            const vh =
+              window.innerHeight || document.documentElement.clientHeight;
+            const vw = window.innerWidth || document.documentElement.clientWidth;
+            return r.bottom > 0 && r.right > 0 && r.top < vh && r.left < vw;
+          }
+  
+          // Button interactions
+          playPauseBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            if (video.paused) {
+              if (video.ended) {
+                video.currentTime = 0;
+              }
+              video
+                .play()
+                .then(() => {
+                  userWantsPlay = true;
+                  updatePlayPauseIcon(false);
+                })
+                .catch(() => {});
+            } else {
+              video.pause();
+              userWantsPlay = false;
+              updatePlayPauseIcon(false);
+            }
+          });
+          playPauseBtn.addEventListener("mouseenter", () =>
+            updatePlayPauseIcon(true),
+          );
+          playPauseBtn.addEventListener("mouseleave", () =>
+            updatePlayPauseIcon(false),
+          );
+  
+          // Pause off-screen; resume on-screen if user wants play
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  if (userWantsPlay) video.play().catch(() => {});
+                } else {
+                  if (!video.paused) video.pause();
+                }
+                updatePlayPauseIcon(false);
+              });
+            },
+            { threshold: 0.25 },
+          );
+          io.observe(video);
+  
+          // Tab visibility handling
+          document.addEventListener("visibilitychange", () => {
+            if (document.visibilityState === "hidden") {
+              if (!video.paused) video.pause();
+            } else if (userWantsPlay && isInViewport(video)) {
+              video.play().catch(() => {});
+            }
+            updatePlayPauseIcon(false);
+          });
+  
+          video.addEventListener("ended", () => {
+            userWantsPlay = false;
+            updatePlayPauseIcon(false);
+          });
+  
+          // Initial load
+          setVideoSource();
+          if (isInViewport(video) && userWantsPlay) {
+            video.play().catch(() => {});
+          }
+          updatePlayPauseIcon(false);
+  
+          // Resize
+          window.addEventListener("resize", setVideoSource);
+        })();
+      </script>
+  
+      <div id="wc-game" class="cont-1656 hp-margin mb-3">
+        <a
+          href="https://app.academy.com/UVHf/ivpouhxn"
+          data-omni="eb_mac_appexclusiveexperience"
+          class="d-block hp-hover"
+          aria-label="Open or get the Academy app to join the adidas + Academy soccer experience and enter the adidas soccer sweepstakes."
+        >
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="
+                https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltf56e19584fe0e51c/6a2ace994b0e8e88309bf3c2/dor-fans_banner_chance-to-win-2-tickets-m.png
+              "
+            />
+            <img
+              loading="lazy"
+              src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt70b629791d9e5dcc/6a1f45d4ea05f1151de4f675/banner_wcticketssweepstakes.png"
+              alt="Promotional graphic offering a chance to win two tickets to the FIFA World Cup 26 match in Houston on July 4, 2026, with a QR code or button to download or open the app."
+              class="img-fluid corners"
+            />
+          </picture>
+        </a>
+  
+        <p class="wc-disclaimer p-2 only-desktop">
+          NO PURCHASE NECESSARY. Games/polls NOT required for entry. Open to
+          residents of U.S. excluding, AK, CA, FL, HI, NY, RI, age 18+. Limit one
+          (1) entry per person per day. For Official Rules see
+          <a href="https://www.academy.com/official-rules" data-pos="6-2"
+            >Academy.com/Official-Rules</a
+          >. Enter by 6/27/26.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Trending for Fans -->
+  

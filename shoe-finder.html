@@ -1,0 +1,3219 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=45">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+  href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+  .headline-svg {
+    height: clamp(32px, 2.5vw, 53px);
+    width: auto;
+  }
+
+  .text-card-title {
+    font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+  }
+
+  .text-card-promo {
+    /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+    
+  }
+
+  .color-red{color: #e81111;}
+
+  .text-card-kicker {
+    font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+  }
+
+  .text-card-disclaimer {
+    font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+  }
+
+  .text-card-cta {
+    font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+
+  .disclaimer {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+    text-align: center;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0;
+    padding-top: 0.5rem;
+  }
+
+  a {
+    color: #1946C8;
+}
+</style>
+
+<!-- Common size styles -->
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .level-up-headline-svg {
+        height: clamp(32px, 3.5vw, 87px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+    }
+</style>
+
+
+<!-- BreadCrumbs -->
+<div class="contentSides">
+    <nav class="breadCrumbComponent asoUI textBodySm contentMaxWidth contentVerticalMargin--hugGy" aria-label="breadcrumb navigation region" data-auid="Feature | Running Shoe Finder">
+        <div class="d-md-flex">
+            <nav class="asoUI asoBC" aria-label="Breadcrumbs">
+                <span data-auid="breadCrumb_link_0" class="entry textBodySm">
+                    <a href="/">Academy</a>
+                    <span class="iconBox12 separator"><svg aria-hidden="true" width="12" height="12"
+                            viewBox="0 0 12 12" fill="none">
+                            <path d="M8 2L5.15 10H4L6.85 2H8Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                </span>
+                <span data-auid="breadCrumb_link_1" class="entry textBodySm">
+                    <a href="/c/footwear">Shoes+ Boots</a>
+                    <span class="iconBox12 separator">
+                        <svg aria-hidden="true" width="12" height="12"
+                            viewBox="0 0 12 12" fill="none">
+                            <path d="M8 2L5.15 10H4L6.85 2H8Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                </span>
+                <span data-auid="breadCrumb_link_2" class="entry textBodySm">
+                    <a href="/c/footwear/athletic-shoes-sneakers">Athletic Shoes + Sneakers</a>
+                    <span class="iconBox12 separator">
+                        <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M8 2L5.15 10H4L6.85 2H8Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                </span>
+                <span data-auid="breadCrumb_link_2" class="entry textBodySm">
+                    <a href="/c/footwear/athletic-shoes-sneakers/running-shoes">Running Shoes</a>
+                    <span class="iconBox12 separator">
+                        <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                            <path d="M8 2L5.15 10H4L6.85 2H8Z" fill="currentColor"></path>
+                        </svg>
+                    </span>
+                </span>
+                <span data-auid="breadCrumb_link_3" class="entry textBodySm">
+                    <span>Running Shoes Finder</span>
+                </span>
+            </nav>
+        </div>
+    </nav>
+</div>
+
+
+
+<style>
+    .sf {
+        font-family: "Open Sans";
+    }
+
+    .sfIntro {
+        margin-top: 0.5rem;
+    }
+
+    .sfIntro__hero {
+        position: relative;
+        border-radius: 0.5rem;
+        overflow: hidden;
+    }
+
+    @media (max-width: 767px) {
+        .sfIntro__hero {
+            border-radius: 0rem;
+        }
+    }
+
+    .sfIntro__hero picture,
+    .sfIntro__hero img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .sfIntro__img {
+        object-fit: cover;
+        min-height: 420px;
+    }
+
+    .sfIntro__card {
+        position: absolute;
+        left: 48px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: min(640px, calc(100% - 96px));
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px 20px 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .18);
+    }
+
+    .sfIntro__card .sf__btn:hover {
+        background-color: #0A427E;
+        color: white;
+    }
+
+    .sfIntro__h1 {
+        margin: 0 0 14px;
+        font-size: 38px;
+        line-height: 1.05;
+        font-weight: 700;
+        color: #1946c8;
+    }
+
+    .sfIntro__p {
+        margin: 0 0 22px;
+        font-size: 24px;
+        line-height: 140%;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .sfIntro__cta {
+        font-size: 20px;
+        line-height: 120%;
+        padding: 0.8rem 1.5rem !important;
+    }
+
+    @media (max-width: 768px) {
+        .sfIntro__hero {
+            min-height: 0;
+        }
+
+        .sfIntro__h1 {
+            margin: 0 0 14px;
+            font-size: 19px;
+            line-height: 120%;
+            font-weight: 700;
+            color: #1946c8;
+        }
+
+        .sfIntro__img {
+            min-height: 280px;
+        }
+
+        .sfIntro__card {
+            top: 20%;
+            left: 0px;
+            margin: 16px;
+            width: auto;
+
+        }
+
+        .sfIntro__p {
+            font-size: 14px;
+        }
+
+        .sfIntro__cta {
+            width: 69%;
+            border-radius: 4px;
+        }
+    }
+
+
+    .sf__wrap {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 24px 16px;
+    }
+
+
+    .sf__brandTitle {
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.44rem;
+        color: #1946c8;
+    }
+
+    @media (max-width:560px) {
+        .sf__wrap {
+            padding: 0.5rem;
+        }
+
+        .sf__brandTitle {
+            font-size: 1.375rem;
+            line-height: 120%;
+        }
+    }
+
+    /* ===== Progress ===== */
+    .sf__progressWrap {
+        position: relative;
+        margin: 16px auto 26px;
+        max-width: 820px;
+        padding: 16px 8px 0;
+    }
+
+
+    .sf__progressTrack {
+        display: none !important;
+    }
+
+    .sf__doneLine {
+        position: absolute;
+        top: 31px;
+        height: 3px;
+        background: #cddbee;
+        border-radius: 999px;
+        z-index: 1;
+        display: none;
+    }
+
+    @media (max-width:560px) {
+
+        .sf__progressWrap {
+            margin: 2rem auto 0rem;
+            padding: 0px;
+        }
+
+        .sf__doneLine {
+            top: 24%;
+        }
+    }
+
+    .sf__progress {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0;
+        align-items: start;
+    }
+
+    .sf__progressItem {
+        display: grid;
+        justify-items: center;
+        gap: 8px;
+        position: relative;
+    }
+
+    .sf__bubble {
+        width: 34px;
+        height: 34px;
+        border-radius: 999px;
+        background: #e6e6e6;
+        border: 2px solid #e6e6e6;
+        position: relative;
+        z-index: 2;
+    }
+
+    .sf__progressItem.is-done .sf__bubble {
+        background: #1946c8;
+        border-color: #1946c8;
+    }
+
+    .sf__progressItem.is-active .sf__bubble {
+        background: #e6edf7;
+        border: 3px solid #1946c8;
+    }
+
+    .sf__progressItem .sf__progressLabel {
+        display: none;
+    }
+
+    .sf__progressItem.is-active .sf__progressLabel {
+        display: block;
+    }
+
+    .sf__progressItem.is-done .sf__progressLabel {
+        display: block;
+    }
+
+    .sf__progressLabel {
+        font-size: 1rem;
+        color: #333333;
+        font-weight: 600;
+    }
+
+    @media (max-width:560px) {
+        .sf__progressLabel {
+            font-size: 0.75rem;
+        }
+
+    }
+
+    /* ===== Panel ===== */
+    .sf__panel {
+        padding: 8px 0 6px;
+    }
+
+    .sf__dividerWrapper {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem !important;
+    }
+
+
+    .sf__divider {
+        height: 1px;
+        background-color: #e8e8e8;
+        max-width: 780px;
+        margin-inline: 1rem;
+        width: 100%;
+    }
+
+    .sf__title {
+        font-size: 1.75rem;
+        color: #1946c8;
+        text-align: center;
+        margin: 14px 0 2rem;
+        font-weight: 700;
+    }
+
+    .sf__subtitle {
+        font-size: 16px;
+        color: #222;
+        text-align: center;
+        margin: 0 0 18px;
+    }
+
+    /* NEW: "Learn More" link under title */
+    .sf__learnMore {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+        width: 100%;
+        margin: 0 0 18px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #333;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .sf__learnMore {
+        text-decoration: underline;
+    }
+
+    .sf__infoIcon {
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+    }
+
+    .sf__hint {
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+        margin: 6px 0 10px;
+    }
+
+    /* ===== Layout helpers ===== */
+    .sf__stack {
+        display: grid;
+        gap: 42px;
+        justify-items: center;
+    }
+
+    .sf__grid3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 80px;
+    }
+
+    /* @media (max-width: 820px) {
+        .sf__progressWrap {
+            max-width: 100%;
+        }
+
+        .sf__progress {
+            grid-template-columns: repeat(5, 1fr);
+            overflow-x: auto;
+        }
+    } */
+
+    @media (max-width: 767px) {
+
+        .sf__grid3 {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+
+    @media (max-width: 560px) {
+        .sf__title {
+            font-size: 21px;
+        }
+
+    }
+
+    .sf__optionBtn {
+        width: 266px;
+        border: 2px solid #333333;
+        border-radius: 6px;
+        background: #fff;
+        padding: 16px 14px;
+        font-size: 16px;
+        color: #333333;
+        cursor: pointer;
+        font-weight: 700;
+    }
+
+    .sf__optionBtn:hover {
+        color: #1946c8;
+        border: 2px solid #1946c8;
+    }
+
+    .sf__optionBtn[aria-pressed="true"] {
+        background: #e6edf7;
+        color: #1946c8;
+        border: 2px solid #1946c8;
+    }
+
+    /* ===== Pronation cards (3-up with desc) ===== */
+    .sf__pCard {
+        border-radius: 4px;
+        background: #fff;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        /* display: grid; */
+        /* grid-template-rows: 150px auto; */
+        cursor: pointer;
+    }
+
+    /* .sf__pImgContainer {
+        width: 100%;
+        display:flex;
+        ju
+    } */
+
+    .sf__pImg {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        background: #fff;
+        display: block;
+        padding: 12px;
+    }
+
+    .sf__pBody {
+        padding: 12px;
+        display: grid;
+        gap: 10px;
+    }
+
+
+    .sf__pBtn {
+        width: 100%;
+        border: 2px solid #333333;
+        border-radius: 6px;
+        background: #fff;
+        padding: 16px 14px;
+        font-size: 16px;
+        color: #333333;
+        cursor: pointer;
+        font-weight: 700;
+    }
+
+    .sf__pDesc {
+        font-size: 13px;
+        color: #333;
+        line-height: 1.35;
+        text-align: center;
+    }
+
+    .sf__pBtn:hover {
+        color: #1946c8;
+        border: 2px solid #1946c8;
+    }
+
+
+    .sf__pBtn[aria-pressed="true"] {
+        background: #e6edf7;
+        color: #1946c8;
+        border: 2px solid #1946c8;
+    }
+
+
+    /* ===== Audience buttons ===== */
+    .sf__audRow {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .sf__audBtn {
+        width: 266px;
+        border: 2px solid #333333;
+        border-radius: 6px;
+        background: #fff;
+        padding: 16px 14px;
+        font-size: 16px;
+        color: #333333;
+        cursor: pointer;
+        font-weight: 700;
+    }
+
+    .sf__audBtn:hover {
+        color: #1946c8;
+        border: 2px solid #1946c8;
+    }
+
+
+    .sf__audBtn[aria-pressed="true"] {
+        background: #e6edf7;
+        color: #1946c8;
+        border: 2px solid #1946c8;
+    }
+
+    /* ===== Size grid ===== */
+    .sf__sizes {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 1.5rem;
+        width: clamp(330px, 60vw, 660px);
+        margin: 0 auto;
+    }
+
+    @media (max-width: 720px) {
+        .sf__sizes {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    .sf__sizeBtn {
+        border: 1.5px solid #6f6f6f;
+        background: #fff;
+        border-radius: 4px;
+        padding: 1rem 0;
+        cursor: pointer;
+        font-weight: 800;
+    }
+
+    .sf__sizeBtn:hover {
+        color: #1946c8;
+        border: 1.5px solid #1946c8;
+    }
+
+    .sf__sizeBtn[aria-pressed="true"] {
+        background: #e6edf7;
+        color: #1946c8;
+        border: 1.5px solid #1946c8;
+    }
+
+    /* ===== Nav ===== */
+    .sf__nav {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        padding-top: 22px;
+        margin-top: 26px;
+    }
+
+    .sf__btn {
+        border-radius: 8px;
+        padding: 2px 18px;
+        cursor: pointer;
+        font-weight: 700;
+        border: 2px solid transparent;
+        min-width: 190px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sf__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        stroke-width: 1.5;
+        fill: none;
+        stroke: currentColor;
+        flex-shrink: 0;
+    }
+
+    .sf__icon--left {
+        margin-right: 2px;
+    }
+
+    .sf__icon--right {
+        margin-left: 2px;
+    }
+
+    .sf__btn--primary {
+        background: #1946C8;
+        color: #fff;
+    }
+
+    .sf__btn--ghost {
+        background: #fff;
+        border-color: #0066CC;
+        color: #0066CC;
+    }
+
+    .sf__btn--ghost:hover {
+        border-color: #00427A;
+        color: #00427A;
+    }
+
+
+
+    @media (max-width:560px) {
+
+        .sf__nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding-top: 0px;
+            margin-top: 26px !important;
+        }
+
+        .sf__btn {
+            min-width: 150px;
+        }
+
+        [data-sf-edit-answers] {
+            min-width: auto;
+            padding: 2px 6px;
+
+        }
+
+        [data-sf-edit-answers] .sf__btnText {
+            display: none;
+        }
+
+    }
+
+    .sf__btn:disabled {
+        display: none;
+    }
+
+    .sf__error {
+        color: #b00020;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .sf button:focus-visible {
+        outline: 3px solid rgba(26, 47, 255, 0.35);
+        outline-offset: 2px;
+    }
+
+    /* =========================
+     Learn More Modal
+     ========================= */
+    .sf__modalOverlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        padding: 18px;
+    }
+
+    .sf__modalOverlay.is-open {
+        display: flex;
+    }
+
+    .sf__modal {
+        width: clamp(300px, 50vw, 491px);
+        background: #F2F8FD;
+        border: 2px solid #1946c8;
+        border-radius: 4px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+    }
+
+    .sf__modalHeader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 16px 10px;
+        /* border-bottom: 1px solid rgba(25, 70, 200, 0.15); */
+    }
+
+    .sf__modalTitleWrap {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+    }
+
+    .sf__modalTitle {
+        font-size: 20px;
+        font-weight: 600;
+        color: #0749AA;
+        margin: 0;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    @media (max-width:560px) {
+
+        .sf__modalTitle {
+            font-size: 1rem;
+        }
+    }
+
+    .sf__modalClose {
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        width: 34px;
+        height: 34px;
+        border-radius: 6px;
+        display: grid;
+        place-items: center;
+        color: #222;
+    }
+
+    .sf__modalClose:hover {
+        background: rgba(25, 70, 200, 0.08);
+        color: #1946c8;
+    }
+
+    .sf__modalBody {
+        padding: 0px 16px 16px;
+        color: #333;
+        font-size: 13px;
+        line-height: 1.35;
+    }
+
+    .sf__modalBody p {
+        margin: 0 0 10px;
+    }
+
+    .sf__modalBody p:last-child {
+        margin-bottom: 0;
+    }
+
+    .sf_loadingGif {
+        max-width: 660px;
+        width: 100%
+    }
+
+    .sf_loadingText {
+        color: #333333;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+
+    .result-h1,
+    .result-h2 {
+        font-weight: 600;
+        font-size: 1.75rem;
+        line-height: 39px;
+    }
+
+    @media (max-width:767px) {
+
+        /* .sf_loadingGif {
+        max-width: 660px;
+    } */
+
+        .sf_loadingText {
+            font-size: 19px;
+            line-height: 120%;
+        }
+
+        .result-h1 {
+            font-weight: 700;
+            font-size: 1.3125rem;
+        }
+
+        .result-h2 {
+            font-weight: 400;
+            font-size: 0.75rem;
+        }
+    }
+
+    .sf__over {
+        color: currentColor;
+        fill: currentColor;
+    }
+
+    /* Results wrapper */
+    .sfResults {
+        max-width: 1376px;
+        margin: 22px auto 0;
+        padding: 0 16px;
+        display: grid;
+        gap: 22px;
+    }
+
+    .sfResults> :first-child {
+        border-top: none;
+    }
+
+
+    /* Card layout */
+    .sfResultCard {
+        display: grid;
+        grid-template-columns: 28vw 1fr;
+        gap: 26px;
+        align-items: center;
+        padding: 26px 0;
+        border-top: 1px solid #e8e8e8;
+    }
+
+    /* Image column */
+    .sfResultMedia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    .sfResultImg {
+        /* width: 240px; */
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    .sfResultImgPlaceholder {
+        width: 240px;
+        height: 160px;
+        background: #f3f3f3;
+        border-radius: 8px;
+    }
+
+    .sfResultWide {
+        margin-top: 10px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 14px;
+        color: #2b2b2b;
+    }
+
+
+    /* Content column */
+    .sfResultBody {
+        min-width: 0;
+    }
+
+    .sfResultTitle {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 1.2;
+        color: #111;
+        margin: 0 0 8px;
+    }
+
+    @media (max-wdith:560px) {
+        .sfResultTitle {
+            font-weight: 700;
+            font-size: 21px;
+        }
+
+    }
+
+    .sfResultRating {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 10px;
+    }
+
+    .sfResultDesc {
+        color: #333;
+        line-height: 1.5;
+        margin: 0 0 14px;
+    }
+
+    /* Features */
+    .sfResultFeatures {
+        margin: 0 0 14px;
+    }
+
+    .sfResultFeaturesTitle {
+        font-weight: 800;
+        color: #1a4fb3;
+        font-size: 20px;
+        margin: 0 0 6px;
+    }
+
+    .sfResultFeaturesList {
+        margin: 0;
+        padding-left: 18px;
+        color: #333;
+        line-height: 1.55;
+    }
+
+    /* CTA */
+    .sfResultCta {
+        text-decoration: none;
+        display: inline-flex;
+        min-width: 232px;
+    }
+
+    .sfResultCta.sf__btn {
+        padding: 12px 18px;
+    }
+
+    .sfResultCta.sf__btn:hover {
+        background-color: #0A427E;
+        color: white;
+    }
+
+
+    @media (max-width: 560px) {
+        .sfResultCard {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .sfResultMedia {
+            align-items: flex-start;
+        }
+
+        .sfResultImg,
+        .sfResultImgPlaceholder {
+            width: 72vw;
+        }
+    }
+
+    @media (max-width:560px) {
+        .sfResultMedia {
+            align-items: center;
+        }
+    }
+
+
+    .sfStarsWrap {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .sfStars {
+        display: flex;
+        gap: 2px;
+    }
+
+    .sfStar {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        background: #e6e6e6;
+        clip-path: polygon(50% 0%,
+                61% 35%,
+                98% 35%,
+                68% 57%,
+                79% 91%,
+                50% 70%,
+                21% 91%,
+                32% 57%,
+                2% 35%,
+                39% 35%);
+    }
+
+    .sfStar--full {
+        background: #f5a623;
+    }
+
+    .sfStar--half {
+        background: linear-gradient(to right, #f5a623 50%, #e6e6e6 50%);
+    }
+
+    .sfStarsValue {
+        font-weight: 700;
+        color: #111;
+    }
+
+    .sf__panel {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        will-change: opacity, transform;
+    }
+
+    .sf__panel--hidden {
+        opacity: 0;
+        transform: translateY(10px);
+        pointer-events: none;
+    }
+
+    /* ===== Results filter chips ===== */
+    .sfFilters {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        max-width: 1040px;
+        margin: 16px auto 0;
+        padding: 0 16px;
+    }
+
+    .sfFilters__label {
+        font-weight: 700;
+        color: #333333;
+    }
+
+    .sfFilterChip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1.5px solid #1946c8;
+        border-radius: 999px;
+        background: #e6edf7;
+        color: #1946c8;
+        padding: 6px 12px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+    .sfFilterChip:hover {
+        background: #fff;
+    }
+
+    .sfFilterChip:disabled {
+        opacity: 0.5;
+        cursor: default;
+    }
+
+    .sfFilterChip--relaxed {
+        border-color: #6f6f6f;
+        background: #fff;
+        color: #6f6f6f;
+    }
+
+    .sfFilterChip--relaxed em {
+        font-weight: 400;
+    }
+
+    .sfFilterChip__x {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .sfResultsCount {
+        margin: 12px auto 0;
+        text-align: center;
+        color: #333333;
+        font-weight: 700;
+    }
+</style>
+
+
+<div id="brooks-shoe-finder" class="sf my-3 my-md-4">
+    <h2 class="sf__brandTitle cont-1656 hp-margin">Running Shoe Finder</h2>
+
+    <div class="sf__wrap cont-1656 hp-margin">
+
+        <!-- Progress -->
+        <div class="sf__progressWrap" aria-label="Shoe finder progress">
+            <div class="sf__progressTrack" aria-hidden="true"></div>
+            <div class="sf__doneLine" aria-hidden="true"></div>
+            <ol class="sf__progress" aria-hidden="false"></ol>
+        </div>
+    </div>
+
+    <!-- Step content -->
+    <div class="sf__panel cont-1656 hp-margin " role="region" aria-live="polite" aria-label="Shoe finder step"></div>
+
+    <!-- Divider -->
+    <div class="sf__dividerWrapper cont-1656 hp-margin">
+        <div class="sf__divider"></div>
+    </div>
+
+    <!-- Footer nav -->
+    <div class="sf__nav cont-1656 hp-margin">
+        <button type="button" class="sf__btn sf__btn--ghost" data-sf-back>
+            <svg class="sf__icon sf__icon--left" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 6 L9 12 L15 18" />
+            </svg>
+            <span class="sf__btnText">Back</span>
+        </button>
+
+        <button type="button" class="sf__btn sf__btn--primary" data-sf-next>
+            <span class="sf__btnText">Next Step</span>
+            <svg class="sf__icon sf__icon--right" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 6 L15 12 L9 18" />
+            </svg>
+        </button>
+    </div>
+
+    <div class="sf__error cont-1656 hp-margin" role="alert" aria-live="assertive" hidden></div>
+
+    <!-- =========================
+       NEW: Modal + Overlay
+       Click overlay or X to close
+       ========================= -->
+    <div class="sf__modalOverlay" data-sf-modal-overlay aria-hidden="true">
+        <div class="sf__modal" role="dialog" aria-modal="true" aria-labelledby="sfModalTitle">
+            <div class="sf__modalHeader">
+                <div class="sf__modalTitleWrap">
+                    <!-- info icon -->
+                    <svg class="sf__infoIcon" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10" fill="none" stroke="#1946c8" stroke-width="2"></circle>
+                        <path d="M12 10.5v6" stroke="#1946c8" stroke-width="2" stroke-linecap="round"></path>
+                        <circle cx="12" cy="7.5" r="1.2" fill="#1946c8"></circle>
+                    </svg>
+
+                    <h4 class="sf__modalTitle" id="sfModalTitle">Learn More</h4>
+                </div>
+
+                <button type="button" class="sf__modalClose" aria-label="Close" data-sf-modal-close>
+                    <!-- X -->
+                    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 6 L18 18 M18 6 L6 18" stroke="currentColor" stroke-width="2.2"
+                            stroke-linecap="round"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="sf__modalBody" data-sf-modal-body></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        if (window.__brooksShoeFinderInitialized) return;
+        window.__brooksShoeFinderInitialized = true;
+
+        const root = document.getElementById("brooks-shoe-finder");
+        if (!root) return;
+
+        const els = {
+            sfWrap: root.querySelector(".sf__wrap"),
+            progressWrap: root.querySelector(".sf__progressWrap"),
+            progress: root.querySelector(".sf__progress"),
+            panel: root.querySelector(".sf__panel"),
+            btnBack: root.querySelector("[data-sf-back]"),
+            btnNext: root.querySelector("[data-sf-next]"),
+            btnNextText: root.querySelector("[data-sf-next] .sf__btnText"),
+            btnNextSvg: root.querySelector("[data-sf-next] svg"),
+            error: root.querySelector(".sf__error"),
+            track: root.querySelector(".sf__progressTrack"),
+            doneLine: root.querySelector(".sf__doneLine"),
+
+            // Modal
+            modalOverlay: root.querySelector("[data-sf-modal-overlay]"),
+            modalClose: root.querySelector("[data-sf-modal-close]"),
+            modalBody: root.querySelector("[data-sf-modal-body]"),
+            modalTitle: root.querySelector("#sfModalTitle"),
+        };
+
+        // =========================
+        //  ALGOLIA CONFIG
+        // =========================
+        const ALGOLIA = {
+            appId: "EKMP1KFS6W",
+            apiKey: "22642137a8bd9574c0365f91b1087e92",
+            // index: "prodlive-skus-data-inventoryaware",
+            index: "prodlive-skus-data-inventoryaware-newarrival",
+            productsIndex: "prodlive-products-data",     // second index (products/details)
+        };
+
+
+        // Use fetch directly: the host page's XHR wrappers can break the SDK transport.
+        async function queryAlgolia(indexName, params) {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 15000);
+            try {
+                const response = await window.fetch(
+                    `https://${ALGOLIA.appId.toLowerCase()}-dsn.algolia.net/1/indexes/${encodeURIComponent(indexName)}/query`,
+                    {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-Algolia-Application-Id": ALGOLIA.appId,
+                            "X-Algolia-API-Key": ALGOLIA.apiKey,
+                        },
+                        body: JSON.stringify({ query: "", ...params }),
+                        signal: controller.signal,
+                    }
+                );
+                if (!response.ok) {
+                    throw new Error(`Algolia search failed (HTTP ${response.status})`);
+                }
+                const result = await response.json();
+                if (!Array.isArray(result?.hits) || !Number.isFinite(result.nbHits)) {
+                    throw new Error("Algolia returned an invalid search response");
+                }
+                return result;
+            } finally {
+                clearTimeout(timeout);
+            }
+        }
+
+        function getCookie(name) {
+            const pattern = new RegExp(
+                "(?:^|; )" + encodeURIComponent(name) + "=([^;]*)"
+            );
+            const m = pattern.exec(document.cookie || "");
+            return m ? decodeURIComponent(m[1]) : "";
+        }
+
+        function extractNumericIds(str) {
+            if (!str) return [];
+            const matches = String(str).match(/\d+/g) || [];
+            return matches.filter((v) => /^\d+$/.test(v));
+        }
+
+        function normalizeToIdArray(input) {
+            const ids = new Set();
+            if (input == null) return [];
+
+            if (Array.isArray(input)) {
+                for (const el of input) normalizeToIdArray(el).forEach((x) => ids.add(x));
+                return Array.from(ids);
+            }
+
+            if (typeof input === "object") {
+                if ("storeIds" in input && input.storeIds != null)
+                    normalizeToIdArray(input.storeIds).forEach((x) => ids.add(x));
+                if ("storeId" in input && input.storeId != null)
+                    normalizeToIdArray(input.storeId).forEach((x) => ids.add(x));
+                return Array.from(ids);
+            }
+
+            extractNumericIds(String(input)).forEach((x) => ids.add(x));
+            return Array.from(ids);
+        }
+
+        function getInventoryFilterV2() {
+
+            let myStoreIds = [];
+            try {
+                const sel = localStorage.getItem("aso_WC_StLocId_Selected");
+                if (sel) myStoreIds = normalizeToIdArray(JSON.parse(sel));
+            } catch (e) { }
+
+            const sddIds = normalizeToIdArray(getCookie("sddStoreId"));
+            const nearbyIds = normalizeToIdArray(getCookie("nbmsids"));
+
+            const pickSet = new Set();
+            const stsSet = new Set();
+
+            myStoreIds.forEach((id) => {
+                pickSet.add(id);
+                stsSet.add(id);
+            });
+            nearbyIds.forEach((id) => {
+                pickSet.add(id);
+                stsSet.add(id);
+            });
+            sddIds.forEach((id) => {
+                pickSet.add(id);
+            });
+
+            if (pickSet.size === 0 && stsSet.size === 0) {
+                return "sth_oos:0";
+            }
+
+            const pickOrs = Array.from(pickSet).map((id) => `inventory_pick:${id}`);
+            const stsOrs = Array.from(stsSet).map((id) => `inventory_sts:${id}`);
+
+            const clauses = [
+                "sth_oos:0",
+                "lsi_oos:0",
+                "stsfs_oos:0",
+                ...pickOrs,
+                ...stsOrs,
+            ];
+
+            return `(${clauses.join(" OR ")})`;
+        }
+
+        // =========================
+        //  FILTER MAPS
+        // =========================
+        // Surface grouped keys: Road / Trail / Gym. "Training" included under Gym.
+        // One facet value can belong to multiple groups.
+        const filterMap = {
+            gender: {
+                "": [],
+                Men: [
+                    { a: "facet_Gender", v: "Men's" },
+                    { a: "facet_Gender", v: "Unisex" },
+                    { a: "facet_Gender", v: "Men's , Women's" },
+                    { a: "facet_Gender", v: "Adults'" },
+                ],
+                Women: [
+                    { a: "facet_Gender", v: "Women's" },
+                    { a: "facet_Gender", v: "Unisex" },
+                    { a: "facet_Gender", v: "Men's , Women's" },
+                ],
+            },
+
+            cushioning: {
+                "": [],
+                // Negated so shoes with no cushioning value still count as Regular.
+                regular: [
+                    { a: "facet_Cushioning", v: "Extra", neg: true },
+                    { a: "facet_Cushioning", v: "Maximum", neg: true },
+                    { a: "facet_Cushioning", v: "Low", neg: true },
+                ],
+                extra: [{ a: "facet_Cushioning", v: "Extra" }],
+                maximum: [{ a: "facet_Cushioning", v: "Maximum" }],
+                any: [],
+            },
+
+
+            pronation: {
+                "": [],
+                normal: [
+                    { a: "facet_Pronation", v: "Normal Pronation" },
+                    { a: "facet_Pronation", v: "Neutral" },
+                    { a: "facet_Pronation", v: "Mid" },
+                ],
+                over: [{ a: "facet_Pronation", v: "Overpronation" }],
+                under: [{ a: "facet_Pronation", v: "Underpronation" }],
+            },
+
+            stability: {
+                "": [],
+                neutral: [{ a: "facet_Stability", v: "Neutral" }],
+                support: [{ a: "facet_Stability", v: "Support" }],
+                "max-support": [{ a: "facet_Stability", v: "Max-Support" }],
+            },
+
+
+            surface: {
+                "": [],
+                any: [],
+                road: [
+                    { a: "facet_Surface Type", v: "Court" },
+                    { a: "facet_Surface Type", v: "Road" },
+                    { a: "facet_Surface Type", v: "Street" },
+                    { a: "facet_Surface Type", v: "Track" },
+                    { a: "facet_Surface Type", v: "Road and Trail" },
+                    { a: "facet_Surface Type", v: "Road, Trail" },
+                    { a: "facet_Surface Type", v: "Multi-surface" },
+                    { a: "facet_Surface Type", v: "Multiple" },
+                    { a: "facet_Surface Type", v: "Various surfaces" },
+                    { a: "facet_Surface Type", v: "All-surface" },
+                    { a: "facet_Surface Type", v: "Most surfaces" },
+                    { a: "facet_Surface Type", v: "Training" },
+                    { a: "facet_Surface Type", v: "Indoor/Outdoor" },
+                    { a: "facet_Surface Type", v: "Multi" },
+                    { a: "facet_Surface Type", v: "Hard, paved" },
+                    { a: "facet_Surface Type", v: "Road/Track" },
+                    { a: "facet_Surface Type", v: "Road, Trail, Indoors" },
+                    { a: "facet_Surface Type", v: "On- and Off-Road" },
+                ],
+
+                trail: [
+                    { a: "facet_Surface Type", v: "Trail" },
+                    { a: "facet_Surface Type", v: "Road and Trail" },
+                    { a: "facet_Surface Type", v: "Road, Trail" },
+                    { a: "facet_Surface Type", v: "Trail / All-terrain" },
+                    { a: "facet_Surface Type", v: "All-Terrain" },
+                    { a: "facet_Surface Type", v: "Trail, Outdoor" },
+                    { a: "facet_Surface Type", v: "Off-road, All-terrain, Trail" },
+                    { a: "facet_Surface Type", v: "Rough surfaces" },
+                    { a: "facet_Surface Type", v: "Off-road, Wet and Dry" },
+                    { a: "facet_Surface Type", v: "Tough terrain" },
+                    { a: "facet_Surface Type", v: "Multi-surface" },
+                    { a: "facet_Surface Type", v: "Multiple" },
+                    { a: "facet_Surface Type", v: "Various surfaces" },
+                    { a: "facet_Surface Type", v: "All-surface" },
+                    { a: "facet_Surface Type", v: "Most surfaces" },
+                    { a: "facet_Surface Type", v: "Multi" },
+                    { a: "facet_Surface Type", v: "Road, Trail, Indoors" },
+                    { a: "facet_Surface Type", v: "On- and Off-Road" },
+                    { a: "facet_Surface Type", v: "Firm Ground" },
+                ],
+
+                gym: [
+                    { a: "facet_Surface Type", v: "Court" },
+                    { a: "facet_Surface Type", v: "Road" },
+                    { a: "facet_Surface Type", v: "Street" },
+                    { a: "facet_Surface Type", v: "Track" },
+                    { a: "facet_Surface Type", v: "Indoor/Outdoor" },
+                    { a: "facet_Surface Type", v: "Multi-surface" },
+                    { a: "facet_Surface Type", v: "Multiple" },
+                    { a: "facet_Surface Type", v: "Various surfaces" },
+                    { a: "facet_Surface Type", v: "All-surface" },
+                    { a: "facet_Surface Type", v: "Most surfaces" },
+                    // add "Training" to Gym bucket per request:
+                    { a: "facet_Surface Type", v: "Training" },
+                    { a: "facet_Surface Type", v: "Multi" },
+                    { a: "facet_Surface Type", v: "Hard, paved" },
+                    { a: "facet_Surface Type", v: "Road/Track" },
+                    { a: "facet_Surface Type", v: "Road, Trail, Indoors" },
+                    { a: "facet_Surface Type", v: "Gym, Track" },
+                ],
+            },
+        };
+
+
+        // =========================
+        //  FILTER BUILDER
+        // =========================
+        function buildAlgoliaFiltersStringFromState(state) {
+            const a = state?.answers || {};
+            const parts = [];
+
+            // helper: escape value for Algolia filters string
+            // - if value has quotes, escape them
+            // - wrap in double quotes if it contains spaces or commas or special chars
+            function qVal(v) {
+                const s = String(v ?? "");
+                const escaped = s.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+                return /[\s,:()]/.test(s) ? `"${escaped}"` : `"${escaped}"`; // safe to always quote
+            }
+
+            // helper: build OR group from defs [{a,v,neg?}]
+            function addGroupFromMap(group, key) {
+                const defs = filterMap[group]?.[key];
+                if (!defs || !defs.length) return;
+
+                // Helper to format the clause with quotes around the attribute name
+                const formatClause = (d) => `"${d.a}":${qVal(d.v)}`;
+
+                // if any neg, we must AND them (like: NOT "A":"V1" AND NOT "A":"V2")
+                const hasNeg = defs.some((d) => d.neg);
+                if (hasNeg) {
+                    const negParts = defs.map((d) => {
+                        const clause = formatClause(d);
+                        return d.neg ? `NOT ${clause}` : clause;
+                    });
+                    parts.push(negParts.length > 1 ? `(${negParts.join(" AND ")})` : negParts[0]);
+                    return;
+                }
+
+                // Normal OR grouping for multiple surface types
+                const orParts = defs.map((d) => formatClause(d));
+                parts.push(orParts.length > 1 ? `(${orParts.join(" OR ")})` : orParts[0]);
+            }
+
+            // ---- gender ---- (skip if audience is any/empty)
+            const aud = String(a.audience || "").toLowerCase();
+            const personaKey = aud === "men" ? "Men" : aud === "women" ? "Women" : "";
+            if (personaKey) addGroupFromMap("gender", personaKey);
+
+            // ---- activity ----
+            parts.push(`facet_Activity:${qVal("Running")}`);
+
+            // ---- surface  ----
+            const surfaceAnswer = String(a.surface || "").toLowerCase();
+            const surfaceKey = surfaceAnswer === "treadmill" ? "gym" : surfaceAnswer;
+            if (surfaceKey) addGroupFromMap("surface", surfaceKey);
+
+            // ---- cushioning ----
+            const cushionKey = String(a.cushioning || "").toLowerCase();
+            if (cushionKey && cushionKey !== "any") addGroupFromMap("cushioning", cushionKey);
+
+            // ---- stability ----
+            const stabilityKey = String(a.stability || "").toLowerCase();
+            if (stabilityKey) addGroupFromMap("stability", stabilityKey);
+
+            // ---- pronation ----
+            const pronationKey = String(a.pronation || "").toLowerCase();
+            if (pronationKey) addGroupFromMap("pronation", pronationKey);
+
+            // ---- size (only if men/women; skip if any) ----
+            const sizes = Array.isArray(a.size) ? a.size.filter(Boolean) : [];
+            if (sizes.length) {
+                const sizeAttr =
+                    aud === "women" ? "facet_womensShoeSize" :
+                        aud === "men" ? "facet_mensShoeSize" :
+                            null;
+
+                if (sizeAttr) {
+                    const orSizes = sizes.map((sz) => `${sizeAttr}:${qVal(String(sz))}`);
+                    parts.push(orSizes.length > 1 ? `(${orSizes.join(" OR ")})` : orSizes[0]);
+                }
+            }
+
+            // ---- inventory  ----
+            parts.push(getInventoryFilterV2());
+
+            // ---- product type ---- 
+            parts.push(`"facet_Product Type":"Shoes"`);
+
+            return parts.join(" AND ");
+        }
+
+        function attachEvents() {
+
+            const targets = document.querySelectorAll('a.sfResultCta, a.sfResultMediaClick');
+
+            console.log('targets: ', targets);
+
+            targets.forEach((element) => {
+                if (element.dataset.hasClickEvent === "true") return;
+
+                element.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const parent_sku = e.currentTarget.getAttribute('data-parentsku');
+                    const child_sku = e.currentTarget.getAttribute('data-childsku');
+
+                    if (typeof window.launchASOQuickView === 'function') {
+                        window.launchASOQuickView({
+                            item: {
+                                other_client_item_ids: {
+                                    identifiers: {
+                                        parent_sku: parent_sku,
+                                        sku: child_sku,
+                                        skus: [child_sku]
+                                    },
+                                },
+                                sku: child_sku,
+                                skus: [child_sku]
+                            },
+                        });
+                    } else {
+                        console.error("launchASOQuickView is not defined");
+                    }
+                });
+
+                // Mark as bound
+                element.dataset.hasClickEvent = "true";
+            });
+        }
+
+        function normalizeScene7Url(u) {
+            const s = String(u || "").trim();
+            if (!s) return "";
+            if (s.startsWith("//")) return "https:" + s;     // //academy... -> https://academy...
+            if (s.startsWith("http")) return s;
+            return s;
+        }
+
+        function extractImageUrl(detail) {
+            // Prefer detail.XFULLIMAGE if present
+            const raw =
+                detail?.XFULLIMAGE ||
+                detail?.xFullImage ||
+                detail?.xfullimage ||
+                "";
+            return normalizeScene7Url(raw);
+        }
+
+        function getHitRatingNumber(hit) {
+            const r = parseFloat(
+                hit?.averageRating ??
+                0
+            );
+
+            return Number.isFinite(r) ? r : 0;
+        }
+
+
+        function getHitStartDateMs(hit) {
+            const t = new Date(hit?.startDate).getTime();
+            return Number.isFinite(t) ? t : 0;
+        }
+
+        function sortHitsByStartDateDesc(hits) {
+            (hits || []).sort((a, b) => getHitStartDateMs(b) - getHitStartDateMs(a));
+            return hits;
+        }
+
+
+
+
+        function uniq(arr) {
+            return Array.from(new Set((arr || []).filter(Boolean)));
+        }
+
+        function hasWideAvailable(hit) {
+            const widths = hit?.facet_footwearWidth;
+
+            if (!Array.isArray(widths)) return false;
+
+            return widths.some((w) =>
+                typeof w === "string" && w.toLowerCase().includes("wide")
+            );
+        }
+
+
+
+        function extractParentPartNumber(hit) {
+            // adjust if the field name differs
+            return (
+                hit?.parentPartNumber ||
+                ""
+            );
+        }
+
+        function stripHtml(html) {
+            const s = String(html || "");
+            return s.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+        }
+
+        // function truncate(str, n) {
+        //     const s = String(str || "");
+        //     if (s.length <= n) return s;
+        //     return s.slice(0, n).trim() + "…";
+        // }
+
+        function extractFeatureBenefitsValues(fb) {
+            if (!fb || typeof fb !== "object") return [];
+            // keep the natural order featureBenefit1..N if present
+            const keys = Object.keys(fb).sort((a, b) => {
+                const na = parseInt(a.match(/\d+/)?.[0] || "0", 10);
+                const nb = parseInt(b.match(/\d+/)?.[0] || "0", 10);
+                return na - nb;
+            });
+            return keys.map((k) => fb[k]).filter((v) => typeof v === "string" && v.trim());
+        }
+
+        function extractChildSkuIdFromDetail(detail) {
+            return detail?.defaultSku?.skuId || "";
+        }
+
+
+        function extractAverageRating(detail) {
+            const r = detail?.averageRating ?? detail?.avgRating ?? detail?.rating;
+            const num = parseFloat(r);
+            return Number.isFinite(num) ? num : 0;
+        }
+
+        function renderStars(rating) {
+            const raw = Math.max(0, Math.min(5, Number(rating) || 0));
+
+            // Bucket to X.5 within each [X, X+1) range; 0 stays 0 unless > 0.
+            let normalized;
+            if (raw >= 5) normalized = 5;
+            else if (raw > 0) normalized = Math.floor(raw) + 0.5;
+            else normalized = 0;
+
+            const full = Math.floor(normalized);
+            const hasHalf = normalized % 1 !== 0;
+
+            let stars = "";
+            for (let i = 0; i < 5; i++) {
+                if (i < full) {
+                    stars += `<span class="sfStar sfStar--full"></span>`;
+                } else if (i === full && hasHalf) {
+                    stars += `<span class="sfStar sfStar--half"></span>`;
+                } else {
+                    stars += `<span class="sfStar"></span>`;
+                }
+            }
+
+            return `
+    <div class="sfStarsWrap">
+      <div class="sfStars">${stars}</div>
+      <div class="sfStarsValue">${raw.toFixed(1)}</div>
+    </div>
+  `;
+        }
+
+        function chunkArray(arr, size) {
+            const out = [];
+            for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+            return out;
+        }
+
+        function pickLongDescription(product) {
+            return (
+                product?.longDescription ||
+                product?.long_description ||
+                product?.description ||
+                product?.longDescriptionText ||
+                ""
+            );
+        }
+
+        function escapeAlgoliaFilterValue(v) {
+            return String(v).replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+        }
+
+        async function enrichHitsWithLongDescriptionAndBenefits(hits) {
+
+            if (!Array.isArray(hits) || hits.length === 0) return hits;
+
+            const ids = Array.from(
+                new Set(
+                    hits
+                        .map((h) => h?.parentPartNumber)
+                        .filter((id) => typeof id === "string" && id.length > 0)
+                )
+            );
+            if (!ids.length) return hits;
+
+            // Keep filter strings from getting too large
+            const CHUNK_SIZE = 50;
+            const chunks = chunkArray(ids, CHUNK_SIZE);
+
+            const idToDetails = new Map(); // objectID -> { longDescription, featureBenefits }
+
+            await Promise.all(
+                chunks.map(async (chunkIds) => {
+                    const orFilter = chunkIds
+                        .map((id) => `partNumber:"${escapeAlgoliaFilterValue(id)}"`)
+                        .join(" OR ");
+
+                    const res = await queryAlgolia(ALGOLIA.productsIndex, {
+                        filters: orFilter,
+                        hitsPerPage: chunkIds.length,
+                        page: 0,
+                    });
+
+
+                    (res?.hits || []).forEach((p) => {
+
+                        if (!p?.partNumber) return;
+
+                        idToDetails.set(p.partNumber, {
+                            longDescription: p.longDescription,
+                            featureBenefits: p.featureBenefits,
+                        });
+                    });
+                })
+            );
+
+            // Merge back onto original hits
+            hits.forEach((hit) => {
+                const id = hit?.parentPartNumber;
+                const details = idToDetails.get(id);
+
+                if (details) {
+                    // longDescription
+                    if (typeof details.longDescription === "string" && details.longDescription.trim()) {
+                        hit.longDescription = details.longDescription;
+                    } else if (!hit.longDescription) {
+                        hit.longDescription = "";
+                    }
+
+                    // featureBenefits (object expected)
+                    if (details.featureBenefits && typeof details.featureBenefits === "object") {
+                        hit.featureBenefits = details.featureBenefits;
+                    } else if (!hit.featureBenefits) {
+                        hit.featureBenefits = null; // so extractFeatureBenefitsValues returns []
+                    }
+                } else {
+                    // If no details record found, keep things predictable
+                    if (!hit.longDescription) hit.longDescription = "";
+                    if (!hit.featureBenefits) hit.featureBenefits = null;
+                }
+            });
+
+            return hits;
+        }
+
+        async function searchWithFallbacks({ baseState, minHits = 5, hitsPerPage = 24 }) {
+            // We only mutate this local copy
+            const answers = typeof structuredClone === "function"
+                ? structuredClone(baseState.answers)
+                : JSON.parse(JSON.stringify(baseState.answers));
+
+            const relaxOrder = ["pronation", "stability", "cushioning", "surface"];
+
+            let lastRes = null;
+            const removed = [];
+
+            for (let attempt = 0; attempt <= relaxOrder.length; attempt++) {
+                const filters = buildAlgoliaFiltersStringFromState({ answers });
+
+                const res = await queryAlgolia(ALGOLIA.index, {
+                    filters,
+                    page: 0,
+                    hitsPerPage,
+                });
+
+                lastRes = res;
+
+                const hitCount = (res?.hits || []).length;
+                if (hitCount >= minHits) break;
+
+                // if we still need to relax, remove next key and try again
+                if (attempt < relaxOrder.length) {
+                    const key = relaxOrder[attempt];
+                    if (answers[key] != null && answers[key] !== "" && answers[key] !== "any") {
+                        removed.push(key);
+                    }
+                    answers[key] = null;
+                }
+            }
+
+            return { res: lastRes, removed };
+        }
+
+        async function runAlgoliaSearch(state) {
+            try {
+                const { res, removed } = await searchWithFallbacks({
+                    baseState: state,
+                    minHits: 5,
+                });
+                const hits = res.hits;
+
+                // Product details are optional; keep matches if enrichment fails.
+                try {
+                    await enrichHitsWithLongDescriptionAndBenefits(hits);
+                } catch (err) {
+                    console.warn("[ShoeFinder] Product enrichment failed:", err);
+                }
+
+                return { ...res, hits, meta: { removedFilters: removed } };
+            } catch (err) {
+                console.error("[ShoeFinder] Algolia search error:", err);
+                return { hits: [], nbHits: 0, nbPages: 0, err };
+            }
+        }
+
+        // Shared by questionnaire completion, retry, and restored results.
+        let resultsRequestId = 0;
+        async function loadResults() {
+            const requestId = ++resultsRequestId;
+            state.results.loading = true;
+            state.results.error = false;
+            state.results.hits = [];
+            state.results.nbHits = 0;
+            state.results.visibleCount = 5;
+            state.results.removedFilters = [];
+            saveToSession();
+            renderStep();
+
+            const res = await runAlgoliaSearch(state);
+            if (requestId !== resultsRequestId) return;
+            const hits = res.hits;
+            sortHitsByStartDateDesc(hits);
+            state.results.loading = false;
+            state.results.error = !!res.err;
+            state.results.hits = hits;
+            state.results.nbHits = res.nbHits;
+            state.results.removedFilters = res.meta?.removedFilters || [];
+            saveToSession();
+            renderStep();
+        }
+
+
+        // =========================
+        //  UI CONFIG / STEPS
+        // =========================
+        const MEN_SIZES = [
+            "6",
+            "6.5",
+            "7",
+            "7.5",
+            "8",
+            "8.5",
+            "9",
+            "9.5",
+            "10",
+            "10.5",
+            "11",
+            "11.5",
+            "12",
+            "12.5",
+            "13",
+            "14",
+            "15",
+        ];
+        const WOMEN_SIZES = [
+            "5",
+            "5.5",
+            "6",
+            "6.5",
+            "7",
+            "7.5",
+            "8",
+            "8.5",
+            "9",
+            "9.5",
+            "10",
+            "10.5",
+            "11",
+            "11.5",
+            "12",
+        ];
+
+
+        const STEPS = [
+            {
+                id: "intro",
+                label: "",
+                title: "",
+                type: "intro",
+            },
+            {
+                id: "surface",
+                label: "Where",
+                title: "Where will you be doing most of your running?",
+                type: "buttons",
+                required: true,
+                options: [
+                    { label: "Road", value: "road" },
+                    { label: "Trail", value: "trail" },
+                    { label: "Treadmill (Gym)", value: "treadmill" },
+                    { label: "No Preference", value: "any" },
+                ],
+            },
+            {
+                id: "cushioning",
+                label: "Cushion",
+                title: "What level of cushioning do you prefer?",
+                type: "buttons",
+                required: true,
+                learnMore: {
+                    linkLabel: "Learn More",
+                    title: "Learn More About Cushioning",
+                    bodyHtml: `
+              <p>Cushioning is the thickness of material under the midsole and the firmness of the foam.</p>
+              <p>Cushioned running shoes can reduce impact on joints and improve comfort, but excessive cushioning may decrease ground feel and potentially lead to instability.</p>
+            `,
+                },
+                options: [
+                    { label: "Regular Cushioning", value: "regular" },
+                    { label: "Extra Cushioning", value: "extra" },
+                    { label: "Maximum Cushioning", value: "maximum" },
+                    { label: "No Preference", value: "any" },
+                ],
+            },
+            {
+                id: "pronation",
+                label: "Pronation",
+                title: "Take a few steps, how do your feet land as you walk?",
+                type: "pronation3",
+                required: true,
+                learnMore: {
+                    linkLabel: "Learn More",
+                    title: "What is pronation?",
+                    bodyHtml: `
+              <p>How your foot moves when you walk or run tells us where the pressure lands—and that helps us understand what kind of support you need.</p>
+              <p>If your toes point slightly in, your body weight tends to roll toward your arch and the outside of your forefoot.</p>
+              <p>If your toes point slightly out, your weight shifts away from the arch and toward the inside of your forefoot.</p>
+              <p>If your foot lands straight, the pressure spreads more evenly from heel to toe.</p>
+              <p>These patterns are known as pronation, and they play a big role in choosing the right shoe. By understanding how your foot naturally moves, we can match you with a shoe that supports your stride and keeps you comfortable.</p>
+            `,
+                },
+                options: [
+                    {
+                        label: "My Feet Point Outward",
+                        value: "over",
+                        img: "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt1fae5b8ddc28edc0/699c822cb13d650008b504ec/Feet-PointOutward.png?auto=webp&format=pjpg",
+                        desc: `<span style="opacity:.75;">(common in people with flatter feet)</span>`,
+                    },
+                    {
+                        label: "My Feet Stay Parallel",
+                        value: "normal",
+                        img: "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt387260a7a5901bd0/699c822cb13d650008b504e8/Feet-Parallel.png?auto=webp&format=pjpg",
+                        desc: "",
+                    },
+                    {
+                        label: "My Feet Point Inward",
+                        value: "under",
+                        img: "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltf82e14cdcf0d2c52/699c822ce8917700087c2b0b/Feet-PointInward.png?auto=webp&format=pjpg",
+                        desc: `<span style="opacity:.75;">(common in people with high arches)</span>`,
+                    },
+                ],
+            },
+            {
+                id: "stability",
+                label: "Stability",
+                title: "Do you want running shoes with extra support?",
+                subtitle:
+                    "Supportive running shoes keep you stable and help prevent you from injury.",
+                type: "buttons",
+                required: true,
+                options: [
+                    { label: "Neutral", value: "neutral" },
+                    { label: "Support", value: "support" },
+                    { label: "Max-Support", value: "max-support" },
+                ],
+            },
+            {
+                id: "audience",
+                label: "Size",
+                title: "Fine-tune your picks",
+                type: "audienceWithSizeBehavior",
+                required: false, // allow no preference / not specified
+            },
+            // NEW: results page with header controls
+            {
+                id: "results",
+                label: "Results",
+                title: "",
+                type: "results",
+            },
+        ];
+
+        const PROGRESS_STEPS = STEPS.filter((s) => s.id !== "intro" && s.id !== "results");
+
+        // ========= STATE =========
+        const state = {
+            stepIndex: 0,
+            answers: {
+                surface: null,
+                cushioning: null,
+                pronation: null,
+                stability: null,
+                audience: "men", // can be "men" | "women" | "any" | null
+                size: [], // optional; can be null
+            },
+            results: {
+                loading: false,
+                error: false,
+                hits: [],
+                nbHits: 0,
+                visibleCount: 5,
+            },
+        };
+
+        // =========================
+        //  SESSION STORAGE PERSIST
+        // =========================
+        // session object
+        const SF_STORAGE_KEY = "brooksShoeFinder.session.v1";
+        // started flag
+        const SF_STARTED_KEY = "brooksShoeFinder.started.v1";
+
+        function hasStartedThisTab() {
+            try { return sessionStorage.getItem(SF_STARTED_KEY) === "1"; }
+            catch (e) { return false; }
+        }
+
+        function markStartedThisTab() {
+            try { sessionStorage.setItem(SF_STARTED_KEY, "1"); }
+            catch (e) { }
+        }
+
+
+
+        function safeParse(json, fallback) {
+            try {
+                return JSON.parse(json);
+            } catch (e) {
+                return fallback;
+            }
+        }
+
+        function clampStepIndex(idx) {
+            const n = Number(idx);
+            if (!Number.isFinite(n)) return 0;
+            return Math.max(0, Math.min(n, STEPS.length - 1));
+        }
+
+        function makePersistPayload() {
+            return {
+                v: 1,
+                t: Date.now(),
+                stepIndex: state.stepIndex,
+                answers: state.answers,
+                // Don't store hits (too big). Store a marker so we know we should refetch.
+                resultsMeta: {
+                    wasOnResults: STEPS[state.stepIndex]?.id === "results",
+                    nbHits: state.results?.nbHits || 0,
+                },
+            };
+        }
+
+        function saveToSession() {
+            try {
+                sessionStorage.setItem(SF_STORAGE_KEY, JSON.stringify(makePersistPayload()));
+            } catch (e) {
+                // ignore storage quota / blocked storage
+            }
+        }
+
+        function clearSession() {
+            try {
+                sessionStorage.removeItem(SF_STORAGE_KEY);
+            } catch (e) { }
+        }
+
+        function restoreFromSession() {
+            // If not started, show intro
+            if (!hasStartedThisTab()) {
+                state.stepIndex = STEPS.findIndex((s) => s.id === "intro");
+                return { restored: false, shouldRefetchResults: false };
+            }
+
+            const raw = sessionStorage.getItem(SF_STORAGE_KEY);
+            if (!raw) return { restored: false, shouldRefetchResults: false };
+
+            const data = safeParse(raw, null);
+            if (!data || typeof data !== "object") return { restored: false, shouldRefetchResults: false };
+
+            state.stepIndex = clampStepIndex(data.stepIndex);
+
+            // never restore intro once started
+            if (STEPS[state.stepIndex]?.id === "intro") {
+                state.stepIndex = STEPS.findIndex((s) => s.id === "surface");
+            }
+
+            // Restore answers (merge to keep any new keys that  are added later)
+            const restoredAnswers = data.answers && typeof data.answers === "object" ? data.answers : {};
+            state.answers = {
+                surface: null,
+                cushioning: null,
+                pronation: null,
+                stability: null,
+                audience: "men",
+                size: [],
+                ...restoredAnswers,
+            };
+
+            // Restore results meta only (hits will be re-fetched if needed)
+            state.results = state.results || { loading: false, error: false, hits: [], nbHits: 0, visibleCount: 5 };
+            state.results.loading = false;
+            state.results.error = false;
+            state.results.hits = [];
+            state.results.nbHits = data.resultsMeta?.nbHits || 0;
+            state.results.visibleCount = 5;
+
+            const isResultsStep = STEPS[state.stepIndex]?.id === "results";
+            return { restored: true, shouldRefetchResults: !!isResultsStep };
+        }
+
+
+        // Expose for debugging
+        window.__ShoeFinderState = state;
+
+        // ========= PROGRESS =========
+        function renderProgress() {
+            els.progress.innerHTML = "";
+
+            PROGRESS_STEPS.forEach((step, idx) => {
+                const li = document.createElement("li");
+                li.className =
+                    "sf__progressItem" +
+                    (idx < state.stepIndex - 1 ? " is-done" : "") +
+                    (idx === state.stepIndex - 1 ? " is-active" : "");
+
+                li.innerHTML = `
+            <div class="sf__bubble" data-sf-bubble="${idx}" aria-hidden="true"></div>
+            <div class="sf__progressLabel">${escapeHtml(step.label)}</div>
+          `;
+                els.progress.appendChild(li);
+            });
+
+            positionDoneLine();
+        }
+
+        function positionDoneLine() {
+            requestAnimationFrame(() => {
+                const wrapRect = els.progressWrap.getBoundingClientRect();
+                const bubbles = els.progressWrap.querySelectorAll("[data-sf-bubble]");
+                if (!bubbles.length) return;
+
+                const lastDoneIndex = Math.min(state.stepIndex - 1, bubbles.length - 1);
+
+                if (lastDoneIndex >= 1) {
+                    const first = bubbles[0].getBoundingClientRect();
+                    const last = bubbles[lastDoneIndex].getBoundingClientRect();
+
+                    const firstCenterX = (first.left + first.right) / 2 - wrapRect.left;
+                    const lastCenterX = (last.left + last.right) / 2 - wrapRect.left;
+
+                    els.doneLine.style.left = firstCenterX + "px";
+                    els.doneLine.style.width = Math.max(0, lastCenterX - firstCenterX) + "px";
+                    els.doneLine.style.display = "block";
+                } else {
+                    els.doneLine.style.display = "none";
+                    els.doneLine.style.width = "0px";
+                }
+            });
+        }
+
+        // ========= MODAL (Learn More) =========
+        let lastFocusedEl = null;
+
+        function openLearnMore(step) {
+            if (!step || !step.learnMore) return;
+            lastFocusedEl = document.activeElement;
+
+            els.modalTitle.textContent = step.learnMore.title || "Learn More";
+            els.modalBody.innerHTML = step.learnMore.bodyHtml || "";
+
+            els.modalOverlay.classList.add("is-open");
+            els.modalOverlay.setAttribute("aria-hidden", "false");
+
+            document.documentElement.style.overflow = "hidden";
+            document.body.style.overflow = "hidden";
+
+            els.modalClose.focus();
+        }
+
+        function closeLearnMore() {
+            els.modalOverlay.classList.remove("is-open");
+            els.modalOverlay.setAttribute("aria-hidden", "true");
+
+            document.documentElement.style.overflow = "";
+            document.body.style.overflow = "";
+
+            if (lastFocusedEl && typeof lastFocusedEl.focus === "function") {
+                lastFocusedEl.focus();
+            }
+            lastFocusedEl = null;
+        }
+
+        els.modalOverlay.addEventListener("click", (e) => {
+            if (e.target === els.modalOverlay) closeLearnMore();
+        });
+        els.modalClose.addEventListener("click", closeLearnMore);
+
+        window.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && els.modalOverlay.classList.contains("is-open")) {
+                closeLearnMore();
+            }
+        });
+
+        // ========= TRANSITION HELPERS =========
+        function nextFrame() {
+            return new Promise((r) => requestAnimationFrame(() => r()));
+        }
+
+        function waitForTransition(el, timeoutMs = 300) {
+            return new Promise((resolve) => {
+                let done = false;
+
+                const finish = () => {
+                    if (done) return;
+                    done = true;
+                    el.removeEventListener("transitionend", onEnd);
+                    clearTimeout(timer);
+                    resolve();
+                };
+
+                const onEnd = (e) => {
+                    // only resolve for the panel itself (not bubbling from children)
+                    if (e.target === el) finish();
+                };
+
+                const timer = setTimeout(finish, timeoutMs);
+                el.addEventListener("transitionend", onEnd);
+            });
+        }
+
+        // ========= STEP RENDER (FADE OUT -> SWAP -> FADE IN) =========
+        async function renderStep() {
+            hideError();
+
+            const step = STEPS[state.stepIndex];
+            const divider = root.querySelector(".sf__dividerWrapper");
+
+            if (els.sfWrap) {
+                els.sfWrap.style.display = step.id === "intro" ? "none" : "";
+            }
+
+            // -------------------------
+            // Progress show/hide
+            // -------------------------
+            const showProgress = step.id !== "intro" && step.id !== "results";
+            els.progressWrap.style.display = showProgress ? "" : "none";
+            if (showProgress) renderProgress();
+
+            // -------------------------
+            // Footer nav show/hide
+            // -------------------------
+            if (step.id === "intro" || step.id === "results") {
+                els.btnBack.style.display = "none";
+                els.btnNext.style.display = "none";
+            } else {
+                els.btnBack.style.display = "";
+                els.btnNext.style.display = "";
+                els.btnBack.disabled =
+                    state.stepIndex === 0 || STEPS[state.stepIndex - 1]?.id === "intro";
+            }
+            if (step.id === "audience") {
+                els.btnNextText.textContent = "Get My Results";
+                els.btnNextSvg.style.display = "none";
+                els.btnNext.classList.add("btnSubmit");
+            } else {
+                els.btnNextText.textContent = "Next Step";
+                els.btnNextSvg.style.display = "";
+                els.btnNext.classList.remove("btnSubmit");
+            }
+
+            // -------------------------
+            // Build headerHtml (intro/results are special)
+            // -------------------------
+            const learnMoreHtml = step.learnMore
+                ? `
+      <div class="sf__learnMore" role="button" tabindex="0" data-sf-learnmore>
+        <svg class="sf__infoIcon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="#333" stroke-width="2"></circle>
+          <path d="M12 10.5v6" stroke="#333" stroke-width="2" stroke-linecap="round"></path>
+          <circle cx="12" cy="7.5" r="1.2" fill="#333"></circle>
+        </svg>
+        <span>${escapeHtml(step.learnMore.linkLabel || "Learn More")}</span>
+      </div>
+    `
+                : "";
+
+            const headerHtml =
+                step.id === "results"
+                    ? renderResultsHeader()
+                    : step.id === "intro"
+                        ? ""
+                        : `
+        <h3 class="sf__title">${escapeHtml(step.title || "")}</h3>
+        ${learnMoreHtml}
+        ${step.subtitle ? `<div class="sf__subtitle">${escapeHtml(step.subtitle)}</div>` : ""}
+      `;
+
+            // -------------------------
+            // Build nextHtml + afterRender binder
+            // -------------------------
+            let nextHtml = "";
+            let afterRender = () => { };
+
+            if (step.type === "intro") {
+                nextHtml = renderIntro();
+                afterRender = () => {
+                    els.panel.classList.add("bleed-scroll-left-right");
+                    divider.style.display = "none";
+                    bindIntro();
+                };
+            } else if (step.type === "buttons") {
+                nextHtml = headerHtml + renderButtons(step);
+                afterRender = () => {
+                    divider.style.display = "";
+                    els.panel.classList.remove("bleed-scroll-left-right");
+                    bindButtons(step);
+                    bindLearnMore(step);
+                };
+            } else if (step.type === "pronation3") {
+                nextHtml = headerHtml + renderPronation3(step);
+                afterRender = () => {
+                    divider.style.display = "";
+                    els.panel.classList.remove("bleed-scroll-left-right");
+                    bindButtons(step);
+                    bindLearnMore(step);
+                };
+            } else if (step.type === "audienceWithSizeBehavior") {
+                nextHtml = headerHtml + renderAudienceWithSizeBehavior();
+                afterRender = () => {
+                    divider.style.display = "";
+                    els.panel.classList.remove("bleed-scroll-left-right");
+                    bindAudienceWithSizeBehavior();
+                };
+            } else if (step.type === "results") {
+                nextHtml = headerHtml + renderResults();
+                afterRender = () => {
+                    els.panel.classList.remove("bleed-scroll-left-right");
+                    bindResultsHeaderButtons();
+                    divider.style.display = "none";
+                    attachEvents();
+                };
+            } else {
+                nextHtml =
+                    headerHtml + `<div class="sf__subtitle">Unknown step type.</div>`;
+                afterRender = () => {
+                    divider.style.display = "";
+                    els.panel.classList.remove("bleed-scroll-left-right");
+                };
+            }
+
+            // -------------------------
+            // Fade OUT old content
+            // -------------------------
+            els.panel.classList.add("sf__panel--hidden");
+
+            // Ensure the class application is painted before we wait
+            await nextFrame();
+
+
+            await waitForTransition(els.panel, 380);
+
+            // -------------------------
+            // Swap content while hidden
+            // -------------------------
+            els.panel.innerHTML = nextHtml;
+            afterRender();
+
+            // -------------------------
+            // Fade IN new content
+            // -------------------------
+            // Wait a frame so the browser commits the new DOM in hidden state,
+            // then remove hidden to trigger transition.
+            await nextFrame();
+            els.panel.classList.remove("sf__panel--hidden");
+
+
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function bindLearnMore(step) {
+            const trigger = els.panel.querySelector("[data-sf-learnmore]");
+            if (!trigger) return;
+
+            const open = () => openLearnMore(step);
+
+            trigger.addEventListener("click", open);
+            trigger.addEventListener("keydown", (e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    open();
+                }
+            });
+        }
+
+        const INTRO_HERO_DESKTOP =
+            "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt6cdf0515d516a706/699c826163bcae0008910c69/eb_startscreen_runningshoefinder.png?auto=webp&format=pjpg";
+
+        const INTRO_HERO_MOBILE =
+            "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt455912e725d232ca/699c8261370b580008b4209b/eb_startscreen_runningshoefinder-m.png?auto=webp&format=pjpg";
+
+        function renderIntro() {
+            els.sfWrap.style.display = "none";
+            return `
+    <section class="sfIntro">
+      <div class="sfIntro__hero">
+
+        <picture>
+          <source 
+            media="(max-width: 767px)" 
+            srcset="${escapeAttr(INTRO_HERO_MOBILE)}"
+          />
+          <img 
+            class="sfIntro__img"
+            src="${escapeAttr(INTRO_HERO_DESKTOP)}"
+            alt="Running Shoe Finder"
+          />
+        </picture>
+
+        <div class="sfIntro__card">
+          <h3 class="sfIntro__h1">
+            Ready to start a run, but not sure which shoes to choose?
+          </h3>
+          <p class="sfIntro__p">
+            Take our 5-minute Shoe Finder Quiz and we’ll help you find the perfect pair.
+          </p>
+          <button 
+            type="button" 
+            class="sf__btn sf__btn--primary sfIntro__cta"
+            data-sf-intro-start
+          >
+            <span class="sf__btnText">Get Started</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  `;
+        }
+
+
+        function bindIntro() {
+            const btn = els.panel.querySelector("[data-sf-intro-start]");
+            if (!btn) return;
+
+            btn.addEventListener("click", () => {
+                markStartedThisTab();
+                // Go to first question
+                state.stepIndex = STEPS.findIndex((s) => s.id === "surface");
+                saveToSession();
+                renderStep();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        }
+
+
+        function renderButtons(step) {
+            const current = state.answers[step.id];
+            return `
+          <div class="sf__stack">
+            ${step.options
+                    .map(
+                        (opt) => `
+              <button type="button"
+                class="sf__optionBtn"
+                data-sf-value="${escapeAttr(opt.value)}"
+                aria-pressed="${current === opt.value ? "true" : "false"}"
+              >${escapeHtml(opt.label)}</button>
+            `
+                    )
+                    .join("")}
+          </div>
+        `;
+        }
+
+        function renderPronation3(step) {
+            const current = state.answers.pronation;
+            return `
+          <div class="sf__grid3" style="max-width:970px;margin:0 auto;">
+            ${step.options
+                    .map((opt) => `
+                  <div class="sf__pCard" role="button" tabindex="0" aria-label="${escapeAttr(
+                        opt.label
+                    )}">
+                    <div class="sf__pImgContainer">
+                        <img class="sf__pImg" alt="${escapeAttr(opt.label)}" src="${escapeAttr(opt.img)}" loading="lazy">
+                    </div>
+                    <div class="sf__pBody">
+                      <button data-sf-value="${escapeAttr(opt.value)}" type="button" class="sf__pBtn" aria-pressed="${current === opt.value ? "true" : "false"
+                        }">${escapeHtml(opt.label)}</button>
+                      <div class="sf__pDesc">${opt.desc}</div>
+                    </div>
+                  </div>
+                `)
+                    .join("")}
+          </div>
+        `;
+        }
+
+        const MAX_SIZES = 3;
+
+        function renderAudienceWithSizeBehavior() {
+            const aud = state.answers.audience;
+            const sizes = Array.isArray(state.answers.size) ? state.answers.size : [];
+            const sizeSet = aud === "men" ? MEN_SIZES : aud === "women" ? WOMEN_SIZES : null;
+
+            return `
+                <div class="sf__stack" style="gap:18px;">
+                <div class="sf__audRow">
+                    <button type="button" class="sf__audBtn" data-sf-audience="men"
+                    aria-pressed="${aud === "men" ? "true" : "false"}">Men's</button>
+
+                    <button type="button" class="sf__audBtn" data-sf-audience="women"
+                    aria-pressed="${aud === "women" ? "true" : "false"}">Women's</button>
+
+                    <button type="button" class="sf__audBtn" data-sf-audience="any"
+                    aria-pressed="${aud === "any" ? "true" : "false"}">No Preference</button>
+                </div>
+
+                ${sizeSet
+                    ? `
+                    <div>
+                        <div class="sf__title mb-2">Select up to ${MAX_SIZES} sizes (optional)</div>
+                        <div class="sf__error sf__errorSize mt-1 mb-2" style="display:none" >You can select up to ${MAX_SIZES} sizes.</div>
+
+                        <div class="sf__sizes" role="group" aria-label="Select shoe size (up to ${MAX_SIZES})">
+                        ${sizeSet
+                        .map((sz) => {
+                            const pressed = sizes.includes(sz);
+                            return `
+                                <button type="button"
+                                class="sf__sizeBtn"
+                                data-sf-size="${escapeAttr(sz)}"
+                                aria-pressed="${pressed ? "true" : "false"}"
+                                >${escapeHtml(sz)}</button>
+                            `;
+                        })
+                        .join("")}
+                        </div>
+                    </div>
+                    `
+                    : `<div style="height: 120px;"></div>`
+                }
+                </div>
+            `;
+        }
+
+        // ============ RESULTS FILTER CHIPS ============
+        const FILTER_LABELS = {
+            surface: "Surface",
+            cushioning: "Cushioning",
+            pronation: "Pronation",
+            stability: "Stability",
+        };
+
+        function getOptionLabel(stepId, value) {
+            const opt = STEPS.find((s) => s.id === stepId)?.options?.find((o) => o.value === value);
+            return opt ? opt.label.replace(/^My /, "") : String(value);
+        }
+
+        function getSelectedFilters() {
+            const a = state.answers;
+            const relaxed = state.results.removedFilters || [];
+            const filters = [];
+
+            Object.keys(FILTER_LABELS).forEach((key) => {
+                const v = a[key];
+                if (v == null || v === "" || v === "any") return;
+                filters.push({
+                    key,
+                    value: v,
+                    label: `${FILTER_LABELS[key]}: ${getOptionLabel(key, v)}`,
+                    relaxed: relaxed.includes(key),
+                });
+            });
+
+            if (a.audience === "men" || a.audience === "women") {
+                filters.push({
+                    key: "audience",
+                    value: a.audience,
+                    label: a.audience === "men" ? "Men's" : "Women's",
+                    relaxed: false,
+                });
+            }
+
+            (Array.isArray(a.size) ? a.size : []).forEach((sz) => {
+                filters.push({ key: "size", value: sz, label: `Size ${sz}`, relaxed: false });
+            });
+
+            return filters;
+        }
+
+        function renderFilterChips() {
+            const filters = getSelectedFilters();
+            if (!filters.length) return "";
+
+            const disabled = state.results.loading ? "disabled" : "";
+            return `
+            <div class="sfFilters" role="group" aria-label="Your filters">
+                <span class="sfFilters__label">Your filters:</span>
+                ${filters.map((f) => `
+                <button type="button" class="sfFilterChip${f.relaxed ? " sfFilterChip--relaxed" : ""}"
+                    data-sf-remove-filter="${escapeAttr(f.key)}"
+                    data-sf-filter-value="${escapeAttr(f.value)}"
+                    aria-label="Remove filter ${escapeAttr(f.label)}${f.relaxed ? " (not applied)" : ""}"
+                    ${disabled}>
+                    <span>${escapeHtml(f.label)}${f.relaxed ? ` <em>(not applied)</em>` : ""}</span>
+                    <span class="sfFilterChip__x" aria-hidden="true">&times;</span>
+                </button>
+                `).join("")}
+            </div>
+            `;
+        }
+
+        function renderResultsCount() {
+            if (state.results.loading || state.results.error) return "";
+
+            const shown = (state.results.hits || []).length;
+            const total = Math.max(state.results.nbHits || 0, shown);
+            if (!total) return "";
+
+            const text = total > shown
+                ? `${total} shoes match your filters. Showing the top ${shown}.`
+                : `${total} ${total === 1 ? "shoe matches" : "shoes match"} your filters.`;
+
+            return `<div class="sfResultsCount" role="status">${escapeHtml(text)}</div>`;
+        }
+
+        function removeFilter(key, value) {
+            const a = state.answers;
+            if (key === "size") {
+                a.size = (Array.isArray(a.size) ? a.size : []).filter((sz) => sz !== value);
+            } else if (key === "audience") {
+                // Sizes are gender-specific, so they go with the audience.
+                a.audience = "any";
+                a.size = [];
+            } else {
+                const hasNoPreference = STEPS.find((s) => s.id === key)?.options?.some((o) => o.value === "any");
+                a[key] = hasNoPreference ? "any" : null;
+            }
+            loadResults();
+        }
+
+        // ============ RESULTS HEADER (Edit / Start Over) ============
+        function renderResultsHeader() {
+            return `
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+              <button type="button" class="sf__btn sf__btn--ghost" data-sf-edit-answers>
+                <svg class="sf__icon sf__icon--left" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M15 6 L9 12 L15 18"></path>
+                </svg>
+                <span class="sf__btnText">Edit Answers</span>
+              </button>
+  
+              <button type="button" class="sf__btn sf__btn--ghost" data-sf-start-over style="min-width:190px;">
+                <span class="sf__btnText pe-2 py-2">Start Over</span>
+
+                <svg  class="sf__over" width="21" height="21" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.8145 0.00685322C12.5673 0.0708697 14.2787 0.572383 15.7939 1.46779C16.2578 1.74046 16.7013 2.04677 17.1211 2.38185L17.1094 2.03517V2.01467C17.1046 1.72218 17.2148 1.43825 17.417 1.2256C17.6205 1.01165 17.9012 0.887556 18.1973 0.880877C18.4936 0.874313 18.7802 0.986292 18.9932 1.19142C19.2043 1.39482 19.3268 1.67281 19.335 1.96486L19.4375 5.01369C19.4827 5.17793 19.4922 5.35038 19.458 5.51857C19.4138 5.73554 19.304 5.93456 19.1436 6.08791L19.1416 6.08986C18.9848 6.2381 18.7878 6.33945 18.5742 6.37892C18.4083 6.40957 18.2387 6.39942 18.0771 6.35549L14.9365 6.25881V6.25783C14.7941 6.25509 14.6532 6.22557 14.5225 6.16896C14.3876 6.1105 14.2663 6.0252 14.165 5.91896C14.0638 5.81275 13.9846 5.68772 13.9326 5.5508C13.8807 5.41383 13.8563 5.26744 13.8613 5.12111C13.8664 4.97478 13.9005 4.83036 13.9619 4.69728C14.0234 4.56412 14.1111 4.44373 14.2197 4.34474C14.3283 4.24583 14.4559 4.16989 14.5947 4.12111C14.6943 4.08611 14.7983 4.06573 14.9033 4.06056H15.0098L15.71 4.08303C15.3766 3.81819 15.025 3.57657 14.6572 3.36037L14.6562 3.35939C13.3829 2.60735 11.9347 2.2074 10.459 2.19924C8.32293 2.19837 6.26922 3.03347 4.73242 4.52931C3.19689 6.02403 2.2969 8.06143 2.22461 10.2119L2.22559 10.2129C2.21937 10.504 2.09892 10.7818 1.88965 10.9854C1.68418 11.1852 1.40891 11.2963 1.12207 11.2969L1.12305 11.2979C1.11991 11.2979 1.11642 11.2969 1.11328 11.2969C1.11145 11.2969 1.10926 11.2979 1.10742 11.2979V11.2969C0.967759 11.2976 0.829216 11.2729 0.699219 11.2217C0.563277 11.1682 0.439537 11.088 0.334961 10.9863C0.230475 10.8847 0.147205 10.7636 0.0898438 10.6299C0.0324703 10.4961 0.0017383 10.3516 0 10.2061V10.1797C0.0862236 7.44863 1.2261 4.85772 3.17871 2.95705C5.13158 1.05622 7.74468 -0.00493896 10.4629 1.72853e-05L10.8145 0.00685322Z"/>
+<path d="M19.885 10.1969C19.9645 10.1952 20.0434 10.2098 20.1174 10.2389C20.1915 10.2681 20.2595 10.3113 20.3166 10.3668C20.3738 10.4224 20.419 10.4897 20.4504 10.5631C20.4818 10.6364 20.4992 10.7149 20.5002 10.7946V10.7995C20.4196 13.4027 19.3336 15.8721 17.4738 17.6832C15.614 19.4944 13.1264 20.5055 10.5383 20.5006C8.75261 20.4909 7 20.0079 5.45822 19.1012C4.68559 18.648 3.97176 18.1004 3.33322 17.4713L3.38498 18.9811V18.9909C3.38818 19.1533 3.32776 19.3106 3.21604 19.4284C3.10378 19.5464 2.94902 19.6152 2.78635 19.6188C2.62363 19.6224 2.46621 19.5609 2.34885 19.4479C2.23169 19.335 2.16413 19.18 2.16037 19.0172L2.05393 15.9079C2.01417 15.8037 2.00533 15.6903 2.02756 15.5807C2.05144 15.4634 2.11011 15.3557 2.19651 15.2731C2.28384 15.1905 2.39384 15.1347 2.51194 15.1129C2.62239 15.0925 2.73602 15.1021 2.84104 15.1413L6.04319 15.2399C6.12244 15.2406 6.20088 15.2572 6.27365 15.2887C6.34704 15.3205 6.41277 15.3675 6.46799 15.4254C6.52321 15.4834 6.56653 15.5517 6.59494 15.6266C6.62329 15.7014 6.63677 15.781 6.63401 15.861C6.63121 15.941 6.6119 16.0197 6.57834 16.0924C6.54478 16.1651 6.49779 16.2309 6.43869 16.2848C6.37955 16.3387 6.31002 16.3804 6.23459 16.4069C6.15978 16.4332 6.08031 16.4439 6.00119 16.4391L3.95529 16.3717C4.58389 17.0372 5.30378 17.6096 6.09299 18.0719C7.44239 18.8688 8.97689 19.2937 10.5412 19.3024C12.8085 19.3031 14.9877 18.4158 16.6174 16.8288C18.2468 15.242 19.1999 13.0797 19.2746 10.7985C19.2757 10.7192 19.2923 10.6409 19.3235 10.568C19.3549 10.4947 19.4011 10.4283 19.4582 10.3727C19.5153 10.3172 19.5825 10.273 19.6565 10.2438C19.6927 10.2295 19.7307 10.2185 19.7688 10.2116V10.1998L19.885 10.1969Z" />
+<path d="M19.885 10.1969L19.874 9.69704L19.8724 9.69708L19.885 10.1969ZM20.1174 10.2389L20.3005 9.77366L20.3005 9.77363L20.1174 10.2389ZM20.3166 10.3668L20.6652 10.0084L20.6651 10.0083L20.3166 10.3668ZM20.4504 10.5631L20.9101 10.3663L20.91 10.3661L20.4504 10.5631ZM20.5002 10.7946H21.0003L21.0002 10.7884L20.5002 10.7946ZM20.5002 10.7995L21 10.8149L21.0002 10.8072V10.7995H20.5002ZM17.4738 17.6832L17.8227 18.0415L17.8227 18.0415L17.4738 17.6832ZM10.5383 20.5006L10.5356 21.0006L10.5374 21.0006L10.5383 20.5006ZM5.45822 19.1012L5.71168 18.6702L5.71122 18.6699L5.45822 19.1012ZM3.33322 17.4713L3.68412 17.1151L2.79054 16.2349L2.83352 17.4885L3.33322 17.4713ZM3.38498 18.9811H3.88498V18.9725L3.88469 18.964L3.38498 18.9811ZM3.38498 18.9909H2.88489L2.88508 19.0007L3.38498 18.9909ZM3.21604 19.4284L3.57841 19.7729L3.57871 19.7726L3.21604 19.4284ZM2.78635 19.6188L2.79742 20.1187L2.79754 20.1187L2.78635 19.6188ZM2.34885 19.4479L2.00197 19.808L2.00198 19.808L2.34885 19.4479ZM2.16037 19.0172L2.66027 19.0057L2.66008 19.0001L2.16037 19.0172ZM2.05393 15.9079L2.55363 15.8907L2.55078 15.8074L2.52103 15.7295L2.05393 15.9079ZM2.02756 15.5807L1.53761 15.481L1.53755 15.4813L2.02756 15.5807ZM2.19651 15.2731L1.85285 14.9099L1.85094 14.9117L2.19651 15.2731ZM2.51194 15.1129L2.42115 14.6212L2.42112 14.6212L2.51194 15.1129ZM2.84104 15.1413L2.66656 15.6098L2.74354 15.6385L2.82564 15.641L2.84104 15.1413ZM6.04319 15.2399L6.02779 15.7398L6.03837 15.7399L6.04319 15.2399ZM6.27365 15.2887L6.47232 14.8299L6.47228 14.8299L6.27365 15.2887ZM6.46799 15.4254L6.10605 15.7704V15.7704L6.46799 15.4254ZM6.59494 15.6266L7.06249 15.4494L7.06244 15.4493L6.59494 15.6266ZM6.63401 15.861L7.1337 15.8784L7.13371 15.8783L6.63401 15.861ZM6.57834 16.0924L7.03229 16.302L7.03232 16.302L6.57834 16.0924ZM6.43869 16.2848L6.77551 16.6543L6.77559 16.6543L6.43869 16.2848ZM6.23459 16.4069L6.40038 16.8786L6.4004 16.8786L6.23459 16.4069ZM6.00119 16.4391L6.03173 15.9398L6.01765 15.9394L6.00119 16.4391ZM3.95529 16.3717L3.97175 15.872L2.75768 15.832L3.59182 16.7151L3.95529 16.3717ZM6.09299 18.0719L6.34724 17.6414L6.34572 17.6405L6.09299 18.0719ZM10.5412 19.3024L10.5385 19.8024L10.5411 19.8024L10.5412 19.3024ZM16.6174 16.8288L16.9662 17.187L16.9662 17.187L16.6174 16.8288ZM19.2746 10.7985L19.7745 10.8149L19.7746 10.8055L19.2746 10.7985ZM19.3235 10.568L18.8639 10.371L18.8638 10.3713L19.3235 10.568ZM19.4582 10.3727L19.1097 10.0142L19.1096 10.0143L19.4582 10.3727ZM19.6565 10.2438L19.4733 9.77854L19.473 9.77868L19.6565 10.2438ZM19.7688 10.2116L19.8587 10.7034L20.2688 10.6284V10.2116H19.7688ZM19.7688 10.1998L19.7562 9.70001L19.2688 9.71229V10.1998H19.7688ZM19.885 10.1969L19.896 10.6968C19.9068 10.6966 19.9199 10.6985 19.9343 10.7042L20.1174 10.2389L20.3005 9.77363C20.1669 9.72107 20.0221 9.69378 19.874 9.69704L19.885 10.1969ZM20.1174 10.2389L19.9343 10.7042C19.9488 10.7099 19.9601 10.7176 19.9682 10.7254L20.3166 10.3668L20.6651 10.0083C20.5588 9.905 20.4341 9.82625 20.3005 9.77366L20.1174 10.2389ZM20.3166 10.3668L19.9681 10.7253C19.9752 10.7322 19.9838 10.7437 19.9909 10.7601L20.4504 10.5631L20.91 10.3661C20.8541 10.2358 20.7725 10.1127 20.6652 10.0084L20.3166 10.3668ZM20.4504 10.5631L19.9908 10.7599C19.9977 10.7762 20.0001 10.7902 20.0003 10.8007L20.5002 10.7946L21.0002 10.7884C20.9983 10.6396 20.9658 10.4965 20.9101 10.3663L20.4504 10.5631ZM20.5002 10.7946H20.0002V10.7995H20.5002H21.0002V10.7946H20.5002ZM20.5002 10.7995L20.0005 10.784C19.9238 13.2581 18.8917 15.6045 17.125 17.325L17.4738 17.6832L17.8227 18.0415C19.7756 16.1396 20.9153 13.5472 21 10.8149L20.5002 10.7995ZM17.4738 17.6832L17.125 17.325C15.3584 19.0455 12.9961 20.0053 10.5393 20.0006L10.5383 20.5006L10.5374 21.0006C13.2566 21.0058 15.8697 19.9434 17.8227 18.0415L17.4738 17.6832ZM10.5383 20.5006L10.541 20.0006C8.84375 19.9914 7.17761 19.5323 5.71168 18.6702L5.45822 19.1012L5.20477 19.5322C6.82239 20.4835 8.66148 20.9904 10.5356 21.0006L10.5383 20.5006ZM5.45822 19.1012L5.71122 18.6699C4.97426 18.2376 4.29329 17.7152 3.68412 17.1151L3.33322 17.4713L2.98233 17.8275C3.65022 18.4855 4.39693 19.0583 5.20523 19.5325L5.45822 19.1012ZM3.33322 17.4713L2.83352 17.4885L2.88528 18.9982L3.38498 18.9811L3.88469 18.964L3.83293 17.4542L3.33322 17.4713ZM3.38498 18.9811H2.88498V18.9909H3.38498H3.88498V18.9811H3.38498ZM3.38498 18.9909L2.88508 19.0007C2.88571 19.033 2.87369 19.0628 2.85337 19.0842L3.21604 19.4284L3.57871 19.7726C3.78183 19.5585 3.89064 19.2736 3.88489 18.981L3.38498 18.9909ZM3.21604 19.4284L2.85366 19.0839C2.83271 19.1059 2.80417 19.1183 2.77516 19.1189L2.78635 19.6188L2.79754 20.1187C3.09388 20.112 3.37485 19.987 3.57841 19.7729L3.21604 19.4284ZM2.78635 19.6188L2.77528 19.1189C2.74579 19.1196 2.71719 19.1085 2.69572 19.0878L2.34885 19.4479L2.00198 19.808C2.21523 20.0134 2.50147 20.1252 2.79742 20.1187L2.78635 19.6188ZM2.34885 19.4479L2.69573 19.0878C2.67429 19.0671 2.66098 19.0377 2.66024 19.0057L2.16037 19.0172L1.66051 19.0288C1.66728 19.3224 1.7891 19.603 2.00197 19.808L2.34885 19.4479ZM2.16037 19.0172L2.66008 19.0001L2.55363 15.8907L2.05393 15.9079L1.55422 15.925L1.66067 19.0343L2.16037 19.0172ZM2.05393 15.9079L2.52103 15.7295C2.51572 15.7156 2.51384 15.6985 2.51757 15.6801L2.02756 15.5807L1.53755 15.4813C1.49681 15.682 1.51263 15.8919 1.58682 16.0862L2.05393 15.9079ZM2.02756 15.5807L2.51751 15.6805C2.52147 15.661 2.53083 15.6452 2.54207 15.6345L2.19651 15.2731L1.85094 14.9117C1.68938 15.0662 1.58141 15.2658 1.53761 15.481L2.02756 15.5807ZM2.19651 15.2731L2.54016 15.6363C2.55705 15.6203 2.57912 15.609 2.60275 15.6046L2.51194 15.1129L2.42112 14.6212C2.20856 14.6605 2.01063 14.7606 1.85285 14.9099L2.19651 15.2731ZM2.51194 15.1129L2.60272 15.6046C2.62529 15.6005 2.6472 15.6026 2.66656 15.6098L2.84104 15.1413L3.01552 14.6727C2.82484 14.6017 2.61949 14.5846 2.42115 14.6212L2.51194 15.1129ZM2.84104 15.1413L2.82564 15.641L6.02779 15.7396L6.04319 15.2399L6.05858 14.7401L2.85643 14.6415L2.84104 15.1413ZM6.04319 15.2399L6.03837 15.7399C6.05125 15.74 6.06376 15.7427 6.07503 15.7476L6.27365 15.2887L6.47228 14.8299C6.338 14.7717 6.19363 14.7413 6.048 14.7399L6.04319 15.2399ZM6.27365 15.2887L6.07499 15.7476C6.08315 15.7511 6.0942 15.758 6.10605 15.7704L6.46799 15.4254L6.82993 15.0805C6.73134 14.977 6.61092 14.8899 6.47232 14.8299L6.27365 15.2887ZM6.46799 15.4254L6.10605 15.7704C6.11596 15.7808 6.12305 15.7923 6.12745 15.8039L6.59494 15.6266L7.06244 15.4493C7.01001 15.3111 6.93046 15.1859 6.82993 15.0805L6.46799 15.4254ZM6.59494 15.6266L6.12739 15.8038C6.1327 15.8178 6.13473 15.8314 6.1343 15.8437L6.63401 15.861L7.13371 15.8783C7.13881 15.7307 7.11387 15.585 7.06249 15.4494L6.59494 15.6266ZM6.63401 15.861L6.13431 15.8435C6.13392 15.8548 6.13108 15.8683 6.12437 15.8829L6.57834 16.0924L7.03232 16.302C7.09272 16.1711 7.1285 16.0273 7.1337 15.8784L6.63401 15.861ZM6.57834 16.0924L6.12439 15.8828C6.11703 15.8988 6.10859 15.9092 6.1018 15.9153L6.43869 16.2848L6.77559 16.6543C6.887 16.5527 6.97253 16.4314 7.03229 16.302L6.57834 16.0924ZM6.43869 16.2848L6.10188 15.9153C6.09199 15.9243 6.08053 15.931 6.06879 15.9352L6.23459 16.4069L6.4004 16.8786C6.53951 16.8297 6.66711 16.7531 6.77551 16.6543L6.43869 16.2848ZM6.23459 16.4069L6.0688 15.9352C6.05814 15.9389 6.0455 15.9409 6.03172 15.94L6.00119 16.4391L5.97067 16.9382C6.11512 16.947 6.26142 16.9274 6.40038 16.8786L6.23459 16.4069ZM6.00119 16.4391L6.01765 15.9394L3.97175 15.872L3.95529 16.3717L3.93884 16.8715L5.98473 16.9388L6.00119 16.4391ZM3.95529 16.3717L3.59182 16.7151C4.25298 17.415 5.01016 18.0171 5.84026 18.5033L6.09299 18.0719L6.34572 17.6405C5.5974 17.2021 4.9148 16.6594 4.31877 16.0284L3.95529 16.3717ZM6.09299 18.0719L5.83874 18.5024C7.26407 19.3442 8.88531 19.7932 10.5385 19.8024L10.5412 19.3024L10.544 18.8024C9.06846 18.7942 7.62071 18.3934 6.34724 17.6414L6.09299 18.0719ZM10.5412 19.3024L10.5411 19.8024C12.9392 19.8031 15.2435 18.8646 16.9662 17.187L16.6174 16.8288L16.2686 16.4705C14.7319 17.967 12.6777 18.803 10.5414 18.8024L10.5412 19.3024ZM16.6174 16.8288L16.9662 17.187C18.6886 15.5097 19.6954 13.2248 19.7744 10.8148L19.2746 10.7985L18.7749 10.7821C18.7044 12.9346 17.8051 14.9742 16.2686 16.4705L16.6174 16.8288ZM19.2746 10.7985L19.7746 10.8055C19.7748 10.7911 19.7778 10.7772 19.7832 10.7647L19.3235 10.568L18.8638 10.3713C18.8068 10.5045 18.7767 10.6473 18.7747 10.7914L19.2746 10.7985ZM19.3235 10.568L19.783 10.765C19.7877 10.7541 19.7956 10.7421 19.8069 10.7311L19.4582 10.3727L19.1096 10.0143C19.0066 10.1145 18.9221 10.2353 18.8639 10.371L19.3235 10.568ZM19.4582 10.3727L19.8068 10.7312C19.8186 10.7197 19.8302 10.7127 19.84 10.7089L19.6565 10.2438L19.473 9.77868C19.3347 9.83323 19.212 9.91471 19.1097 10.0142L19.4582 10.3727ZM19.6565 10.2438L19.8396 10.709C19.8471 10.7061 19.8539 10.7043 19.8587 10.7034L19.7688 10.2116L19.6789 9.71972C19.6075 9.73276 19.5383 9.75295 19.4733 9.77854L19.6565 10.2438ZM19.7688 10.2116H20.2688V10.1998H19.7688H19.2688V10.2116H19.7688ZM19.7688 10.1998L19.7814 10.6997L19.8976 10.6968L19.885 10.1969L19.8724 9.69708L19.7562 9.70001L19.7688 10.1998Z"/>
+</svg>
+
+              </button>
+            </div>
+  
+            <div style="text-align:center;margin-top:14px;">
+                <div class='result-h1'>${state.results.loading ? "Finding your shoes" : state.results.error ? "Search unavailable" : "The results are in!"}</div>
+                ${!state.results.loading && !state.results.error && state.results.hits.length
+                    ? `<div class='result-h2'>These are the running shoes we think fit you the best:</div>` : ""}
+            </div>
+            ${renderFilterChips()}
+            ${renderResultsCount()}
+        `;
+        }
+
+        function bindResultsHeaderButtons() {
+            const editBtn = els.panel.querySelector("[data-sf-edit-answers]");
+            const startOverBtn = els.panel.querySelector("[data-sf-start-over]");
+            const showMoreBtn = els.panel.querySelector("[data-sf-show-more]");
+            const retryBtn = els.panel.querySelector("[data-sf-retry]");
+
+            if (retryBtn) {
+                retryBtn.addEventListener("click", () => {
+                    if (!state.results.loading) loadResults();
+                });
+            }
+
+            els.panel.querySelectorAll("[data-sf-remove-filter]").forEach((chip) => {
+                chip.addEventListener("click", () => {
+                    if (state.results.loading) return;
+                    removeFilter(
+                        chip.getAttribute("data-sf-remove-filter"),
+                        chip.getAttribute("data-sf-filter-value")
+                    );
+                });
+            });
+
+            if (editBtn) {
+                editBtn.addEventListener("click", () => {
+                    resultsRequestId++;
+                    state.results.loading = false;
+                    state.stepIndex = 5;
+                    renderStep();
+                    // root.scrollIntoView({ behavior: "smooth", block: "start" });
+                });
+            }
+
+            if (startOverBtn) {
+                startOverBtn.addEventListener("click", () => {
+                    resetToFirstQuestion();
+
+                    // root.scrollIntoView({ behavior: "smooth", block: "start" });
+                });
+            }
+
+            if (showMoreBtn) {
+                showMoreBtn.addEventListener("click", () => {
+                    const hits = state.results.hits || [];
+                    const total = hits.length;
+                    const start = state.results.visibleCount || 5;
+                    const next = Math.min(start + 5, total);
+                    if (next <= start) return;
+
+                    const grid = els.panel.querySelector(".sfResults");
+                    if (grid) {
+                        const html = hits.slice(start, next).map(renderResultCard).join("");
+                        grid.insertAdjacentHTML("beforeend", html);
+                        attachEvents();
+                    }
+
+                    state.results.visibleCount = next;
+                    if (next >= total) {
+                        const wrap = els.panel.querySelector(".sfResultsShowMoreWrap");
+                        if (wrap) wrap.remove();
+                    }
+                });
+            }
+        }
+
+        function renderResultCard(hit) {
+            const title = String(hit?.name || "");
+            const img = hit.__img || extractImageUrl(hit);
+            const wideAvailable = hasWideAvailable(hit);
+            const parentSku = String(hit?.parentPartNumber || hit?.objectID || "");
+            const childSku = String(hit?.partNumber || "");
+            const rating = getHitRatingNumber(hit);
+            const longDesc = hit.longDescription;
+            const benefits = extractFeatureBenefitsValues(hit.featureBenefits);
+            return `
+          <article
+            class="sfResultCard"
+          >
+          <a class="sfResultMediaClick" data-parentsku="${escapeAttr(parentSku)}"
+            data-childsku="${escapeAttr(childSku)}">
+            <div class="sfResultMedia">
+                ${img
+                    ? `<img class="sfResultImg" src="${escapeAttr(img)}" alt="${escapeAttr(title)}" loading="lazy" />`
+                    : `<div class="sfResultImgPlaceholder" aria-hidden="true"></div>`
+                }
+
+                ${wideAvailable ? `<div class="sfResultWide">Available in Wide</div>` : ``}
+            </div>
+          </a>
+
+
+            <div class="sfResultBody">
+              <h4 class="sfResultTitle">${escapeHtml(title)}</h4>
+
+              <div class="sfResultRating">
+                ${renderStars(rating)}
+              </div>
+
+              <p class="sfResultDesc">${escapeHtml(longDesc)}</p>
+
+              ${benefits.length
+                    ? `
+                    <div class="sfResultFeatures">
+                      <div class="sfResultFeaturesTitle">Features</div>
+                      <ul class="sfResultFeaturesList">
+                        ${benefits.map((b) => `<li>${escapeHtml(b)}</li>`).join("")}
+                      </ul>
+                    </div>
+                  `
+                    : ""
+                }
+
+              <a class="sf__btn sf__btn--primary sfResultCta" href="#" aria-label="Shop now"
+              data-parentsku="${escapeAttr(parentSku)}"
+            data-childsku="${escapeAttr(childSku)}">
+                <span class="sf__btnText">SHOP NOW</span>
+              </a>
+            </div>
+          </article>
+        `;
+        }
+
+        function renderResults() {
+
+            const a = state.answers;
+            const loading = state.results.loading;
+            const hits = state.results.hits || [];
+            const visibleCount = state.results.visibleCount || 5;
+            const top5 = hits.slice(0, visibleCount);
+            const hasMore = visibleCount < hits.length;
+
+            //     const summary = `
+            //   <div class="sf__subtitle" style="max-width:760px;margin:14px auto 0;">
+            //     <div><strong>Surface:</strong> ${escapeHtml(a.surface || "-")}</div>
+            //     <div><strong>Cushioning:</strong> ${escapeHtml(a.cushioning || "-")}</div>
+            //     <div><strong>Pronation:</strong> ${escapeHtml(a.pronation || "-")}</div>
+            //     <div><strong>Stability:</strong> ${escapeHtml(a.stability || "-")}</div>
+            //     <div><strong>Audience:</strong> ${escapeHtml(a.audience || "any")}</div>
+            //     <div><strong>Size:</strong> ${escapeHtml(a.size || "(not selected)")}</div>
+            //   </div>
+            // `;
+            const summary = ``;
+
+            if (loading) {
+                return `
+            ${summary}
+            <div style="max-width:1040px;margin:28px auto 0;padding:0 16px;text-align:center;">
+                <img src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltf08be6115854eb7b/699c8de35a4f770008232d73/Loading-ShoeFinder.gif" 
+                alt="Loading..." class="sf_loadingGif">
+              <div class="sf_loadingText">Looking for the perfect running shoes for you......</div>
+            </div>
+          `;
+            }
+
+            if (state.results.error) {
+                return `
+            <div role="alert" style="max-width:1040px;margin:28px auto 0;padding:0 16px;text-align:center;">
+                <div style="font-weight:700;color:#333;">We couldn't load your shoe matches.</div>
+                <p>Please try again. Your answers have been saved.</p>
+                <button type="button" class="sf__btn sf__btn--primary" data-sf-retry>
+                    <span class="sf__btnText">Try again</span>
+                </button>
+            </div>
+            `;
+            }
+
+            if (!top5.length) {
+                return `
+            ${summary}
+            <div style="max-width:1040px;margin:28px auto 0;padding:0 16px;text-align:center;">
+                ${Array.isArray(a.size) && a.size.length
+                    ? `<div style="font-weight:700;color:#333;">No in-stock running shoes found in your size right now.</div>
+                <p>Try another size, or check back soon as new shoes arrive.</p>`
+                    : `<div style="font-weight:700;color:#333;">No in-stock running shoes found right now.</div>
+                <p>Please check back soon as new shoes arrive.</p>`}
+            </div>
+            `;
+            }
+
+            //     if (!hits.length) {
+            //         return `
+            //     ${summary}
+            //     <div style="max-width:1040px;margin:28px auto 0;padding:0 16px;text-align:center;">
+            //       <div style="font-weight:700;color:#333;">No in-stock shoes found for those answers.</div>
+            //     </div>
+            //   `;
+            //     }
+
+            const removed = (state.results.removedFilters || []).map((key) => FILTER_LABELS[key].toLowerCase());
+            const relaxedNote = removed.length
+                ? `
+            <div class="sfResultsRelaxed" role="status" style="max-width:760px;margin:16px auto 0;padding:0 16px;text-align:center;color:#333;">
+                Not enough in-stock shoes matched every answer, so these results also include shoes outside your
+                ${escapeHtml(removed.length > 1 ? `${removed.slice(0, -1).join(", ")} and ${removed[removed.length - 1]}` : removed[0])}
+                ${removed.length > 1 ? "preferences" : "preference"}.
+            </div>
+            `
+                : "";
+
+            return `
+  ${summary}
+  ${relaxedNote}
+  <div class="sfResults">
+    ${top5.map(renderResultCard).join("")}
+             </div>
+            ${hasMore
+                ? `
+            <div class="sfResultsShowMoreWrap" style="display:flex;justify-content:center;margin-top:24px;">
+              <button type="button" class="sf__btn sf__btn--ghost" data-sf-show-more>
+                <span class="sf__btnText">Show More</span>
+              </button>
+            </div>
+            `
+                : ``}
+            `;
+
+
+        }
+
+        // ========= BINDINGS =========
+        function bindButtons(step) {
+            const buttons = els.panel.querySelectorAll("[data-sf-value]");
+            buttons.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    setAnswer(step.id, btn.getAttribute("data-sf-value"));
+                    buttons.forEach((b) =>
+                        b.setAttribute("aria-pressed", b === btn ? "true" : "false")
+                    );
+                    goNext();
+                });
+            });
+        }
+
+
+        function bindAudienceWithSizeBehavior() {
+            const audBtns = els.panel.querySelectorAll("[data-sf-audience]");
+            audBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const newAud = btn.getAttribute("data-sf-audience");
+                    const prevAud = state.answers.audience;
+
+                    setAnswer("audience", newAud);
+
+                    // If switched audience OR selected "any", clear sizes
+                    if (newAud === "any" || (prevAud && prevAud !== newAud)) {
+                        state.answers.size = [];
+                        saveToSession();
+                    }
+
+                    renderStep();
+                });
+            });
+
+            const sizeBtns = els.panel.querySelectorAll("[data-sf-size]");
+            sizeBtns.forEach((btn) => {
+                btn.addEventListener("click", () => {
+                    const v = btn.getAttribute("data-sf-size");
+
+                    // Normalize to array
+                    const sizes = Array.isArray(state.answers.size) ? state.answers.size.slice() : [];
+
+                    const idx = sizes.indexOf(v);
+                    const isSelected = idx >= 0;
+
+                    if (isSelected) {
+                        // Unselect always allowed
+                        sizes.splice(idx, 1);
+                        state.answers.size = sizes;
+                        saveToSession();
+
+                        // Update button states
+                        sizeBtns.forEach((b) => {
+                            const sv = b.getAttribute("data-sf-size");
+                            b.setAttribute("aria-pressed", sizes.includes(sv) ? "true" : "false");
+                        });
+
+                        root.querySelector(".sf__errorSize").style.display = "none";
+                        return;
+                    }
+
+                    // Selecting a new one — enforce max
+                    if (sizes.length >= MAX_SIZES) {
+                        root.querySelector(".sf__errorSize").style.display = "";
+                        return;
+                    }
+
+                    sizes.push(v);
+                    state.answers.size = sizes;
+                    saveToSession();
+
+                    sizeBtns.forEach((b) => {
+                        const sv = b.getAttribute("data-sf-size");
+                        b.setAttribute("aria-pressed", sizes.includes(sv) ? "true" : "false");
+                    });
+
+                    hideError();
+                });
+            });
+        }
+
+        // ========= NAV =========
+        async function goNext() {
+            const step = STEPS[state.stepIndex];
+
+            // Required checks
+            if (step.required && !state.answers[step.id]) {
+                showError("Please make a selection to continue.");
+                return;
+            }
+
+            // After audience step, go to results page and run Algolia
+            if (step.id === "audience") {
+                state.stepIndex = STEPS.findIndex((s) => s.id === "results");
+                await loadResults();
+                return;
+            }
+
+            // Normal next
+            state.stepIndex = Math.min(state.stepIndex + 1, STEPS.length - 1);
+            renderStep();
+            // root.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function goBack() {
+            hideError();
+            state.stepIndex = Math.max(state.stepIndex - 1, 0);
+            saveToSession();
+            renderStep();
+            // root.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+
+        function resetToFirstQuestion() {
+            resultsRequestId++;
+            markStartedThisTab(); // ensure intro never comes back in this tab
+
+            state.stepIndex = STEPS.findIndex((s) => s.id === "surface");
+            state.answers = {
+                surface: null,
+                cushioning: null,
+                pronation: null,
+                stability: null,
+                audience: "men",
+                size: [],
+            };
+            state.results = { loading: false, error: false, hits: [], nbHits: 0, visibleCount: 5 };
+
+            // IMPORTANT: do NOT clear session; we want intro not to return
+            saveToSession();
+            renderStep();
+        }
+
+
+
+        els.btnNext.addEventListener("click", goNext);
+        els.btnBack.addEventListener("click", goBack);
+
+        // Reposition line on resize
+        let resizeTimer = null;
+        window.addEventListener("resize", () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(positionDoneLine, 60);
+        });
+
+        // ========= HELPERS =========
+        function setAnswer(key, value) {
+            state.answers[key] = value;
+            hideError();
+            saveToSession();
+        }
+
+
+        function showError(msg) {
+            els.error.textContent = msg;
+            els.error.hidden = false;
+        }
+
+        function hideError() {
+            els.error.textContent = "";
+            els.error.hidden = true;
+        }
+
+        function escapeHtml(str) {
+            return String(str).replace(/[&<>"']/g, (s) => ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;",
+            }[s]));
+        }
+
+        function escapeAttr(str) {
+            return escapeHtml(str).replace(/`/g, "&#096;");
+        }
+
+
+        // Init (restore session + render)
+        const restored = restoreFromSession();
+        renderStep();
+
+        // If the user refreshed while on results, re-run Algolia to repopulate.
+        if (restored.shouldRefetchResults) loadResults();
+
+    })();
+</script>

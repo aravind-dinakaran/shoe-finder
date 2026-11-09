@@ -1,0 +1,189 @@
+<script>
+    (function plpEgiftCardPromotionMonetate() {
+        const PROMOTION_TEXT = "Spend $150 on Premium Running & Recovery, get $20 e-gift card!";
+        const PRODUCT_CARD_SELECTOR = "[data-productid]";
+        const PRODUCT_DETAILS_SELECTOR = '[data-monetate="plpPromotionalTextInject"]';
+        const PROMOTION_SELECTOR = ".promotion--hfJyc";
+        const PRICE_SELECTOR = ".price--WDaoS";
+        const BADGE_GROUP_SELECTOR = ".tier3BadgeGroup--zEvgh";
+        const INSERTED_ATTR = "data-monetate-plp-egift-card-promotion";
+        const OBSERVER_KEY = "plpEgiftCardPromotionObserverInstance";
+        const DEBOUNCE_MS = 150;
+        const TARGET_PRODUCT_IDS = new Set([
+        "131360170",
+        "131359689",
+        "131363872",
+        "162554840",
+        "163827854",
+        "161064283",
+        "161068524",
+        "163360123",
+        "163827854",
+        "157093760",
+        "157030013",
+        "131360866",
+        "131363872",
+        "157016991",
+        "131360866",
+        "157093760",
+        "162555068",
+        "163360123",
+        "154345141",
+        "157016991",
+        "154345141",
+        "157030013",
+        "154345141",
+        "157093760",
+        "131360479",
+        "162555068",
+        "154345141",
+        "163826561",
+        "162554840",
+        "158257990",
+        "158257990",
+        "163835563",
+        "154345141",
+        "157016991",
+        "131360170",
+        "157016991",
+        "154345141",
+        "157016991",
+        "157093760",
+        "131360233",
+        "157030013",
+        "157030013",
+        "157016991",
+        "157093760",
+        "154345141",
+        "157016991",
+        "163360123",
+        "161064283",
+        "161068524"
+        ]);
+
+        let debounceTimer;
+        let isUpdating = false;
+
+        function getTargetProductCards() {
+            return Array.from(document.querySelectorAll(PRODUCT_CARD_SELECTOR)).filter(function (productCard) {
+                return TARGET_PRODUCT_IDS.has(productCard.getAttribute("data-productid"));
+            });
+        }
+
+        function createPromotionElement() {
+            const promotion = document.createElement("div");
+            promotion.className = "promotion--hfJyc textBodySm fwBold";
+            promotion.setAttribute("data-auid", "product-additional-promotion");
+            promotion.setAttribute(INSERTED_ATTR, "true");
+            promotion.textContent = PROMOTION_TEXT;
+            return promotion;
+        }
+
+        function placePromotion(productDetails, promotion, existingPromotions) {
+            const lastExistingPromotion = existingPromotions[existingPromotions.length - 1];
+
+            if (lastExistingPromotion) {
+                if (lastExistingPromotion.nextElementSibling !== promotion) {
+                    lastExistingPromotion.insertAdjacentElement("afterend", promotion);
+                }
+                return;
+            }
+
+            const badgeGroup = productDetails.querySelector(BADGE_GROUP_SELECTOR);
+
+            if (badgeGroup) {
+                if (promotion.nextElementSibling !== badgeGroup) {
+                    productDetails.insertBefore(promotion, badgeGroup);
+                }
+                return;
+            }
+
+            const price = productDetails.querySelector(PRICE_SELECTOR);
+
+            if (price) {
+                if (price.nextElementSibling !== promotion) {
+                    price.insertAdjacentElement("afterend", promotion);
+                }
+                return;
+            }
+
+            if (promotion.parentElement !== productDetails || productDetails.lastElementChild !== promotion) {
+                productDetails.appendChild(promotion);
+            }
+        }
+
+        function ensurePromotionPlacement() {
+            if (isUpdating) return;
+            isUpdating = true;
+
+            getTargetProductCards().forEach(function (productCard) {
+                const productDetails = productCard.querySelector(PRODUCT_DETAILS_SELECTOR);
+
+                if (!productDetails) {
+                    return;
+                }
+
+                const promotions = Array.from(productDetails.querySelectorAll(PROMOTION_SELECTOR));
+                const existingPromotions = promotions.filter(function (promotion) {
+                    return !promotion.hasAttribute(INSERTED_ATTR);
+                });
+                const insertedPromotions = promotions.filter(function (promotion) {
+                    return promotion.hasAttribute(INSERTED_ATTR);
+                });
+                const promotion = insertedPromotions[0] || createPromotionElement();
+
+                insertedPromotions.slice(1).forEach(function (duplicate) {
+                    duplicate.remove();
+                });
+
+                if (promotion.textContent.trim() !== PROMOTION_TEXT) {
+                    promotion.textContent = PROMOTION_TEXT;
+                }
+
+                promotion.setAttribute("data-auid", "product-additional-promotion");
+                promotion.setAttribute(INSERTED_ATTR, "true");
+                placePromotion(productDetails, promotion, existingPromotions);
+            });
+
+            isUpdating = false;
+        }
+
+        function schedulePlacementCheck() {
+            window.clearTimeout(debounceTimer);
+            debounceTimer = window.setTimeout(ensurePromotionPlacement, DEBOUNCE_MS);
+        }
+
+        function init() {
+            ensurePromotionPlacement();
+
+            if (window[OBSERVER_KEY]) {
+                window[OBSERVER_KEY].disconnect();
+            }
+
+            if (document.body && "MutationObserver" in window) {
+                const observer = new MutationObserver(schedulePlacementCheck);
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true,
+                    attributes: true,
+                    attributeFilter: ["data-productid"]
+                });
+                window[OBSERVER_KEY] = observer;
+            }
+
+            window.setTimeout(ensurePromotionPlacement, 1000);
+            window.setTimeout(ensurePromotionPlacement, 3000);
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init, { once: true });
+        } else {
+            init();
+        }
+    })();
+</script>
+
+
+<!-- Reference:  https://marketer.monetate.net/control/a-682295e7/p/academy.com/experience/2122335 (Archived Method) -->
+
+<!-- new method: using inbuilt monetate action:  https://marketer.monetate.net/control/a-682295e7/p/academy.com/experience/2122414#c2666474:what -->

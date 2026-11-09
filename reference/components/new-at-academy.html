@@ -1,0 +1,549 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+
+<!-- START: New Finds For You — 6-up cards (desktop scroll, mobile stack w/ full-width first + last) -->
+<style>
+    /* Title / headline */
+    #svg-wrapper-new-finds-for-you .svg-new-finds-for-you {
+        width: clamp(249px, 33.21vw, 550px);
+    }
+
+    @media (max-width: 767px) {
+        #svg-wrapper-new-finds-for-you .svg-new-finds-for-you {
+            width: clamp(200px, 66.4vw, 550px);
+        }
+    }
+
+    /* 4 cards visible on desktop, the rest scroll horizontally */
+    #c6-scrollD-stackM .scrollable-card-wrapper {
+        --card-gap: clamp(1rem, 1.45vw, 1.5rem);
+        --card-count: 4;
+        --prev-btn-hover-img: url('https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt85d13c756fd4c87f/6668cc8105319148701f3beb/left-arrow_hover.svg');
+        --next-btn-hover-img: url('https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltc1bb7050ac69c4dc/6668c1d8a70874062b612002/arrow_hover.svg');
+    }
+
+    /* Portrait card media (matches Figma 396 x 502) */
+    #c6-scrollD-stackM .scrollable-card-count-based-width {
+        aspect-ratio: 396 / 502;
+        object-fit: cover;
+        height: auto;
+    }
+
+    #c6-scrollD-stackM .css-scroll-btn {
+        top: 45%;
+    }
+
+    /* Each card anchors the absolutely-positioned text overlay + controls */
+    #c6-scrollD-stackM .scrollable-card {
+        position: relative;
+        display: block;
+    }
+
+    /* Video play/pause control (video card only) */
+    #c6-scrollD-stackM .video-control-button {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        width: clamp(1.5rem, 2.17vw, 2.25rem);
+        height: clamp(1.5rem, 2.17vw, 2.25rem);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #c6-scrollD-stackM .play-pause-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* Mobile: first + last cards go full width, the rest stack 2-up */
+    @media (max-width: 767px) {
+        #c6-scrollD-stackM .scrollable-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        #c6-scrollD-stackM .scrollable-card-count-based-width {
+            width: 100% !important;
+            min-width: 0px;
+        }
+
+        #c6-scrollD-stackM .card-mobile-full {
+            grid-column: 1 / -1;
+        }
+
+        /* Full-width banner crops (match Figma 343 x 200 video, 343 x 103 promo) */
+        #c6-scrollD-stackM .card-video-banner .scrollable-card-count-based-width {
+            aspect-ratio: 343 / 200;
+        }
+
+        #c6-scrollD-stackM .card-bat-banner .scrollable-card-count-based-width {
+            aspect-ratio: 343 / 103;
+        }
+    }
+</style>
+
+<section data-cname="cs_c5plus_stack" data-pz-seg-name="cs_default" data-pz-seg-id="cs_default">
+
+    <!-- Title -->
+    <!-- <div id="svg-wrapper-new-finds-for-you" class="cont-1656 hp-margin mb-3">
+        <div class="text-center mb-4 pt-3">
+            <svg class="svg-new-finds-for-you" viewBox="0 0 550 56" fill="none" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="New Finds For You">
+                <path d="M4.23343 1.1199H17.1134L28.8734 30.4799H29.0334L28.7934 1.1199H40.0734V54.3999H27.4334L15.4334 24.5599H15.2734L15.5134 54.3999H4.23343V1.1199ZM46.7928 1.1199H76.5528V12.8799H59.5128V21.5999H72.5528V32.9599H59.5128V42.6399H76.5528V54.3999H46.7928V1.1199ZM79.4428 1.1199H92.3228L95.8428 37.0399H96.0028L102.243 1.1199H113.123L119.203 37.0399H119.363L122.883 1.1199H134.643L126.003 54.6399H113.203L107.123 22.3199H106.963L101.043 54.6399H88.1628L79.4428 1.1199ZM150.252 1.1199H179.612V12.9599H163.132V23.0399H175.452V34.5599H163.132V54.3999H150.252V1.1199ZM184.536 1.1199H197.576V54.3999H184.536V1.1199ZM204.512 1.1199H217.392L229.152 30.4799H229.312L229.072 1.1199H240.352V54.3999H227.712L215.712 24.5599H215.552L215.792 54.3999H204.512V1.1199ZM247.071 1.1199H265.151C276.591 1.1199 282.911 7.3599 282.911 18.5599V37.0399C282.911 48.2399 276.591 54.3999 265.151 54.3999H247.071V1.1199ZM260.111 11.7599V43.7599H264.191C268.031 43.7599 269.711 41.4399 269.711 37.6799V17.8399C269.711 14.0799 268.031 11.7599 264.191 11.7599H260.111ZM304.689 -9.82285e-05C316.449 -9.82285e-05 321.409 6.3999 321.409 15.1999V18.2399H309.329V15.4399C309.329 12.4799 307.969 10.4799 304.769 10.4799C301.649 10.4799 300.209 12.2399 300.209 14.4799C300.209 17.3599 302.049 19.0399 309.249 22.7999C318.049 27.4399 321.809 31.2799 321.809 39.6799C321.809 49.3599 315.889 55.5199 304.129 55.5199C291.649 55.5199 287.009 48.9599 287.009 40.3199V36.5599H299.329V39.1199C299.329 42.6399 300.609 45.0399 304.209 45.0399C307.569 45.0399 309.089 43.1999 309.089 40.6399C309.089 37.5199 307.329 36.0799 299.969 32.1599C291.249 27.5199 287.489 23.1999 287.489 15.3599C287.489 6.7999 293.329 -9.82285e-05 304.689 -9.82285e-05Z" fill="#1946C8"></path>
+                <path d="M342.43 48.7963C341.072 48.782 340.398 48.2896 340.066 47.6067C339.923 47.3625 340.023 47.1209 340.267 46.9779C342.516 45.206 343.407 43.5653 345.093 40.0889L356.102 17.153C359.276 10.5377 364.665 0.839918 370.388 0.900182C372.473 0.922142 373.427 2.43663 373.402 4.81435C373.338 10.88 366.762 22.7491 357.342 28.3765C357.561 30.5627 358.363 32.7065 360.885 32.733C364.911 32.7754 368.07 27.5674 369.16 25.395C369.606 24.4777 371.489 25.274 370.994 26.2879C369.009 30.5376 364.981 35.3483 360.422 35.3002C357.657 35.2711 356.075 33.5074 355.322 31.3156L351.057 40.2003C348.925 44.6426 346.068 48.8346 342.43 48.7963ZM358.546 24.6038C366.175 18.6179 371.043 7.79838 371.078 4.40163C371.085 3.77081 370.896 3.33204 370.508 3.32796C368.422 3.306 364.597 11.8556 362.067 17.2158L358.546 24.6038Z" fill="#1946C8"></path>
+                <path d="M373.623 37.4775C369.112 37.43 367.203 34.5466 367.241 30.9073C367.308 24.5505 373.318 15.7813 381.126 15.8635C385.636 15.911 387.498 18.7939 387.459 22.4818C387.438 24.5198 386.831 26.8429 385.693 29.0148L385.984 29.0178C388.021 29.0393 389.826 27.9906 391.015 25.6252C391.462 24.6593 393.296 25.5036 392.849 26.518C391.062 30.4302 387.945 31.6106 385.52 31.5851C385.035 31.5799 384.599 31.5268 384.212 31.4257C381.75 34.8939 377.988 37.5235 373.623 37.4775ZM375.891 33.9587C378.171 33.9827 380.275 32.2092 381.852 29.8479C381.519 29.262 381.38 28.6296 381.387 27.9018C381.409 25.8637 382.693 23.6934 384.495 22.9359C384.547 22.6452 384.55 22.4026 384.553 22.1115C384.573 20.122 383.813 18.658 381.97 18.6386C377.75 18.5942 373.111 26.1646 373.064 30.6774C373.044 32.5699 373.854 33.9373 375.891 33.9587Z" fill="#1946C8"></path>
+                <path d="M399.869 37.7539C397.202 37.7258 395.52 36.2522 395.547 33.6319C395.56 32.4187 395.963 30.9671 396.757 29.3254L401.269 19.958C399.229 20.2277 397.678 20.1144 396.131 19.6613L392.857 26.5181C392.51 27.2424 390.577 26.5426 391.024 25.6253C393.252 21.2325 394.156 18.3302 394.239 15.031C394.242 14.7884 394.389 14.5958 394.633 14.5013C396.676 13.9405 398.071 15.0228 397.368 17.2963C400.078 17.9072 403.38 17.5538 406.637 16.8601C406.88 16.8141 407.074 16.8647 407.217 17.1089L407.836 18.183C407.979 18.3787 407.977 18.6213 407.877 18.8629L403.117 28.7615C402.422 30.2586 402.07 31.4196 402.061 32.2931C402.05 33.3606 402.529 33.8995 403.305 33.9077C405.1 33.9266 407.508 30.943 410.084 25.826C410.53 24.8601 412.413 25.7049 411.918 26.7188C408.697 33.188 404.477 37.8024 399.869 37.7539Z" fill="#1946C8"></path>
+                <path d="M350.303 54.7399L344.996 50.7929C344.666 50.5152 344.76 50.2328 345.178 50.1829C373.624 44.5011 394.161 45.4133 411.14 46.4847C411.468 46.5285 411.609 46.7643 411.471 47.0464L411.102 47.8929C411.01 48.1254 410.869 48.2679 410.729 48.2715C396.742 47.366 377.247 48.2732 350.907 54.8817C350.673 54.9283 350.484 54.8864 350.297 54.7446L350.303 54.7399Z" fill="#1946C8"></path>
+                <path d="M428.193 1.1199H442.033L448.513 21.3599L455.153 1.1199H467.873L454.353 34.0799V54.3999H441.313V34.0799L428.193 1.1199ZM486.96 -9.82285e-05C497.76 -9.82285e-05 505.28 6.7199 505.28 18.0799V37.4399C505.28 48.7999 497.76 55.5199 486.96 55.5199C476.16 55.5199 468.64 48.7999 468.64 37.4399V18.0799C468.64 6.7199 476.16 -9.82285e-05 486.96 -9.82285e-05ZM486.96 11.4399C483.84 11.4399 481.84 13.2799 481.84 17.6799V37.8399C481.84 42.2399 483.84 44.0799 486.96 44.0799C490.08 44.0799 492.08 42.2399 492.08 37.8399V17.6799C492.08 13.2799 490.08 11.4399 486.96 11.4399ZM510.898 1.1199H523.938V36.9599C523.938 41.1999 525.298 43.6799 528.818 43.6799C532.338 43.6799 533.698 41.1999 533.698 36.9599V1.1199H546.098V36.9599C546.098 48.8799 540.658 55.5199 528.978 55.5199C516.018 55.5199 510.898 49.1999 510.898 36.9599V1.1199Z" fill="#1946C8"></path>
+            </svg>
+        </div>
+    </div> -->
+
+    <!-- Cards -->
+    <div id="c6-scrollD-stackM">
+        <div class="scrollable-card-wrapper cont-1656 hp-margin bleed-scroll-right position-relative mb-3">
+
+            <div id="scrollable-container-c6-scrollD-stackM-1"
+                class="scrollable-container hide-horizontal-scrollbar-flex pe-3 pe-md-0">
+
+                <button class="css-scroll-btn css-scroll-btn-prev" id="slider-prev" type="button" data-slide="prev"
+                    aria-label="Scroll to previous cards" style="display: none;">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="16" fill="white" />
+                        <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" fill="white" />
+                        <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" stroke="#333333" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.5286 16.4717C12.2682 16.2114 12.2682 15.7893 12.5286 15.5289L18.5286 9.52892C18.7889 9.26857 19.211 9.26857 19.4714 9.52892C19.7317 9.78927 19.7317 10.2114 19.4714 10.4717L13.9428 16.0003L19.4714 21.5289C19.7317 21.7893 19.7317 22.2114 19.4714 22.4717C19.211 22.7321 18.7889 22.7321 18.5286 22.4717L12.5286 16.4717Z"
+                            fill="#333333" />
+                    </svg>
+                </button>
+
+                <!-- CARD 1 — VIDEO ($500 OFF Ninebot Gokart); full width on mobile -->
+                <a href="https://www.academy.com/p/segway-ninebot-electric-pro-2-gokart"
+                    data-omni="new_snr_segwaygokart500d"
+                    class="position-relative scrollable-card hp-hover card-mobile-full card-video-banner"
+                    aria-label="Shop new Segway Ninebot Electric Pro 2 Gokart $400 off.">
+                    <video class="scrollable-card-count-based-width position-relative corners" preload="metadata" muted
+                        playsinline aria-hidden="true" tabindex="-1"
+                        data-src-desktop="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt5fc9a84d42faf936/6a3406959f32c77bf491178f/Card_Segway_GoCart_web.mp4"
+                        data-src-mobile="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt66e9332d339232ec/6a3406952b3b2d14d7382b7f/Card_Segway_GoCart_m.mp4">
+                        <source
+                            src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt5fc9a84d42faf936/6a3406959f32c77bf491178f/Card_Segway_GoCart_web.mp4"
+                            type="video/mp4">
+                    </video>
+                    <div class="text-overlay text-overlay-top-left">
+                        <div class="text-card-promo color-white">$400 OFF</div>
+                        <div class="text-card-title color-white">Ninebot Electric Pro 2 Gokart</div>
+                    </div>
+                    <button class="video-control-button" type="button" aria-label="Pause video">
+                        <img src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg"
+                            alt="Pause video" class="play-pause-icon">
+                    </button>
+                </a>
+
+                <!-- CARD 2 — adidas cleats -->
+                <a href="https://www.academy.com/c/sports/football/football-cleats" data-omni="new_fw_newcleats"
+                    class="position-relative scrollable-card hp-hover"
+                    aria-label="Shop new football cleats from adidas and more top brands.">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt72cab11681f608db/6a319701b2246400085a4ca2/New_adidas.png?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Three pairs of soccer cleats in pastel colors displayed on grass with overlaid adidas logo + MORE.">
+                    <div class="text-overlay text-overlay-top-left">
+                        <div class="text-card-kicker color-white">Unstoppable Speed</div>
+                        <div class="text-card-title color-white">New Season, <br>New Cleats</div>
+                    </div>
+                </a>
+
+                <!-- CARD 3 — Realtree collection -->
+                <a href="https://www.academy.com/c/brands/baseball-lifestyle-101" data-omni="new_snr_bl101realtree"
+                    class="position-relative scrollable-card hp-hover"
+                    aria-label="Shop new Baseball Lifestyle 101 Realtree collection.">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltc3b6489a5fc78320/6a31970143375800089b065a/New_realtree.png?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Person wearing a Realtree camo shirt and green shorts standing outdoors with overlaid Baseball Lifestyle 101 logo.">
+                    <div class="text-overlay text-overlay-top-left">
+                        <div class="text-card-kicker color-white">Catch Big League Camo</div>
+                        <div class="text-card-title color-white">Realtree Collection</div>
+                    </div>
+                </a>
+
+                <!-- CARD 4 — Callaway golf balls -->
+                <a href="https://www.academy.com/c/sports/golf/golf-balls" data-omni="new_snr_250golfballs"
+                    class="position-relative scrollable-card hp-hover"
+                    aria-label="Shop limited-edition red, white and blue golf balls for America 250.">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt9600e24fde1cb7d0/6a319701f02c1000089056ea/New_callaway.png?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Close-up of a golf ball on a tee with patriotic accents and 250 Callaway branding.">
+                    <div class="text-overlay text-overlay-top-left">
+                        <div class="text-card-kicker color-white">Tee Up for 250 with</div>
+                        <div class="text-card-title color-white">Limited-Edition <br>Golf Balls</div>
+                    </div>
+                </a>
+
+                <!-- CARD 5 — Magellan washed camo tees -->
+                <a href="https://www.academy.com/c/brands/magellan/magellan-apparel?&facet=%27facet_Style%27:%27Graphic%20Tees%27#wrapperProductGrid"
+                    data-omni="new_app_magellanwashedcamotees" class="position-relative scrollable-card hp-hover"
+                    aria-label="Shop new Magellan Outdoors washed camo tees.">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb98f091907ce772/6a31970143375800089b0656/New_washed_camo_magellan.png?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Person holding bag of decoys outdoors wearing a hat and a Magellan Outdoors washed camo tee.">
+                    <div class="text-overlay text-overlay-top-left">
+                        <div class="text-card-kicker color-white">Style that Hunts</div>
+                        <div class="text-card-title color-white">Washed Camo Tees</div>
+                    </div>
+                </a>
+
+                <!-- CARD 6 — 2027 Supra Baseball Bat; full width on mobile -->
+                <a href="https://www.academy.com/p/louisville-slugger-supra-sl-2026-usssa-baseball-bat-10"
+                    data-omni="new_snr_lousiville2026suprabbalbat"
+                    class="position-relative scrollable-card hp-hover card-mobile-full card-bat-banner"
+                    aria-label="Shop new Lousiville Slugger 2027 Supra Baseball Bat.">
+                    <picture>
+                        <source media="(min-width: 768px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt600104461ce5b0c9/6a345e133f782806d56f0867/New_Finds_Supra_Bat2.png?auto=webp&format=jpg">
+                        <source media="(max-width: 767px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltc0a33add4796faa4/6a345e1245496a4b4cecd37a/New_Finds_Supra_Bat-m.png?auto=webp&format=jpg">
+                        <img loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltc0a33add4796faa4/6a345e1245496a4b4cecd37a/New_Finds_Supra_Bat-m.png?auto=webp&format=jpg"
+                            class="scrollable-card-count-based-width position-relative corners"
+                            alt="Close-up of a multicolored Louisville Slugger 2027 Supra Baseball Bat held outdoors.">
+                    </picture>
+                    <div class="text-overlay text-overlay-top-left">
+                        <div class="text-card-kicker color-dark-blue">NEW</div>
+                        <div class="text-card-title color-dark-blue">2027 Supra <br>Baseball Bat</div>
+                    </div>
+                </a>
+
+                <button class="css-scroll-btn css-scroll-btn-next" id="slider-next" type="button" data-slide="next"
+                    aria-label="Scroll to next cards" style="display: none;">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="white" />
+                        <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)"
+                            fill="white" />
+                        <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)"
+                            stroke="#333333" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M19.4714 16.4717C19.7318 16.2114 19.7318 15.7893 19.4714 15.5289L13.4714 9.52892C13.2111 9.26857 12.789 9.26857 12.5286 9.52892C12.2683 9.78927 12.2683 10.2114 12.5286 10.4717L18.0572 16.0003L12.5286 21.5289C12.2683 21.7893 12.2683 22.2114 12.5286 22.4717C12.789 22.7321 13.2111 22.7321 13.4714 22.4717L19.4714 16.4717Z"
+                            fill="#333333" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const root = document.getElementById("c6-scrollD-stackM");
+
+        if (!root) {
+            return;
+        }
+
+        // ---------------------------------------------------------------
+        // Responsive video sources (desktop vs mobile crop)
+        // ---------------------------------------------------------------
+        (function initResponsiveVideoSources() {
+            const mq = window.matchMedia("(max-width: 767px)");
+
+            root.querySelectorAll("video[data-src-desktop]").forEach(function (video) {
+                const source = video.querySelector("source");
+
+                if (!source) {
+                    return;
+                }
+
+                function applySource() {
+                    const desired = mq.matches
+                        ? video.getAttribute("data-src-mobile")
+                        : video.getAttribute("data-src-desktop");
+
+                    if (desired && source.getAttribute("src") !== desired) {
+                        source.setAttribute("src", desired);
+                        video.load();
+                    }
+                }
+
+                applySource();
+                mq.addEventListener("change", applySource);
+            });
+        })();
+
+        // ---------------------------------------------------------------
+        // Horizontal scroll controls (desktop only)
+        // ---------------------------------------------------------------
+        (function initScrollControls() {
+            const container = root.querySelector(".scrollable-container");
+            const prevButton = root.querySelector(".css-scroll-btn-prev");
+            const nextButton = root.querySelector(".css-scroll-btn-next");
+
+            if (!container || !prevButton || !nextButton) {
+                return;
+            }
+
+            function calculateScrollAmount() {
+                const firstCard = container.querySelector(".scrollable-card");
+
+                if (!firstCard) {
+                    return container.clientWidth;
+                }
+
+                const gap = parseFloat(getComputedStyle(container).columnGap) || 15;
+                const cardWidth = firstCard.offsetWidth + gap;
+                const visibleCards = window.innerWidth > 768 ? 4 : 1;
+
+                return cardWidth * visibleCards;
+            }
+
+            function updateButtonVisibility() {
+                const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+                if (window.innerWidth > 768) {
+                    prevButton.style.display = container.scrollLeft > 0 ? "block" : "none";
+                    nextButton.style.display = container.scrollLeft < (maxScrollLeft - 1) ? "block" : "none";
+                } else {
+                    prevButton.style.display = "none";
+                    nextButton.style.display = "none";
+                }
+            }
+
+            nextButton.addEventListener("click", function () {
+                container.scrollBy({ left: calculateScrollAmount(), behavior: "smooth" });
+            });
+
+            prevButton.addEventListener("click", function () {
+                container.scrollBy({ left: -calculateScrollAmount(), behavior: "smooth" });
+            });
+
+            container.addEventListener("scroll", updateButtonVisibility);
+            window.addEventListener("resize", updateButtonVisibility);
+
+            updateButtonVisibility();
+        })();
+
+        // ---------------------------------------------------------------
+        // Video cards (generic — handles 0, 1, 2, or more video cards)
+        // Each video: auto-plays once when >= 25% visible, replays once if
+        // it leaves and returns to view, and pauses when scrolled away.
+        // The play/pause button toggles playback without following the link.
+        // ---------------------------------------------------------------
+        (function initVideoCards() {
+            const playIconUrl =
+                "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfb7f6e5f516cd86b/68dbe6f04983061fa4f367e1/button_play_default.svg";
+            const pauseIconUrl =
+                "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg";
+
+            root.querySelectorAll(".scrollable-card video").forEach(function (video) {
+                const card = video.closest(".scrollable-card");
+                const button = card ? card.querySelector(".video-control-button") : null;
+                const icon = button ? button.querySelector(".play-pause-icon") : null;
+
+                let hasAutoPlayedOnce = false;
+                let hasExitedAfterAutoPlay = false;
+                let hasAutoReplayedOnce = false;
+
+                function setIcon(isPaused) {
+                    if (!icon || !button) {
+                        return;
+                    }
+
+                    icon.src = isPaused ? playIconUrl : pauseIconUrl;
+                    icon.alt = isPaused ? "Play video" : "Pause video";
+                    button.setAttribute("aria-label", isPaused ? "Play video" : "Pause video");
+                }
+
+                function playFromStart() {
+                    try {
+                        video.currentTime = 0;
+                    } catch (e) { }
+
+                    const playAttempt = video.play();
+
+                    if (playAttempt && typeof playAttempt.catch === "function") {
+                        playAttempt.catch(function () {
+                            setIcon(true);
+                        });
+                    }
+                }
+
+                video.addEventListener("play", function () { setIcon(false); });
+                video.addEventListener("pause", function () { setIcon(true); });
+                video.addEventListener("ended", function () { setIcon(true); });
+
+                if (button) {
+                    button.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+
+                        if (video.paused) {
+                            const nearEnd =
+                                video.duration &&
+                                video.currentTime >= Math.max(0, video.duration - 0.05);
+
+                            if (video.ended || nearEnd) {
+                                playFromStart();
+                            } else {
+                                const playAttempt = video.play();
+
+                                if (playAttempt && typeof playAttempt.catch === "function") {
+                                    playAttempt.catch(function () {
+                                        setIcon(true);
+                                    });
+                                }
+                            }
+                        } else {
+                            video.pause();
+                        }
+                    });
+                }
+
+                const observer = new IntersectionObserver(
+                    function (entries) {
+                        entries.forEach(function (entry) {
+                            const isAtLeastQuarterVisible =
+                                entry.isIntersecting && entry.intersectionRatio >= 0.25;
+
+                            if (isAtLeastQuarterVisible) {
+                                if (!hasAutoPlayedOnce) {
+                                    hasAutoPlayedOnce = true;
+                                    playFromStart();
+                                    return;
+                                }
+
+                                if (hasExitedAfterAutoPlay && !hasAutoReplayedOnce) {
+                                    hasAutoReplayedOnce = true;
+                                    playFromStart();
+                                    return;
+                                }
+                            } else {
+                                if (hasAutoPlayedOnce) {
+                                    hasExitedAfterAutoPlay = true;
+                                }
+
+                                if (!video.paused) {
+                                    video.pause();
+                                }
+                            }
+                        });
+                    },
+                    { threshold: [0, 0.25] }
+                );
+
+                setIcon(false);
+                observer.observe(card || video);
+            });
+        })();
+    });
+</script>
+<!-- END: New Finds For You — 6-up cards -->

@@ -1,0 +1,228 @@
+- generic [ref=e1]:
+  - dialog "Clarip Cookie Consent Banner" [ref=e2]:
+    - generic [ref=e3]:
+      - text: Academy uses cookies and similar technologies to improve your experience. Please see our
+      - link "Privacy Policy" [ref=e4] [cursor=pointer]:
+        - /url: https://www.academy.com/privacy-policy
+      - text: and
+      - link "Terms and Conditions" [ref=e5] [cursor=pointer]:
+        - /url: https://www.academy.com/terms-conditions
+      - text: . Learn more about your
+      - button "Cookie Choices" [ref=e6] [cursor=pointer]
+      - text: .
+    - generic [ref=e7]:
+      - button "deny cookies" [ref=e8] [cursor=pointer]: Reject All Marketing Cookies
+      - button "dismiss cookie message" [ref=e9] [cursor=pointer]: Keep All Cookies
+  - generic [ref=e11]:
+    - generic [ref=e12]:
+      - link "skip to main content" [ref=e13] [cursor=pointer]:
+        - /url: "#content-main"
+      - generic [ref=e15]:
+        - generic [ref=e17]:
+          - button "Academy Sports and outdoors click here to open find a store flyout. Current selected Store is Kirby Open Closes at 10:00 PM" [ref=e20] [cursor=pointer]:
+            - generic [ref=e26]: Kirby
+            - generic [ref=e27]:
+              - generic [ref=e28]: Open
+              - generic [aria-hidden] [ref=e29]: •
+              - generic [ref=e30]: Closes at 10:00 PM
+          - navigation [ref=e34]:
+            - list [ref=e35]:
+              - listitem [ref=e36]:
+                - button "Gift Cards" [ref=e39] [cursor=pointer]
+              - listitem [ref=e44]:
+                - link "Big Fun Deals" [ref=e45] [cursor=pointer]:
+                  - /url: /c/hot-deals
+              - listitem [ref=e47]:
+                - link "Clearance" [ref=e48] [cursor=pointer]:
+                  - /url: /c/academy-clearance
+              - listitem [ref=e50]:
+                - link "New At Academy" [ref=e51] [cursor=pointer]:
+                  - /url: /c/new-at-academy
+              - listitem [ref=e53]:
+                - link "myAcademy® Rewards Credit Cards" [ref=e54] [cursor=pointer]:
+                  - /url: " /myacademy-rewards-credit-card"
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - button "Click here to select the shop menu" [ref=e59] [cursor=pointer]
+            - link "Academy Sports and Outdoors" [ref=e62] [cursor=pointer]:
+              - /url: /
+          - generic [ref=e94]:
+            - group "search controls" [ref=e96]:
+              - searchbox "product search term" [ref=e98]
+              - button "Perform product search" [ref=e99] [cursor=pointer]
+            - generic [ref=e104]: Press space bar to activate this search field.
+            - status [ref=e105]
+          - generic [ref=e106]:
+            - button "Sign In" [ref=e107] [cursor=pointer]
+            - generic [ref=e114] [cursor=pointer]: Sign In
+            - button "No Items added to Cart" [ref=e118] [cursor=pointer]
+      - generic [ref=e126]: Main content starts here.
+    - navigation "breadcrumb navigation region" [ref=e128]:
+      - navigation "Breadcrumbs" [ref=e130]:
+        - link "Academy" [ref=e132] [cursor=pointer]:
+          - /url: /
+        - link "Shoes+ Boots" [ref=e137] [cursor=pointer]:
+          - /url: /c/footwear
+        - link "Athletic Shoes + Sneakers" [ref=e142] [cursor=pointer]:
+          - /url: /c/footwear/athletic-shoes-sneakers
+        - link "Running Shoes" [ref=e147] [cursor=pointer]:
+          - /url: /c/footwear/athletic-shoes-sneakers/running-shoes
+        - generic [ref=e151]: Running Shoes Finder
+    - generic [ref=e153]:
+      - heading "Running Shoe Finder" [level=2] [ref=e154]
+      - region "Shoe finder step" [ref=e155]:
+        - generic [ref=e157]:
+          - img "Running Shoe Finder" [ref=e159]
+          - generic [ref=e160]:
+            - heading "Ready to start a run, but not sure which shoes to choose?" [level=3] [ref=e161]
+            - paragraph [ref=e162]: Take our 5-minute Shoe Finder Quiz and we’ll help you find the perfect pair.
+            - button "Get Started" [ref=e163] [cursor=pointer]
+    - generic [ref=e169]:
+      - generic [ref=e170]:
+        - img "$15 OFF AFTER YOU JOIN. Terms and conditions Apply." [ref=e171]
+        - heading "$15 OFF AFTER YOU JOIN" [level=3] [ref=e172]
+        - paragraph [ref=e173]: Terms and conditions Apply.
+        - link "Join for Free" [ref=e174] [cursor=pointer]:
+          - /url: https://www.academy.com/shop/LogonForm?pageState=signUp
+        - link "See Details" [ref=e175] [cursor=pointer]:
+          - /url: https://www.academy.com/myacademy-rewards
+      - generic [ref=e176]:
+        - img "Free shipping on Orders $25+ with myAcademy" [ref=e177]
+        - heading "FREE SHIPPING" [level=3] [ref=e178]
+        - paragraph [ref=e179]: on Orders $25+ with myAcademy Rewards
+        - link "See Details" [ref=e180] [cursor=pointer]:
+          - /url: /shipping-returns
+      - generic [ref=e181]:
+        - img "Same Day Delivery" [ref=e182]
+        - heading "SAME DAY DELIVERY" [level=3] [ref=e183]
+        - paragraph [ref=e184]: Powered by DoorDash
+        - link "See Details" [ref=e185] [cursor=pointer]:
+          - /url: /same-day-delivery
+      - generic [ref=e186]:
+        - img "1-Hour Pickup Icon" [ref=e187]
+        - heading "FREE 1-HOUR PICK UP" [level=3] [ref=e188]
+        - paragraph [ref=e189]: Curbside or In-Store
+        - link "See Details" [ref=e190] [cursor=pointer]:
+          - /url: /buy-online-pick-up-in-store
+    - contentinfo [ref=e192]:
+      - generic [ref=e193]:
+        - generic [ref=e194]:
+          - generic [ref=e196]:
+            - heading "Download Our App" [level=3] [ref=e197]
+            - list [ref=e198]:
+              - listitem [ref=e199]:
+                - link [ref=e200] [cursor=pointer]:
+                  - /url: https://play.google.com/store/apps/details?id=com.academy.android
+                  - img "Academy App Download from Play Store" [ref=e201]
+              - listitem [ref=e202]:
+                - link [ref=e203] [cursor=pointer]:
+                  - /url: https://apps.apple.com/us/app/academy-sports-outdoors/id1572699554
+                  - img "Academy App Download from App Store" [ref=e204]
+          - generic [ref=e205]:
+            - heading "Orders & Purchases" [level=3] [ref=e206]
+            - list [ref=e208]:
+              - listitem [ref=e209]:
+                - link "Track Orders & Purchases" [ref=e210] [cursor=pointer]:
+                  - /url: /myaccount/orders
+              - listitem [ref=e212]:
+                - link "Shipping" [ref=e213] [cursor=pointer]:
+                  - /url: https://www.academy.com/shipping-returns
+              - listitem [ref=e215]:
+                - link "Shop Gift Cards" [ref=e216] [cursor=pointer]:
+                  - /url: /c/shops/gift-card-shop
+              - listitem [ref=e218]:
+                - link "Check Gift Card Balance" [ref=e219] [cursor=pointer]:
+                  - /url: /gift-card-balance-check
+              - listitem [ref=e221]:
+                - link "Order Online & Pick Up Today" [ref=e222] [cursor=pointer]:
+                  - /url: /buy-online-pick-up-in-store
+              - listitem [ref=e224]:
+                - link "myAcademy® Rewards Credit Cards" [ref=e225] [cursor=pointer]:
+                  - /url: /myacademy-rewards-credit-card
+          - generic [ref=e227]:
+            - heading "Services" [level=3] [ref=e228]
+            - list [ref=e230]:
+              - listitem [ref=e231]:
+                - link "Offer Details" [ref=e232] [cursor=pointer]:
+                  - /url: /disclaimers
+              - listitem [ref=e234]:
+                - link "Returns" [ref=e235] [cursor=pointer]:
+                  - /url: /return-policy
+              - listitem [ref=e237]:
+                - link "Price Match Policy" [ref=e238] [cursor=pointer]:
+                  - /url: /price-match-guarantee
+              - listitem [ref=e240]:
+                - link "Store Services" [ref=e241] [cursor=pointer]:
+                  - /url: /instore-services
+              - listitem [ref=e243]:
+                - link "Product Rebates" [ref=e244] [cursor=pointer]:
+                  - /url: /rebates
+              - listitem [ref=e246]:
+                - link "Product Recalls" [ref=e247] [cursor=pointer]:
+                  - /url: /product-recalls
+          - generic [ref=e249]:
+            - heading "About Academy" [level=3] [ref=e250]
+            - list [ref=e252]:
+              - listitem [ref=e253]:
+                - link "Customer Service" [ref=e254] [cursor=pointer]:
+                  - /url: https://www.academy.com/help
+              - listitem [ref=e256]:
+                - link "myAcademy® Rewards" [ref=e257] [cursor=pointer]:
+                  - /url: https://www.academy.com/myacademy-rewards
+              - listitem [ref=e259]:
+                - link "About Us" [ref=e260] [cursor=pointer]:
+                  - /url: https://corporate.academy.com/
+              - listitem [ref=e262]:
+                - link "Investor Relations" [ref=e263] [cursor=pointer]:
+                  - /url: https://investors.academy.com/
+              - listitem [ref=e265]:
+                - link "Careers" [ref=e266] [cursor=pointer]:
+                  - /url: https://careers.academy.com/us/en
+              - listitem [ref=e268]:
+                - link "Affiliate Program" [ref=e269] [cursor=pointer]:
+                  - /url: https://www.academy.com/affiliate-program
+        - generic [ref=e271]:
+          - generic [ref=e272]:
+            - link "Need Help?" [ref=e273] [cursor=pointer]:
+              - /url: https://www.academy.com/help
+            - link "Find A Store" [ref=e276] [cursor=pointer]:
+              - /url: /storelocator/directory
+            - link "Expert Advice" [ref=e279] [cursor=pointer]:
+              - /url: /expert-advice
+          - generic [ref=e282]:
+            - link "Follow us on Facebook" [ref=e283] [cursor=pointer]:
+              - /url: https://www.facebook.com/Academy/
+            - link "Follow us on Twitter" [ref=e285] [cursor=pointer]:
+              - /url: https://twitter.com/academy/
+            - link "Follow us on YouTube" [ref=e287] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/academydotcom
+            - link "Follow us on Instagram" [ref=e289] [cursor=pointer]:
+              - /url: https://www.instagram.com/academy/
+            - link "Follow us on Pinterest" [ref=e291] [cursor=pointer]:
+              - /url: https://www.pinterest.com/academy/
+        - generic [ref=e295]:
+          - generic [ref=e296]:
+            - link "Privacy Policy" [ref=e297] [cursor=pointer]:
+              - /url: /privacy-policy
+            - generic [aria-hidden] [ref=e299]: "|"
+            - link "Terms & Conditions" [ref=e300] [cursor=pointer]:
+              - /url: /terms-conditions
+            - generic [aria-hidden] [ref=e302]: "|"
+            - link "Accessibility" [ref=e303] [cursor=pointer]:
+              - /url: /accessibility
+            - generic [aria-hidden] [ref=e305]: "|"
+            - link "Sitemap" [ref=e306] [cursor=pointer]:
+              - /url: /sitemap
+          - generic [ref=e308]:
+            - link "Cookie Preferences" [ref=e309] [cursor=pointer]:
+              - /url: "#_void_"
+            - generic [aria-hidden] [ref=e311]: "|"
+            - link "Data Rights Request" [ref=e312] [cursor=pointer]:
+              - /url: https://academy.clarip.com/dsr/create
+            - generic [aria-hidden] [ref=e314]: "|"
+            - link "Do Not Sell/Share My Information" [ref=e315] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=e317]: © 2026 Academy Sports + Outdoors. All Rights Reserved
+  - generic:
+    - iframe
+    - iframe

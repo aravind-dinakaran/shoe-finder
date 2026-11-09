@@ -1,0 +1,21 @@
+---
+description: Running Shoe Finder bugs, Algolia/XHR, filterMap, and fix priorities
+alwaysApply: true
+---
+
+# Shoe Finder agent context
+
+Working file: `shoe-finder.html`. Full notes: `AGENTS.md` and `reference/agents/AGENTS_SHOE_FINDER.md`.
+
+## Fix order
+
+1. Algolia via **fetch** (prod XHR often fails → empty results).
+2. Map `treadmill` → gym; complete `facet_Surface Type` mapping.
+3. Regular cushioning = `"Regular"`; disclose or rethink `searchWithFallbacks`.
+4. Fix `enrichHitsWithLongDescription` → `enrichHitsWithLongDescriptionAndBenefits`.
+
+## Do not forget
+
+- Fallbacks drop only pronation → stability → cushioning → surface (never size/gender).
+- Empty copy can mean failed search, not true zero inventory.
+- Prefer surgical Contentstack-ready HTML/JS edits; no drive-by refactors.

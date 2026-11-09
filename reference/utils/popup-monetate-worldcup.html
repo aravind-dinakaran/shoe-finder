@@ -1,0 +1,1389 @@
+<style>
+    #monetate-popup-worldcup-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+    }
+
+    #monetate-popup-worldcup-overlay.is-open {
+        display: block;
+        pointer-events: auto;
+        z-index: 99998;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-backdrop {
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        position: fixed;
+        inset: 0;
+        z-index: 99998;
+        pointer-events: auto;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-dialog {
+        container-type: inline-size;
+        width: 600px;
+        max-width: 90%;
+        position: fixed;
+        z-index: 99999;
+        pointer-events: auto;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-dialog.monetate-popup--center {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-dialog.monetate-popup--bottomRight {
+        bottom: 50px;
+        right: 55px;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-dialog.monetate-popup--bottomLeft {
+        bottom: 50px;
+        left: 55px;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-dialog.monetate-popup--topRight {
+        top: 50px;
+        right: 55px;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-dialog.monetate-popup--topLeft {
+        top: 50px;
+        left: 55px;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-close-button {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        display: inline-flex;
+        height: clamp(28px, 8cqw, 48px);
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        right: 2cqw;
+        top: 1.5cqw;
+        width: clamp(28px, 8cqw, 48px);
+        z-index: 2;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-close-button::before,
+    #monetate-popup-worldcup-overlay .monetate-popup-close-button::after {
+        background-color: #fff;
+        border-radius: 999px;
+        content: "";
+        height: 4cqw;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        width: clamp(2px, 0.5cqw, 3px);
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-close-button::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-close-button::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-close-button:hover::before,
+    #monetate-popup-worldcup-overlay .monetate-popup-close-button:hover::after {
+        background-color: rgba(255, 255, 255, 0.82);
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-disclaimer p {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 14px;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-picture {
+        display: block;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-picture .monetate-popup-img {
+        width: 100%;
+        border-radius: 0.5rem;
+        box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.20);
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-image-link {
+        aspect-ratio: var(--monetate-popup-desktop-image-ratio, auto);
+        display: block;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-btn {
+        background-color: #1928A0;
+        border-color: #1928A0;
+        color: #fff;
+        display: block;
+        width: 170px;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 0.5em;
+        padding: 7px;
+        font-size: 16px;
+        text-decoration-color: white;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-btn:hover {
+        background-color: #0C5EE5;
+        border-color: #0C5EE5;
+        text-decoration-color: white;
+        text-decoration: underline;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-close-button:focus-visible,
+    #monetate-popup-worldcup-overlay .monetate-popup-image-link:focus-visible,
+    #monetate-popup-worldcup-overlay .monetate-btn:focus-visible,
+    #monetate-popup-worldcup-overlay .monetate-popup-mobile-btn:focus-visible {
+        outline: 3px solid #fff;
+        outline-offset: 2px;
+        box-shadow: 0 0 0 5px #0C5EE5;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-mobile-actions {
+        display: none;
+    }
+
+    #monetate-popup-worldcup-overlay .monetate-popup-media {
+        display: block;
+        position: relative;
+    }
+
+    @media (max-width: 767px) {
+        #monetate-popup-worldcup-overlay .monetate-popup-image-link {
+            aspect-ratio: var(--monetate-popup-mobile-image-ratio, auto);
+            pointer-events: none;
+            cursor: default;
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-disclaimer p {
+            width: 100%;
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-picture .monetate-popup-img {
+            border-radius: 0.25rem;
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-close-button {
+            right: 5cqw;
+            top: 5cqw;
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-close-button::before,
+    #monetate-popup-worldcup-overlay .monetate-popup-close-button::after {
+            height: 4.5cqw;
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-mobile-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(8px, 3.2vw, 12px);
+            left: 50%;
+            margin-top: 0;
+            position: absolute;
+            bottom: 25%;
+            transform: translateX(-50%);
+            width: max-content;
+            z-index: 1;
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-mobile-btn {
+            align-items: center;
+            border: 0;
+            border-radius: clamp(4px, 1.067vw, 4px);
+            box-sizing: border-box;
+            cursor: pointer;
+            display: inline-flex;
+            font-family: "Open Sans", sans-serif;
+            font-size: clamp(5px, 3.2vw, 35px);
+            font-weight: 700;
+            height: clamp(8px, 8.533vw, 50px);
+            justify-content: center;
+            line-height: 1.2;
+            padding: 0 clamp(8px, 3.2vw, 12px);
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            white-space: nowrap;
+            width: clamp(8px, 41.867vw, 500px);
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-mobile-app-cta {
+            background-color: #1946c8;
+            color: #fff;
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-mobile-app-cta:hover {
+            background-color: #0C5EE5;
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-mobile-continue {
+            background-color: transparent;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        #monetate-popup-worldcup-overlay .monetate-popup-mobile-continue:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            text-decoration: underline;
+        }
+    }
+</style>
+
+<div id="monetate-popup-worldcup-overlay" hidden aria-hidden="true">
+    <div class="monetate-popup-backdrop"></div>
+    <div class="monetate-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="monetate-popup-worldcupsweepstakes-title"
+        aria-describedby="monetate-popup-worldcupsweepstakes-description" tabindex="-1">
+
+        <!-- START: Popup Content -->
+
+        <h2 id="monetate-popup-worldcupsweepstakes-title" class="monetate-popup-sr-only">Academy promotion</h2>
+        <p id="monetate-popup-worldcupsweepstakes-description" class="monetate-popup-sr-only">Enter for a chance to win TWO TICKETS to the FIFA World Cup 26™ Match in Houston on July 4, 2026, exclusively in the Academy app.</p>
+        
+        <!-- Close Button -->
+        <button class="monetate-popup-close-button" type="button" aria-label="Close popup"
+            data-omni="popup_mac_worldcupsweepstakesclose" data-omni-track="state"></button>
+
+        <!-- Main PopUp Image -->
+        <div class="monetate-popup-media">
+        <a class="monetate-popup-image-link">
+            <picture class="monetate-popup-picture">
+                <!-- Desktop Image -->
+                <source class="monetate-popup-image-desktop" media="(min-width: 768px)" />
+                <!-- Mobile Image -->
+                <source class="monetate-popup-image-mobile" media="(max-width: 767px)" />
+                <!-- Main Image -->
+                <img class="monetate-popup-img monetate-popup-main-image" alt="" />
+            </picture>
+        </a>
+
+        <div class="monetate-popup-mobile-actions">
+            <a class="monetate-popup-mobile-btn monetate-popup-mobile-app-cta monetate-popup-app-cta" href="https://app.academy.com/UVHf/ivpouhxn"
+                data-omni="popup_app_worldcupsweepstakes" data-omni-track="load">Open or Get the App</a>
+            <button class="monetate-popup-mobile-btn monetate-popup-mobile-continue monetate-popup-continue-shopping" type="button"
+                data-omni="popup_mac_worldcupsweepstakescontinueshopping" data-omni-track="state">Continue shopping</button>
+        </div>
+        </div>
+
+        <!-- Additional PopUp Content -->
+        <!-- <div class="monetate-btn-container" style="margin-top: 1em;">
+            <a class="monetate-btn monetate-popup-cta" href="https://www.academy.com/shop/LogonForm">
+                Join for Free
+            </a>
+        </div> -->
+
+        <!-- Disclaimer -->
+        <!-- <div class="monetate-popup-disclaimer">
+            <p>*$20 max discount. Exclusions apply.</p>
+        </div> -->
+
+
+        <!-- <img class="monetate-popup-img"
+            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt365bab088e354fca/Stripe.png"
+            alt="" aria-hidden="true" /> -->
+
+        <!-- END: Popup Content -->
+
+        
+    </div>
+</div>
+
+<script>
+    (function popupMonetate() {
+        console.log("Test B: A/B TEST: Worldcup Popup Sweepstakes");
+        const MONETATE_POPUP_CONFIG = {
+            // Frequently edited popup settings
+
+            // position: popup panel placement (adds class monetate-popup--{value} to the popup panel)
+            //   'center'      → top: 50%; left: 50%; transform: translate(-50%, -50%);
+            //   'bottomRight' → bottom: 50px; right: 55px;
+            //   'bottomLeft'  → bottom: 50px; left: 55px;
+            //   'topRight'    → top: 50px; right: 55px;
+            //   'topLeft'     → top: 50px; left: 55px;
+            position: 'center',
+
+            // autoDismissMs: time before the popup closes automatically; keep 0 for WCAG-friendly timing.
+            autoDismissMs: 0,
+
+            // popupImage: main popup image sources for desktop and mobile screens.
+            popupImage: {
+                // desktopSrc: image used for desktop screens greater than 767px wide.
+                desktopSrc: 'https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blta61965b55c33c444/6a3322ea5a44879dcfa7438c/popup_wc26_ticketgiveaway.png',
+
+                // mobileSrc: image used for mobile screens less than 768px wide.
+                mobileSrc: 'https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltc792b1cf22dfb704/6a3322eaead44b2ed8a9db4e/popup_wc26_ticketgiveaway-m.png',
+
+                // desktopWidth: intrinsic width of the desktop image, used to reserve image space.
+                desktopWidth: 1200,
+
+                // desktopHeight: intrinsic height of the desktop image, used to reserve image space.
+                desktopHeight: 1200,
+
+                // mobileWidth: intrinsic width of the mobile image, used to reserve image space.
+                mobileWidth: 602,
+
+                // mobileHeight: intrinsic height of the mobile image, used to reserve image space.
+                mobileHeight: 976,
+
+                // altText: accessible description for the main popup image.
+                altText: 'Promotional banner on a green grass background advertising a ticket giveaway powered by Adidas, FIFA World Cup 2026, and Academy Sports + Outdoors. Large headline reads “Enter for a chance to win TWO TICKETS.” Supporting text states “to the FIFA World Cup 26™ Match in Houston on July 4, 2026, exclusively in the Academy app.” Two colorful FIFA World Cup ticket graphics with barcodes are displayed near the center. Fine print at the bottom reads: “No purchase necessary. Games/polls NOT required for entry. Open to residents of U.S. excluding AK, CA, FL, HI, NY, RI, age 18+. Limit one (1) entry per person per day. For Official Rules see Academy.com/Official-Rules. Enter by 6/27/26.”',
+
+                // clickthroughEnabled: set false to disable the main popup image link.
+                clickthroughEnabled: false,
+
+                // clickthroughUrl: optional link for the main popup image.
+                clickthroughUrl: 'https://app.academy.com/UVHf/ivpouhxn',
+
+                // clickthroughLabel: accessible label for the image link when clickthroughUrl is set.
+                clickthroughLabel: 'Enter for a chance to win TWO TICKETS to the FIFA World Cup 26™ Match in Houston on July 4, 2026, exclusively in the Academy app.',
+
+                // dataOmni: optional analytics value added as data-omni on the image link.
+                dataOmni: 'popup_mac_worldcupsweepstakes',
+
+                // dataOmniTrack: analytics action type for the image link.
+                dataOmniTrack: 'load',
+            },
+
+            // mobileButtons: mobile-only CTA buttons shown below the popup image on screens less than 768px wide.
+            mobileButtons: {
+                // appCta: primary button that opens the app and permanently suppresses future popup displays.
+                appCta: {
+                    // label: visible button text.
+                    label: 'Open or Get the App',
+
+                    // href: destination URL for the primary mobile button.
+                    href: 'https://app.academy.com/UVHf/ivpouhxn',
+
+                    // dataOmni: optional analytics value added as data-omni on the primary mobile button.
+                    dataOmni: 'popup_mac_worldcupsweepstakes',
+
+                    // dataOmniTrack: analytics action type for the primary mobile button.
+                    dataOmniTrack: 'load',
+                },
+
+                // continueShopping: secondary button that dismisses the popup without permanent suppression.
+                continueShopping: {
+                    // label: visible button text.
+                    label: 'Continue shopping',
+                },
+            },
+
+            // accessibility: screen-reader labels for the dialog and close control.
+            accessibility: {
+                // dialogTitle: concise accessible name announced when the popup opens.
+                dialogTitle: 'Academy promotion for FIFA World Cup 2026 sweepstakes',
+
+                // dialogDescription: brief instruction announced with the dialog.
+                dialogDescription: 'Promotional banner on a green grass background advertising a ticket giveaway powered by Adidas, FIFA World Cup 2026, and Academy Sports + Outdoors. Large headline reads “Enter for a chance to win TWO TICKETS.” Supporting text states “to the FIFA World Cup 26™ Match in Houston on July 4, 2026, exclusively in the Academy app.” Two colorful FIFA World Cup ticket graphics with barcodes are displayed near the center. Fine print at the bottom reads: “No purchase necessary. Games/polls NOT required for entry. Open to residents of U.S. excluding AK, CA, FL, HI, NY, RI, age 18+. Limit one (1) entry per person per day. For Official Rules see Academy.com/Official-Rules. Enter by 6/27/26.” Use the primary link to continue, or close to dismiss.',
+
+                // closeButtonLabel: accessible label for the close icon button.
+                closeButtonLabel: 'Close popup',
+            },
+
+            // maxShowsPerSession: maximum popup opens per browser session; use 0 for no session limit.
+            maxShowsPerSession: 1,
+
+            // maxShowsWithinCoolOffPeriod: maximum popup opens across browser sessions within the cool-off window; use 0 for no limit.
+            maxShowsWithinCoolOffPeriod: 2,
+
+            // coolOffPeriodMs: rolling window length used to count cross-session popup displays.
+            coolOffPeriodMs: 7 * 24 * 60 * 60 * 1000,
+
+            // maxDismissalsBeforePermanentDisable: number of dismissals before permanently suppressing this popup;
+            // use 0 for no dismissal-based permanent suppression.
+            maxDismissalsBeforePermanentDisable: 0,
+
+            // profileEligibility: localStorage profile values required before this popup can show.
+            profileEligibility: {
+                // enabled: set false to skip the localStorage profile/team eligibility check.
+                enabled: false,
+
+                // storageKey: localStorage key containing the enrichment profile JSON.
+                storageKey: 'profile_enrichment_v2',
+
+                // topTeam: settings for selecting from the ordered top-team levels array.
+                topTeam: {
+                    // enabled: set false to skip the top-team levels eligibility check.
+                    enabled: true,
+
+                    // levelsPath: dot path from the parsed profile object to the ordered team levels array.
+                    levelsPath: 'enrichedProfile.personalization.topTeam.levels',
+
+                    // teamValue: required value inside the configured levels array.
+                    teamValue: 'New York Knicks',
+                },
+            },
+
+            // popupPrecedence: shared settings for mutually exclusive popup experiences.
+            popupPrecedence: {
+                // enabled: set false to ignore precedence ranking across popup experiences.
+                enabled: false,
+
+                // storageKey: shared localStorage key where the winning popup decision is recorded.
+                storageKey: 'nbaTopTeamPopupPrecedence',
+
+                // candidateValues: popup team values competing in this mutual-exclusion group.
+                candidateValues: ['San Antonio Spurs', 'New York Knicks'],
+            },
+
+            // Advanced/internal popup settings
+
+            // storageKeys: browser storage keys used to track session display and interactions.
+            storageKeys: {
+                // sessionShowCount: sessionStorage count incremented each time the popup opens.
+                sessionShowCount: 'worldCupPopupSessionShowCount',
+
+                // coolOffWindowStartedAt: localStorage timestamp when the current cool-off show window began.
+                coolOffWindowStartedAt: 'worldCupPopupCoolOffWindowStartedAt',
+
+                // coolOffShowCount: localStorage count of popup opens within the current cool-off window.
+                coolOffShowCount: 'worldCupPopupCoolOffShowCount',
+
+                // permanentlyDisabledByEngagement: localStorage flag set when the mobile app CTA is clicked.
+                permanentlyDisabledByEngagement: 'worldCupPopupPermanentlyDisabledByEngagement',
+
+                // lastDismissedAt: localStorage timestamp of the most recent popup dismissal.
+                lastDismissedAt: 'worldCupPopupLastDismissedAt',
+
+                // dismissalCount: localStorage count incremented each time the popup is dismissed.
+                dismissalCount: 'worldCupPopupDismissalCount',
+            },
+
+            // cookieConsent: settings used to wait until the cookie banner is dismissed.
+            cookieConsent: {
+                // enabled: set false to skip waiting for cookie consent before showing the popup.
+                enabled: true,
+
+                // bannerSelector: CSS selector for the cookie consent banner.
+                bannerSelector: '.cc-window',
+
+                // dismissButtonSelectors: CSS selectors for buttons that close the cookie banner.
+                dismissButtonSelectors: '.cc-btn.cc-dismiss, .cc-btn.cc-deny',
+
+                // statusCookieName: consent cookie name that indicates the banner was answered.
+                statusCookieName: 'cookieconsent_status',
+
+                // pollIntervalMs: how often to recheck cookie banner status while waiting.
+                pollIntervalMs: 300,
+
+                // maxWaitMs: longest wait before continuing even if banner status is unclear.
+                maxWaitMs: 120000,
+            },
+
+            // overlayZIndex: stacking order for the full-screen overlay wrapper.
+            overlayZIndex: 99998,
+
+            // backdropZIndex: stacking order for the dimmed background layer.
+            backdropZIndex: 99998,
+
+            // popupZIndex: stacking order for the popup panel above the backdrop.
+            popupZIndex: 99999,
+        };
+
+        const overlay = document.getElementById('monetate-popup-worldcup-overlay');
+        const backdrop = overlay ? overlay.querySelector('.monetate-popup-backdrop') : null;
+        const popup = overlay ? overlay.querySelector('.monetate-popup-dialog') : null;
+        const imageLink = overlay ? overlay.querySelector('.monetate-popup-image-link') : null;
+        const desktopImageSource = overlay ? overlay.querySelector('.monetate-popup-image-desktop') : null;
+        const mobileImageSource = overlay ? overlay.querySelector('.monetate-popup-image-mobile') : null;
+        const mainImage = overlay ? overlay.querySelector('.monetate-popup-main-image') : null;
+        const dialogTitle = overlay ? overlay.querySelector('#monetate-popup-worldcupsweepstakes-title') : null;
+        const dialogDescription = overlay ? overlay.querySelector('#monetate-popup-worldcupsweepstakes-description') : null;
+        const closeButton = popup ? popup.querySelector('.monetate-popup-close-button') : null;
+        const mobileAppCta = popup ? popup.querySelector('.monetate-popup-app-cta') : null;
+        const mobileContinueShopping = popup ? popup.querySelector('.monetate-popup-continue-shopping') : null;
+
+        let autoDismissTimer = null;
+        let cookieWaitCleanup = null;
+        let activeListeners = null;
+        let previouslyFocusedElement = null;
+
+        function applyZIndexFromConfig() {
+            const overlayZ = MONETATE_POPUP_CONFIG.overlayZIndex;
+            if (overlay) {
+                overlay.style.zIndex = String(overlayZ);
+            }
+            if (backdrop) {
+                backdrop.style.zIndex = String(MONETATE_POPUP_CONFIG.backdropZIndex);
+            }
+            if (popup) {
+                popup.style.zIndex = String(MONETATE_POPUP_CONFIG.popupZIndex);
+            }
+        }
+
+        function applyPositionClass() {
+            if (!popup) {
+                return;
+            }
+            const position = MONETATE_POPUP_CONFIG.position || 'center';
+            popup.classList.remove(
+                'monetate-popup--center',
+                'monetate-popup--bottomRight',
+                'monetate-popup--bottomLeft',
+                'monetate-popup--topRight',
+                'monetate-popup--topLeft'
+            );
+            popup.classList.add('monetate-popup--' + position);
+        }
+
+        function applyPopupImageFromConfig() {
+            const imageConfig = MONETATE_POPUP_CONFIG.popupImage || {};
+            const desktopSrc = imageConfig.desktopSrc || '';
+            const mobileSrc = imageConfig.mobileSrc || desktopSrc;
+            const desktopWidth = Number(imageConfig.desktopWidth);
+            const desktopHeight = Number(imageConfig.desktopHeight);
+            const mobileWidth = Number(imageConfig.mobileWidth) || desktopWidth;
+            const mobileHeight = Number(imageConfig.mobileHeight) || desktopHeight;
+
+            function getAspectRatio(width, height) {
+                if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+                    return '';
+                }
+
+                return width + ' / ' + height;
+            }
+
+            if (desktopImageSource && desktopSrc) {
+                desktopImageSource.setAttribute('srcset', desktopSrc);
+            } else if (desktopImageSource) {
+                desktopImageSource.removeAttribute('srcset');
+            }
+
+            if (mobileImageSource && mobileSrc) {
+                mobileImageSource.setAttribute('srcset', mobileSrc);
+            } else if (mobileImageSource) {
+                mobileImageSource.removeAttribute('srcset');
+            }
+
+            if (mainImage) {
+                if (desktopSrc) {
+                    mainImage.setAttribute('src', desktopSrc);
+                } else {
+                    mainImage.removeAttribute('src');
+                }
+
+                if (imageConfig.altText) {
+                    mainImage.setAttribute('alt', imageConfig.altText);
+                }
+
+                if (Number.isFinite(desktopWidth) && desktopWidth > 0) {
+                    mainImage.setAttribute('width', String(desktopWidth));
+                }
+
+                if (Number.isFinite(desktopHeight) && desktopHeight > 0) {
+                    mainImage.setAttribute('height', String(desktopHeight));
+                }
+            }
+
+            if (imageLink) {
+                const desktopAspectRatio = getAspectRatio(desktopWidth, desktopHeight);
+                const mobileAspectRatio = getAspectRatio(mobileWidth, mobileHeight) || desktopAspectRatio;
+
+                if (desktopAspectRatio) {
+                    imageLink.style.setProperty('--monetate-popup-desktop-image-ratio', desktopAspectRatio);
+                } else {
+                    imageLink.style.removeProperty('--monetate-popup-desktop-image-ratio');
+                }
+
+                if (mobileAspectRatio) {
+                    imageLink.style.setProperty('--monetate-popup-mobile-image-ratio', mobileAspectRatio);
+                } else {
+                    imageLink.style.removeProperty('--monetate-popup-mobile-image-ratio');
+                }
+
+                if (imageConfig.clickthroughEnabled !== false && imageConfig.clickthroughUrl) {
+                    imageLink.setAttribute('href', imageConfig.clickthroughUrl);
+                    imageLink.setAttribute(
+                        'aria-label',
+                        imageConfig.clickthroughLabel || imageConfig.altText || 'View promotion'
+                    );
+
+                    if (imageConfig.dataOmni) {
+                        imageLink.setAttribute('data-omni', imageConfig.dataOmni);
+                    } else {
+                        imageLink.removeAttribute('data-omni');
+                    }
+
+                    if (imageConfig.dataOmniTrack) {
+                        imageLink.setAttribute('data-omni-track', imageConfig.dataOmniTrack);
+                    } else {
+                        imageLink.removeAttribute('data-omni-track');
+                    }
+                } else {
+                    imageLink.removeAttribute('href');
+                    imageLink.removeAttribute('aria-label');
+                    imageLink.removeAttribute('data-omni');
+                    imageLink.removeAttribute('data-omni-track');
+                }
+            }
+        }
+
+        function applyAccessibilityFromConfig() {
+            const accessibilityConfig = MONETATE_POPUP_CONFIG.accessibility || {};
+
+            if (dialogTitle && accessibilityConfig.dialogTitle) {
+                dialogTitle.textContent = accessibilityConfig.dialogTitle;
+            }
+
+            if (dialogDescription && accessibilityConfig.dialogDescription) {
+                dialogDescription.textContent = accessibilityConfig.dialogDescription;
+            }
+
+            if (closeButton && accessibilityConfig.closeButtonLabel) {
+                closeButton.setAttribute('aria-label', accessibilityConfig.closeButtonLabel);
+            }
+        }
+
+        function applyMobileButtonsFromConfig() {
+            const mobileButtonsConfig = MONETATE_POPUP_CONFIG.mobileButtons || {};
+            const appCtaConfig = mobileButtonsConfig.appCta || {};
+            const continueShoppingConfig = mobileButtonsConfig.continueShopping || {};
+
+            if (mobileAppCta) {
+                if (appCtaConfig.label) {
+                    mobileAppCta.textContent = appCtaConfig.label;
+                }
+
+                if (appCtaConfig.href) {
+                    mobileAppCta.setAttribute('href', appCtaConfig.href);
+                } else {
+                    mobileAppCta.removeAttribute('href');
+                }
+
+                if (appCtaConfig.dataOmni) {
+                    mobileAppCta.setAttribute('data-omni', appCtaConfig.dataOmni);
+                } else {
+                    mobileAppCta.removeAttribute('data-omni');
+                }
+
+                if (appCtaConfig.dataOmniTrack) {
+                    mobileAppCta.setAttribute('data-omni-track', appCtaConfig.dataOmniTrack);
+                } else {
+                    mobileAppCta.removeAttribute('data-omni-track');
+                }
+            }
+
+            if (mobileContinueShopping && continueShoppingConfig.label) {
+                mobileContinueShopping.textContent = continueShoppingConfig.label;
+            }
+        }
+
+        function getFocusablePopupElements() {
+            if (!popup) {
+                return [];
+            }
+
+            const focusableSelector = [
+                'a[href]',
+                'button:not([disabled])',
+                'input:not([disabled])',
+                'select:not([disabled])',
+                'textarea:not([disabled])',
+                '[tabindex]:not([tabindex="-1"])',
+            ].join(',');
+
+            return Array.prototype.slice.call(popup.querySelectorAll(focusableSelector))
+                .filter(function (element) {
+                    return element.offsetParent !== null;
+                });
+        }
+
+        function focusInitialPopupElement() {
+            const focusableElements = getFocusablePopupElements();
+            const firstFocusableElement = focusableElements[0];
+
+            if (firstFocusableElement) {
+                firstFocusableElement.focus();
+                return;
+            }
+
+            popup.focus();
+        }
+
+        function restorePreviousFocus() {
+            if (
+                previouslyFocusedElement &&
+                document.contains(previouslyFocusedElement) &&
+                typeof previouslyFocusedElement.focus === 'function'
+            ) {
+                previouslyFocusedElement.focus();
+            }
+
+            previouslyFocusedElement = null;
+        }
+
+        function getCookieValue(name) {
+            const match = document.cookie.match(
+                new RegExp('(?:^|; )' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '=([^;]*)')
+            );
+            return match ? decodeURIComponent(match[1]) : null;
+        }
+
+        function isCookieConsentDismissed() {
+            const cfg = MONETATE_POPUP_CONFIG.cookieConsent;
+
+            if (!cfg || cfg.enabled === false) {
+                return true;
+            }
+
+            if (getCookieValue(cfg.statusCookieName)) {
+                return true;
+            }
+
+            if (window.cookieconsent && typeof window.cookieconsent.hasAnswered === 'function') {
+                try {
+                    if (window.cookieconsent.hasAnswered()) {
+                        return true;
+                    }
+                } catch (e) {
+                    /* ignore */
+                }
+            }
+
+            const banner = document.querySelector(cfg.bannerSelector);
+            if (!banner) {
+                return true;
+            }
+
+            if (banner.classList.contains('cc-invisible')) {
+                return true;
+            }
+
+            const style = window.getComputedStyle(banner);
+            if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') {
+                return true;
+            }
+
+            return false;
+        }
+
+        function isCoolOffActive() {
+            const coolOff = MONETATE_POPUP_CONFIG.coolOffPeriodMs;
+            if (!coolOff || coolOff <= 0) {
+                return false;
+            }
+
+            const raw = localStorage.getItem(MONETATE_POPUP_CONFIG.storageKeys.coolOffWindowStartedAt);
+            if (!raw) {
+                return false;
+            }
+
+            const coolOffWindowStartedAt = Number(raw);
+            if (!Number.isFinite(coolOffWindowStartedAt)) {
+                return false;
+            }
+
+            return Date.now() - coolOffWindowStartedAt < coolOff;
+        }
+
+        function resetCoolOffShowTracking() {
+            localStorage.removeItem(MONETATE_POPUP_CONFIG.storageKeys.coolOffWindowStartedAt);
+            localStorage.removeItem(MONETATE_POPUP_CONFIG.storageKeys.coolOffShowCount);
+        }
+
+        function getCoolOffShowCount() {
+            if (!isCoolOffActive()) {
+                resetCoolOffShowTracking();
+                return 0;
+            }
+
+            const raw = localStorage.getItem(MONETATE_POPUP_CONFIG.storageKeys.coolOffShowCount);
+            const count = Number(raw);
+
+            return Number.isFinite(count) && count > 0 ? count : 0;
+        }
+
+        function hasReachedCoolOffShowLimit() {
+            const maxShows = Number(MONETATE_POPUP_CONFIG.maxShowsWithinCoolOffPeriod);
+            if (!Number.isFinite(maxShows) || maxShows <= 0) {
+                return false;
+            }
+
+            return getCoolOffShowCount() >= maxShows;
+        }
+
+        function isPermanentlyDisabledByEngagement() {
+            return localStorage.getItem(
+                MONETATE_POPUP_CONFIG.storageKeys.permanentlyDisabledByEngagement
+            ) === 'true';
+        }
+
+        function markPermanentlyDisabledByEngagement() {
+            localStorage.setItem(
+                MONETATE_POPUP_CONFIG.storageKeys.permanentlyDisabledByEngagement,
+                'true'
+            );
+        }
+
+        function getDismissalCount() {
+            const raw = localStorage.getItem(MONETATE_POPUP_CONFIG.storageKeys.dismissalCount);
+            const count = Number(raw);
+
+            return Number.isFinite(count) && count > 0 ? count : 0;
+        }
+
+        function isPermanentlyDisabledByDismissals() {
+            const maxDismissals = Number(MONETATE_POPUP_CONFIG.maxDismissalsBeforePermanentDisable);
+            if (!Number.isFinite(maxDismissals) || maxDismissals <= 0) {
+                return false;
+            }
+
+            return getDismissalCount() >= maxDismissals;
+        }
+
+        function getSessionShowCount() {
+            const raw = sessionStorage.getItem(MONETATE_POPUP_CONFIG.storageKeys.sessionShowCount);
+            const count = Number(raw);
+
+            return Number.isFinite(count) && count > 0 ? count : 0;
+        }
+
+        function hasReachedSessionShowLimit() {
+            const maxShows = Number(MONETATE_POPUP_CONFIG.maxShowsPerSession);
+            if (!Number.isFinite(maxShows) || maxShows <= 0) {
+                return false;
+            }
+
+            return getSessionShowCount() >= maxShows;
+        }
+
+        function getValueAtPath(source, path) {
+            if (!path) {
+                return source;
+            }
+
+            const parts = Array.isArray(path) ? path : String(path).split('.');
+            return parts.reduce(function (current, part) {
+                return current && part ? current[part] : current;
+            }, source);
+        }
+
+        function getProfileTopTeamLevels() {
+            const cfg = MONETATE_POPUP_CONFIG.profileEligibility || {};
+            const topTeamCfg = cfg.topTeam || {};
+            if (!cfg.storageKey) {
+                return null;
+            }
+
+            const raw = localStorage.getItem(cfg.storageKey);
+            if (!raw) {
+                return null;
+            }
+
+            let profile;
+            try {
+                profile = JSON.parse(raw);
+            } catch (e) {
+                return null;
+            }
+
+            const levels = getValueAtPath(profile, topTeamCfg.levelsPath);
+
+            return Array.isArray(levels) ? levels : null;
+        }
+
+        function getTeamRank(levels, teamValue) {
+            if (!Array.isArray(levels) || !teamValue) {
+                return -1;
+            }
+
+            for (let i = 0; i < levels.length; i += 1) {
+                if (levels[i] && levels[i].value === teamValue) {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        function getPopupPrecedenceDecision(levels) {
+            const profileCfg = MONETATE_POPUP_CONFIG.profileEligibility || {};
+            const topTeamCfg = profileCfg.topTeam || {};
+            const precedenceCfg = MONETATE_POPUP_CONFIG.popupPrecedence || {};
+            const candidateValues = Array.isArray(precedenceCfg.candidateValues) &&
+                precedenceCfg.candidateValues.length
+                ? precedenceCfg.candidateValues
+                : [topTeamCfg.teamValue];
+
+            let winningValue = '';
+            let winningRank = Infinity;
+
+            candidateValues.forEach(function (candidateValue) {
+                const rank = getTeamRank(levels, candidateValue);
+                if (rank > -1 && rank < winningRank) {
+                    winningValue = candidateValue;
+                    winningRank = rank;
+                }
+            });
+
+            if (!winningValue || !Number.isFinite(winningRank)) {
+                return null;
+            }
+
+            return {
+                value: winningValue,
+                rank: winningRank,
+                candidateValues: candidateValues,
+            };
+        }
+
+        function recordPopupPrecedenceDecision(decision) {
+            const cfg = MONETATE_POPUP_CONFIG.popupPrecedence || {};
+            if (cfg.enabled === false || !cfg.storageKey || !decision) {
+                return;
+            }
+
+            localStorage.setItem(cfg.storageKey, JSON.stringify({
+                value: decision.value,
+                rank: decision.rank,
+                candidateValues: decision.candidateValues,
+                updatedAt: Date.now(),
+            }));
+        }
+
+        function isEligibleProfileTeam() {
+            const profileCfg = MONETATE_POPUP_CONFIG.profileEligibility || {};
+            const topTeamCfg = profileCfg.topTeam || {};
+            const precedenceCfg = MONETATE_POPUP_CONFIG.popupPrecedence || {};
+
+            if (profileCfg.enabled === false) {
+                return true;
+            }
+
+            if (topTeamCfg.enabled === false) {
+                return true;
+            }
+
+            const levels = getProfileTopTeamLevels();
+            const ownRank = getTeamRank(levels, topTeamCfg.teamValue);
+            if (ownRank < 0) {
+                return false;
+            }
+
+            if (precedenceCfg.enabled === false) {
+                return true;
+            }
+
+            const decision = getPopupPrecedenceDecision(levels);
+            recordPopupPrecedenceDecision(decision);
+
+            return decision &&
+                decision.value === topTeamCfg.teamValue &&
+                decision.rank === ownRank;
+        }
+
+        function canShowMonetatePopup() {
+            if (!isCookieConsentDismissed()) {
+                return false;
+            }
+            if (!isEligibleProfileTeam()) {
+                return false;
+            }
+            if (isPermanentlyDisabledByEngagement()) {
+                return false;
+            }
+            if (hasReachedSessionShowLimit()) {
+                return false;
+            }
+            if (hasReachedCoolOffShowLimit()) {
+                return false;
+            }
+            if (isPermanentlyDisabledByDismissals()) {
+                return false;
+            }
+            return true;
+        }
+
+        function removeActiveListeners() {
+            if (!activeListeners) {
+                return;
+            }
+
+            const {
+                handlePopupClick,
+                handleBackdropClick,
+                handleDocumentKeyDown,
+                touchStartHandler,
+                touchEndHandler,
+            } = activeListeners;
+
+            if (handlePopupClick) {
+                popup.removeEventListener('click', handlePopupClick);
+            }
+            if (handleBackdropClick && backdrop) {
+                backdrop.removeEventListener('click', handleBackdropClick);
+            }
+            if (handleDocumentKeyDown) {
+                document.removeEventListener('keydown', handleDocumentKeyDown);
+            }
+            if (touchStartHandler) {
+                document.removeEventListener('touchstart', touchStartHandler, false);
+            }
+            if (touchEndHandler) {
+                document.removeEventListener('touchend', touchEndHandler, false);
+            }
+
+            activeListeners = null;
+        }
+
+        function markPopupInteractionAt() {
+            localStorage.setItem(
+                MONETATE_POPUP_CONFIG.storageKeys.lastDismissedAt,
+                String(Date.now())
+            );
+        }
+
+        function markShownInCoolOffWindow() {
+            const maxShows = Number(MONETATE_POPUP_CONFIG.maxShowsWithinCoolOffPeriod);
+            if (!Number.isFinite(maxShows) || maxShows <= 0) {
+                return;
+            }
+
+            if (!isCoolOffActive()) {
+                resetCoolOffShowTracking();
+                localStorage.setItem(
+                    MONETATE_POPUP_CONFIG.storageKeys.coolOffWindowStartedAt,
+                    String(Date.now())
+                );
+            }
+
+            localStorage.setItem(
+                MONETATE_POPUP_CONFIG.storageKeys.coolOffShowCount,
+                String(getCoolOffShowCount() + 1)
+            );
+        }
+
+        function markPopupDismissed() {
+            markPopupInteractionAt();
+
+            const maxDismissals = Number(MONETATE_POPUP_CONFIG.maxDismissalsBeforePermanentDisable);
+            if (!Number.isFinite(maxDismissals) || maxDismissals <= 0) {
+                return;
+            }
+
+            localStorage.setItem(
+                MONETATE_POPUP_CONFIG.storageKeys.dismissalCount,
+                String(getDismissalCount() + 1)
+            );
+        }
+
+        function dismissPopUpModal() {
+            if (autoDismissTimer) {
+                clearTimeout(autoDismissTimer);
+                autoDismissTimer = null;
+            }
+
+            removeActiveListeners();
+
+            if (overlay) {
+                overlay.classList.remove('is-open');
+                overlay.hidden = true;
+                overlay.setAttribute('aria-hidden', 'true');
+            }
+
+            document.body.style.overflow = '';
+            restorePreviousFocus();
+
+            markPopupDismissed();
+        }
+
+        function markShownThisSession() {
+            const maxShows = Number(MONETATE_POPUP_CONFIG.maxShowsPerSession);
+            if (Number.isFinite(maxShows) && maxShows > 0) {
+                sessionStorage.setItem(
+                    MONETATE_POPUP_CONFIG.storageKeys.sessionShowCount,
+                    String(getSessionShowCount() + 1)
+                );
+            }
+
+            markShownInCoolOffWindow();
+        }
+
+        function attachActiveListeners() {
+            removeActiveListeners();
+
+            const cta = popup ? popup.querySelector('.monetate-popup-cta') : null;
+            let touchstartX = 0;
+            let touchstartY = 0;
+
+            const handleBackdropClick = function () {
+                dismissPopUpModal();
+            };
+
+            const handlePopupClick = function (event) {
+                const clickedAppCta = mobileAppCta && mobileAppCta.contains(event.target);
+                const clickedContinueShopping = mobileContinueShopping &&
+                    mobileContinueShopping.contains(event.target);
+                const clickedCloseButton = closeButton && closeButton.contains(event.target);
+                const clickedCta = cta && cta.contains(event.target);
+                const clickedImageLink = imageLink &&
+                    imageLink.hasAttribute('href') &&
+                    imageLink.contains(event.target);
+
+                if (clickedAppCta || clickedContinueShopping || clickedCloseButton) {
+                    return;
+                }
+
+                if (clickedCta || clickedImageLink) {
+                    markPopupInteractionAt();
+                    return;
+                }
+
+                return;
+            };
+
+            const touchStartHandler = function (event) {
+                touchstartX = event.changedTouches[0].screenX;
+                touchstartY = event.changedTouches[0].screenY;
+            };
+
+            const touchEndHandler = function (event) {
+                const touchendX = event.changedTouches[0].screenX;
+                const touchendY = event.changedTouches[0].screenY;
+                if (
+                    Math.abs(touchendX - touchstartX) > 10 ||
+                    Math.abs(touchendY - touchstartY) > 10
+                ) {
+                    dismissPopUpModal();
+                }
+            };
+
+            const handleDocumentKeyDown = function (event) {
+                if (!overlay || overlay.hidden) {
+                    return;
+                }
+
+                if (event.key === 'Escape' || event.key === 'Esc') {
+                    event.preventDefault();
+                    dismissPopUpModal();
+                    return;
+                }
+
+                if (event.key !== 'Tab') {
+                    return;
+                }
+
+                const focusableElements = getFocusablePopupElements();
+                if (!focusableElements.length) {
+                    event.preventDefault();
+                    popup.focus();
+                    return;
+                }
+
+                const firstFocusableElement = focusableElements[0];
+                const lastFocusableElement = focusableElements[focusableElements.length - 1];
+
+                if (event.shiftKey && document.activeElement === firstFocusableElement) {
+                    event.preventDefault();
+                    lastFocusableElement.focus();
+                    return;
+                }
+
+                if (!event.shiftKey && document.activeElement === lastFocusableElement) {
+                    event.preventDefault();
+                    firstFocusableElement.focus();
+                }
+            };
+
+            if (backdrop) {
+                backdrop.addEventListener('click', handleBackdropClick);
+            }
+            if (popup) {
+                popup.addEventListener('click', handlePopupClick);
+            }
+
+            document.addEventListener('keydown', handleDocumentKeyDown);
+            document.addEventListener('touchstart', touchStartHandler, false);
+            document.addEventListener('touchend', touchEndHandler, false);
+
+            activeListeners = {
+                handlePopupClick,
+                handleBackdropClick,
+                handleDocumentKeyDown,
+                touchStartHandler,
+                touchEndHandler,
+            };
+
+            if (MONETATE_POPUP_CONFIG.autoDismissMs > 0) {
+                autoDismissTimer = setTimeout(dismissPopUpModal, MONETATE_POPUP_CONFIG.autoDismissMs);
+            }
+        }
+
+        function showMonetatePopup() {
+            if (!overlay || !popup) {
+                return;
+            }
+
+            previouslyFocusedElement = document.activeElement;
+            markShownThisSession();
+
+            overlay.hidden = false;
+            overlay.classList.add('is-open');
+            overlay.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+
+            attachActiveListeners();
+            focusInitialPopupElement();
+        }
+
+        function setupPopupModalCloseButton() {
+            if (closeButton && !closeButton.hasEventListenerAttached) {
+                closeButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    dismissPopUpModal();
+                });
+                closeButton.hasEventListenerAttached = true;
+            }
+        }
+
+        function setupMobilePopupButtons() {
+            if (mobileAppCta && !mobileAppCta.hasEventListenerAttached) {
+                mobileAppCta.addEventListener('click', function () {
+                    markPermanentlyDisabledByEngagement();
+                    markPopupInteractionAt();
+                    dismissPopUpModal();
+                });
+                mobileAppCta.hasEventListenerAttached = true;
+            }
+
+            if (mobileContinueShopping && !mobileContinueShopping.hasEventListenerAttached) {
+                mobileContinueShopping.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    dismissPopUpModal();
+                });
+                mobileContinueShopping.hasEventListenerAttached = true;
+            }
+        }
+
+        function tryShowMonetatePopup() {
+            if (canShowMonetatePopup()) {
+                showMonetatePopup();
+            }
+        }
+
+        function stopCookieConsentWait() {
+            if (typeof cookieWaitCleanup === 'function') {
+                cookieWaitCleanup();
+                cookieWaitCleanup = null;
+            }
+        }
+
+        function waitForCookieConsentDismissed(callback) {
+            const cfg = MONETATE_POPUP_CONFIG.cookieConsent;
+            let done = false;
+
+            if (!cfg || cfg.enabled === false) {
+                callback();
+                return;
+            }
+
+            function finish() {
+                if (done) {
+                    return;
+                }
+                done = true;
+                stopCookieConsentWait();
+                callback();
+            }
+
+            if (isCookieConsentDismissed()) {
+                finish();
+                return;
+            }
+
+            const observer = new MutationObserver(function () {
+                if (isCookieConsentDismissed()) {
+                    finish();
+                }
+            });
+
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true,
+                attributes: true,
+                attributeFilter: ['class', 'style', 'hidden', 'aria-hidden'],
+            });
+
+            const pollId = setInterval(function () {
+                if (isCookieConsentDismissed()) {
+                    finish();
+                }
+            }, cfg.pollIntervalMs);
+
+            const maxWaitId = setTimeout(finish, cfg.maxWaitMs);
+
+            function bindDismissButtons() {
+                document.querySelectorAll(cfg.dismissButtonSelectors).forEach(function (button) {
+                    if (button.hasMonetatePopupConsentListener) {
+                        return;
+                    }
+                    button.addEventListener('click', function () {
+                        setTimeout(finish, 0);
+                    });
+                    button.hasMonetatePopupConsentListener = true;
+                });
+            }
+
+            bindDismissButtons();
+
+            const buttonObserver = new MutationObserver(bindDismissButtons);
+            buttonObserver.observe(document.body, { childList: true, subtree: true });
+
+            cookieWaitCleanup = function () {
+                observer.disconnect();
+                buttonObserver.disconnect();
+                clearInterval(pollId);
+                clearTimeout(maxWaitId);
+            };
+        }
+
+        function initMonetatePopup() {
+            applyZIndexFromConfig();
+            applyPositionClass();
+            applyPopupImageFromConfig();
+            applyAccessibilityFromConfig();
+            applyMobileButtonsFromConfig();
+            setupPopupModalCloseButton();
+            setupMobilePopupButtons();
+
+            waitForCookieConsentDismissed(function () {
+                tryShowMonetatePopup();
+            });
+        }
+
+        initMonetatePopup();
+    })();
+</script>

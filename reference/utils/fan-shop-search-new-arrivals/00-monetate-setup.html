@@ -1,0 +1,69 @@
+<!--
+  Fan Shop → default sort New Arrivals (Monetate)
+
+  Two experiences. Do not put 06 into the search experience if Where is
+  Page type = search — it will never run on PLPs.
+
+  =====================================================================
+  Experience 1 — Search (SRP)
+  =====================================================================
+  Use ONE of these, not both (duplicate history wraps).
+
+  Option A — single action (preferred if Monetate JS size allows):
+  - Name: [SRP][Fan Shop Team Search New Arrivals][Evergreen]
+  - 1 action: 07-search-all-leagues.js
+    League lists stay separate in the file (MLB / NCAA / NBA / NHL / NFL)
+    and are merged into one keyword set at runtime.
+
+  Option B — five actions (chunked):
+  - 01-mlb.js, 02-ncaa.js, 03-nba.js, 04-nhl.js, 05-nfl.js
+
+  - Tag: AravindD
+  - Soccer search keywords are omitted.
+  - Team lists are the full league PLPs (not just the header mega menu).
+  - Non-team collections (City Connect, Tailgate, HBCU, Rivalries, etc.) are omitted.
+  - Fan-shop intent phrases are included (fan shop, nfl jersey, mlb apparel, …).
+  - Team matches also append facet='facet_Team':'<Full Team Name>'
+    e.g. &facet=%27facet_Team%27:%27Houston%20Rockets%27
+    Intent-only searches (nfl jersey, fan shop) get orderBy without a team facet.
+  - Where: Page type = search (current setup). Recheck if Home → Search
+    should still fire. Run Once: Yes.
+
+  =====================================================================
+  Experience 2 — Fan Shop + related PLPs
+  =====================================================================
+  - Name: [PLP][Fan Shop New Arrivals Sort][Evergreen]
+  - Tag: AravindD
+  - 1 action, type Javascript: 06-fan-shop-plp.js
+    JS does not duplicate the URL list. Monetate Where is the target.
+    JS only appends orderBy, and keeps the history wrap from leaking
+    onto non-Fan-Shop SPA navigations (/c/fan-shop prefix only).
+  - Where: URL contains chips, OR together:
+      /c/fan-shop
+      /c/shops/fan-shop-hats
+      /c/brands/nike-brand-shop/nike-fan-shop
+      /c/brands/adidas/adidas-fan-shop
+      /c/brands/jordan/jordan-fan-shop
+      /c/brands/brands-m-r/mitchell-ness
+      /c/brands/brands-m-r/new-era
+      /c/brands/47-brand
+      /c/brands/brands-a-to-d/antigua
+      /c/brands/carhartt-brand-shop/carhartt-x-47
+      /c/bags/clear-stadium-bags-totes
+  - Run Once: Yes
+  - Recheck: Yes (Fan Shop → Astros, and related brand PLPs).
+
+  Behavior (both experiences)
+  - Appends &orderBy=newArrival only when orderBy is absent.
+  - Never overwrites an existing orderBy (price, best match, user-changed sort).
+  - Preserves other query params (facet, storeid, page, …).
+  - No full-page reload: history.pushState wrap, or replaceState + popstate.
+
+  Nicknames excluded (ambiguous or other-product collisions)
+  - Shared mascots: tigers, bulldogs, wildcats, cougars, huskies, mountaineers,
+    cardinals, panthers, knights, bears, cowboys, ducks, giants, jets, rangers
+  - Products on Academy: cowboy boots/hats, riding spurs, duck decoys, grills
+    (flames), walking canes, ENO/eagles, predator hunting brands, Wolverine
+    boots, Red Wing boots, phone chargers, deer bucks
+  - Standalone state/city names: alabama, texas, washington, etc.
+-->

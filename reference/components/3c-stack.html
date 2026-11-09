@@ -1,0 +1,481 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+
+<!-- 3-card stack -->
+<style>
+    #c3-stack {
+        --text-card-title: clamp(16px, 1.69vw, 28px);
+        --text-card-kicker: clamp(12px, 1.33vw, 22px);
+    }
+
+    #c3-stack .c3-stack-title {
+        width: clamp(260px, 36.77vw, 609px);
+    }
+
+    /* Desktop: 3 equal columns */
+    #c3-stack .c3-stack-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    /* Card container */
+    #c3-stack .c3-stack-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        height: clamp(220px, 28.68vw, 475px);
+    }
+
+    /* Clickable link fills the full card */
+    #c3-stack .c3-stack-card .c3-stack-link {
+        display: block;
+        height: 100%;
+    }
+
+    /* Picture element fills height */
+    #c3-stack .c3-stack-card picture {
+        display: block;
+        height: 100%;
+    }
+
+    /* Media fills the card */
+    #c3-stack .c3-stack-card img,
+    #c3-stack .c3-stack-card video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Play/pause button — bottom-right */
+    #c3-stack .c3-stack-video-btn {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        width: clamp(1.5rem, 2.17vw, 2.25rem);
+        height: clamp(1.5rem, 2.17vw, 2.25rem);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #c3-stack .c3-stack-video-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* ── Mobile ──
+       Config on .c3-stack-grid:
+         data-full-card="1|2|3"           which card spans full width
+         data-full-position="top|middle|bottom"  where that card sits
+    */
+    @media (max-width: 767px) {
+        #c3-stack .c3-stack-title {
+            width: clamp(200px, 68.27vw, 256px);
+        }
+
+        #c3-stack .c3-stack-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        #c3-stack .c3-stack-card {
+            height: 207px;
+            border-radius: 4px;
+        }
+
+        /* Full-width card (by desktop index) */
+        #c3-stack .c3-stack-grid[data-full-card="1"] > .c3-stack-card:nth-child(1),
+        #c3-stack .c3-stack-grid[data-full-card="2"] > .c3-stack-card:nth-child(2),
+        #c3-stack .c3-stack-grid[data-full-card="3"] > .c3-stack-card:nth-child(3) {
+            grid-column: span 2;
+            height: 200px;
+        }
+
+        /* Position: top — full card first */
+        #c3-stack .c3-stack-grid[data-full-position="top"][data-full-card="1"] > .c3-stack-card:nth-child(1) { order: 1; }
+        #c3-stack .c3-stack-grid[data-full-position="top"][data-full-card="1"] > .c3-stack-card:nth-child(2) { order: 2; }
+        #c3-stack .c3-stack-grid[data-full-position="top"][data-full-card="1"] > .c3-stack-card:nth-child(3) { order: 3; }
+
+        #c3-stack .c3-stack-grid[data-full-position="top"][data-full-card="2"] > .c3-stack-card:nth-child(2) { order: 1; }
+        #c3-stack .c3-stack-grid[data-full-position="top"][data-full-card="2"] > .c3-stack-card:nth-child(1) { order: 2; }
+        #c3-stack .c3-stack-grid[data-full-position="top"][data-full-card="2"] > .c3-stack-card:nth-child(3) { order: 3; }
+
+        #c3-stack .c3-stack-grid[data-full-position="top"][data-full-card="3"] > .c3-stack-card:nth-child(3) { order: 1; }
+        #c3-stack .c3-stack-grid[data-full-position="top"][data-full-card="3"] > .c3-stack-card:nth-child(1) { order: 2; }
+        #c3-stack .c3-stack-grid[data-full-position="top"][data-full-card="3"] > .c3-stack-card:nth-child(2) { order: 3; }
+
+        /* Position: middle — one half, full, other half */
+        #c3-stack .c3-stack-grid[data-full-position="middle"][data-full-card="1"] > .c3-stack-card:nth-child(2) { order: 1; }
+        #c3-stack .c3-stack-grid[data-full-position="middle"][data-full-card="1"] > .c3-stack-card:nth-child(1) { order: 2; }
+        #c3-stack .c3-stack-grid[data-full-position="middle"][data-full-card="1"] > .c3-stack-card:nth-child(3) { order: 3; }
+
+        #c3-stack .c3-stack-grid[data-full-position="middle"][data-full-card="2"] > .c3-stack-card:nth-child(1) { order: 1; }
+        #c3-stack .c3-stack-grid[data-full-position="middle"][data-full-card="2"] > .c3-stack-card:nth-child(2) { order: 2; }
+        #c3-stack .c3-stack-grid[data-full-position="middle"][data-full-card="2"] > .c3-stack-card:nth-child(3) { order: 3; }
+
+        #c3-stack .c3-stack-grid[data-full-position="middle"][data-full-card="3"] > .c3-stack-card:nth-child(1) { order: 1; }
+        #c3-stack .c3-stack-grid[data-full-position="middle"][data-full-card="3"] > .c3-stack-card:nth-child(3) { order: 2; }
+        #c3-stack .c3-stack-grid[data-full-position="middle"][data-full-card="3"] > .c3-stack-card:nth-child(2) { order: 3; }
+
+        /* Position: bottom — full card last */
+        #c3-stack .c3-stack-grid[data-full-position="bottom"][data-full-card="1"] > .c3-stack-card:nth-child(2) { order: 1; }
+        #c3-stack .c3-stack-grid[data-full-position="bottom"][data-full-card="1"] > .c3-stack-card:nth-child(3) { order: 2; }
+        #c3-stack .c3-stack-grid[data-full-position="bottom"][data-full-card="1"] > .c3-stack-card:nth-child(1) { order: 3; }
+
+        #c3-stack .c3-stack-grid[data-full-position="bottom"][data-full-card="2"] > .c3-stack-card:nth-child(1) { order: 1; }
+        #c3-stack .c3-stack-grid[data-full-position="bottom"][data-full-card="2"] > .c3-stack-card:nth-child(3) { order: 2; }
+        #c3-stack .c3-stack-grid[data-full-position="bottom"][data-full-card="2"] > .c3-stack-card:nth-child(2) { order: 3; }
+
+        #c3-stack .c3-stack-grid[data-full-position="bottom"][data-full-card="3"] > .c3-stack-card:nth-child(1) { order: 1; }
+        #c3-stack .c3-stack-grid[data-full-position="bottom"][data-full-card="3"] > .c3-stack-card:nth-child(2) { order: 2; }
+        #c3-stack .c3-stack-grid[data-full-position="bottom"][data-full-card="3"] > .c3-stack-card:nth-child(3) { order: 3; }
+
+        #c3-stack .c3-stack-video-btn {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+</style>
+
+<div id="c3-stack" class="cont-1656 hp-margin mb-3">
+
+    <div class="text-center mb-4 pt-3">
+        <svg class="c3-stack-title" viewBox="0 0 609 100" fill="none" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Trending for Fans">
+            <path
+                d="M1.81594 23.22H35.8959V35.22H25.4159V76.5H12.3759V35.22H1.81594V23.22ZM53.5578 57.94V76.5H40.5178V23.22H60.0378C69.1578 23.22 74.7578 28.66 74.7578 37.46V43.7C74.7578 49.3 72.4378 53.54 68.4378 55.86L75.8778 76.5H62.5178L55.9578 57.94H53.5578ZM53.5578 33.62V47.78H56.7578C60.2778 47.78 61.7178 46.1 61.7178 42.74V38.74C61.7178 35.3 60.2778 33.62 56.7578 33.62H53.5578ZM80.1866 23.22H109.947V34.98H92.9066V43.7H105.947V55.06H92.9066V64.74H109.947V76.5H80.1866V23.22ZM115.637 23.22H128.517L140.277 52.58H140.437L140.197 23.22H151.477V76.5H138.837L126.837 46.66H126.677L126.917 76.5H115.637V23.22ZM158.196 23.22H176.276C187.716 23.22 194.036 29.46 194.036 40.66V59.14C194.036 70.34 187.716 76.5 176.276 76.5H158.196V23.22ZM171.236 33.86V65.86H175.316C179.156 65.86 180.836 63.54 180.836 59.78V39.94C180.836 36.18 179.156 33.86 175.316 33.86H171.236ZM200.214 23.22H213.254V76.5H200.214V23.22ZM220.19 23.22H233.07L244.83 52.58H244.99L244.75 23.22H256.03V76.5H243.39L231.39 46.66H231.23L231.47 76.5H220.19V23.22ZM280.029 22.1C291.149 22.1 297.309 27.7 297.309 39.3V42.66H285.469V39.62C285.469 35.54 283.629 33.54 280.429 33.54C277.069 33.54 275.149 35.78 275.149 39.78V60.26C275.149 64.34 277.149 66.5 280.349 66.5C283.469 66.5 285.549 64.42 285.549 60.42V56.74H280.429V48.18H297.709V76.5H291.709L289.869 69.38C287.869 73.46 284.269 77.54 277.069 77.54C268.029 77.54 261.949 71.14 261.949 59.86V40.18C261.949 28.82 269.549 22.1 280.029 22.1Z"
+                fill="#1946C8" />
+            <path
+                d="M317.82 94.6792C315.266 94.8577 313.848 94.0747 313.126 92.9223C312.768 92.386 312.974 91.8904 313.419 91.3781C316.787 87.9348 318.056 85.4402 320.437 79.3393L330.284 53.8703L335.376 40.683C340.194 28.1564 348.152 12.3628 358.048 11.6708C361.958 11.3974 363.904 13.988 364.2 18.2176C364.914 28.4327 355.873 48.2316 340.906 58.9818C341.556 62.5451 343.211 65.5571 347.201 65.278C354.064 64.7981 358.769 55.2466 360.211 51.7776C360.886 49.9661 364.418 51.1626 363.674 53.1393C361.031 60.0606 354.952 69.4676 346.812 70.0368C342.343 70.3493 339.365 67.911 337.774 64.6541L331.869 79.9833C329.02 87.4002 324.524 94.2104 317.82 94.6792ZM342.793 51.5521C354.129 40.4944 360.294 23.1421 359.925 17.875C359.853 16.8375 359.489 16.2214 358.93 16.2604C355.818 16.4781 351.33 29.142 347.473 39.3559L342.793 51.5521ZM369.295 71.5922C361.554 72.1335 357.867 67.5796 357.443 61.5144C356.701 50.9003 365.592 35.8434 378.84 34.917C386.581 34.3757 390.188 38.9352 390.618 45.0802C390.841 48.2724 390.209 51.8452 388.847 55.3087L389.086 55.2919C392.358 55.0631 395.205 53.3404 396.841 49.2162C397.517 47.4046 400.969 48.6068 400.305 50.5779C397.873 57.0834 393.007 59.7493 388.697 60.0507C387.899 60.1065 387.175 60.0769 386.531 60.0417C382.789 66.1577 376.797 71.0676 369.295 71.5922ZM373.45 64.4851C376.881 64.2451 379.804 61.3141 381.947 57.5555C381.241 56.6425 380.918 55.4621 380.835 54.265C380.611 51.0728 382.367 47.5017 385.315 46.0926C385.362 45.6082 385.334 45.2091 385.306 44.8101C385.099 41.8573 383.832 39.7807 381.198 39.9649C374.893 40.4057 368.559 53.0383 369.05 60.0612C369.24 62.7746 370.577 64.686 373.45 64.4851ZM413.346 68.5118C408.398 68.8578 405.028 66.5273 404.704 61.8986C404.564 59.9035 404.95 57.3904 406.111 54.5024L411.965 39.5777C408.954 40.109 406.629 40.1112 404.52 39.7775L400.304 50.578C399.834 51.8939 396.085 51.0334 396.84 49.2163C399.718 42.1984 400.786 36.8308 400.531 32.037C400.486 31.3985 400.692 30.9029 401.319 30.6987C404.832 29.3303 407.44 31.0726 406.597 35.0612C411.127 35.6265 416.817 34.4267 422.166 32.93C422.793 32.7257 423.283 32.8518 423.641 33.3881L424.711 34.9173C425.069 35.4536 425.097 35.8526 424.896 36.428L418.997 51.8371C417.978 54.4745 417.559 56.5087 417.66 57.9452C417.777 59.6211 418.636 60.4432 419.913 60.3539C422.627 60.1641 426.007 55.7576 429.56 46.9282C430.236 45.1167 433.768 46.3133 433.024 48.29C428.326 60.2468 421.407 67.9482 413.346 68.5118Z"
+                fill="#1946C8" />
+            <path
+                d="M341.679 89.504L334.13 82.294C333.66 81.7861 333.787 81.2638 334.375 81.1662C374.364 70.3019 403.324 71.7088 427.271 73.457C427.734 73.5333 427.937 73.9665 427.748 74.4887L427.243 76.0553C427.117 76.4855 426.92 76.7502 426.724 76.7588C406.995 75.2764 379.537 77.212 342.532 89.7575C342.203 89.8467 341.936 89.7718 341.67 89.5128L341.679 89.504Z"
+                fill="#1946C8" />
+            <path
+                d="M460.48 23.22H489.84V35.06H473.36V45.14H485.68V56.66H473.36V76.5H460.48V23.22ZM514.93 76.5L513.17 67.62H501.09L499.33 76.5H487.49L499.73 22.98H515.41L527.57 76.5H514.93ZM507.17 37.62L503.09 57.94H511.33L507.33 37.62H507.17ZM530.833 23.22H543.713L555.473 52.58H555.633L555.393 23.22H566.673V76.5H554.033L542.033 46.66H541.873L542.113 76.5H530.833V23.22ZM589.232 22.1C600.992 22.1 605.952 28.5 605.952 37.3V40.34H593.872V37.54C593.872 34.58 592.512 32.58 589.312 32.58C586.192 32.58 584.752 34.34 584.752 36.58C584.752 39.46 586.592 41.14 593.792 44.9C602.592 49.54 606.352 53.38 606.352 61.78C606.352 71.46 600.432 77.62 588.672 77.62C576.192 77.62 571.552 71.06 571.552 62.42V58.66H583.872V61.22C583.872 64.74 585.152 67.14 588.752 67.14C592.112 67.14 593.632 65.3 593.632 62.74C593.632 59.62 591.872 58.18 584.512 54.26C575.792 49.62 572.032 45.3 572.032 37.46C572.032 28.9 577.872 22.1 589.232 22.1Z"
+                fill="#1946C8" />
+        </svg>
+    </div>
+
+    <section data-cname="cs_3c_wtitle_stack" data-pz-seg-name="cs_default" data-pz-seg-id="cs_default">
+        <!--
+          Mobile layout config (desktop order is unchanged):
+            data-full-card="1" | "2" | "3"
+            data-full-position="top" | "middle" | "bottom"
+        -->
+        <div class="c3-stack-grid" data-full-card="1" data-full-position="top">
+
+            <!-- Card 1: video -->
+            <div class="c3-stack-card" id="c3StackCard1">
+                <a href="https://www.academy.com/c/fan-shop/nba"
+                    data-omni="trendforfans_app_NBA"
+                    class="c3-stack-link hp-hover"
+                    aria-label="Shop NBA apparel and gear. NBA Playoffs Are Here.">
+                    <video id="c3StackVideo1" muted loop playsinline preload="metadata"
+                        aria-label="NBA Playoffs Are Here">
+                        <source media="(min-width: 768px)"
+                            src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt5443f0389fa1af9f/69e2636e95cc741c2a16e0cc/trendforfans_NBA.mp4"
+                            type="video/mp4" />
+                        <source media="(max-width: 767px)"
+                            src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt823afeba05dffe74/69e26368fc22ead79cd1182b/trendforfans_NBA-m.mp4"
+                            type="video/mp4" />
+                    </video>
+                    <div class="text-overlay text-overlay-top-left">
+                        <div class="text-card-kicker color-white">Rep Your Team</div>
+                        <div class="text-card-title color-white">NBA Playoffs Are Here</div>
+                    </div>
+                    <button id="c3StackBtn1" class="c3-stack-video-btn" type="button" aria-label="Pause video">
+                        <img id="c3StackIcon1"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg"
+                            alt="Pause video" class="c3-stack-video-icon" />
+                    </button>
+                </a>
+            </div>
+
+            <!-- Card 2: static image -->
+            <div class="c3-stack-card">
+                <a href="https://www.academy.com/c/shops/fan-shop-hats/nfl-hats-beanies"
+                    data-omni="trendforfans_app_NFL"
+                    class="c3-stack-link hp-hover"
+                    aria-label="Shop NFL Draft Hats. Just Dropped.">
+                    <picture>
+                        <source media="(min-width: 768px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltcaebaf343d5088d5/69e67be8fe17be77b4f7f02a/trendforfans_NFL_drafthats.png" />
+                        <source media="(max-width: 767px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt95922823f76b9697/69e67be4fe17be5bfcf7f026/trendforfans_NFL_drafthats-m.png" />
+                        <img loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltcaebaf343d5088d5/69e67be8fe17be77b4f7f02a/trendforfans_NFL_drafthats.png"
+                            alt="NFL Draft Hats displayed on a flat brim with team logos" />
+                    </picture>
+                    <div class="text-overlay text-overlay-top-left">
+                        <div class="text-card-kicker color-white">Just Dropped</div>
+                        <div class="text-card-title color-white">NFL Draft Hats</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3: video -->
+            <div class="c3-stack-card" id="c3StackCard3">
+                <a href="https://www.academy.com/c/fan-shop/fan-shop-jerseys/nhl-jerseys"
+                    data-omni="trendforfans_app_NHL"
+                    class="c3-stack-link hp-hover"
+                    aria-label="Shop NHL Jerseys. Face Off on Ice.">
+                    <video id="c3StackVideo3" muted loop playsinline preload="metadata"
+                        aria-label="NHL Jerseys">
+                        <source media="(min-width: 768px)"
+                            src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt533f1397a7b09174/69e5bc8afc22ea48c5d11c39/FanShop-Card_Desktop.mp4"
+                            type="video/mp4" />
+                        <source media="(max-width: 767px)"
+                            src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt09b94fefb4d6a2a3/69e14d46fe17be6f98f7e24b/NHL-Jerseys-m.mp4"
+                            type="video/mp4" />
+                    </video>
+                    <div class="text-overlay text-overlay-top-left">
+                        <div class="text-card-kicker color-white">Face Off on Ice</div>
+                        <div class="text-card-title color-white">NHL Jerseys</div>
+                    </div>
+                    <button id="c3StackBtn3" class="c3-stack-video-btn" type="button" aria-label="Pause video">
+                        <img id="c3StackIcon3"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg"
+                            alt="Pause video" class="c3-stack-video-icon" />
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ── Card 1 video: IntersectionObserver auto-play (once + one replay) ── */
+    (function initCard1Video() {
+        var card  = document.getElementById("c3StackCard1");
+        var video = document.getElementById("c3StackVideo1");
+        var btn   = document.getElementById("c3StackBtn1");
+        var icon  = document.getElementById("c3StackIcon1");
+
+        if (!card || !video || !btn || !icon) return;
+
+        var playIconUrl  = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfb7f6e5f516cd86b/68dbe6f04983061fa4f367e1/button_play_default.svg";
+        var pauseIconUrl = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg";
+
+        var hasAutoPlayedOnce     = false;
+        var hasExitedAfterAutoPlay = false;
+        var hasAutoReplayedOnce   = false;
+
+        function setIcon(isPaused) {
+            icon.src = isPaused ? playIconUrl : pauseIconUrl;
+            icon.alt = isPaused ? "Play video" : "Pause video";
+            btn.setAttribute("aria-label", isPaused ? "Play video" : "Pause video");
+        }
+
+        function playFromStart() {
+            try { video.currentTime = 0; } catch (e) {}
+            video.play().then(function () { setIcon(false); }).catch(function () { setIcon(true); });
+        }
+
+        function pauseVideo() {
+            if (!video.paused) video.pause();
+            setIcon(true);
+        }
+
+        video.addEventListener("ended", function () { setIcon(true); });
+        video.addEventListener("pause", function () { setIcon(true); });
+        video.addEventListener("play",  function () { setIcon(false); });
+
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (video.paused) {
+                var nearEnd = video.duration && video.currentTime >= Math.max(0, video.duration - 0.05);
+                if (video.ended || nearEnd) {
+                    playFromStart();
+                } else {
+                    video.play().then(function () { setIcon(false); }).catch(function () { setIcon(true); });
+                }
+            } else {
+                pauseVideo();
+            }
+        });
+
+        var card1Observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    if (!hasAutoPlayedOnce) {
+                        hasAutoPlayedOnce = true;
+                        playFromStart();
+                        return;
+                    }
+                    if (hasExitedAfterAutoPlay && !hasAutoReplayedOnce) {
+                        hasAutoReplayedOnce = true;
+                        playFromStart();
+                        return;
+                    }
+                } else {
+                    if (hasAutoPlayedOnce) hasExitedAfterAutoPlay = true;
+                    pauseVideo();
+                }
+            });
+        }, { threshold: 0 });
+
+        setIcon(false);
+        card1Observer.observe(card);
+    })();
+
+    /* ── Card 3 video: immediate auto-play on load ── */
+    (function initCard3Video() {
+        var card  = document.getElementById("c3StackCard3");
+        var video = document.getElementById("c3StackVideo3");
+        var btn   = document.getElementById("c3StackBtn3");
+        var icon  = document.getElementById("c3StackIcon3");
+
+        if (!card || !video || !btn || !icon) return;
+
+        var playIconUrl  = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfb7f6e5f516cd86b/68dbe6f04983061fa4f367e1/button_play_default.svg";
+        var pauseIconUrl = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg";
+
+        function setIcon(isPaused) {
+            icon.src = isPaused ? playIconUrl : pauseIconUrl;
+            icon.alt = isPaused ? "Play video" : "Pause video";
+            btn.setAttribute("aria-label", isPaused ? "Play video" : "Pause video");
+        }
+
+        function playFromStart() {
+            try { video.currentTime = 0; } catch (e) {}
+            video.play().then(function () { setIcon(false); }).catch(function () { setIcon(true); });
+        }
+
+        video.addEventListener("ended", function () { setIcon(true); });
+        video.addEventListener("pause", function () { setIcon(true); });
+        video.addEventListener("play",  function () { setIcon(false); });
+
+        video.play().then(function () { setIcon(false); }).catch(function () { setIcon(true); });
+
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (video.paused) {
+                var nearEnd = video.duration && video.currentTime >= Math.max(0, video.duration - 0.05);
+                if (video.ended || nearEnd) {
+                    playFromStart();
+                } else {
+                    video.play().then(function () { setIcon(false); }).catch(function () { setIcon(true); });
+                }
+            } else {
+                if (!video.paused) video.pause();
+                setIcon(true);
+            }
+        });
+    })();
+
+});
+</script>
+<!-- 3-card stack -->

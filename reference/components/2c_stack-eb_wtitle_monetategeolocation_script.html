@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home is where the gym is</title>
+</head>
+
+<body>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=11">
+
+    <!-- Global Imports -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=140">
+
+    <!-- Module Imports -->
+    <!-- Ticker -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=15">
+
+    <!-- Featured Categories -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=113">
+
+    <!-- Banner with featured categories -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=13">
+
+    <!-- Scrollable cards -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=18">
+
+    <!-- Hero Banner -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=17">
+
+    <!-- New and Upcoming Component -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=113">
+
+    <!-- Holiday Season (Green) Component -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=15">
+
+    <!-- Evergreen ACC -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=12">
+
+    <!-- Trending / Keep Shopping Banner -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=15">
+
+    <!-- Promo Banner -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=11">
+
+    <!-- Evergreen - Customers are Shopping - Featured Categories -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=16">
+
+    <!-- New Scrollable Cards -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=12">
+
+
+    <!-- Trending Near You -->
+    <style>
+        #trending-near-you {
+            --text-card-title: clamp(16px, 1.69vw, 28px);
+            --text-card-kicker: clamp(12px, 1.33vw, 22px);
+            --text-card-disclaimer: clamp(14px, 1.33vw, 22px);
+            --text-card-cta: clamp(14px, 1.33vw, 22px);
+        }
+
+        #trending-near-you .text-card-title {
+            font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+        }
+
+        #trending-near-you .text-card-kicker {
+            font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+        }
+
+        #trending-near-you .text-card-cta {
+            font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+            text-decoration: underline;
+        }
+
+        #trending-near-you .headline-svg {
+            height: clamp(36px, 2.5vw, 53px);
+        }
+
+        .ocd-card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .grid-card-wide {
+            grid-column: 1 / -1;
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .svg-trending-near-you {
+            width: clamp(252px, 35.81vw, 593px);
+        }
+
+        @media (max-width: 767px) {
+            .ocd-card-grid {
+                gap: 1rem;
+            }
+
+            /* Mobile (<768px): stack ONLY the first two base cards (Tailgate + Winter Olympics).
+               Keep Monetate-injected cards (appended after) in the existing 2-col grid behavior. */
+            #trending-near-you .ocd-card-grid>a:nth-child(-n+2) {
+                grid-column: 1 / -1;
+            }
+
+            .svg-trending-near-you {
+                width: clamp(250px, 67.2vw, 767px);
+            }
+
+            #trending-near-you {
+                --text-card-title: clamp(10px, 4.26vw, 28px);
+                --text-card-kicker: clamp(6px, 3.2vw, 22px);
+                --text-card-cta: clamp(8px, 3.2vw, 22px);
+            }
+
+            #trending-near-you .text-card-title {
+                font-size: var(--text-card-title, clamp(10px, 4.26vw, 28px));
+            }
+
+            #trending-near-you .text-card-kicker {
+                font-size: var(--text-card-kicker, clamp(6px, 3.2vw, 22px));
+            }
+
+            #trending-near-you .text-card-cta {
+                font-size: var(--text-card-cta, clamp(8px, 3.2vw, 22px));
+                text-decoration: underline;
+            }
+        }
+    </style>
+    <div id="trending-near-you" class="cont-1656 hp-margin mb-3">
+        <div class="text-center mb-4 pt-3">
+            <svg class="svg-trending-near-you" viewBox="0 0 593 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M1.81594 23.22H35.8959V35.22H25.4159V76.5H12.3759V35.22H1.81594V23.22ZM53.5578 57.94V76.5H40.5178V23.22H60.0378C69.1578 23.22 74.7578 28.66 74.7578 37.46V43.7C74.7578 49.3 72.4378 53.54 68.4378 55.86L75.8778 76.5H62.5178L55.9578 57.94H53.5578ZM53.5578 33.62V47.78H56.7578C60.2778 47.78 61.7178 46.1 61.7178 42.74V38.74C61.7178 35.3 60.2778 33.62 56.7578 33.62H53.5578ZM80.1866 23.22H109.947V34.98H92.9066V43.7H105.947V55.06H92.9066V64.74H109.947V76.5H80.1866V23.22ZM115.637 23.22H128.517L140.277 52.58H140.437L140.197 23.22H151.477V76.5H138.837L126.837 46.66H126.677L126.917 76.5H115.637V23.22ZM158.196 23.22H176.276C187.716 23.22 194.036 29.46 194.036 40.66V59.14C194.036 70.34 187.716 76.5 176.276 76.5H158.196V23.22ZM171.236 33.86V65.86H175.316C179.156 65.86 180.836 63.54 180.836 59.78V39.94C180.836 36.18 179.156 33.86 175.316 33.86H171.236ZM200.214 23.22H213.254V76.5H200.214V23.22ZM220.19 23.22H233.07L244.83 52.58H244.99L244.75 23.22H256.03V76.5H243.39L231.39 46.66H231.23L231.47 76.5H220.19V23.22ZM280.029 22.1C291.149 22.1 297.309 27.7 297.309 39.3V42.66H285.469V39.62C285.469 35.54 283.629 33.54 280.429 33.54C277.069 33.54 275.149 35.78 275.149 39.78V60.26C275.149 64.34 277.149 66.5 280.349 66.5C283.469 66.5 285.549 64.42 285.549 60.42V56.74H280.429V48.18H297.709V76.5H291.709L289.869 69.38C287.869 73.46 284.269 77.54 277.069 77.54C268.029 77.54 261.949 71.14 261.949 59.86V40.18C261.949 28.82 269.549 22.1 280.029 22.1Z"
+                    fill="#1946C8" />
+                <path
+                    d="M347.57 83.7715L339.92 78.0847C339.444 77.6845 339.579 77.2776 340.182 77.2058C381.189 69.0193 410.795 70.3337 435.271 71.8774C435.744 71.9404 435.947 72.2802 435.749 72.6866L435.217 73.9063C435.084 74.2413 434.88 74.4466 434.679 74.4518C414.515 73.1471 386.411 74.4542 348.441 83.9759C348.103 84.043 347.831 83.9826 347.561 83.7783L347.57 83.7715Z"
+                    fill="#1946C8" />
+                <path
+                    d="M320.933 72.2041C319.102 72.3321 317.609 71.6481 317.034 69.0602C316.941 68.6725 317.119 68.3972 317.437 68.2436C322.605 66.0426 327.629 59.9094 332.675 48.4529L339.081 33.879C340.547 30.4256 341.541 27.728 342.983 25.7876C339.803 25.4186 337.423 24.271 334.023 24.5087C328.466 24.8973 325.929 29.0169 326.244 33.5283C326.377 35.4244 327.046 37.48 328.155 39.2422C328.383 39.6861 328.275 40.0222 327.752 40.0588C323.586 40.6129 321.06 37.373 320.776 33.3193C320.324 26.8464 325.436 21.0356 333.021 20.5053C338.709 20.1075 342.669 23.1814 347.442 22.8477C348.226 22.7928 349.011 22.7379 349.917 22.5432C350.37 22.4458 350.585 22.6936 350.551 23.1559C350.226 25.0839 350.573 27.2279 350.762 28.9886L353.894 54.9848L360.724 37.0961C364.451 27.44 368.415 18.3588 372.992 18.0387C374.888 17.9061 376.382 18.5901 376.952 21.1126C377.05 21.5657 376.867 21.7756 376.484 21.9338C371.48 23.6634 367.846 30.882 364.391 39.7306L353.937 66.8739C353.829 67.21 353.577 67.359 353.254 67.4472L348.793 68.4819C348.405 68.5747 348.06 68.3361 348.033 67.9438L343.648 33.4282L336.281 51.1573C331.042 63.6129 325.575 71.8795 320.933 72.2041ZM376.35 66.555C369.223 67.0533 365.871 63.2799 365.51 58.1147C364.916 49.6149 372.653 37.1818 383.245 36.4411C388.149 36.0982 390.873 38.4044 391.097 41.6082C391.458 46.7734 385.479 54.2873 373.269 56.3237C373.227 56.6552 373.245 56.9168 373.263 57.1783C373.478 60.2513 375.273 62.4254 379.261 62.1465C386.257 61.6573 392.201 55.5255 394.813 48.707C395.375 47.3536 397.937 48.2914 397.379 49.7101C393.826 59.0255 385.83 65.892 376.35 66.555ZM373.704 53.1397C382.644 51.3318 386.692 45.3327 386.468 42.1289C386.359 40.5597 385.169 39.526 383.6 39.6357C379.743 39.9054 375.165 46.7957 373.704 53.1397ZM400.524 64.6017C395.294 64.9675 392.833 61.7231 392.513 57.1463C391.914 48.5812 399.265 35.3209 410.053 34.5665C413.453 34.3288 415.898 35.4718 417.357 37.538L418.789 35.4668C418.967 35.1916 419.284 35.0379 419.611 35.0151L424.973 34.6402C425.43 34.6082 425.715 34.9168 425.551 35.3882L419.546 50.9853C418.828 52.9408 418.541 54.4721 418.623 55.649C418.733 57.2181 419.512 58.0178 420.623 57.9401C423.042 57.7709 425.897 53.4978 428.747 46.334C429.244 44.9852 431.872 45.9184 431.314 47.3372C427.929 56.2466 422.689 63.0518 416.543 63.4816C412.947 63.7331 410.839 61.778 410.414 58.5226C407.949 61.783 404.643 64.3137 400.524 64.6017ZM403.647 59.4557C406.85 59.2317 410.228 54.922 412.671 48.5094L415.502 41.0842C414.698 38.9723 413.191 38.0921 411.491 38.211C405.541 38.6271 400.032 50.0502 400.444 55.9347C400.599 58.1577 401.554 59.602 403.647 59.4557ZM441.948 61.7051C438.352 61.9566 435.926 60.1551 435.679 56.6245C435.565 54.9899 435.951 52.9919 436.841 50.6957L441.904 37.5954C439.186 38.1798 437.084 38.1953 434.951 37.7532L431.285 47.3392C430.896 48.352 428.216 47.6195 428.718 46.3361C431.244 40.1805 432.147 36.1753 431.901 31.7247C431.878 31.3978 432.056 31.1225 432.374 30.9689C435.065 29.9923 437.062 31.2981 436.361 34.4351C440.078 34.9637 444.487 34.1297 448.799 32.8427C449.121 32.7544 449.388 32.8015 449.607 33.1147L450.557 34.4937C450.772 34.7415 450.794 35.0684 450.687 35.4045L445.347 49.2468C444.573 51.3377 444.225 52.9389 444.308 54.1157C444.408 55.5542 445.112 56.2276 446.159 56.1545C448.578 55.9853 451.498 51.7076 454.413 44.5393C454.91 43.1905 457.538 44.1237 456.98 45.5424C453.343 54.6009 448.159 61.2708 441.948 61.7051Z"
+                    fill="#1946C8" />
+                <path
+                    d="M470.933 23.22H484.773L491.253 43.46L497.893 23.22H510.613L497.093 56.18V76.5H484.053V56.18L470.933 23.22ZM529.7 22.1C540.5 22.1 548.02 28.82 548.02 40.18V59.54C548.02 70.9 540.5 77.62 529.7 77.62C518.9 77.62 511.38 70.9 511.38 59.54V40.18C511.38 28.82 518.9 22.1 529.7 22.1ZM529.7 33.54C526.58 33.54 524.58 35.38 524.58 39.78V59.94C524.58 64.34 526.58 66.18 529.7 66.18C532.82 66.18 534.82 64.34 534.82 59.94V39.78C534.82 35.38 532.82 33.54 529.7 33.54ZM553.638 23.22H566.678V59.06C566.678 63.3 568.038 65.78 571.558 65.78C575.078 65.78 576.438 63.3 576.438 59.06V23.22H588.838V59.06C588.838 70.98 583.398 77.62 571.718 77.62C558.758 77.62 553.638 71.3 553.638 59.06V23.22Z"
+                    fill="#1946C8" />
+            </svg>
+
+
+        </div>
+
+        <div class="ocd-card-grid">
+            <!-- Top-left: Super Bowl -->
+            <a href="/c/outdoors/tailgate" class="position-relative hp-hover" data-omni="trend_mac_superbowl"
+                aria-label="Ready, Set, Tailgate. Gear Up for the Big Game.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-kicker color-white">Ready, Set, Tailgate</div>
+                    <div class="text-card-title color-white">Gear Up for<br>the Big Game</div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt560123dc527ec059/697b4c8923d5fb57c3c79c44/trend_superbowl_R2.png?auto=webp&format=pjpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt48efc3cad5b4c91d/697b4c89da790611a27224ec/trend_superbowl_R2-m.png?auto=webp&format=pjpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt48efc3cad5b4c91d/697b4c89da790611a27224ec/trend_superbowl_R2-m.png?auto=webp&format=pjpg"
+                        alt="Ready, Set, Tailgate. Gear Up for the Big Game." class="img-fluid corners">
+                </picture>
+            </a>
+
+            <!-- Top-right: Winter Olympics -->
+            <a href="/c/fan-shop/winter-games-2026" class="position-relative hp-hover"
+                data-omni="trend_app_winterolympics" aria-label="2026 Winter Olympics. Cheer on Team USA.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-kicker color-dark-blue">2026 Winter Olympics</div>
+                    <div class="text-card-title color-dark-blue">Cheer on<br>Team USA</div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt039751919af257b0/697b4c89e4b27a65c037d09a/trend_winterolympics_R2.png?auto=webp&format=pjpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt57dcda35ac8c1f4c/697b4c89ce74ee2bdb80a1ea/trend_winterolympics_R2-m.png?auto=webp&format=pjpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt57dcda35ac8c1f4c/697b4c89ce74ee2bdb80a1ea/trend_winterolympics_R2-m.png?auto=webp&format=pjpg"
+                        alt="2026 Winter Olympics. Cheer on Team USA." class="img-fluid corners">
+                </picture>
+            </a>
+
+            <!-- Bottom (wide): Let's Play Ball / T-Ball (always full-width) -->
+            <a href="/c/fan-shop/fan-shop-jerseys/nba-jersey" class="position-relative hp-hover grid-card-wide"
+                data-omni="trend_app_nbaallstars" aria-label="Shop NBA All Stars fan gear.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte5a25b3640bc813b/6983dd7c0228b564e6cd2b5f/letsplayball_banner_tball_R2.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltf1e3c9984a73f6f5/6983dd7c88fbdd0beebd925a/letsplayball_banner_tball_R2-m.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltf1e3c9984a73f6f5/6983dd7c88fbdd0beebd925a/letsplayball_banner_tball_R2-m.png"
+                        alt="Three 2026 NBA All-Star basketball jerseys—navy USA, white World, and red USA—displayed on a hardwood court background."
+                        class="img-fluid corners">
+                </picture>
+            </a>
+
+        </div>
+    </div>
+    <!-- Trending Near You -->
+
+    <template id="crawfish-card-tx-la-ms-al">
+        <a href="/c/outdoors/grills--outdoor-cooking/crawfish" class="position-relative hp-hover "
+            data-omni="trend_mac_pzcrawfish" aria-label="Spice Up Your Boil. Shop Crawfish.">
+            <div class="card-overlay" aria-hidden="true"></div>
+            <picture>
+                <source media="(min-width: 768px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt758fea65002cb14d/697a1e2c7ca2b67bc2110985/trend_GEO_crawfishboil.png?auto=webp&format=pjpg">
+                <source media="(max-width: 767px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4612f767dd9b29e1/697a1e2c219ed57e1327a921/trend_GEO_crawfishboil-m.png?auto=webp&format=pjpg">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4612f767dd9b29e1/697a1e2c219ed57e1327a921/trend_GEO_crawfishboil-m.png?auto=webp&format=pjpg"
+                    alt="Spice Up Your Boil. Shop Crawfish." class="img-fluid corners">
+            </picture>
+        </a>
+    </template>
+
+    <template id="crawfish-card-ga">
+        <a href="/c/outdoors/grills--outdoor-cooking/crawfish" class="position-relative hp-hover "
+            data-omni="trend_mac_pzcrawfish" aria-label="Spice Up Your Boil. Shop Crawfish.">
+            <div class="card-overlay" aria-hidden="true"></div>
+            <picture>
+                <source media="(min-width: 768px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltee63d56076507ff9/697b4c897ca2b6bb96110fd4/trend_GEO-georgia_banner_crawfishboil.png?auto=webp&format=pjpg">
+                <source media="(max-width: 767px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb87cfa1729f74571/697b4c8961fa46268c63abbe/trend_GEO-georgia_banner_crawfishboil-m.png?auto=webp&format=pjpg">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb87cfa1729f74571/697b4c8961fa46268c63abbe/trend_GEO-georgia_banner_crawfishboil-m.png?auto=webp&format=pjpg"
+                    alt="Spice Up Your Boil. Shop Crawfish." class="img-fluid corners">
+            </picture>
+        </a>
+    </template>
+
+    <template id="mardi-gras-card">
+        <a href="/c/shops/mardi-gras-collection" class="position-relative hp-hover" data-omni="trend_mac_pzmardigras"
+            aria-label="Mardi Gras Season. Shop Now.">
+            <div class="card-overlay" aria-hidden="true"></div>
+            <picture>
+                <source media="(min-width: 768px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltf333f1ce1723eace/697a1e2c72d74d8495acd2e7/trend_GEO_mardigras.png?auto=webp&format=pjpg">
+                <source media="(max-width: 767px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltaca08d3b895c74d6/697a1e2c219ed55d8327a91d/trend_GEO_mardigras-m.png?auto=webp&format=pjpg">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltaca08d3b895c74d6/697a1e2c219ed55d8327a91d/trend_GEO_mardigras-m.png?auto=webp&format=pjpg"
+                    alt="Mardi Gras Season. Shop Now." class="img-fluid corners">
+            </picture>
+        </a>
+    </template>
+
+    <script>
+        /**
+     * Monetate Action Script (Gulf Coast states: TX / LA / MS / AL)
+     * Goal: Clone BOTH #crawfish-card and #mardi-gras-card templates and append them
+     * under #trending-near-you .ocd-card-grid.
+     *
+     * Notes:
+     * - Geo targeting is handled by Monetate "where" clause; this script only manipulates DOM.
+     * - Script is idempotent: it removes previously-inserted clones before inserting again.
+     */
+            (function trendingNearYouGeoGulfCoast() {
+                console.log("trendingNearYouGeo - TX-LA-MS-AL");
+                const ROOT_ID = "trending-near-you";
+                const GRID_SELECTOR = ".ocd-card-grid";
+                const TEMPLATE_IDS = ["crawfish-card-tx-la-ms-al", "mardi-gras-card"];
+                const INSERTED_ATTR = "data-monetate-trending-near-you";
+                const INSERTED_VAL = "geo-gulf-coast";
+                const SKELETON_ATTR = "data-monetate-trending-near-you-skeleton";
+                const STYLE_ID = "monetate-tny-skeleton-styles";
+
+                function nowMs() {
+                    return Date.now();
+                }
+
+                function waitFor(getter, timeoutMs) {
+                    return new Promise((resolve) => {
+                        const start = nowMs();
+                        const initial = getter();
+                        if (initial) return resolve(initial);
+
+                        const obs = new MutationObserver(() => {
+                            const val = getter();
+                            const expired = nowMs() - start > timeoutMs;
+                            if (val || expired) {
+                                obs.disconnect();
+                                resolve(val || null);
+                            }
+                        });
+
+                        obs.observe(document.documentElement, { childList: true, subtree: true });
+
+                        // Hard timeout (safety)
+                        window.setTimeout(() => {
+                            obs.disconnect();
+                            resolve(getter() || null);
+                        }, timeoutMs);
+                    });
+                }
+
+                function getRoot() {
+                    return document.getElementById(ROOT_ID);
+                }
+
+                function getGrid(rootEl) {
+                    return rootEl ? rootEl.querySelector(GRID_SELECTOR) : null;
+                }
+
+                function removePreviouslyInserted(gridEl) {
+                    if (!gridEl) return;
+                    gridEl.querySelectorAll(`[${INSERTED_ATTR}="${INSERTED_VAL}"]`).forEach((el) => el.remove());
+                    gridEl.querySelectorAll(`[${SKELETON_ATTR}="${INSERTED_VAL}"]`).forEach((el) => el.remove());
+                }
+
+                function ensureSkeletonStyles() {
+                    if (document.getElementById(STYLE_ID)) return;
+                    const style = document.createElement("style");
+                    style.id = STYLE_ID;
+                    style.textContent = `
+          /* Monetate Trending Near You - Skeleton/Shimmer */
+          .monetate-tny-skeleton {
+            position: relative;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #E8E8E8;
+          }
+          .monetate-tny-skeleton::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(90deg, rgba(232,232,232,0) 0%, rgba(245,245,245,0.9) 50%, rgba(232,232,232,0) 100%);
+            background-size: 200% 100%;
+            animation: monetateTnyShimmer 1.25s ease-in-out infinite;
+          }
+          .monetate-tny-skeleton-aspect {
+            aspect-ratio: 16 / 9;
+          }
+          @keyframes monetateTnyShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+          }
+          @media (prefers-reduced-motion: reduce) {
+            .monetate-tny-skeleton::before { animation: none; }
+          }
+        `;
+                    document.head.appendChild(style);
+                }
+
+                function createSkeletonCard() {
+                    const el = document.createElement("div");
+                    el.className = "monetate-tny-skeleton monetate-tny-skeleton-aspect";
+                    el.setAttribute(SKELETON_ATTR, INSERTED_VAL);
+                    el.setAttribute("aria-hidden", "true");
+                    return el;
+                }
+
+                async function cloneTemplateRootElement(templateId, timeoutMs) {
+                    const templateEl = await waitFor(() => document.getElementById(templateId), timeoutMs);
+                    if (!templateEl) return null;
+
+                    // Prefer template.content (spec-compliant)
+                    const templateRoot =
+                        (templateEl.content && templateEl.content.firstElementChild) || templateEl.firstElementChild;
+                    if (!templateRoot) return null;
+
+                    return templateRoot.cloneNode(true);
+                }
+
+                async function init() {
+                    const rootEl = await waitFor(getRoot, 8000);
+                    const gridEl = await waitFor(() => getGrid(rootEl), 8000);
+                    if (!gridEl) return;
+
+                    removePreviouslyInserted(gridEl);
+
+                    ensureSkeletonStyles();
+
+                    // Insert skeletons first (one per card), then replace them as clones become available
+                    const skeletons = TEMPLATE_IDS.map(() => {
+                        const sk = createSkeletonCard();
+                        gridEl.appendChild(sk);
+                        return sk;
+                    });
+
+                    for (let i = 0; i < TEMPLATE_IDS.length; i++) {
+                        const templateId = TEMPLATE_IDS[i];
+                        const skeleton = skeletons[i];
+
+                        const cloned = await cloneTemplateRootElement(templateId, 8000);
+                        if (!cloned) {
+                            skeleton.remove();
+                            continue;
+                        }
+
+                        // Mark so we can remove on re-run
+                        if (cloned.setAttribute) {
+                            cloned.setAttribute(INSERTED_ATTR, INSERTED_VAL);
+                        }
+
+                        skeleton.replaceWith(cloned);
+                    }
+                }
+
+                if (document.readyState === "loading") {
+                    document.addEventListener("DOMContentLoaded", init, { once: true });
+                } else {
+                    init();
+                }
+            })();
+
+        
+
+    </script>
+
+</body>
+
+</html>

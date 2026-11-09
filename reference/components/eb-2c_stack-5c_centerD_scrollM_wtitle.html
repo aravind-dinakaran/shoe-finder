@@ -1,0 +1,344 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+
+<style>
+    #the-right-gear-for-the-job {
+        --text-card-promo: clamp(24px, 2.9vw, 48px);
+        --text-card-kicker: clamp(12px, 1.33vw, 22px);
+    }
+
+    #the-right-gear-for-the-job .text-card-promo {
+        font-size: var(--text-card-promo, clamp(24px, 2.9vw, 48px));
+        font-weight: 700;
+    }
+
+    #the-right-gear-for-the-job .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    #the-right-gear-for-the-job .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+    }
+
+    #the-right-gear-for-the-job .padding-header {
+        z-index: 2;
+    }
+
+    .rgfj-card-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Sub-component 3: Looking for More Brands */
+    .rgfj-brands-heading {
+        font-size: clamp(20px, 1.69vw, 28px);
+        font-weight: 700;
+        color: #1946C8;
+        text-align: center;
+    }
+
+    .rgfj-brand-row {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rgfj-brand-btn {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 250px;
+        aspect-ratio: 250 / 75;
+        background-color: #e8ae16;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: clamp(6px, 0.7vw, 12px) clamp(8px, 1vw, 16px);
+    }
+
+    .rgfj-brand-btn img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+
+    @media (max-width: 767px) {
+        #the-right-gear-for-the-job {
+            --text-card-promo: clamp(18px, 7.2vw, 40px);
+            --text-card-kicker: clamp(10px, 3.2vw, 18px);
+        }
+
+        #the-right-gear-for-the-job .text-card-promo {
+            font-size: var(--text-card-promo, clamp(18px, 7.2vw, 40px));
+            font-weight: 700;
+        }
+
+        #the-right-gear-for-the-job .text-card-kicker {
+            font-size: var(--text-card-kicker, clamp(10px, 3.2vw, 18px));
+        }
+
+        #the-right-gear-for-the-job .text-card-cta {
+            font-size: var(--text-card-cta, clamp(8px, 3.2vw, 22px));
+            text-decoration: underline;
+        }
+
+        .rgfj-card-grid {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .rgfj-brands-heading {
+            font-size: clamp(16px, 5.6vw, 21px);
+            text-align: left;
+        }
+
+        .rgfj-brand-row {
+            overflow-x: auto;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            gap: 0.5rem;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .rgfj-brand-row::-webkit-scrollbar {
+            display: none;
+        }
+
+        .rgfj-brand-btn {
+            flex: 0 0 144px;
+            max-width: none;
+            aspect-ratio: auto;
+            height: 43px;
+            padding: 8px;
+        }
+    }
+</style>
+
+<div id="the-right-gear-for-the-job" class="cont-1656 hp-margin mb-3">
+
+    <!-- Sub-component 1: Event Banner -->
+    <section
+        data-cname="cs_eb_1click_stack"
+        data-pz-seg-name="cs_default"
+        data-pz-seg-id="cs_default"
+    >
+        <a href="/c/shops/workwear-clothing-boots"
+        class="d-block mb-3 hp-hover"
+        data-omni="eb_mac_therightgearforthejob"
+        aria-label="Shop workwear and work boots from top brands.">
+            <picture>
+                <source media="(min-width: 768px)" srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt73fa25a22715af01/69c088718a9f50b43734c06f/banner_RGFJ_work.png?auto=webp&format=pjpg">
+                <source media="(max-width: 767px)" srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt932062ccab37c21a/69b04029c1628e0008bc5ed1/banner_work-m.png?auto=webp&format=pjpg">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt932062ccab37c21a/69b04029c1628e0008bc5ed1/banner_work-m.png?auto=webp&format=pjpg"
+                    alt="Yellow workwear promotion banner with a caution-stripe border and the message 'The Right Gear for the Job. Shop All Workwear.'"
+                    class="img-fluid corners">
+            </picture>
+        </a>
+    </section>
+
+    <!-- Sub-component 2: 2-Card Grid (Carhartt + Skechers) -->
+    <section
+        data-cname="cs_2c_wtitle"
+        data-pz-seg-name="cs_default"
+        data-pz-seg-id="cs_default"
+    >
+        <div class="rgfj-card-grid">
+
+            <!-- Card 1: Carhartt — 25% Off Select Styles -->
+            <a href="https://www.academy.com/c/brands/carhartt-brand-shop"
+            class="position-relative hp-hover"
+            data-omni="work_app_carhartt25p"
+            aria-label="Shop 25% off Carhartt workwear.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-promo color-white">25% OFF</div>
+                    <div class="text-card-cta color-white">Select Styles</div>
+                </div>
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt1f4a309fb665c6c4/69c088954440ed7288b1de04/RGFJ_work_Carhartt.png?auto=webp&format=pjpg"
+                    alt="A person wearing a green Carhartt shirt and work gloves carrying a large piece of lumber in a jobsite setting, with text advertising 25% off select styles."
+                    class="img-fluid corners">
+            </a>
+
+            <!-- Card 2: Skechers — 25% Off Select Service Shoes + Work Shoes -->
+            <a href="https://www.academy.com/c/brands/skechers/work-shoes-boots-by-skechers"
+            class="position-relative hp-hover"
+            data-omni="work_fw_skechersserviceworkshoes25p"
+            aria-label="Shop select SKECHERS service shoes and work shoes 25% off.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-promo color-white">25% OFF</div>
+                    <div class="text-card-cta color-white">Select Service + <br>Work Shoes</div>
+                </div>
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb4c6218d1e017554/69c08895dbde58644dbc362e/RGFJ_work_skechers.png?auto=webp&format=pjpg"
+                    alt="Close-up of Skechers service and work shoes worn on an industrial metal surface with text advertising 25% off select service and work shoes."
+                    class="img-fluid corners">
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Sub-component 3: Looking for More Brands? -->
+    <section
+        data-cname="cs_5c_wtitle_scroll"
+        data-pz-seg-name="cs_default"
+        data-pz-seg-id="cs_default"
+    >
+        <div class="mt-3 mb-2">
+            <div class="rgfj-brands-heading">LOOKING FOR MORE BRANDS?</div>
+        </div>
+        <div class="rgfj-brand-row">
+            <a href="https://www.academy.com/c/brands/ariat"
+            class="rgfj-brand-btn hp-hover"
+            data-omni="work_mac_ariat"
+            aria-label="Shop workwear from Ariat.">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blta0cda41156c5a36b/69c0888b1209756b95409308/looking-for-more-brands_Ariat.png?auto=webp&format=pjpg"
+                    alt="Ariat brand logo displayed on a yellow rectangular background.">
+            </a>
+            <a href="https://www.academy.com/c/brands/brands-a-to-d/brazos-brand"
+            class="rgfj-brand-btn hp-hover"
+            data-omni="work_mac_brazos"
+            aria-label="Shop workwear from Brazos, only at Academy.">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt98cf4b9727f68056/69c0888b0c7dd622196c0a9d/looking-for-more-brands_Brazos.png?auto=webp&format=pjpg"
+                    alt="Brazos brand logo displayed on a yellow rectangular background.">
+            </a>
+            <a href="https://www.academy.com/c/brands/brands-s-z/wrangler"
+            class="rgfj-brand-btn hp-hover"
+            data-omni="work_mac_wrangler"
+            aria-label="Shop workwear from Wrangler.">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt81b83fd1140314f5/69c0888b6b74d385c13c82a2/looking-for-more-brands_Wrangler.png?auto=webp&format=pjpg"
+                    alt="Wrangler brand logo displayed on a yellow rectangular background.">
+            </a>
+            <a href="https://www.academy.com/c/brands/brands-s-z/wolverine"
+            class="rgfj-brand-btn hp-hover"
+            data-omni="work_mac_wolverine"
+            aria-label="Shop workwear from Wolverine.">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb108b5eb40bf4c3/69c0888b283733598555eb97/looking-for-more-brands_Wolverine.png?auto=webp&format=pjpg"
+                    alt="Wolverine brand logo displayed on a yellow rectangular background.">
+            </a>
+            <a href="https://www.academy.com/c/brands/brands-e-l/levis"
+            class="rgfj-brand-btn hp-hover"
+            data-omni="work_mac_levis"
+            aria-label="Shop workwear from Levi's.">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt45c9551b6bbe4bfe/69c0888b88c83b6184145947/looking-for-more-brands_Levis.png?auto=webp&format=pjpg"
+                    alt="Levi's brand logo displayed on a yellow rectangular background.">
+            </a>
+        </div>
+    </section>
+</div>
+<!-- The Right Gear for the Job -->
+

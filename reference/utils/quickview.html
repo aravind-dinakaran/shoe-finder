@@ -1,0 +1,852 @@
+<style>
+    .contentVerticalMargin--iU1wb {
+        display: none;
+    }
+
+    .patriotic-banner {
+        max-width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    @media (max-width: 575px) {
+        .patriotic-banner {
+            margin-left: calc(50% - 50vw) !important;
+            margin-right: calc(50% - 50vw) !important;
+            width: 100vw !important;
+            max-width: 100vw !important;
+            overflow: hidden;
+        }
+
+        .patriotic-banner video {
+            transform: scale(1.25);
+            transform-origin: center center;
+        }
+    }
+</style>
+
+<div class="cont-1656 hp-margin hlp-content-margin-h1" style="z-index: 3; position: relative;">
+    <div class="hlp-header">
+        <h1>Patriotic Essentials</h1>
+        <a href="#filterBarStickyArea" class="jump-cta">Shop All</a>
+    </div>
+</div>
+
+<!-- Full Width -->
+<div class="row patriotic-banner g-0 hp-margin">
+    <div class="mb-3 text-center">
+        <a data-omni="patriotic_mac_shopall" href="#filterBarStickyArea"
+            aria-label="Explore all patriotic clothing, shoes and party essentials.">
+            <video id="patriotic-hero-video" class="img-fluid" autoplay muted playsinline
+                style="display: block; width: 100%; margin-top: -3%; margin-left: -1%; z-index: 0; position: relative;">
+            </video>
+        </a>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var video = document.getElementById('patriotic-hero-video');
+        var desktopSrc = 'https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt5716ed960c9178ca/69fe080bfb76d400324a2bad/HB_rev1.mp4';
+        var mobileSrc = 'https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltf967cccf9074b814/69fcdb134be0732c5b7d6139/HB-m.mp4';
+
+        function setSource() {
+            var src = window.innerWidth >= 576 ? desktopSrc : mobileSrc;
+            if (video.getAttribute('src') !== src) {
+                video.setAttribute('src', src);
+                video.load();
+                video.play();
+            }
+        }
+
+        setSource();
+
+        var resizeTimer;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(setSource, 200);
+        });
+    })();
+</script>
+
+
+
+
+<style>
+    #hm-mod-5050 {
+        margin-top: -9% !important;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hp-caption-block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hp-stripe-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        width: 100%;
+    }
+
+    .hp-stripe-bar span {
+        display: block;
+        width: 100%;
+        height: 6px;
+    }
+
+    .hp-stripe-bar .s-red {
+        background-color: #E81111;
+    }
+
+    .hp-stripe-bar .s-white {
+        background-color: #ffffff;
+    }
+
+    .hp-stripe-bar .s-blue {
+        background-color: #1928A0;
+    }
+
+    .hp-star-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        padding: 8px 0px;
+        background-color: #ffffff;
+        text-decoration: none;
+    }
+
+    .hp-star-label:hover {
+        text-decoration: none;
+    }
+
+    .hp-star-label .label-text {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        font-size: 23px;
+        color: #1928A0;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .hp-stars {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .hp-stars img {
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        transform: rotate(180deg);
+    }
+
+    @media (max-width: 767px) {
+        #hm-mod-5050 {
+            margin-top: -15% !important;
+        }
+
+        .hp-star-label .label-text {
+            font-size: 18px;
+        }
+
+        .hp-stars img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+</style>
+
+<div id="hm-mod-5050" class="cont-1656 hp-margin g-0 my-3">
+    <div class="row m-0">
+
+        <!-- Clothing + Shoes -->
+        <div
+            class="hp-col position-relative d-flex flex-column align-items-center col-12 col-lg-6 px-0 pe-lg-2 pb-2 pb-md-2 pb-lg-0">
+            <a class="hp-link" href="/c/shops/patriotic-gear/patriotic-clothing-shoes"
+                data-omni="patriotic_mac_clothingshoes"
+                aria-label="Shop all patriotic clothing and shoes for the family.">
+
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt647616b0e73efabc/69fb6ac5b1ca70b3f075e04e/Split-banner_clothing_shoes.png?auto=webp&format=pjpg&width=1576&quality=95" />
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt408ba1a51050e3c7/69fcc2de9e74d5fb33c7f7ad/Split-banner_clothing_shoes-m.png?auto=webp&format=pjpg&width=945&quality=95" />
+                    <img loading="lazy" width="945" height="360"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt408ba1a51050e3c7/69fcc2de9e74d5fb33c7f7ad/Split-banner_clothing_shoes-m.png?auto=webp&format=pjpg&width=945&quality=95"
+                        class="img-fluid light-border corners-top"
+                        alt="Group of adults and children standing on a front porch decorated with American flags, wearing red, white, and blue outfits while gathering around a small table outdoors." />
+                </picture>
+
+                <div class="hp-caption-block">
+                    <div class="hp-stripe-bar">
+                        <span class="s-red"></span>
+                        <span class="s-white"></span>
+                        <span class="s-blue"></span>
+                    </div>
+                    <div class="hp-star-label">
+                        <div class="hp-stars" id="stars-left-1"></div>
+                        <span class="label-text">Clothing + Shoes</span>
+                        <div class="hp-stars" id="stars-right-1"></div>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+        <!-- Party Essentials -->
+        <div
+            class="hp-col position-relative d-flex flex-column align-items-center col-12 col-lg-6 px-0 ps-lg-2 pb-2 pb-md-0">
+            <a class="hp-link" href="/c/shops/patriotic-gear/patriotic-sports-gear"
+                data-omni="patriotic_mac_partyessentials"
+                aria-label="Shop patriotic party essentials, including backyard games, coolers and more.">
+
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb6e80d02cde3b2d6/69fcc2dedceae650a183a88f/Split-banner_party-essentials.png?auto=webp&format=pjpg&width=1576&quality=95" />
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt92f406ed0092449a/69fcc2decfd6c7455ee0d1d0/Split-banner_party-essentials-m.png?auto=webp&format=pjpg&width=945&quality=95" />
+                    <img loading="lazy" width="945" height="360"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt92f406ed0092449a/69fcc2decfd6c7455ee0d1d0/Split-banner_party-essentials-m.png?auto=webp&format=pjpg&width=945&quality=95"
+                        class="img-fluid light-border corners-top"
+                        alt="Outdoor backyard scene with a red, white, and blue cooler, folding table with patriotic items, small American flags, and a cornhole board set on the grass." />
+                </picture>
+
+                <div class="hp-caption-block">
+                    <div class="hp-stripe-bar">
+                        <span class="s-red"></span>
+                        <span class="s-white"></span>
+                        <span class="s-blue"></span>
+                    </div>
+                    <div class="hp-star-label">
+                        <div class="hp-stars" id="stars-left-2"></div>
+                        <span class="label-text">Party Essentials</span>
+                        <div class="hp-stars" id="stars-right-2"></div>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const redStar = 'https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt6e1fdbb910a3fac0/69fb6ac5eb66df731c4b798b/red-star.svg';
+    const blueStar = 'https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfa7539932c2a235c/69fb6abceb66df56dc4b7987/blue-star.svg';
+
+    const starContainerIds = ['stars-left-1', 'stars-right-1', 'stars-left-2', 'stars-right-2'];
+
+    function buildStars(containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+
+        const isMobile = window.innerWidth < 768;
+        const count = isMobile ? 4 : 7;
+
+        const current = container.querySelectorAll('img').length;
+        if (current === count) return;
+
+        container.innerHTML = '';
+        for (let i = 0; i < count; i++) {
+            const img = document.createElement('img');
+            img.src = i % 2 === 0 ? redStar : blueStar;
+            img.alt = '';
+            img.setAttribute('aria-hidden', 'true');
+            container.appendChild(img);
+        }
+    }
+
+    function buildAllStars() {
+        starContainerIds.forEach(buildStars);
+    }
+
+    document.addEventListener('DOMContentLoaded', buildAllStars);
+
+    let starResizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(starResizeTimer);
+        starResizeTimer = setTimeout(buildAllStars, 150);
+    });
+</script>
+
+
+<style>
+    /* --- BASE COMPONENT STYLES --- */
+    .gg-component-wrapper {
+        position: relative;
+        overflow: hidden;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .gg-component-wrapper img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .gg-component-wrapper a {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .gg-component-wrapper--cards {
+        border-radius: 0 0 8px 8px;
+    }
+
+    /* --- ARROW BUTTON STYLES --- */
+    .gg-scroll-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: none;
+        /* hidden by default; JS shows on desktop */
+        line-height: 0;
+        padding-right: 1%;
+    }
+
+    .gg-scroll-btn-prev {
+        left: 4px;
+    }
+
+    .gg-scroll-btn-next {
+        right: 4px;
+    }
+
+    .gg-scroll-btn svg {
+        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.18));
+    }
+
+    .gg-scroll-btn:hover svg rect[fill="white"],
+    .gg-scroll-btn:hover svg rect:not([stroke]) {
+        fill: #f0f0f0;
+    }
+
+    /* --- CARD GRID (LAYER 3) STYLES --- */
+    .gg-card-grid {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        padding: 1rem;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    .gg-card {
+        flex: 0 0 auto;
+        width: calc((100% - 3rem) / 5);
+        min-width: 300px;
+        scroll-snap-align: start;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .gg-card-bg {
+        width: 100%;
+        height: 310px;
+        display: block;
+        object-fit: cover;
+    }
+
+    .gg-card-cover-link {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
+
+    .gg-card-content {
+        position: absolute;
+        top: 68%;
+        left: 16px;
+        right: 16px;
+        bottom: 24px;
+        z-index: 3;
+        background: #FFF;
+        border-radius: 8px;
+        display: flex;
+        padding: 12px 16px;
+        flex-direction: row;
+        align-items: center;
+        box-sizing: border-box;
+        gap: 1rem;
+    }
+
+    .gg-card-icon {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .gg-card-headline {
+        width: 130px;
+        height: 60px;
+        flex-shrink: 0;
+        margin-top: 5px;
+    }
+
+    .gg-card-text {
+        color: #01024A;
+        font-family: "Roboto Flex", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 110%;
+    }
+
+    .gg-plus-button {
+        position: relative;
+        z-index: 4;
+        width: 28px;
+        height: 28px;
+        display: flex;
+        flex-shrink: 0;
+        background-color: transparent;
+        padding: 0;
+        cursor: pointer;
+        border: 2px solid transparent;
+        background-image: url('https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt139bd2fb47ae2622/68d5c74ef5170771462ae477/button_addtocard_default.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -1.5rem;
+    }
+
+    .gg-plus-button:hover {
+        background-image: url('https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8bea815705e71b2d/68d5c74ea39329c055c982c2/button_addtocard_hover.svg');
+    }
+
+    /* --- RESPONSIVE ADJUSTMENTS --- */
+    @media (min-width: 1350px) {
+        .gg-card-content {
+            top: 72%;
+        }
+    }
+
+    @media (max-width: 1499px) {
+        .gg-card-text {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .gg-card-content {
+            top: 70%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .gg-component-wrapper {
+            margin-right: 0rem !important;
+            border-radius: 0rem !important;
+        }
+
+        .gg-card-content {
+            padding: 10px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            top: 75%;
+        }
+
+        .gg-card-headline {
+            width: 60px;
+            height: 35px;
+        }
+
+        .gg-plus-button {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Arrows hidden on mobile — touch scroll handles it */
+        .gg-scroll-btn {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .gg-card-content {
+            top: 75%;
+        }
+    }
+</style>
+
+<div class="gg-component-wrapper gg-component-wrapper--cards cont-1656 hp-margin mb-3">
+
+    <!-- Prev Arrow -->
+    <button class="gg-scroll-btn gg-scroll-btn-prev" id="gg-scroll-prev" aria-label="Scroll left">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="16" fill="white" />
+            <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" fill="white" />
+            <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" stroke="#333333" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.5286 16.4717C12.2682 16.2114 12.2682 15.7893 12.5286 15.5289L18.5286 9.52892C18.7889 9.26857 19.211 9.26857 19.4714 9.52892C19.7317 9.78927 19.7317 10.2114 19.4714 10.4717L13.9428 16.0003L19.4714 21.5289C19.7317 21.7893 19.7317 22.2114 19.4714 22.4717C19.211 22.7321 18.7889 22.7321 18.5286 22.4717L12.5286 16.4717Z"
+                fill="#333333" />
+        </svg>
+    </button>
+
+    <!-- Next Arrow -->
+    <button class="gg-scroll-btn gg-scroll-btn-next" id="gg-scroll-next" aria-label="Scroll right">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="white" />
+            <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)" fill="white" />
+            <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)"
+                stroke="#333333" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M19.4714 16.4717C19.7318 16.2114 19.7318 15.7893 19.4714 15.5289L13.4714 9.52892C13.2111 9.26857 12.789 9.26857 12.5286 9.52892C12.2683 9.78927 12.2683 10.2114 12.5286 10.4717L18.0572 16.0003L12.5286 21.5289C12.2683 21.7893 12.2683 22.2114 12.5286 22.4717C12.789 22.7321 13.2111 22.7321 13.4714 22.4717L19.4714 16.4717Z"
+                fill="#333333" />
+        </svg>
+    </button>
+
+    <div class="gg-card-grid" id="gg-scrollable-container">
+
+        <div class="gg-card" data-parentsku="164534308" data-childsku="164534316">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltddcfe2f0acda43e9/69fb6abceca92eae76f68eda/EG_card1_fanny-pack-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt42851885e5b25e9c/69fb6abceca92e6daef68edc/EG_card1_fanny-pack.png"
+                    alt="Igloo Americana flag–pattern fanny pack cooler worn at the waist." loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_out_iglooamericanafannypack"
+                aria-label="See product details for Igloo Americana Flag Fanny Pack Cooler Americana."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8f750e40e288ee55/69fb6ac54ce1e2fe47a7d161/tumbnail-fanny-pack.png"
+                            alt="Igloo Americana Flag Fanny Pack Cooler Americana." loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">Igloo Americana Flag Fanny Pack Cooler Americana</p>
+            </div>
+        </div>
+
+        <div class="gg-card" data-parentsku="164534324" data-childsku="164534332">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt5929f18976efb1bc/69fb6abcb2944f6cb99d4d47/EG_card2_beerdoller-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt0c0fd1528d68017f/69fb6abcc7c3baafccd07b4d/EG_card2_beerdoller.png"
+                    alt="Igloo Americana flag–pattern beerdolier cooler holding multiple aluminum cans." loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_out_iglooamericanabeerdolier"
+                aria-label="See product details for Igloo Americana Flag Beerdolier Cooler Americana."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltf5f623a43e287e9d/69fb6ac59df29a3387c1e346/tumbnail-beer-doller.png"
+                            alt="Igloo Americana Flag Beerdolier Cooler Americana" loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">Igloo Americana Flag Beerdolier Cooler Americana</p>
+            </div>
+        </div>
+
+        <div class="gg-card" data-parentsku="164534287" data-childsku="164534295">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt5e79d2cc1b400047/69fb6abceca92e1f03f68ee0/EG_card3_backpack-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt61a6e0f8e86685bf/69fb6abccfd6c74020e0c9fc/EG_card3_backpack.png"
+                    alt="Igloo Americana flag–pattern backpack cooler worn on the back." loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_out_iglooamericanabackpackcooler"
+                aria-label="See product details for Igloo Americana Flag Backpack Cooler Americana."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte826743ef2c854a7/69fb6ac59e74d53ba2c7ef5a/tumbnail-backpack.png"
+                            alt="Igloo Americana Flag Backpack Cooler Americana" loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">Igloo Americana Flag Backpack Cooler Americana</p>
+            </div>
+        </div>
+
+        <div class="gg-card" data-parentsku="148903847" data-childsku="164704573">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb8563cab41c062ec/69fcc15cc7c3ba5823d0839f/EG_card4_owala-kids-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd4e7589240a37250/69fcc15c39ea75a09e50248e/EG_card4_owala-kids.png"
+                    alt="Owala FreeSip stainless steel water bottle with red, white, and blue star design."
+                    loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_out_owala16oz"
+                aria-label="See product details for Owala Kids FreeSip 16oz Stainless Steel Bottle."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb87857af642865a6/69fb6ac9b1dd97039b3725b3/tumbnail-owala-kids.png"
+                            alt="Owala Kids FreeSip 16oz Stainless Steel Bottle" loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">Owala Kids FreeSip 16oz Stainless Steel Bottle</p>
+            </div>
+        </div>
+
+        <div class="gg-card" data-parentsku="139767548" data-childsku="164704645">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt0a9cadb0c15784ca/69fb6abccfd6c757dae0c9f8/EG_card5_owala-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltf9176a7446c3570c/69fb6ac59df29a7ed4c1e34a/EG_card5_owala.png"
+                    alt="Owala FreeSip stainless steel water bottle with wavy red, white, and blue flag pattern."
+                    loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_out_owala24oz"
+                aria-label="See product details for Owala FreeSip 24oz Stainless Steel Bottle."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt62b4bae1acd48427/69fb6ac94ce1e2c1e3a7d165/tumbnail-owala.png"
+                            alt="Owala FreeSip 24oz Stainless Steel Bottle" loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">Owala FreeSip 24oz Stainless Steel Bottle</p>
+            </div>
+        </div>
+
+        <!-- 2ND GROUP -->
+
+        <div class="gg-card" data-parentsku="163398439" data-childsku="163398535">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte31ba5b10030282d/69fcb48e9e74d537dcc7f70c/EG_card1_shoes-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt2435482529bca164/69fcb48fc7c3ba0f0cd082a8/EG_card1_shoes.png"
+                    alt="HEYDUDE Men's Wally Americana Hey20 BURLEBO USA Shoe" loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_fw_heydudeusashoe"
+                aria-label="See product details for HEYDUDE Men's Wally Americana Hey20 BURLEBO USA Shoe."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbda53ebb7e11898e/69fcb4939e74d5ee9cc7f716/tumbnail-shoes.png"
+                            alt="HEYDUDE Men's Wally Americana Hey20 BURLEBO USA Shoe" loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">HEYDUDE Men's Wally Americana Hey20 BURLEBO USA Shoe</p>
+            </div>
+        </div>
+
+        <div class="gg-card" data-parentsku="140479324" data-childsku="161850305">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt6e256df76bebd8af/69fcb48fc7c3baf9b9d082a4/EG_card3_shirt-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4b4f6299cdc2ef81/69fcb48fd02decdb26896814/EG_card3_shirt.png"
+                    alt="Magellan Outdoors Men's Americana Print Short Sleeve Shirt." loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_out_owala24oz"
+                aria-label="See product details for Magellan Outdoors Men's Americana Print Short Sleeve Shirt."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltec93f37fd6f31ddb/69fcb493dceae6e9a783a7e8/tumbnail-shirt.png"
+                            alt="Magellan Outdoors Men's Americana Print Short Sleeve Shirt" loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">Magellan Outdoors Men's Americana Print Short Sleeve Shirt</p>
+            </div>
+        </div>
+
+        <div class="gg-card" data-parentsku="163276693" data-childsku="163276706">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltde0dd24c5bcbfad7/69fcb48f4e472f3ef0c045f7/EG_card2_backpack-cooler-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt121a47adad51a4e6/69fcb48f9e74d5279dc7f710/EG_card2_backpack-cooler.png"
+                    alt="Magellan Outdoors Americana Portable 18-Can Backpack Cooler." loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_out_magellan18canbackpackcooler"
+                aria-label="See product details for Magellan Outdoors Americana Portable 18-Can Backpack Cooler."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt760e7dc803895053/69fcb493a50ce02a5f91f405/tumbnail-backpack-cooler.png"
+                            alt="Magellan Outdoors Americana Portable 18-Can Backpack Cooler" loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">Magellan Outdoors Americana Portable 18-Can Backpack Cooler</p>
+            </div>
+        </div>
+
+        <div class="gg-card" data-parentsku="163539967" data-childsku="163539975">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte25d9689810446f7/69fcb48fa50ce0e3a791f3fd/EG_card4_hardbody-cooler-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt1adf1225a3b3cae5/69fcb48feb66df61224b8126/EG_card4_hardbody-cooler.png"
+                    alt="Magellan Outdoors Durable 24 Can Americana Hardbody Cooler." loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_out_owala24oz"
+                aria-label="See product details for Magellan Outdoors Durable 24 Can Americana Hardbody Cooler."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt2982716cf2689f15/69fcb4938a644d63c4a6fc26/tumbnail-hardbody-coller.png"
+                            alt="Magellan Outdoors Durable 24 Can Americana Hardbody Cooler" loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">Magellan Outdoors Durable 24 Can Americana Hardbody Cooler</p>
+            </div>
+        </div>
+
+        <div class="gg-card" data-parentsku="163540811" data-childsku="163540829">
+            <picture>
+                <source media="(max-width: 1350px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte7aa3fba0bf5843f/69fcb48f4d1ef932edecdbe5/EG_card4_tote-m.png">
+                <img class="gg-card-bg"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt9634e1e1f9335d8d/69fcb48fa50ce0006791f401/EG_card4_tote.png"
+                    alt="Magellan Outdoors 45-can Americana Tote." loading="lazy">
+            </picture>
+            <a href="" class="gg-card-cover-link" data-omni="patriotic_out_owala24oz"
+                aria-label="See product details for Magellan Outdoors 45-can Americana Tote."></a>
+            <div class="gg-card-content">
+                <div class="gg-card-icon">
+                    <picture>
+                        <img class="gg-card-headline"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7ed93692a8309175/69fcb4934be07360777d6034/tumbnail-tote.png"
+                            alt="Magellan Outdoors 45-can Americana Tote" loading="lazy">
+                    </picture>
+                    <button class="gg-plus-button" aria-label="Add to cart"></button>
+                </div>
+                <p class="gg-card-text">Magellan Outdoors 45-can Americana Tote</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        // --- Quick View ---
+        const productCards = document.querySelectorAll(".gg-card");
+        productCards.forEach(card => {
+            card.addEventListener("click", function (e) {
+                e.preventDefault();
+                const parent_sku = this.getAttribute("data-parentsku");
+                const child_sku = this.getAttribute("data-childsku");
+                if (!parent_sku || !child_sku) {
+                    console.error("SKU attributes not found on the clicked card.");
+                    return;
+                }
+                window.launchASOQuickView({
+                    item: {
+                        other_client_item_ids: {
+                            identifiers: {
+                                parent_sku: parent_sku,
+                                sku: child_sku,
+                                skus: [child_sku],
+                            },
+                        },
+                        sku: child_sku,
+                        skus: [child_sku],
+                    },
+                });
+            });
+        });
+
+        // --- Arrow Scroll ---
+        const container = document.getElementById('gg-scrollable-container');
+        const prevBtn = document.getElementById('gg-scroll-prev');
+        const nextBtn = document.getElementById('gg-scroll-next');
+
+        function updateArrows() {
+            const isMobile = window.innerWidth < 768;
+            if (isMobile) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+                return;
+            }
+            const scrollLeft = Math.round(container.scrollLeft);
+            const maxScroll = Math.round(container.scrollWidth - container.clientWidth);
+            // Use 20px buffer to account for the 16px padding offset on initial load
+            prevBtn.style.display = scrollLeft > 20 ? 'block' : 'none';
+            nextBtn.style.display = scrollLeft < maxScroll - 4 ? 'block' : 'none';
+        }
+
+        prevBtn.addEventListener('click', function (e) {
+            const cards = Array.from(container.querySelectorAll('.gg-card'));
+            const containerLeft = container.scrollLeft;
+
+            // Find the first card that is at or beyond the current scroll position
+            let currentIndex = 0;
+            for (let i = 0; i < cards.length; i++) {
+                if (cards[i].offsetLeft >= containerLeft - 2) {
+                    currentIndex = i;
+                    break;
+                }
+            }
+
+            // Step back one card from the current leading card
+            const targetIndex = Math.max(0, currentIndex - 5);
+            const targetCard = cards[targetIndex];
+
+            container.scrollTo({ left: targetCard.offsetLeft - 16, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', function (e) {
+            // Find the first card that starts beyond the current right edge
+            const cards = Array.from(container.querySelectorAll('.gg-card'));
+            const containerRight = container.scrollLeft + container.clientWidth;
+
+            let targetCard = null;
+            for (let i = 0; i < cards.length; i++) {
+                if (cards[i].offsetLeft + cards[i].offsetWidth > containerRight) {
+                    targetCard = cards[i];
+                    break;
+                }
+            }
+
+            if (targetCard) {
+                container.scrollTo({ left: targetCard.offsetLeft - 16, behavior: 'smooth' });
+            }
+        });
+
+        container.addEventListener('scroll', updateArrows);
+        window.addEventListener('resize', updateArrows);
+
+        // Initial state
+        updateArrows();
+    });
+</script>

@@ -1,0 +1,398 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+
+<style>
+    #trending-for-fans {
+        --text-card-title: clamp(16px, 1.69vw, 28px);
+        --text-card-kicker: clamp(12px, 1.33vw, 22px);
+    }
+
+    #trending-for-fans .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    #trending-for-fans .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .svg-trending-for-fans {
+        width: clamp(252px, 36.17vw, 599px);
+    }
+
+    .tff-card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    @media (max-width: 767px) {
+        #trending-for-fans {
+            --text-card-title: clamp(10px, 4.26vw, 28px);
+            --text-card-kicker: clamp(6px, 3.2vw, 22px);
+        }
+
+        #trending-for-fans .text-card-title {
+            font-size: var(--text-card-title, clamp(10px, 4.26vw, 28px));
+        }
+
+        #trending-for-fans .text-card-kicker {
+            font-size: var(--text-card-kicker, clamp(6px, 3.2vw, 22px));
+        }
+
+        .svg-trending-for-fans {
+            width: clamp(220px, 67.2vw, 599px);
+        }
+
+        .tff-card-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .tff-card-grid .tff-bracket-img {
+            aspect-ratio: 213/270;
+            object-fit: cover;
+        }
+    }
+
+    .tff-champ-banners {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    @media (max-width: 767px) {
+        .tff-champ-banners {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+
+    #trending-for-fans .video-control-button {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        width: clamp(1.5rem, 2.17vw, 2.25rem);
+        height: clamp(1.5rem, 2.17vw, 2.25rem);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<div id="trending-for-fans" class="cont-1656 hp-margin mb-3">
+    <div class="text-center mb-4 pt-3">
+        <svg class="svg-trending-for-fans" viewBox="0 0 599 98" fill="none" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Trending for Fans">
+            <path
+                d="M1.81594 21.7467H35.8959V33.7467H25.4159V75.0267H12.3759V33.7467H1.81594V21.7467ZM53.5578 56.4667V75.0267H40.5178V21.7467H60.0378C69.1578 21.7467 74.7578 27.1867 74.7578 35.9867V42.2267C74.7578 47.8267 72.4378 52.0667 68.4378 54.3867L75.8778 75.0267H62.5178L55.9578 56.4667H53.5578ZM53.5578 32.1467V46.3067H56.7578C60.2778 46.3067 61.7178 44.6267 61.7178 41.2667V37.2667C61.7178 33.8267 60.2778 32.1467 56.7578 32.1467H53.5578ZM80.1866 21.7467H109.947V33.5067H92.9066V42.2267H105.947V53.5867H92.9066V63.2667H109.947V75.0267H80.1866V21.7467ZM115.637 21.7467H128.517L140.277 51.1067H140.437L140.197 21.7467H151.477V75.0267H138.837L126.837 45.1867H126.677L126.917 75.0267H115.637V21.7467ZM158.196 21.7467H176.276C187.716 21.7467 194.036 27.9867 194.036 39.1867V57.6667C194.036 68.8667 187.716 75.0267 176.276 75.0267H158.196V21.7467ZM171.236 32.3867V64.3867H175.316C179.156 64.3867 180.836 62.0667 180.836 58.3067V38.4667C180.836 34.7067 179.156 32.3867 175.316 32.3867H171.236ZM200.214 21.7467H213.254V75.0267H200.214V21.7467ZM220.19 21.7467H233.07L244.83 51.1067H244.99L244.75 21.7467H256.03V75.0267H243.39L231.39 45.1867H231.23L231.47 75.0267H220.19V21.7467ZM280.029 20.6267C291.149 20.6267 297.309 26.2267 297.309 37.8267V41.1867H285.469V38.1467C285.469 34.0667 283.629 32.0667 280.429 32.0667C277.069 32.0667 275.149 34.3067 275.149 38.3067V58.7867C275.149 62.8667 277.149 65.0267 280.349 65.0267C283.469 65.0267 285.549 62.9467 285.549 58.9467V55.2667H280.429V46.7067H297.709V75.0267H291.709L289.869 67.9067C287.869 71.9867 284.269 76.0667 277.069 76.0667C268.029 76.0667 261.949 69.6667 261.949 58.3867V38.7067C261.949 27.3467 269.549 20.6267 280.029 20.6267Z"
+                fill="#1946C8" />
+            <path
+                d="M312.82 91.2099C310.266 91.3885 308.848 90.6055 308.126 89.4531C307.767 88.9168 307.973 88.4212 308.419 87.9089C311.787 84.4655 313.056 81.9709 315.436 75.87L325.283 50.4011L330.376 37.2137C335.194 24.6871 343.152 8.89355 353.047 8.20156C356.958 7.92812 358.903 10.5187 359.199 14.7484C359.913 24.9635 350.872 44.7623 335.906 55.5125C336.556 59.0759 338.21 62.0878 342.2 61.8088C349.064 61.3289 353.769 51.7774 355.21 48.3084C355.886 46.4969 359.418 47.6934 358.674 49.6701C356.03 56.5914 349.952 65.9983 341.811 66.5675C337.342 66.88 334.365 64.4418 332.774 61.1848L326.869 76.5141C324.019 83.9309 319.523 90.7411 312.82 91.2099ZM337.792 48.0829C349.128 37.0252 355.293 19.6729 354.925 14.4057C354.852 13.3683 354.488 12.7521 353.93 12.7912C350.817 13.0088 346.33 25.6727 342.473 35.8867L337.792 48.0829ZM364.295 68.123C356.554 68.6643 352.867 64.1103 352.443 58.0452C351.701 47.4311 360.592 32.3742 373.84 31.4478C381.581 30.9065 385.188 35.466 385.617 41.611C385.84 44.8032 385.208 48.376 383.846 51.8394L384.086 51.8227C387.358 51.5939 390.205 49.8711 391.841 45.7469C392.516 43.9354 395.968 45.1375 395.304 47.1086C392.872 53.6142 388.006 56.2801 383.697 56.5814C382.899 56.6372 382.175 56.6076 381.531 56.5725C377.788 62.6884 371.796 67.5984 364.295 68.123ZM368.449 61.0159C371.881 60.7759 374.803 57.8449 376.946 54.0862C376.241 53.1732 375.918 51.9929 375.834 50.7958C375.611 47.6036 377.366 44.0325 380.315 42.6233C380.361 42.1389 380.333 41.7399 380.305 41.3409C380.099 38.3881 378.831 36.3115 376.197 36.4956C369.893 36.9365 363.559 49.5691 364.05 56.592C364.239 59.3053 365.576 61.2168 368.449 61.0159ZM408.346 65.0426C403.398 65.3886 400.027 63.0581 399.703 58.4294C399.564 56.4342 399.95 53.9212 401.111 51.0332L406.964 36.1085C403.954 36.6398 401.628 36.642 399.52 36.3083L395.303 47.1087C394.834 48.4247 391.085 47.5641 391.84 45.747C394.717 38.7292 395.785 33.3616 395.53 28.5677C395.486 27.9293 395.692 27.4337 396.319 27.2295C399.832 25.8611 402.44 27.6034 401.596 31.592C406.126 32.1573 411.817 30.9575 417.165 29.4607C417.793 29.2565 418.283 29.3826 418.641 29.9189L419.71 31.448C420.068 31.9844 420.096 32.3834 419.896 32.9588L413.996 48.3678C412.978 51.0053 412.559 53.0395 412.659 54.476C412.776 56.1519 413.636 56.9739 414.913 56.8846C417.626 56.6949 421.007 52.2883 424.56 43.459C425.235 41.6475 428.767 42.844 428.023 44.8207C423.326 56.7775 416.406 64.479 408.346 65.0426Z"
+                fill="#1946C8" />
+            <path
+                d="M336.958 90.0251L329.409 82.8152C328.939 82.3072 329.066 81.7849 329.654 81.6873C369.643 70.823 398.602 72.2299 422.55 73.9781C423.013 74.0545 423.216 74.4876 423.026 75.0098L422.522 76.5764C422.396 77.0066 422.199 77.2713 422.003 77.2799C402.274 75.7975 374.815 77.7331 337.811 90.2786C337.482 90.3678 337.215 90.293 336.949 90.0339L336.958 90.0251Z"
+                fill="#1946C8" />
+            <path
+                d="M450.758 21.7467H480.118V33.5867H463.638V43.6667H475.958V55.1867H463.638V75.0267H450.758V21.7467ZM505.208 75.0267L503.448 66.1467H491.368L489.608 75.0267H477.768L490.008 21.5067H505.688L517.848 75.0267H505.208ZM497.448 36.1467L493.368 56.4667H501.608L497.608 36.1467H497.448ZM521.111 21.7467H533.991L545.751 51.1067H545.911L545.671 21.7467H556.951V75.0267H544.311L532.311 45.1867H532.151L532.391 75.0267H521.111V21.7467ZM579.51 20.6267C591.27 20.6267 596.23 27.0267 596.23 35.8267V38.8667H584.15V36.0667C584.15 33.1067 582.79 31.1067 579.59 31.1067C576.47 31.1067 575.03 32.8667 575.03 35.1067C575.03 37.9867 576.87 39.6667 584.07 43.4267C592.87 48.0667 596.63 51.9067 596.63 60.3067C596.63 69.9867 590.71 76.1467 578.95 76.1467C566.47 76.1467 561.83 69.5867 561.83 60.9467V57.1867H574.15V59.7467C574.15 63.2667 575.43 65.6667 579.03 65.6667C582.39 65.6667 583.91 63.8267 583.91 61.2667C583.91 58.1467 582.15 56.7067 574.79 52.7867C566.07 48.1467 562.31 43.8267 562.31 35.9867C562.31 27.4267 568.15 20.6267 579.51 20.6267Z"
+                fill="#1946C8" />
+        </svg>
+    </div>
+
+    <section
+        data-cname="cs_2c_wtitle"
+        data-pz-seg-name="cs_default"
+        data-pz-seg-id="cs_default"
+    >
+        <div class="tff-champ-banners mb-4">
+            <!-- Left: Men's NCAA Champion — Michigan Wolverines -->
+            <a href="https://www.academy.com/c/fan-shop/ncaa/michigan-wolverines"
+                class="d-block"
+                data-omni="fanshop_app_ncaachamp_wolverines"
+                aria-label="Shop Michigan Wolverines fan gear.">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte8cd8c41ce44396f/69d42a011604ee7dbf875b86/Banner_SPLIT_-_Wolverines_Men.png"
+                    alt="Michigan Wolverines NCAA Men's Basketball Championship banner"
+                    class="img-fluid w-100 corners">
+            </a>
+            <!-- Right: Women's NCAA Champion — UCLA Bruins -->
+            <a href="https://www.academy.com/c/fan-shop/ncaa/ucla-bruins"
+                class="d-block"
+                data-omni="fanshop_app_ncaachamp_bruins"
+                aria-label="Shop UCLA Bruins fan gear.">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt497c078729a3b0c7/69d04f274027813e43c2dac4/Banner_SPLIT_-_Burns.png"
+                    alt="UCLA Bruins NCAA Women's Basketball Championship banner"
+                    class="img-fluid w-100 corners">
+            </a>
+        </div>
+    </section>
+
+    <section
+        data-cname="cs_2c_wtitle"
+        data-pz-seg-name="cs_default"
+        data-pz-seg-id="cs_default"
+    >
+        <div class="tff-card-grid">
+
+            <!-- Card 1: NCAA Tournament — Final Four + Championship -->
+            <!-- TODO: Image asset pending — Grid Row 56 notes "Will provide once teams are known" -->
+            <!-- TODO: Alt text pending (Grid Row 56: "PENDING") -->
+            <!-- TODO: Aria-label pending (Grid Row 56: "PENDING") -->
+            <a href="https://www.academy.com/c/fan-shop/ncaa"
+            class="position-relative hp-hover"
+            data-omni="fanshop_app_ncaatourney"
+            aria-label="Shop NCAA fan gear to rep your bracket.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-kicker color-white">On to the Next Round</div>
+                    <div class="text-card-title color-white">Rep Your Bracket</div>
+                </div>
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltecf1422a299a9d6f/69caab27a0fd9e428e0f43d3/TFF_NCAA-tourney_rev1.png?auto=webp&format=pjpg"
+                    alt="NCAA team fan gear from teams in the Tourney including Illinois, Purdue, Arizona, and Iowa shown hanging in a set of blue lockers."
+                    class="img-fluid corners tff-bracket-img">
+            </a>
+
+            <!-- Card 2: MLB Season Is Here — Styles that Bat a Thousand (GIF video) -->
+            <div class="position-relative" id="tff-mlbopeningday">
+                <a href="https://www.academy.com/c/fan-shop/mlb"
+                class="hp-hover"
+                data-omni="fanshop_app_mlb"
+                aria-label="Explore MLB gear for opening day.">
+                    <div class="position-absolute top-0 left-0 padding-header" style="z-index: 1;">
+                        <div class="text-card-kicker color-white">MLB Season Is Here</div>
+                        <div class="text-card-title color-white">Styles that Bat <br>a Thousand</div>
+                    </div>
+                    <canvas id="tffMlbCanvas" class="img-fluid corners" style="display:none; width:100%;"></canvas>
+                    <img id="tffMlbGif"
+                        src=""
+                        class="img-fluid corners"
+                        alt="Video of people wearing different MLB team fan gear outside and inside MLB stadiums."
+                        style="display:block;">
+                    <button id="tffMlbVideoBtn" class="video-control-button" type="button" aria-label="Pause video">
+                        <img id="tffMlbVideoIcon"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg"
+                            alt="Pause video" class="play-pause-icon">
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+</div>
+
+<script>
+(function () {
+    const mobileUrl  = 'https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt99831857a5758f5a/69c45aa6aa4cbe216b833064/baseball_fans-m2.gif';
+    const desktopUrl = 'https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt0cab133779e6a048/69c4587f593018e0e1eb3267/2card_1_mlbopeningday.gif';
+
+    const playIconUrl  = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfb7f6e5f516cd86b/68dbe6f04983061fa4f367e1/button_play_default.svg";
+    const pauseIconUrl = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg";
+
+    const card   = document.getElementById('tff-mlbopeningday');
+    const gif    = document.getElementById('tffMlbGif');
+    const canvas = document.getElementById('tffMlbCanvas');
+    const btn    = document.getElementById('tffMlbVideoBtn');
+    const icon   = document.getElementById('tffMlbVideoIcon');
+    const ctx    = canvas.getContext('2d');
+
+    let isPlaying = false;
+    let currentUrl = null;
+    let hasAutoPlayedOnce = false;
+    let hasExitedAfterAutoPlay = false;
+    let hasAutoReplayedOnce = false;
+
+    function getUrl() {
+        return window.innerWidth < 768 ? mobileUrl : desktopUrl;
+    }
+
+    function updateSource() {
+        const newUrl = getUrl();
+        if (newUrl === currentUrl) return;
+        currentUrl = newUrl;
+        if (isPlaying) startGif();
+    }
+
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateSource, 50);
+    });
+
+    function setIcon(playing) {
+        if (playing) {
+            icon.src = pauseIconUrl;
+            icon.alt = "Pause";
+            btn.setAttribute("aria-label", "Pause video");
+        } else {
+            icon.src = playIconUrl;
+            icon.alt = "Play";
+            btn.setAttribute("aria-label", "Play video");
+        }
+    }
+
+    function freezeFrame() {
+        canvas.width  = gif.naturalWidth  || gif.width;
+        canvas.height = gif.naturalHeight || gif.height;
+        try { ctx.drawImage(gif, 0, 0, canvas.width, canvas.height); } catch(e) {}
+        gif.style.display    = 'none';
+        canvas.style.display = 'block';
+    }
+
+    function startGif() {
+        canvas.style.display = 'none';
+        gif.style.display    = 'block';
+        gif.src = currentUrl + '?t=' + Date.now();
+        isPlaying = true;
+        setIcon(true);
+    }
+
+    function pauseGif() {
+        freezeFrame();
+        gif.src = '';
+        isPlaying = false;
+        setIcon(false);
+    }
+
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (isPlaying) { pauseGif(); } else { startGif(); }
+    });
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            var visible = entry.isIntersecting && entry.intersectionRatio >= 0.25;
+
+            if (visible) {
+                if (!hasAutoPlayedOnce) {
+                    hasAutoPlayedOnce = true;
+                    currentUrl = getUrl();
+                    startGif();
+                    return;
+                }
+                if (hasExitedAfterAutoPlay && !hasAutoReplayedOnce) {
+                    hasAutoReplayedOnce = true;
+                    startGif();
+                    return;
+                }
+            } else {
+                if (hasAutoPlayedOnce) hasExitedAfterAutoPlay = true;
+                if (isPlaying) pauseGif();
+            }
+        });
+    }, { threshold: [0, 0.25] });
+
+    setIcon(true);
+    currentUrl = getUrl();
+    observer.observe(card);
+})();
+</script>
+
+<!-- Trending for Fans -->
+

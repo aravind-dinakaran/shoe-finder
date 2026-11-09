@@ -1,0 +1,1118 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=40">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        font-size: var(--text-card-promo, clamp(18px, 1.75vw, 48px));
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+<style>
+    .c2-wrapper {
+        display: flex;
+        gap: 1.5vw;
+    }
+
+    .c2-slider,
+    .c2-right-static-container {
+        width: 100%;
+    }
+
+    .c2-slider {
+        aspect-ratio: 816 / 600;
+        border: 1px solid #cccccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow: hidden;
+        container-type: inline-size;
+    }
+
+    .c2-slider .carousel-inner {
+        width: 100%;
+        aspect-ratio: 816 / 550;
+        overflow: hidden;
+    }
+
+    .c2-slider .carousel-item {
+        height: 100%;
+    }
+
+    .c2-slide-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000000;
+        font-family: "Roboto Flex", Roboto, Arial, sans-serif;
+    }
+
+    .c2-slide-content picture,
+    .c2-slide-link,
+    .c2-slide-link picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .c2-slide-link {
+        position: relative;
+        overflow: hidden;
+        font-family: "Roboto Flex", Roboto, Arial, sans-serif;
+        text-decoration: none;
+    }
+
+    .c2-slide-content picture {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    .c2-slide-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .c2-video-art .c2-slide-img {
+        object-fit: contain;
+        transform: translateY(calc(clamp(20px, 2.62vw, 60px) / -2));
+    }
+
+    .c2-slide-video {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: #000000;
+    }
+
+    .c2-slide-link::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .c2-overlay-link {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: block;
+    }
+
+    .c2-details-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: clamp(4px, 0.53vw, 8.704px) clamp(10px, 1.31vw, 21.76px);
+        background: #1946c8;
+        color: #ffffff;
+        font-family: "Ringside Regular", "Open Sans", Arial, sans-serif;
+        font-size: clamp(12px, 1.58vw, 26.112px);
+        font-weight: 900;
+        line-height: 1.307;
+        text-align: center;
+        text-transform: uppercase;
+        pointer-events: none;
+    }
+
+    .c2-countdown-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: clamp(4px, 0.53vw, 8.704px) clamp(10px, 1.31vw, 21.76px);
+        background: #1946c8;
+        color: #ffffff;
+        font-family: "Ringside Regular", "Open Sans", Arial, sans-serif;
+        font-size: clamp(12px, 1.58vw, 26.112px);
+        font-weight: 900;
+        line-height: 1.307;
+        text-align: center;
+        text-transform: uppercase;
+        pointer-events: none;
+    }
+
+    .c2-countdown-bar--pink {
+        justify-content: space-between;
+        padding: 0;
+        background: #ddb6f2;
+        color: #000000;
+        font-family: Roboto, "Open Sans", Arial, sans-serif;
+        font-size: clamp(16px, 1.45vw, 24px);
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    .c2-countdown-bar--pink .c2-countdown-florals {
+        display: flex;
+        flex: 0 0 auto;
+    }
+
+    .c2-countdown-bar--pink img {
+        width: clamp(28px, 3vw, 50px);
+        height: auto;
+    }
+
+    .c2-countdown-message {
+        flex: 1 1 auto;
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    /* Overlay text uses the global .text-overlay system. Keep it above the
+       media/links and let clicks fall through to the underlying link. */
+    #c2HeroSlider .text-overlay-top-left {
+        z-index: 4;
+        pointer-events: none;
+    }
+
+    /* Opt-in clearance for cards whose art has a thick baked-in design border.
+       Apply .c2-overlay-padded only on those slides — not all overlays. */
+    #c2HeroSlider .c2-overlay-padded {
+        --c2-overlay-pad-y: 8cqw;
+        --c2-overlay-pad-x: 8.4cqw;
+        padding: var(--c2-overlay-pad-y) var(--c2-overlay-pad-x);
+    }
+
+    /* Bar clearance: the overlay text is top-aligned by default (correct for
+       cards with no bar). Only push it down when a details/countdown bar
+       shares the card, since the bar is absolutely positioned and does not
+       affect document flow. */
+    #c2HeroSlider .c2-details-bar ~ .text-overlay-top-left,
+    #c2HeroSlider .c2-countdown-bar ~ .text-overlay-top-left {
+        top: clamp(24px, 3.14vw, 52px);
+    }
+
+    #c2HeroSlider .c2-slide-link:hover .text-card-title,
+    #c2HeroSlider .c2-slide-link:focus-visible .text-card-title,
+    #c2HeroSlider .c2-overlay-link:hover ~ .text-overlay .text-card-title,
+    #c2HeroSlider .c2-overlay-link:focus-visible ~ .text-overlay .text-card-title {
+        text-decoration: underline;
+        text-decoration-color: currentColor;
+    }
+
+    .c2-cta-group {
+        position: absolute;
+        left: 50%;
+        bottom: clamp(20px, 2.62vw, 60px);
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(12px, 0.97vw, 16px);
+        width: 100%;
+        padding: 0 clamp(12px, 1.2vw, 20px);
+        transform: translateX(-50%);
+    }
+
+    .c2-cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(8px, 0.73vw, 12px) clamp(16px, 1.45vw, 24px);
+        border-radius: clamp(4px, 0.48vw, 8px);
+        background: #1946c8;
+        color: #ffffff;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: clamp(10px, 1.33vw, 22px);
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    .c2-cta:hover,
+    .c2-cta:focus-visible {
+        color: #ffffff;
+        background: #0f35a8;
+        text-decoration: none;
+    }
+
+    .c2-indicator-wrapper {
+        --c2-indicator-row-y: clamp(3px, 0.42vw, 7px);
+        --c2-indicator-row-x: clamp(12px, 1.45vw, 24px);
+        --c2-indicator-dot-size: clamp(8px, 0.97vw, 16px);
+        --c2-indicator-dot-gap: clamp(10px, 1.21vw, 20px);
+        --c2-indicator-dot-border: clamp(1px, 0.12vw, 2px);
+        --c2-indicator-button-y: clamp(3px, 0.24vw, 4px);
+        --c2-indicator-button-x: clamp(6px, 0.48vw, 8px);
+        --c2-indicator-icon-size: clamp(18px, 1.93vw, 32px);
+        flex: 0 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--c2-indicator-dot-gap);
+        padding: var(--c2-indicator-row-y) var(--c2-indicator-row-x);
+    }
+
+    .c2-indicators {
+        position: relative;
+        margin: 0;
+        display: flex;
+        flex: 0 1 auto;
+        align-items: center;
+        justify-content: flex-start;
+        gap: var(--c2-indicator-dot-gap);
+    }
+
+    #c2HeroSlider .c2-indicators [data-bs-target] {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        width: var(--c2-indicator-dot-size);
+        height: var(--c2-indicator-dot-size);
+        max-width: 16px;
+        max-height: 16px;
+        padding: 0;
+        border-radius: 50%;
+        background: #ffffff;
+        border: var(--c2-indicator-dot-border) solid #1946c8;
+        border-top: var(--c2-indicator-dot-border) solid #1946c8;
+        border-bottom: var(--c2-indicator-dot-border) solid #1946c8;
+        margin: 0;
+        opacity: 1;
+    }
+
+    #c2HeroSlider .c2-indicators .active {
+        background: #1946c8;
+        border-color: #1946c8;
+    }
+
+    #c2HeroPlayPauseBtn {
+        flex: 0 0 auto;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: none;
+        padding: var(--c2-indicator-button-y) var(--c2-indicator-button-x);
+        line-height: 1;
+    }
+
+    .c2-play-pause-icon {
+        display: block;
+        width: var(--c2-indicator-icon-size);
+        height: var(--c2-indicator-icon-size);
+    }
+
+    .c2-corners-top {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .c2-right-static {
+        display: flex;
+        gap: 1.5rem;
+        height: 100%;
+    }
+
+    .c2-right-static-container {
+        text-align: center;
+    }
+
+    @media (max-width: 767px) {
+        .c2-wrapper {
+            display: block;
+        }
+
+        .c2-slider {
+            max-width: 100%;
+            margin-bottom: 1rem;
+            aspect-ratio: auto;
+            min-height: 0;
+        }
+
+        .c2-slider .carousel-inner {
+            aspect-ratio: auto;
+            height: clamp(300px, 80vw, 550px);
+        }
+
+        .c2-slider .carousel-item {
+            min-height: 0;
+        }
+
+        .c2-indicator-wrapper {
+            --c2-indicator-row-y: clamp(3px, 0.8vw, 7px);
+            --c2-indicator-row-x: clamp(12px, 6.4vw, 24px);
+            --c2-indicator-dot-size: clamp(6px, 2.09vw, 16px);
+            --c2-indicator-dot-gap: clamp(8px, 2.61vw, 20px);
+            --c2-indicator-dot-border: clamp(1px, 0.53vw, 2px);
+            --c2-indicator-button-y: clamp(3px, 1.07vw, 4px);
+            --c2-indicator-button-x: clamp(6px, 2.13vw, 8px);
+            --c2-indicator-icon-size: clamp(18px, 4.17vw, 32px);
+        }
+
+        .c2-corners-top {
+            border-radius: 0;
+        }
+
+        .c2-details-bar {
+            padding: 4px 10px;
+            font-size: clamp(10px, 3.2vw, 26.112px);
+        }
+
+        .c2-countdown-bar {
+            padding: 4px 10px;
+            font-size: clamp(10px, 3.2vw, 26.112px);
+        }
+
+        .c2-countdown-bar--pink {
+            padding: 0;
+            font-size: clamp(14px, 4.27vw, 24px);
+        }
+
+        .c2-countdown-bar--pink img {
+            width: clamp(24px, 8vw, 50px);
+        }
+
+        #c2HeroSlider .c2-details-bar ~ .text-overlay-top-left,
+        #c2HeroSlider .c2-countdown-bar ~ .text-overlay-top-left {
+            top: clamp(20px, 6.4vw, 52px);
+        }
+
+        /* Mobile clearance — only for .c2-overlay-padded slides. */
+        #c2HeroSlider .c2-overlay-padded {
+            --c2-overlay-pad-y: clamp(8px, 8.53cqw, 60px);
+            --c2-overlay-pad-x: clamp(8px, 8.53cqw, 65px);
+        }
+
+        .c2-cta-group {
+            bottom: clamp(18px, 7.47vw, 28px);
+            gap: 16px;
+            padding: 0 12px;
+        }
+
+        .c2-cta {
+            padding: 2.13vw 4.26vw;
+            border-radius: 4px;
+            font-size: clamp(8px, 4.26vw, 32px);
+        }
+
+        .c2-right-static {
+            height: auto;
+            width: 100%;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .c2-right-static::-webkit-scrollbar {
+            display: none;
+        }
+    }
+</style>
+
+<section data-cname="cs_2c_wcarousel" data-pz-seg-name="cs_default" data-pz-seg-id="cs_default">
+    <div class="c2-wrapper cont-1656 hp-margin bleed-scroll-left-right my-3">
+        <div id="c2HeroSlider" class="carousel slide c2-slider corners-d">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="/c/shops/flash-sale" data-omni="eb_mac_myacademyearlyaccesssitewidesale"
+                        class="c2-slide-link" aria-label="Shop Easter essentials at undefeatable prices.">
+                        <div class="c2-countdown-bar" aria-hidden="true">
+                            ONLINE ONLY <span class="px-2">|</span>
+                            <span class="c2-countdown" data-countdown-end="2026-04-02T00:00:00-05:00"
+                                data-countdown-expired="00h"></span> LEFT TO SAVE
+                        </div>
+                        <picture>
+                            <source media="(min-width: 768px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt213dc28a07500481/69c326ce4e28d1848dec4a6a/carousel_academydealdays30p20p.png">
+                            <source media="(max-width: 767px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt32f30d9f24158e56/69c34669191b6b16587c802c/carousel_academydealdays30p20p_R4shorter-m.png">
+                            <img class="c2-slide-img c2-corners-top" loading="lazy"
+                                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt213dc28a07500481/69c326ce4e28d1848dec4a6a/carousel_academydealdays30p20p.png"
+                                alt="Spring promotional image showing a red wagon filled with Easter basket items on grass.">
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="/c/shops/easter-essentials#easter-slider" data-omni="easter_mac_basketideas"
+                        class="c2-slide-link" aria-label="Explore Easter basket gift ideas.">
+                        <picture>
+                            <source media="(min-width: 768px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt811d821660524af1/69c30438735fd3ea3479e515/Easter.gif">
+                            <source media="(max-width: 767px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4d2e699cd208d7b4/69c3043879d2ccbb109ecfb7/Easter-m.gif">
+                            <img class="c2-slide-img c2-corners-top" loading="lazy"
+                                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt811d821660524af1/69c30438735fd3ea3479e515/Easter.gif"
+                                alt="Assortment of sports items, toys, and clothing arranged on grass for Easter basket ideas.">
+                        </picture>
+                    </a>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="c2-slide-content c2-corners-top">
+                        <div class="c2-countdown-bar c2-countdown-bar--pink c2-corners-top"
+                            aria-hidden="true">
+                            <div class="c2-countdown-florals">
+                                <img src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt32028fbe7e6314ee/69f122b36a2c0a1aa4c18cb1/momsday_flower_tulip.svg"
+                                    alt="">
+                                <img src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb0d8f85aa24f26e7/69f122b3fe0e3466e706d7d3/momsday_flower_daisy.svg"
+                                    alt="">
+                            </div>
+                            <div class="c2-countdown-message">
+                                <span class="c2-countdown" data-countdown-end="2026-05-11T00:00:00-05:00"
+                                    data-countdown-mode="mother-day" data-countdown-expired="It's Mother's Day">It's Mother's Day</span>
+                            </div>
+                            <div class="c2-countdown-florals">
+                                <img src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb0d8f85aa24f26e7/69f122b3fe0e3466e706d7d3/momsday_flower_daisy.svg"
+                                    alt="">
+                                <img src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt32028fbe7e6314ee/69f122b36a2c0a1aa4c18cb1/momsday_flower_tulip.svg"
+                                    alt="">
+                            </div>
+                        </div>
+                        <video class="c2-slide-video c2-corners-top" muted loop playsinline preload="metadata"
+                            aria-hidden="true">
+                            <source media="(min-width: 768px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltff068eb0b8ab74d2/69efc1966466600c3168d0a1/Carousel-MD-Desktop-Comp.mp4"
+                                type="video/mp4">
+                            <source media="(max-width: 767px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8233b91c77230a20/69efc196edcdda45c3fa528b/Carousel-MD-Mobile-Comp.mp4"
+                                type="video/mp4">
+                        </video>
+                        <picture class="c2-video-art">
+                            <source media="(min-width: 768px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7bbe163d72a738bb/69f0e17874f87173e64b77a7/MothersDayCarousel-GiveFun-Gifts1Hour.svg">
+                            <source media="(max-width: 767px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7bbe163d72a738bb/69f0e17874f87173e64b77a7/MothersDayCarousel-GiveFun-Gifts1Hour.svg">
+                            <img class="c2-slide-img" loading="lazy"
+                                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7bbe163d72a738bb/69f0e17874f87173e64b77a7/MothersDayCarousel-GiveFun-Gifts1Hour.svg"
+                                alt="Mother's Day promotional graphic for last-minute gifts, gift ideas, and gift cards.">
+                        </picture>
+                        <div class="c2-cta-group">
+                            <a class="c2-cta"
+                                href="/c/shops/mothers-day-gifts?&facet=deliveryFilter:inventory_pick%3A19%20OR%20inventory_sts%3A19&bopisEligible=1&isSTS1=1"
+                                data-omni="momsday_mac_dayonthewater"
+                                aria-label="Explore gift ideas for Mom's day on the water.">Gift Ideas</a>
+                            <a class="c2-cta" href="/c/shops/gift-card-shop" data-omni="momsday_mac_giftcards"
+                                aria-label="Shop gift cards for Mother's Day.">Gift Cards</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="c2-slide-content c2-corners-top">
+                        <video class="c2-slide-video c2-corners-top" muted loop playsinline preload="metadata"
+                            aria-hidden="true">
+                            <source media="(min-width: 768px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltbe65c1cfadbe64ec/69fa1573aac936decf6e7908/Carousel-Freely-Maggi-Desktop-Comp.mp4"
+                                type="video/mp4">
+                            <source media="(max-width: 767px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt3454257bb900b1c5/69fa1573f406deca51008ed8/Carousel-Freely-Maggi-Mobile-Comp.mp4"
+                                type="video/mp4">
+                        </video>
+                        <a class="c2-overlay-link"
+                            href="https://www.academy.com/c/shops/promo-offers/apparel-promo-offer-4"
+                            data-omni="momsday_app_academyexclusivebrandsbogo50p"
+                            aria-label="Shop Academy-exclusive brands for mom, buy one get one 50% off."></a>
+                        <div class="text-overlay text-overlay-top-left">
+                            <div class="text-card-kicker color-white">BOGO</div>
+                            <div class="text-card-promo color-white">50% OFF</div>
+                            <div class="text-card-title color-white">Select Styles</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="c2-slide-content c2-corners-top">
+                        <video class="c2-slide-video c2-corners-top" muted loop playsinline preload="metadata"
+                            aria-hidden="true">
+                            <source media="(min-width: 768px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltd5ab22a281087bd2/69efc183d51e8d14f405d579/Carousel-Desktop-Carhartt-Comp.mp4"
+                                type="video/mp4">
+                            <source media="(max-width: 767px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt949a81d6ac183537/69efc18301b5007847af9d62/Carousel-Mobile-Carhartt-Comp.mp4"
+                                type="video/mp4">
+                        </video>
+                        <a class="c2-overlay-link"
+                            href="https://www.academy.com/c/brands/carhartt-brand-shop/womens-carhartt&facet=%27facet_Deals%27:%27Hot%20Deal%27"
+                            data-omni="momsday_app_carharttforher25p"
+                            aria-label="Shop 25% off Carhartt styles for mom."></a>
+                        <div class="text-overlay text-overlay-top-left">
+                            <div class="text-card-promo color-white">25% OFF</div>
+                            <div class="text-card-title color-white">Styles for Her</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <a class="c2-slide-link" href="https://www.academy.com/c/brands/skechers"
+                        data-omni="momsday_fw_skechers20p" aria-label="Shop up to 20% off SKECHERS for mom.">
+                        <picture>
+                            <source media="(min-width: 768px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt02f487e299d5860b/69efc8c2e0947c80c4c909d7/Carousel-Skechers.png">
+                            <source media="(max-width: 767px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt27812869c5f68fcc/69efc8c2fd3d4c1d9170d436/Carousel-Skechers-m.png">
+                            <img class="c2-slide-img c2-corners-top" loading="lazy"
+                                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt02f487e299d5860b/69efc8c2e0947c80c4c909d7/Carousel-Skechers.png"
+                                alt="Skechers shoes worn outdoors, promoting up to 20% off Skechers.">
+                        </picture>
+                        <div class="text-overlay text-overlay-top-left">
+                            <div class="text-card-kicker color-white">Up to</div>
+                            <div class="text-card-promo color-white">20% OFF</div>
+                            <div class="text-card-title color-white">Skechers</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="https://www.academy.com/c/shops/mktg-offers/app-offer-20?&facet=%27facet_Deals%27:%27Hot%20Deal%27&facet=%27facet_Deals%27:%27Clearance%27"
+                        data-omni="deal_mac_nikejordan20p"
+                        class="c2-slide-link c2-slide-link--nike-jordan"
+                        aria-label="Shop select Nike and Jordan styles for the family up to 20% off.">
+                        <picture>
+                            <source media="(min-width: 768px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte5bbeb59bd1370b5/6a0e0339d885fd78143e14f9/CarouselCard_1_Nike_Jordan.png">
+                            <source media="(max-width: 767px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt76fa50a72fde697e/6a0e0339302c37ef9b9013b9/CarouselCard_1_Nike_Jordan_m.png">
+                            <img class="c2-slide-img c2-corners-top" loading="lazy"
+                                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte5bbeb59bd1370b5/6a0e0339d885fd78143e14f9/CarouselCard_1_Nike_Jordan.png"
+                                alt="Up to 20% off Nike and Jordan styles for the family.">
+                        </picture>
+                        <div class="c2-details-bar" aria-hidden="true">Limited-Time Offer &nbsp; | &nbsp; Online + In-Store</div>
+                    </a>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="https://www.academy.com/c/outdoors/grills--outdoor-cooking/grills"
+                        data-omni="hero_snr_OGgrills99d" class="c2-slide-link c2-slide-link--grills"
+                        aria-label="Shop grills from Outdoor Gourmet and more top brands starting at $99.99.">
+                        <picture>
+                            <source media="(min-width: 768px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4b23e562d7eff327/6a033f5ff521fc2e3cda7d28/Card1_grills1.png">
+                            <source media="(max-width: 767px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd0274ab4f84277c8/6a033f607897e64f08f4b847/Card1_grills-m.png">
+                            <img class="c2-slide-img c2-corners-top" loading="lazy"
+                                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4b23e562d7eff327/6a033f5ff521fc2e3cda7d28/Card1_grills1.png"
+                                alt="Outdoor Gourmet gas grill with steaks cooking over open flames.">
+                        </picture>
+                        <div class="c2-details-bar" aria-hidden="true">Kick Off Summer With Academy Deal Days</div>
+                        <div class="text-overlay text-overlay-top-left">
+                            <div class="text-card-kicker color-white">From</div>
+                            <div class="text-card-promo color-white">$99.99</div>
+                            <div class="text-card-title color-white">Grills</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="https://www.academy.com/c/home-backyard/pools/pools-on-sale"
+                        data-omni="hero_out_intexbestwaypools400d" class="c2-slide-link c2-slide-link--pools"
+                        aria-label="Shop above-ground pools up to $400 off.">
+                        <picture>
+                            <source media="(min-width: 768px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt33d72db925b0071f/6a033f5fb06a7be2d7eddb09/Card3_pools1.png">
+                            <source media="(max-width: 767px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4c50295b67a54de5/6a033f5f26f60c074c51e8e4/Card3_pools-m.png">
+                            <img class="c2-slide-img c2-corners-top" loading="lazy"
+                                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt33d72db925b0071f/6a033f5fb06a7be2d7eddb09/Card3_pools1.png"
+                                alt="Family swimming in an above-ground pool in a backyard, with logos from Intex and Bestway overlaid.">
+                        </picture>
+                        <div class="c2-details-bar" aria-hidden="true">Kick Off Summer With Academy Deal Days</div>
+                        <div class="text-overlay text-overlay-top-left">
+                            <div class="text-card-kicker color-white">Up to</div>
+                            <div class="text-card-promo color-white">$400 OFF</div>
+                            <div class="text-card-title color-white">Swimming Pools</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="carousel-item">
+                    <a href="https://www.academy.com/c/shops/all-accessories/sunglasses-and-accessories/ai-sunglasses"
+                        data-omni="hero_snr_metarayban15p" class="c2-slide-link c2-slide-link--meta"
+                        aria-label="Save 15% on Ray-Ban Gen 2 META glasses.">
+                        <picture>
+                            <source media="(min-width: 768px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt9d76fa2fd952194e/6a033f5fec3f1b1704b1e457/Card4_meta2.png">
+                            <source media="(max-width: 767px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe131908a7c83049/6a033f5fb5a0407551217d54/Card4_meta-m.png">
+                            <img class="c2-slide-img c2-corners-top" loading="lazy"
+                                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt9d76fa2fd952194e/6a033f5fec3f1b1704b1e457/Card4_meta2.png"
+                                alt="Person wearing Ray-Ban Meta smart glasses outdoors.">
+                        </picture>
+                        <div class="c2-details-bar" aria-hidden="true">Kick Off Summer With Academy Deal Days</div>
+                        <div class="text-overlay text-overlay-top-left">
+                            <div class="text-card-promo color-red">15% OFF</div>
+                            <div class="text-card-title color-dark-blue">Ray-Ban Gen 2<br>AI Glasses</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- WK25 BTS cards (from c2-carousel-gtm.html) -->
+                <div class="carousel-item">
+                    <a href="https://www.academy.com/c/shops/back-to-school" data-omni="hero_mac_btsshopall"
+                        class="c2-slide-link"
+                        aria-label="Shop back-to-school clothes, shoes, backpacks and more.">
+                        <picture>
+                            <source media="(min-width: 768px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd424aba61547a56e/6a57fa731d6cdc565dfaf937/2card_carousel_1_storyname.png">
+                            <source media="(max-width: 767px)"
+                                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4cf8a65712bee40e/6a57fa733eab227405d537b0/2card_carousel_1_storyname-m.png">
+                            <img class="c2-slide-img c2-corners-top" loading="lazy"
+                                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd424aba61547a56e/6a57fa731d6cdc565dfaf937/2card_carousel_1_storyname.png"
+                                alt="Three students taking a selfie in a classroom with a Back-to-School Game On badge overlaid.">
+                        </picture>
+                        <div class="text-overlay text-overlay-top-left c2-overlay-padded">
+                            <div class="text-card-kicker color-dark-blue">Bring Your A-Game</div>
+                            <div class="text-card-title color-dark-blue">Everything You Need for School</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="c2-slide-content c2-corners-top">
+                        <video class="c2-slide-video c2-corners-top" muted loop playsinline preload="metadata"
+                            aria-hidden="true"
+                            poster="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blta4e8fe4826727ded/6a58015f4e650d85a6750d83/2card_carousel_3_shoes.png">
+                            <source media="(min-width: 768px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltd65a8263d104ee6d/6a58f58891d0076f08be6fd0/2card_carousel_3_shoes-1.mp4"
+                                type="video/mp4">
+                            <source media="(max-width: 767px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt94038d70c5076209/6a590690a40cc298eeb61048/2card_carousel_3_shoes-m-1.mp4"
+                                type="video/mp4">
+                        </video>
+                        <a class="c2-overlay-link"
+                            href="https://www.academy.com/c/shops/back-to-school/bts-shoes#wrapperProductGrid"
+                            data-omni="hero_fw_kidsshoes29d"
+                            aria-label="Shop kids' shoes from $29.99."></a>
+                        <div class="text-overlay text-overlay-top-left c2-overlay-padded">
+                            <div class="text-card-kicker color-white">From</div>
+                            <div class="text-card-promo color-white">$29.99</div>
+                            <div class="text-card-title color-white">Kids' Shoes</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="c2-slide-content c2-corners-top">
+                        <video class="c2-slide-video c2-corners-top" muted loop playsinline preload="metadata"
+                            aria-hidden="true"
+                            poster="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7f98aef99c8d0ae0/6a57fa7342ffaa1b4dbec9e1/2card_carousel_4_backpacks.png">
+                            <source media="(min-width: 768px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb2576e6600492ca2/6a58f58815befe1b0d3a8453/2card_carousel_4_backpacks-1.mp4"
+                                type="video/mp4">
+                            <source media="(max-width: 767px)"
+                                src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltf4b06ca20e5808a8/6a5906ed11465e4e079f500c/2card_carousel_4_backpacks-m-1.mp4"
+                                type="video/mp4">
+                        </video>
+                        <a class="c2-overlay-link"
+                            href="https://www.academy.com/c/shops/back-to-school/back-to-school-deals/backpack-deals"
+                            data-omni="hero_snr_backpacks20d"
+                            aria-label="Save 20% on select backpacks."></a>
+                        <div class="text-overlay text-overlay-top-left c2-overlay-padded">
+                            <div class="text-card-promo color-white">20% OFF</div>
+                            <div class="text-card-title color-white">Select Backpacks &amp; Lunch Boxes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="c2-indicator-wrapper">
+                <div class="carousel-indicators c2-indicators">
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Go to slide 1"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="1"
+                        aria-label="Go to slide 2"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="2"
+                        aria-label="Go to slide 3"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="3"
+                        aria-label="Go to slide 4"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="4"
+                        aria-label="Go to slide 5"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="5"
+                        aria-label="Go to slide 6"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="6"
+                        aria-label="Go to slide 7"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="7"
+                        aria-label="Go to slide 8"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="8"
+                        aria-label="Go to slide 9"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="9"
+                        aria-label="Go to slide 10"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="10"
+                        aria-label="Go to slide 11"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="11"
+                        aria-label="Go to slide 12"></button>
+                    <button type="button" data-bs-target="#c2HeroSlider" data-bs-slide-to="12"
+                        aria-label="Go to slide 13"></button>
+                </div>
+
+                <button id="c2HeroPlayPauseBtn" type="button" aria-label="Pause carousel and video">
+                    <img class="c2-play-pause-icon" alt="Pause carousel and video"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg">
+                </button>
+            </div>
+        </div>
+
+        <div class="c2-right-static-container corners-d" id="acc-right">
+            <div class="c2-right-static">
+                <a href="/myacademy-rewards-credit-card" data-omni="eb_mac_myacademyrewards_noncardholder"
+                    aria-label="Learn more about the myAcademy Rewards credit cards.">
+                    <picture>
+                        <source media="(min-width: 768px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt94eecc01c3cb7ab4/69baae4900c6f0b4df874f0b/banner_marcc_noncardholder.png">
+                        <source media="(max-width: 767px)"
+                            srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltda82aec05c05b917/69baae49b5128f320230c089/banner_marcc_noncardholder-m.png">
+                        <img loading="lazy" height="auto"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltda82aec05c05b917/69baae49b5128f320230c089/banner_marcc_noncardholder-m.png"
+                            class="img-fluid corners"
+                            alt="myAcademy Rewards graphic promoting $30 off a purchase over $30 when opening and using a myAcademy Rewards credit card, with an image of the myAcademy Rewards Credit Card and an image of the myAcademy Rewards Mastercard Credit Card.">
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Slider Functionality -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+<script>
+    (function () {
+        const sliderEl = document.getElementById("c2HeroSlider");
+        const playPauseBtn = document.getElementById("c2HeroPlayPauseBtn");
+
+        if (!sliderEl || !playPauseBtn || typeof bootstrap === "undefined") {
+            return;
+        }
+
+        if (sliderEl.dataset.c2CarouselInitialized === "true") {
+            return;
+        }
+
+        sliderEl.dataset.c2CarouselInitialized = "true";
+
+        const pauseSrc = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg";
+        const playSrc = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfb7f6e5f516cd86b/68dbe6f04983061fa4f367e1/button_play_default.svg";
+        const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        let isPaused = reduceMotion;
+
+        const existingCarousel = bootstrap.Carousel.getInstance(sliderEl);
+
+        if (existingCarousel) {
+            existingCarousel.dispose();
+        }
+
+        const bsCarousel = new bootstrap.Carousel(sliderEl, {
+            interval: 5000,
+            pause: false,
+            ride: false
+        });
+
+        function setPlayPauseIcon(paused) {
+            const icon = playPauseBtn.querySelector(".c2-play-pause-icon");
+            const action = paused ? "Play" : "Pause";
+            const label = action + " carousel and video";
+
+            if (icon) {
+                icon.src = paused ? playSrc : pauseSrc;
+                icon.alt = label;
+            }
+
+            playPauseBtn.setAttribute("aria-label", label);
+        }
+
+        function getActiveSlide() {
+            return sliderEl.querySelector(".carousel-item.active");
+        }
+
+        function setVideoPaused(video, paused) {
+            if (!video) {
+                return;
+            }
+
+            if (paused) {
+                video.pause();
+                return;
+            }
+
+            const playPromise = video.play();
+
+            if (playPromise && typeof playPromise.catch === "function") {
+                playPromise.catch(function () {});
+            }
+        }
+
+        function syncVideos() {
+            const activeSlide = getActiveSlide();
+
+            sliderEl.querySelectorAll("video").forEach(function (video) {
+                const shouldPlay = activeSlide && activeSlide.contains(video) && !isPaused;
+                setVideoPaused(video, !shouldPlay);
+            });
+        }
+
+        function findBarFor(overlay) {
+            let sibling = overlay.previousElementSibling;
+
+            while (sibling) {
+                if (sibling.classList.contains("c2-details-bar") || sibling.classList.contains("c2-countdown-bar")) {
+                    return sibling;
+                }
+
+                sibling = sibling.previousElementSibling;
+            }
+
+            return null;
+        }
+
+        function syncBarOffsets() {
+            sliderEl.querySelectorAll(".text-overlay-top-left").forEach(function (overlay) {
+                const bar = findBarFor(overlay);
+
+                if (!bar) {
+                    return;
+                }
+
+                // offsetHeight is 0 for slides Bootstrap has hidden; skip them and
+                // recompute when they become visible (slide/slid/resize events).
+                const barHeight = bar.offsetHeight;
+
+                if (barHeight > 0) {
+                    overlay.style.top = barHeight + "px";
+                }
+            });
+        }
+
+        let barOffsetRaf = null;
+
+        function scheduleBarOffsetSync() {
+            if (barOffsetRaf) {
+                window.cancelAnimationFrame(barOffsetRaf);
+            }
+
+            barOffsetRaf = window.requestAnimationFrame(function () {
+                barOffsetRaf = null;
+                syncBarOffsets();
+            });
+        }
+
+        function formatStandardCountdown(distance) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const mm = minutes < 10 ? "0" + minutes : minutes;
+            const ss = seconds < 10 ? "0" + seconds : seconds;
+            let output = "";
+
+            if (days >= 1) {
+                output += days + "d ";
+            }
+
+            if (hours > 0) {
+                output += hours + "h ";
+            }
+
+            if (minutes > 0) {
+                output += mm + "m ";
+            }
+
+            if (hours === 0 && seconds > 0) {
+                output += ss + "s ";
+            }
+
+            return output.trim();
+        }
+
+        function formatMotherDayCountdown(distance) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            if (days > 1) {
+                return days + " Days Until Mother's Day";
+            }
+
+            if (days === 1) {
+                return "Tomorrow is Mother's Day";
+            }
+
+            return "It's Mother's Day";
+        }
+
+        function updateCountdowns() {
+            const now = Date.now();
+
+            sliderEl.querySelectorAll(".c2-countdown[data-countdown-end]").forEach(function (el) {
+                const endTime = new Date(el.dataset.countdownEnd).getTime();
+
+                if (Number.isNaN(endTime)) {
+                    return;
+                }
+
+                const distance = endTime - now;
+
+                if (distance <= 0) {
+                    el.textContent = el.dataset.countdownExpired || "00h";
+                    return;
+                }
+
+                el.textContent = el.dataset.countdownMode === "mother-day"
+                    ? formatMotherDayCountdown(distance)
+                    : formatStandardCountdown(distance);
+            });
+        }
+
+        if (isPaused) {
+            bsCarousel.pause();
+        } else {
+            bsCarousel.cycle();
+        }
+
+        setPlayPauseIcon(isPaused);
+        updateCountdowns();
+        syncVideos();
+        syncBarOffsets();
+
+        sliderEl.addEventListener("slide.bs.carousel", function () {
+            sliderEl.querySelectorAll("video").forEach(function (video) {
+                video.pause();
+            });
+
+            scheduleBarOffsetSync();
+        });
+
+        sliderEl.addEventListener("slid.bs.carousel", function () {
+            syncVideos();
+            scheduleBarOffsetSync();
+        });
+
+        window.addEventListener("resize", scheduleBarOffsetSync);
+
+        if (typeof ResizeObserver === "function") {
+            const barObserver = new ResizeObserver(scheduleBarOffsetSync);
+
+            sliderEl.querySelectorAll(".c2-details-bar, .c2-countdown-bar").forEach(function (bar) {
+                barObserver.observe(bar);
+            });
+        }
+
+        playPauseBtn.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            isPaused = !isPaused;
+
+            if (isPaused) {
+                bsCarousel.pause();
+            } else {
+                bsCarousel.cycle();
+            }
+
+            setPlayPauseIcon(isPaused);
+            syncVideos();
+        });
+
+        window.setInterval(updateCountdowns, 1000);
+    })();
+</script>

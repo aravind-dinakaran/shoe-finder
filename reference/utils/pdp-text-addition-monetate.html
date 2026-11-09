@@ -1,0 +1,134 @@
+<script>
+    (function pdpEgiftCardPromotionMonetate() {
+        const PROMOTION_TEXT = "Get $20 e-gift card!";
+        const PROMOTION_COLOR = "#167d16";
+        const PROMOTION_FONT_SIZE = "0.875rem";
+        const PROMOTION_FONT_FAMILY = '"Open Sans", sans-serif';
+        const PROMOTION_FONT_WEIGHT = "700";
+
+        
+        const SECTION_SELECTOR = 'section[data-monetate="pdpBelowPricingInject"], .stickySectionWrapper--UWcmx';
+        const PROMOTION_SELECTOR = ".promotionMessage--MROOP";
+        const PRICE_ROW_SELECTOR = ".priceRatingSpacing--how5h";
+        const ACC_DISCOUNT_SELECTOR = ".accDiscountPromotionWrapper--gabGn";
+        const INSERTED_ATTR = "data-monetate-pdp-egift-card-promotion";
+        const INSERTED_SELECTOR = "[" + INSERTED_ATTR + '="true"]';
+        const OBSERVER_KEY = "pdpEgiftCardPromotionObserverInstance";
+        const DEBOUNCE_MS = 150;
+        
+
+        let debounceTimer;
+        let isUpdating = false;
+
+        function uniqueElements(elements) {
+            return Array.from(new Set(elements));
+        }
+
+        function createPromotionElement() {
+            const promotion = document.createElement("p");
+            promotion.setAttribute(INSERTED_ATTR, "true");
+            promotion.textContent = PROMOTION_TEXT;
+            applyPromotionStyles(promotion);
+            return promotion;
+        }
+
+        function applyPromotionStyles(promotion) {
+            promotion.style.color = PROMOTION_COLOR;
+            promotion.style.fontSize = PROMOTION_FONT_SIZE;
+            promotion.style.fontFamily = PROMOTION_FONT_FAMILY;
+            promotion.style.fontWeight = PROMOTION_FONT_WEIGHT;
+        }
+
+        function placePromotion(section, promotion, existingPromotions) {
+            const lastExistingPromotion = existingPromotions[existingPromotions.length - 1];
+
+            if (lastExistingPromotion) {
+                if (lastExistingPromotion.nextElementSibling !== promotion) {
+                    lastExistingPromotion.insertAdjacentElement("afterend", promotion);
+                }
+                return;
+            }
+
+            const accDiscount = section.querySelector(ACC_DISCOUNT_SELECTOR);
+
+            if (accDiscount) {
+                if (promotion.nextElementSibling !== accDiscount) {
+                    section.insertBefore(promotion, accDiscount);
+                }
+                return;
+            }
+
+            const priceRow = section.querySelector(PRICE_ROW_SELECTOR);
+
+            if (priceRow) {
+                if (priceRow.nextElementSibling !== promotion) {
+                    priceRow.insertAdjacentElement("afterend", promotion);
+                }
+                return;
+            }
+
+            if (promotion.parentElement !== section || section.lastElementChild !== promotion) {
+                section.appendChild(promotion);
+            }
+        }
+
+        function ensurePromotionPlacement() {
+            if (isUpdating) return;
+            isUpdating = true;
+
+            uniqueElements(document.querySelectorAll(SECTION_SELECTOR)).forEach(function (section) {
+                const existingPromotions = Array.from(section.querySelectorAll(PROMOTION_SELECTOR));
+                const insertedPromotions = Array.from(section.querySelectorAll(INSERTED_SELECTOR));
+                const promotion = insertedPromotions[0] || createPromotionElement();
+
+                insertedPromotions.slice(1).forEach(function (duplicate) {
+                    duplicate.remove();
+                });
+
+                if (promotion.textContent.trim() !== PROMOTION_TEXT) {
+                    promotion.textContent = PROMOTION_TEXT;
+                }
+
+                promotion.setAttribute(INSERTED_ATTR, "true");
+                applyPromotionStyles(promotion);
+                placePromotion(section, promotion, existingPromotions);
+            });
+
+            isUpdating = false;
+        }
+
+        function schedulePlacementCheck() {
+            window.clearTimeout(debounceTimer);
+            debounceTimer = window.setTimeout(ensurePromotionPlacement, DEBOUNCE_MS);
+        }
+
+        function init() {
+            ensurePromotionPlacement();
+
+            if (window[OBSERVER_KEY]) {
+                window[OBSERVER_KEY].disconnect();
+            }
+
+            if (document.body && "MutationObserver" in window) {
+                const observer = new MutationObserver(schedulePlacementCheck);
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+                window[OBSERVER_KEY] = observer;
+            }
+
+            window.setTimeout(ensurePromotionPlacement, 1000);
+            window.setTimeout(ensurePromotionPlacement, 3000);
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init, { once: true });
+        } else {
+            init();
+        }
+    })();
+</script>
+<!-- Reference:  https://marketer.monetate.net/control/a-682295e7/p/academy.com/experience/2122407#c2666467:what -->
+ 
+<!-- Tags: add pdp text monetate -->

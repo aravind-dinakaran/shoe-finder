@@ -1,0 +1,1518 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+<style>
+    #suppressor-store-locator-page {
+        --ssl-blue: #1946c8;
+        --ssl-gray: #333333;
+        --ssl-logo-aspect-ratio: 10.72;
+        --ssl-logo-width: clamp(296px, 42.09vw, 697px);
+        --ssl-banner-y-padding: 12px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    #suppressor-store-locator-page * {
+        box-sizing: border-box;
+    }
+
+    #suppressor-store-locator-page .ssl-content {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(12px, 0.97vw, 16px);
+    }
+
+    #suppressor-store-locator-page .ssl-heading-row {
+        align-items: flex-start;
+        display: flex;
+        gap: clamp(12px, 1.45vw, 24px);
+        justify-content: space-between;
+        line-height: 1.2;
+        width: 100%;
+        margin-top: 24px;
+    }
+
+    #suppressor-store-locator-page .ssl-title {
+        color: var(--ssl-blue);
+        flex: 1 1 auto;
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(22px, 1.93vw, 32px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        min-width: 0;
+        text-transform: capitalize;
+    }
+
+    #suppressor-store-locator-page .ssl-cta {
+        align-items: center;
+        color: var(--ssl-blue);
+        display: inline-flex;
+        flex: 0 0 auto;
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(14px, 1.09vw, 18px);
+        font-weight: 600;
+        line-height: 1.2;
+        min-height: 39px;
+        text-align: left;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        text-underline-position: from-font;
+        white-space: nowrap;
+    }
+
+    #suppressor-store-locator-page .ssl-cta:hover {
+        color: var(--ssl-blue);
+    }
+
+    #suppressor-store-locator-page .ssl-banner {
+        background-color: #272d2c;
+        border-radius: 8px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-banner-bg,
+    #suppressor-store-locator-page .ssl-banner-bg img {
+        height: 100%;
+        inset: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-banner-bg img {
+        object-fit: cover;
+    }
+
+    #suppressor-store-locator-page .ssl-banner-inner {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        padding: var(--ssl-banner-y-padding) clamp(16px, 1.45vw, 24px);
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    #suppressor-store-locator-page .ssl-logo {
+        aspect-ratio: var(--ssl-logo-aspect-ratio) / 1;
+        display: block;
+        height: auto;
+        max-width: 100%;
+        width: var(--ssl-logo-width);
+    }
+
+    #suppressor-store-locator-page .ssl-copy {
+        color: var(--ssl-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(14px, 0.97vw, 16px);
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    #suppressor-store-locator-page .ssl-store-selector {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: clamp(24px, 2.9vw, 48px);
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-store-header {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-store-kicker {
+        color: var(--ssl-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(14px, 0.97vw, 16px);
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
+    }
+
+    #suppressor-store-locator-page .ssl-store-select {
+        appearance: none;
+        background-color: #ffffff;
+        background-image:
+            linear-gradient(45deg, transparent 50%, #999999 50%),
+            linear-gradient(135deg, #999999 50%, transparent 50%);
+        background-position:
+            calc(100% - 18px) 50%,
+            calc(100% - 12px) 50%;
+        background-repeat: no-repeat;
+        background-size: 6px 6px, 6px 6px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        color: var(--ssl-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(16px, 0.97vw, 16px);
+        font-weight: 400;
+        line-height: 24px;
+        max-width: 491px;
+        padding: 10px 34px 10px 10px;
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-store-select:disabled {
+        color: #777777;
+        cursor: not-allowed;
+    }
+
+    #suppressor-store-locator-page .ssl-store-grid {
+        align-items: stretch;
+        display: grid;
+        gap: 24px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-store-card {
+        align-items: flex-start;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 8px;
+        color: var(--ssl-gray);
+        display: grid;
+        gap: 8px;
+        grid-template-rows: auto auto auto 1fr;
+        height: 100%;
+        min-width: 0;
+        overflow: hidden;
+        padding: 24px;
+    }
+
+    #suppressor-store-locator-page .ssl-store-card-copy {
+        display: contents;
+    }
+
+    #suppressor-store-locator-page .ssl-store-card-title {
+        color: var(--ssl-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(18px, 1.45vw, 24px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+
+    #suppressor-store-locator-page .ssl-store-card-address,
+    #suppressor-store-locator-page .ssl-store-card-phone {
+        color: var(--ssl-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(12px, 0.85vw, 14px);
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+
+    #suppressor-store-locator-page .ssl-store-details {
+        background-color: var(--ssl-blue);
+        border-radius: 4px;
+        color: #ffffff;
+        display: inline-flex;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        align-self: start;
+        justify-content: center;
+        justify-self: start;
+        line-height: 24px;
+        margin-top: 4px;
+        padding: 8px 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    #suppressor-store-locator-page .ssl-store-details:hover {
+        background-color: #004080;
+        color: #ffffff;
+    }
+
+    #suppressor-store-locator-page .ssl-store-message {
+        color: var(--ssl-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(14px, 0.97vw, 16px);
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    #suppressor-store-locator-page .ssl-store-toggle {
+        align-items: center;
+        align-self: center;
+        background: transparent;
+        border: 0;
+        color: var(--ssl-blue);
+        display: none;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        gap: 4px;
+        line-height: normal;
+        padding: 0;
+        text-decoration: underline;
+        text-underline-position: from-font;
+    }
+
+    #suppressor-store-locator-page .ssl-store-toggle::after {
+        border-bottom: 2px solid currentColor;
+        border-right: 2px solid currentColor;
+        content: "";
+        height: 8px;
+        margin-top: -4px;
+        transform: rotate(45deg);
+        width: 8px;
+    }
+
+    #suppressor-store-locator-page .ssl-store-toggle--less::after {
+        margin-top: 4px;
+        transform: rotate(225deg);
+    }
+
+    @supports (grid-template-rows: subgrid) {
+        #suppressor-store-locator-page .ssl-store-card {
+            grid-row: span 4;
+            grid-template-rows: subgrid;
+        }
+    }
+
+    #suppressor-store-locator-page .ssl-how-to-buy {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: clamp(24px, 2.9vw, 48px);
+    }
+
+    #suppressor-store-locator-page .ssl-requirements {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: clamp(24px, 2.9vw, 48px);
+    }
+
+    #suppressor-store-locator-page .ssl-keep-shopping {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: clamp(24px, 2.9vw, 48px);
+        margin-top: clamp(24px, 2.9vw, 48px);
+        position: relative;
+    }
+
+    #suppressor-store-locator-page .ssl-section-title {
+        color: var(--ssl-blue);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(21px, 1.69vw, 28px);
+        font-weight: 700;
+        line-height: normal;
+        margin: 0;
+    }
+
+    #suppressor-store-locator-page .ssl-steps {
+        color: var(--ssl-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(14px, 1.09vw, 18px);
+        font-weight: 400;
+        line-height: 1.6;
+        margin: 0;
+        max-width: 984px;
+        padding-left: 1.5em;
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-steps li {
+        margin-bottom: 8px;
+        padding-left: 0;
+    }
+
+    #suppressor-store-locator-page .ssl-steps li:last-child {
+        margin-bottom: 0;
+    }
+
+    #suppressor-store-locator-page .ssl-steps strong {
+        font-weight: 700;
+    }
+
+    #how-to-buy-a-suppressor {
+        scroll-margin-top: 300px;
+    }
+
+    #suppressor-store-locator-page .ssl-requirements-list {
+        color: var(--ssl-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(14px, 1.09vw, 18px);
+        font-weight: 400;
+        line-height: 1.6;
+        margin: 0;
+        padding-left: 1.5em;
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-requirements-list li {
+        margin-bottom: 8px;
+        padding-left: 0;
+    }
+
+    #suppressor-store-locator-page .ssl-requirements-list li:last-child {
+        margin-bottom: 0;
+    }
+
+    #suppressor-store-locator-page .ssl-category-rail-wrap {
+        position: relative;
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-category-rail {
+        align-items: flex-start;
+        display: flex;
+        gap: 24px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-category-rail::-webkit-scrollbar {
+        display: none;
+    }
+
+    #suppressor-store-locator-page .ssl-category-card {
+        color: var(--ssl-gray);
+        display: flex;
+        flex: 0 0 186px;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+        text-decoration: none;
+        width: 186px;
+    }
+
+    #suppressor-store-locator-page .ssl-category-card:hover .ssl-category-title {
+        text-decoration: underline;
+    }
+
+    #suppressor-store-locator-page .ssl-category-media {
+        align-items: center;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 6px;
+        display: flex;
+        flex: 0 0 186px;
+        height: 186px;
+        justify-content: center;
+        overflow: hidden;
+        width: 186px;
+    }
+
+    #suppressor-store-locator-page .ssl-category-image {
+        display: block;
+        height: auto;
+        max-height: 90%;
+        max-width: 90%;
+        object-fit: contain;
+    }
+
+    #suppressor-store-locator-page .ssl-category-image--suppressors {
+        width: 73%;
+    }
+
+    #suppressor-store-locator-page .ssl-category-image--guns {
+        width: 72%;
+    }
+
+    #suppressor-store-locator-page .ssl-category-image--optics {
+        width: 88%;
+    }
+
+    #suppressor-store-locator-page .ssl-category-image--subsonic {
+        width: 91%;
+    }
+
+    #suppressor-store-locator-page .ssl-category-image--safety {
+        width: 89%;
+    }
+
+    #suppressor-store-locator-page .ssl-category-image--ammo {
+        width: 82%;
+    }
+
+    #suppressor-store-locator-page .ssl-category-title {
+        color: var(--ssl-gray);
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+        margin: 0;
+        min-width: 100%;
+    }
+
+    #suppressor-store-locator-page .ssl-category-scroll-btn {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        display: none;
+        height: 32px;
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        top: 93px;
+        transform: translateY(-50%);
+        width: 32px;
+        z-index: 2;
+    }
+
+    #suppressor-store-locator-page .ssl-category-scroll-btn svg {
+        display: block;
+        height: 32px;
+        width: 32px;
+    }
+
+    #suppressor-store-locator-page .ssl-category-scroll-btn-prev {
+        left: 8px;
+    }
+
+    #suppressor-store-locator-page .ssl-category-scroll-btn-next {
+        right: 8px;
+    }
+
+    #suppressor-store-locator-page .ssl-category-scroll-btn:disabled {
+        cursor: default;
+    }
+
+    #suppressor-services-footer {
+        --ssf-gray: #333333;
+        --ssf-divider: #e8e8e8;
+        background: #ffffff;
+        color: var(--ssf-gray);
+        display: flex;
+        flex-direction: column;
+        font-family: 'Open Sans', sans-serif;
+        gap: clamp(8px, 0.66vw, 11px);
+        padding-bottom: clamp(20px, 1.21vw, 20px);
+        width: 100%;
+    }
+
+    #suppressor-services-footer * {
+        box-sizing: border-box;
+    }
+
+    #suppressor-services-footer .ssf-divider {
+        background-color: var(--ssf-divider);
+        flex: 0 0 1px;
+        height: 1px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #suppressor-services-footer .ssf-services {
+        align-items: flex-start;
+        display: flex;
+        gap: clamp(0px, calc((100vw - 1200px) / 3), 152px);
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1656px;
+        overflow: hidden;
+        padding: clamp(4px, 0.24vw, 4px) 0;
+        width: 100%;
+    }
+
+    #suppressor-services-footer .ssf-service-item {
+        align-items: center;
+        display: flex;
+        flex: 0 0 300px;
+        flex-direction: column;
+        gap: clamp(4px, 0.24vw, 4px);
+        min-width: 300px;
+        position: relative;
+        text-align: center;
+        width: 300px;
+    }
+
+    #suppressor-services-footer .ssf-service-item--myacademy {
+        flex: 0 0 300px;
+        width: 300px;
+    }
+
+    #suppressor-services-footer .ssf-icon {
+        align-items: center;
+        display: flex;
+        height: clamp(35px, 2.11vw, 35px);
+        justify-content: center;
+        width: clamp(35px, 2.11vw, 35px);
+    }
+
+    #suppressor-services-footer .ssf-icon--myacademy {
+        width: 108px;
+    }
+
+    #suppressor-services-footer .ssf-icon-img {
+        display: block;
+        height: auto;
+        width: 30px;
+    }
+
+    #suppressor-services-footer .ssf-icon-img--licenses {
+        height: 30px;
+        width: 40px;
+    }
+
+    #suppressor-services-footer .ssf-myacademy-logo {
+        display: block;
+        height: auto;
+        object-fit: contain;
+        width: 108px;
+    }
+
+    #suppressor-services-footer .ssf-copy {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(8px, 0.6vw, 10px);
+        padding-top: clamp(5px, 0.3vw, 5px);
+        width: 100%;
+        word-break: break-word;
+    }
+
+    #suppressor-services-footer .ssf-text {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: clamp(6px, 0.36vw, 6px);
+        text-align: center;
+        width: 100%;
+    }
+
+    #suppressor-services-footer .ssf-heading {
+        color: var(--ssf-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(16px, 1.09vw, 18px);
+        font-weight: 700;
+        line-height: 1;
+        margin: 0;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    #suppressor-services-footer .ssf-subheading {
+        color: var(--ssf-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(12px, 0.79vw, 13px);
+        font-weight: 400;
+        line-height: 1;
+        margin: 0;
+        width: 100%;
+    }
+
+    #suppressor-services-footer .ssf-links {
+        align-items: flex-start;
+        display: flex;
+        gap: clamp(20px, 1.21vw, 20px);
+        justify-content: center;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    #suppressor-services-footer .ssf-link {
+        color: var(--ssf-gray);
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(12px, 0.72vw, 12px);
+        font-weight: 400;
+        line-height: 1;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        text-underline-position: from-font;
+    }
+
+    #suppressor-services-footer .ssf-link:hover {
+        color: var(--ssf-gray);
+    }
+
+    @media (max-width: 1199px) {
+        #suppressor-store-locator-page .ssl-store-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        #suppressor-services-footer {
+            gap: 30px;
+            padding-bottom: 24px;
+        }
+
+        #suppressor-services-footer .ssf-services {
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 378px;
+            overflow: visible;
+            padding: 0;
+        }
+
+        #suppressor-services-footer .ssf-service-item,
+        #suppressor-services-footer .ssf-service-item--myacademy {
+            flex: 0 0 300px;
+            min-width: 300px;
+            width: 300px;
+        }
+
+        #suppressor-services-footer .ssf-heading {
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+        #suppressor-services-footer .ssf-subheading,
+        #suppressor-services-footer .ssf-link {
+            font-size: 12px;
+            line-height: 13px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #suppressor-store-locator-page {
+            --ssl-logo-width: clamp(296px, 86.3vw, 420px);
+            --ssl-banner-y-padding: clamp(13px, 3.79vw, 14px);
+        }
+
+        #suppressor-store-locator-page .ssl-heading-row {
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        #suppressor-store-locator-page .ssl-title {
+            font-size: 22px;
+        }
+
+        #suppressor-store-locator-page .ssl-cta {
+            font-size: 14px;
+            min-height: auto;
+            white-space: normal;
+        }
+
+        #suppressor-store-locator-page .ssl-banner {
+            border-radius: 4px;
+        }
+
+        #suppressor-store-locator-page .ssl-store-selector {
+            gap: 16px;
+            margin-top: 24px;
+            padding: 8px 0;
+        }
+
+        #suppressor-store-locator-page .ssl-store-header {
+            gap: 12px;
+        }
+
+        #suppressor-store-locator-page .ssl-store-kicker {
+            font-size: 14px;
+            max-width: 343px;
+        }
+
+        #suppressor-store-locator-page .ssl-store-select {
+            max-width: none;
+        }
+
+        #suppressor-store-locator-page .ssl-store-grid {
+            gap: 16px;
+            grid-template-columns: 1fr;
+        }
+
+        #suppressor-store-locator-page .ssl-store-card {
+            padding: 16px;
+        }
+
+        #suppressor-store-locator-page .ssl-store-card-title {
+            font-size: 18px;
+        }
+
+        #suppressor-store-locator-page .ssl-store-card-address {
+            font-size: 12px;
+        }
+
+        #suppressor-store-locator-page .ssl-store-card-phone {
+            font-size: 14px;
+        }
+
+        #suppressor-store-locator-page .ssl-how-to-buy {
+            margin-top: 24px;
+            padding: 8px 0;
+        }
+
+        #suppressor-store-locator-page .ssl-requirements {
+            margin-top: 24px;
+            padding: 8px 0;
+        }
+
+        #suppressor-store-locator-page .ssl-keep-shopping {
+            margin-bottom: 24px;
+            margin-top: 24px;
+            padding: 8px 0;
+        }
+
+        #suppressor-store-locator-page .ssl-section-title {
+            font-size: 21px;
+        }
+
+        #suppressor-store-locator-page .ssl-steps {
+            font-size: 14px;
+            max-width: none;
+        }
+
+        #suppressor-store-locator-page .ssl-requirements-list {
+            font-size: 14px;
+        }
+
+        #suppressor-store-locator-page .ssl-category-rail {
+            gap: 16px;
+            padding-bottom: 4px;
+            padding-right: 16px;
+        }
+
+        #suppressor-store-locator-page .ssl-category-card {
+            flex-basis: 120px;
+            width: 120px;
+        }
+
+        #suppressor-store-locator-page .ssl-category-media {
+            border-radius: 4px;
+            flex-basis: 120px;
+            height: 120px;
+            width: 120px;
+        }
+
+        #suppressor-store-locator-page .ssl-category-title {
+            font-size: 14px;
+        }
+
+        #suppressor-store-locator-page .ssl-category-scroll-btn {
+            display: none !important;
+        }
+    }
+</style>
+
+<!-- Suppressor Store Locator -->
+<section id="suppressor-store-locator-page" class="cont-1656 hp-margin">
+    <div class="ssl-content">
+        <div class="ssl-heading-row">
+            <h1 class="ssl-title">Suppressor Store Locator</h1>
+            <a class="ssl-cta" href="#how-to-buy-a-suppressor">How to Buy a Suppressor</a>
+        </div>
+
+        <div class="ssl-banner corners">
+            <picture class="ssl-banner-bg" aria-hidden="true">
+                <source media="(max-width: 767px)"
+                    srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt79adfa6967a32d41/69f3c99760b9c52207063c69/Banner-_Mobile.png">
+                <img loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt6fb700901a9a776d/69f3c997789064d0b08127bf/Banner-_Desktop.png"
+                    alt="">
+            </picture>
+            <div class="ssl-banner-inner">
+                <img class="ssl-logo" loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt75b0a72c1e51bcba/69f3c99a789064d4d98127c3/Lodo-_Silencer_Shop_ASO.png"
+                    alt="Silencer Shop plus Academy Sports + Outdoors">
+            </div>
+        </div>
+
+        <p class="ssl-copy">Academy Sports + Outdoors is now selling suppressors for your firearms. We have partnered
+            with Silencer Shop to provide customers a secure suppressor purchase experience.</p>
+    </div>
+
+    <div class="ssl-store-selector"
+        data-stores-csv-url="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt2dbd7663a292e3f6/suppressors-stores.csv">
+        <div class="ssl-store-header">
+            <h2 class="ssl-section-title">Stores Selling Suppressors</h2>
+            <p class="ssl-store-kicker">Select your state to find an Academy Store in your area.</p>
+            <select class="ssl-store-select" aria-label="Select state" disabled>
+                <option>Loading stores...</option>
+            </select>
+        </div>
+        <p class="ssl-store-message" aria-live="polite">Loading stores...</p>
+        <div class="ssl-store-grid" aria-live="polite"></div>
+        <button class="ssl-store-toggle" type="button">View More Stores</button>
+    </div>
+
+    <div class="ssl-how-to-buy">
+        <h2 id="how-to-buy-a-suppressor" class="ssl-section-title">How to Buy a Suppressor</h2>
+        <ol class="ssl-steps">
+            <li>Choose a Suppressor at a participating Academy Sports + Outdoors location.</li>
+            <li>Create Silencer Shop profile on the Silencer Shop Kiosk located in-store near the gun counter.</li>
+            <li>Submit your fingerprints using the Kiosk.</li>
+            <li>Submit a passport style photo using the Kiosk, your Cell Phone, or Firearm Counter Tablet.</li>
+            <li>Select &ldquo;Individual&rdquo; or a &ldquo;Trust&rdquo; type to register your suppressor.</li>
+            <li>Create your ATF eForms profile with the exact <strong>same name and email used for</strong> your
+                Silencer Shop profile.</li>
+            <li>Certify the National Firearm Act (NFA) Form 4 via the certified link sent by Silencer Shop.</li>
+            <li>Wait for your Form 4 to be approved by the ATF. Approval wait time is in line with current ATF
+                processing times.</li>
+            <li>Return to the store once you have been notified of your Form 4 ATF approval.</li>
+            <li>Complete the standard ATF Form 4473.</li>
+            <li>Purchase the suppressor.</li>
+        </ol>
+    </div>
+
+    <div class="ssl-requirements">
+        <h2 class="ssl-section-title">Additional Suppressor Requirements:</h2>
+        <ul class="ssl-requirements-list">
+            <li>A Valid Government Issued Photo ID</li>
+            <li>21+ Years Old</li>
+            <li>Resident of the state you wish to purchase the suppressor</li>
+        </ul>
+    </div>
+
+    <div class="ssl-keep-shopping">
+        <h2 class="ssl-section-title">Keep Shopping</h2>
+        <div class="ssl-category-rail-wrap">
+            <button class="ssl-category-scroll-btn ssl-category-scroll-btn-prev" type="button"
+                aria-label="Scroll Keep Shopping categories left">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="16" fill="white"></rect>
+                    <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" fill="white"></rect>
+                    <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" stroke="#333333"></rect>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.5286 16.4717C12.2682 16.2114 12.2682 15.7893 12.5286 15.5289L18.5286 9.52892C18.7889 9.26857 19.211 9.26857 19.4714 9.52892C19.7317 9.78927 19.7317 10.2114 19.4714 10.4717L13.9428 16.0003L19.4714 21.5289C19.7317 21.7893 19.7317 22.2114 19.4714 22.4717C19.211 22.7321 18.7889 22.7321 18.5286 22.4717L12.5286 16.4717Z"
+                        fill="#333333"></path>
+                </svg>
+            </button>
+
+            <div class="ssl-category-rail" tabindex="0" aria-label="Keep Shopping categories">
+                <a class="ssl-category-card" href="https://www.academy.com/c/outdoors/shooting/suppressors"
+                    data-omni="suppressorstorelocator_keep_suppressorsaccessories"
+                    aria-label="Shop suppressors and accessories">
+                    <span class="ssl-category-media">
+                        <img class="ssl-category-image ssl-category-image--suppressors" loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt350a00d2254812b5/69f3c9973e47cca5ca134df6/Category_1-_Accessories.png"
+                            alt="">
+                    </span>
+                    <span class="ssl-category-title">Suppressors + Accessories</span>
+                </a>
+
+                <a class="ssl-category-card" href="https://www.academy.com/c/outdoors/shooting/firearms"
+                    data-omni="suppressorstorelocator_keep_gunsfirearms" aria-label="Shop guns and firearms">
+                    <span class="ssl-category-media">
+                        <img class="ssl-category-image ssl-category-image--guns" loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte1181b1402bccda5/69f3c9974e19e624ed414d35/Category_2-_Guns.png"
+                            alt="">
+                    </span>
+                    <span class="ssl-category-title">Guns + Firearms</span>
+                </a>
+
+                <a class="ssl-category-card" href="https://www.academy.com/c/outdoors/hunting/optics"
+                    data-omni="suppressorstorelocator_keep_optics" aria-label="Shop optics">
+                    <span class="ssl-category-media">
+                        <img class="ssl-category-image ssl-category-image--optics" loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7794a43b4df08889/69f3c99749f6ceb405746e95/Category_3-_Optics.png"
+                            alt="">
+                    </span>
+                    <span class="ssl-category-title">Optics</span>
+                </a>
+
+                <a class="ssl-category-card" href="https://www.academy.com/c/outdoors/shooting/ammunition/subsonic-ammunition"
+                    data-omni="suppressorstorelocator_keep_subsonicammo" aria-label="Shop subsonic ammo">
+                    <span class="ssl-category-media">
+                        <img class="ssl-category-image ssl-category-image--subsonic" loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt579858865f0c138b/69f3c99749f6cee403746e99/Category_4-_Subsonic_Ammo.png"
+                            alt="">
+                    </span>
+                    <span class="ssl-category-title">Subsonic Ammo</span>
+                </a>
+
+                <a class="ssl-category-card" href="https://www.academy.com/c/outdoors/shooting/gun-storage--safety"
+                    data-omni="suppressorstorelocator_keep_storagesafety" aria-label="Shop storage and safety">
+                    <span class="ssl-category-media">
+                        <img class="ssl-category-image ssl-category-image--safety" loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte1c73e39c079e93e/69f3c99acc157b19e021b99c/Category_5-_Safety.png"
+                            alt="">
+                    </span>
+                    <span class="ssl-category-title">Storage + Safety</span>
+                </a>
+
+                <a class="ssl-category-card" href="https://www.academy.com/c/outdoors/shooting/ammunition"
+                    data-omni="suppressorstorelocator_keep_ammunition" aria-label="Shop ammunition">
+                    <span class="ssl-category-media">
+                        <img class="ssl-category-image ssl-category-image--ammo" loading="lazy"
+                            src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt0bbe9a743dd5f3af/69f3c99ac4674579cc8c2914/Category_6-_Ammo.png"
+                            alt="">
+                    </span>
+                    <span class="ssl-category-title">Ammunition</span>
+                </a>
+            </div>
+
+            <button class="ssl-category-scroll-btn ssl-category-scroll-btn-next" type="button"
+                aria-label="Scroll Keep Shopping categories right">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="white"></rect>
+                    <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5"
+                        transform="matrix(-1 0 0 1 29 2)" fill="white"></rect>
+                    <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5"
+                        transform="matrix(-1 0 0 1 29 2)" stroke="#333333"></rect>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.4714 16.4717C19.7318 16.2114 19.7318 15.7893 19.4714 15.5289L13.4714 9.52892C13.2111 9.26857 12.789 9.26857 12.5286 9.52892C12.2683 9.78927 12.2683 10.2114 12.5286 10.4717L18.0572 16.0003L12.5286 21.5289C12.2683 21.7893 12.2683 22.2114 12.5286 22.4717C12.789 22.7321 13.2111 22.7321 13.4714 22.4717L19.4714 16.4717Z"
+                        fill="#333333"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- Suppressor Store Locator -->
+
+<!-- Suppressor Services Footer -->
+<section id="suppressor-services-footer" data-cname="cs_servicefooter_stack" data-pz-seg-name="cs_default"
+    data-pz-seg-id="cs_default">
+    <div class="ssf-divider" aria-hidden="true"></div>
+
+    <div class="ssf-services">
+        <div class="ssf-service-item">
+            <div class="ssf-icon" aria-hidden="true">
+                <img class="ssf-icon-img" loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt6ef7a808dd16380a/687015db0205a2c9cc4da715/10_off-safes.png"
+                    alt="">
+            </div>
+            <div class="ssf-copy">
+                <div class="ssf-text">
+                    <h3 class="ssf-heading">GET 10% OFF A SAFE</h3>
+                    <p class="ssf-subheading">with the Purchase of a Firearm</p>
+                </div>
+                <div class="ssf-links">
+                    <a class="ssf-link" href="/c/outdoors/shooting/gun-storage--safety/gun--safes"
+                        data-pos="11-1">Shop Safes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ssf-service-item">
+            <div class="ssf-icon" aria-hidden="true">
+                <img class="ssf-icon-img ssf-icon-img--licenses" loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb77515c66383924/687015db8799658c1af1e1cd/H_F_licenses.png"
+                    alt="">
+            </div>
+            <div class="ssf-copy">
+                <div class="ssf-text">
+                    <h3 class="ssf-heading">HUNTING + FISHING LICENSES</h3>
+                    <p class="ssf-subheading">Available In-Store</p>
+                </div>
+                <div class="ssf-links">
+                    <a class="ssf-link" href="/instore-services/fishing-hunting-licenses"
+                        data-pos="11-2">See Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ssf-service-item">
+            <div class="ssf-icon" aria-hidden="true">
+                <img class="ssf-icon-img" loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt74cb1e6585fc4684/687026d715fcea0780245c5c/B_S_mounting.png"
+                    alt="">
+            </div>
+            <div class="ssf-copy">
+                <div class="ssf-text">
+                    <h3 class="ssf-heading">BORESIGHTING +<br>SCOPE MOUNTING</h3>
+                    <p class="ssf-subheading">with the Purchase of a Firearm</p>
+                </div>
+                <div class="ssf-links">
+                    <a class="ssf-link" href="/instore-services/boresighting-and-scope-mounting"
+                        data-pos="11-3">See Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ssf-service-item ssf-service-item--myacademy">
+            <div class="ssf-icon ssf-icon--myacademy">
+                <img class="ssf-myacademy-logo" loading="lazy"
+                    src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt150865484bac2aa0/699bf1a47603c100089f2143/myacademyrewards.svg"
+                    alt="$15 OFF AFTER YOU JOIN. Terms and conditions Apply.">
+            </div>
+            <div class="ssf-copy">
+                <div class="ssf-text">
+                    <h3 class="ssf-heading">$15 OFF AFTER YOU JOIN</h3>
+                    <p class="ssf-subheading">Terms and conditions apply.</p>
+                </div>
+                <div class="ssf-links">
+                    <a class="ssf-link" href="https://www.academy.com/shop/LogonForm?pageState=signUp"
+                        data-omni="hp_storeservices_mac_myacademy">Join for Free</a>
+                    <a class="ssf-link" href="https://www.academy.com/myacademy-rewards"
+                        data-omni="hp_storeservices_mac_myacademy">See Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Suppressor Services Footer -->
+
+<script>
+    (function () {
+        const STORE_CSV_VERSION = "2";
+        const STORE_BATCH_SIZE = 6;
+        const STATE_NAMES = {
+            AL: "Alabama",
+            AK: "Alaska",
+            AZ: "Arizona",
+            AR: "Arkansas",
+            CA: "California",
+            CO: "Colorado",
+            CT: "Connecticut",
+            DE: "Delaware",
+            FL: "Florida",
+            GA: "Georgia",
+            HI: "Hawaii",
+            ID: "Idaho",
+            IL: "Illinois",
+            IN: "Indiana",
+            IA: "Iowa",
+            KS: "Kansas",
+            KY: "Kentucky",
+            LA: "Louisiana",
+            ME: "Maine",
+            MD: "Maryland",
+            MA: "Massachusetts",
+            MI: "Michigan",
+            MN: "Minnesota",
+            MS: "Mississippi",
+            MO: "Missouri",
+            MT: "Montana",
+            NE: "Nebraska",
+            NV: "Nevada",
+            NH: "New Hampshire",
+            NJ: "New Jersey",
+            NM: "New Mexico",
+            NY: "New York",
+            NC: "North Carolina",
+            ND: "North Dakota",
+            OH: "Ohio",
+            OK: "Oklahoma",
+            OR: "Oregon",
+            PA: "Pennsylvania",
+            RI: "Rhode Island",
+            SC: "South Carolina",
+            SD: "South Dakota",
+            TN: "Tennessee",
+            TX: "Texas",
+            UT: "Utah",
+            VT: "Vermont",
+            VA: "Virginia",
+            WA: "Washington",
+            WV: "West Virginia",
+            WI: "Wisconsin",
+            WY: "Wyoming"
+        };
+
+        function initSuppressorStoreSelector() {
+            const root = document.getElementById("suppressor-store-locator-page");
+            if (!root) return;
+
+            const selector = root.querySelector(".ssl-store-selector");
+            if (!selector) return;
+
+            const csvBaseUrl = selector.getAttribute("data-stores-csv-url");
+            const select = selector.querySelector(".ssl-store-select");
+            const grid = selector.querySelector(".ssl-store-grid");
+            const message = selector.querySelector(".ssl-store-message");
+            const toggleButton = selector.querySelector(".ssl-store-toggle");
+            if (!csvBaseUrl || !select || !grid || !message || !toggleButton) return;
+
+            const csvUrl = csvBaseUrl + (csvBaseUrl.indexOf("?") === -1 ? "?" : "&") + "v=" + encodeURIComponent(STORE_CSV_VERSION);
+
+            let storesByState = {};
+            let visibleCount = STORE_BATCH_SIZE;
+
+            function setMessage(text) {
+                message.textContent = text;
+                message.style.display = text ? "block" : "none";
+            }
+
+            function escapeHtml(value) {
+                return String(value || "")
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#39;");
+            }
+
+            function parseCsv(csvText) {
+                const rows = [];
+                let row = [];
+                let field = "";
+                let inQuotes = false;
+
+                for (let index = 0; index < csvText.length; index += 1) {
+                    const char = csvText[index];
+                    const nextChar = csvText[index + 1];
+
+                    if (char === '"') {
+                        if (inQuotes && nextChar === '"') {
+                            field += '"';
+                            index += 1;
+                        } else {
+                            inQuotes = !inQuotes;
+                        }
+                    } else if (char === "," && !inQuotes) {
+                        row.push(field);
+                        field = "";
+                    } else if ((char === "\n" || char === "\r") && !inQuotes) {
+                        if (char === "\r" && nextChar === "\n") {
+                            index += 1;
+                        }
+                        row.push(field);
+                        rows.push(row);
+                        row = [];
+                        field = "";
+                    } else {
+                        field += char;
+                    }
+                }
+
+                if (field || row.length) {
+                    row.push(field);
+                    rows.push(row);
+                }
+
+                const headers = rows.shift();
+                if (!headers || !headers.length) return [];
+
+                return rows.map(function (cells) {
+                    return headers.reduce(function (record, header, index) {
+                        record[header.trim()] = (cells[index] || "").trim();
+                        return record;
+                    }, {});
+                });
+            }
+
+            function parseGoLiveDate(value) {
+                const dateParts = String(value || "").trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+                if (!dateParts) return null;
+
+                const month = Number(dateParts[1]);
+                const day = Number(dateParts[2]);
+                const year = Number(dateParts[3]);
+                const date = new Date(year, month - 1, day);
+
+                if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
+                    return null;
+                }
+
+                return date;
+            }
+
+            function getToday() {
+                const now = new Date();
+                return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            }
+
+            function isRealUrl(value) {
+                return /^https?:\/\//i.test(String(value || "").trim());
+            }
+
+            function formatPhone(value) {
+                const digits = String(value || "").replace(/\D/g, "");
+                if (digits.length !== 10) return value;
+
+                return "(" + digits.slice(0, 3) + ") " + digits.slice(3, 6) + "-" + digits.slice(6);
+            }
+
+            function getAddress(store) {
+                return [store.address, store.city, store.state].filter(Boolean).join(", ");
+            }
+
+            function normalizeStores(records) {
+                const today = getToday();
+
+                return records.map(function (record) {
+                    const state = (record["State Value"] || "").trim().toUpperCase();
+                    const goLiveDate = parseGoLiveDate(record["Go Live Date"]);
+
+                    return {
+                        goLiveDate: goLiveDate,
+                        storeNumber: Number(record["Store #"]) || 0,
+                        name: record["Location Name"] || "",
+                        address: record.Address || "",
+                        city: record.City || "",
+                        phone: record["Phone Number"] || "",
+                        state: state,
+                        url: record["Store URL"] || ""
+                    };
+                }).filter(function (store) {
+                    return store.name && store.state && store.goLiveDate && store.goLiveDate <= today;
+                }).sort(function (storeA, storeB) {
+                    return storeA.goLiveDate - storeB.goLiveDate || storeA.storeNumber - storeB.storeNumber;
+                });
+            }
+
+            function groupStoresByState(stores) {
+                return stores.reduce(function (groups, store) {
+                    if (!groups[store.state]) {
+                        groups[store.state] = [];
+                    }
+                    groups[store.state].push(store);
+                    return groups;
+                }, {});
+            }
+
+            function renderOptions() {
+                const states = Object.keys(storesByState).sort(function (stateA, stateB) {
+                    return (STATE_NAMES[stateA] || stateA).localeCompare(STATE_NAMES[stateB] || stateB);
+                });
+
+                if (!states.length) {
+                    select.innerHTML = '<option>No stores available</option>';
+                    select.disabled = true;
+                    return;
+                }
+
+                select.innerHTML = states.map(function (state) {
+                    return '<option value="' + escapeHtml(state) + '">' + escapeHtml(STATE_NAMES[state] || state) + '</option>';
+                }).join("");
+                select.disabled = false;
+                select.value = states[0];
+            }
+
+            function renderCard(store) {
+                const detailsLink = isRealUrl(store.url)
+                    ? '<a class="ssl-store-details" href="' + escapeHtml(store.url) + '">Store Details</a>'
+                    : "";
+
+                return [
+                    '<article class="ssl-store-card">',
+                    '<div class="ssl-store-card-copy">',
+                    '<h3 class="ssl-store-card-title">' + escapeHtml(store.name) + '</h3>',
+                    '<p class="ssl-store-card-address">' + escapeHtml(getAddress(store)) + '</p>',
+                    '<p class="ssl-store-card-phone">' + escapeHtml(formatPhone(store.phone)) + '</p>',
+                    '</div>',
+                    detailsLink,
+                    '</article>'
+                ].join("");
+            }
+
+            function renderStores() {
+                const selectedState = select.value;
+                const stores = storesByState[selectedState] || [];
+                const visibleStores = stores.slice(0, visibleCount);
+
+                grid.innerHTML = visibleStores.map(renderCard).join("");
+
+                if (!stores.length) {
+                    setMessage("No stores are available for this state yet.");
+                } else {
+                    setMessage("");
+                }
+
+                if (stores.length > STORE_BATCH_SIZE) {
+                    const isFullyExpanded = visibleCount >= stores.length;
+                    toggleButton.textContent = isFullyExpanded ? "View Less Stores" : "View More Stores";
+                    toggleButton.classList.toggle("ssl-store-toggle--less", isFullyExpanded);
+                    toggleButton.style.display = "inline-flex";
+                } else {
+                    toggleButton.style.display = "none";
+                    toggleButton.classList.remove("ssl-store-toggle--less");
+                }
+            }
+
+            select.addEventListener("change", function () {
+                visibleCount = STORE_BATCH_SIZE;
+                renderStores();
+            });
+
+            toggleButton.addEventListener("click", function () {
+                const stores = storesByState[select.value] || [];
+
+                if (visibleCount >= stores.length) {
+                    visibleCount = STORE_BATCH_SIZE;
+                    renderStores();
+                    selector.scrollIntoView({ behavior: "smooth", block: "start" });
+                    return;
+                }
+
+                visibleCount += STORE_BATCH_SIZE;
+                renderStores();
+            });
+
+            fetch(csvUrl)
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error("Store CSV request failed.");
+                    }
+                    return response.text();
+                })
+                .then(function (csvText) {
+                    storesByState = groupStoresByState(normalizeStores(parseCsv(csvText)));
+                    renderOptions();
+                    renderStores();
+                })
+                .catch(function () {
+                    select.innerHTML = '<option>Stores unavailable</option>';
+                    select.disabled = true;
+                    grid.innerHTML = "";
+                    toggleButton.style.display = "none";
+                    setMessage("Store information is temporarily unavailable. Please check back soon.");
+                });
+        }
+
+        function initSuppressorKeepShoppingScroll() {
+            const root = document.getElementById("suppressor-store-locator-page");
+            if (!root) return;
+
+            const carousel = root.querySelector(".ssl-category-rail");
+            const prevButton = root.querySelector(".ssl-category-scroll-btn-prev");
+            const nextButton = root.querySelector(".ssl-category-scroll-btn-next");
+            if (!carousel || !prevButton || !nextButton) return;
+
+            function isDesktop() {
+                return window.innerWidth > 767;
+            }
+
+            function getMaxScrollLeft() {
+                return carousel.scrollWidth - carousel.clientWidth;
+            }
+
+            function updateButtonVisibility() {
+                const maxScrollLeft = getMaxScrollLeft();
+                const hasDesktopOverflow = isDesktop() && maxScrollLeft > 1;
+                const canScrollPrev = hasDesktopOverflow && carousel.scrollLeft > 1;
+                const canScrollNext = hasDesktopOverflow && carousel.scrollLeft < maxScrollLeft - 1;
+
+                prevButton.style.display = canScrollPrev ? "flex" : "none";
+                nextButton.style.display = canScrollNext ? "flex" : "none";
+                prevButton.disabled = !canScrollPrev;
+                nextButton.disabled = !canScrollNext;
+            }
+
+            function scrollByPage(direction) {
+                carousel.scrollBy({
+                    left: direction * carousel.clientWidth,
+                    behavior: "smooth"
+                });
+            }
+
+            prevButton.addEventListener("click", function () {
+                scrollByPage(-1);
+            });
+
+            nextButton.addEventListener("click", function () {
+                scrollByPage(1);
+            });
+
+            carousel.addEventListener("scroll", updateButtonVisibility);
+            window.addEventListener("resize", updateButtonVisibility);
+
+            if ("ResizeObserver" in window) {
+                new ResizeObserver(updateButtonVisibility).observe(carousel);
+            }
+
+            requestAnimationFrame(updateButtonVisibility);
+        }
+
+        function initSuppressorStoreLocatorPage() {
+            initSuppressorStoreSelector();
+            initSuppressorKeepShoppingScroll();
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initSuppressorStoreLocatorPage);
+        } else {
+            initSuppressorStoreLocatorPage();
+        }
+    })();
+</script>

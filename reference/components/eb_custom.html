@@ -1,0 +1,257 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+<!-- <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,700&display=swap"> -->
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+
+<style>
+    #same-day-delivery .sdd-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e81111;
+        border-radius: 8px;
+        height: 80px;
+        overflow: hidden;
+        font-family: 'Roboto Flex', sans-serif;
+        cursor: pointer;
+        position: relative;
+    }
+
+    #same-day-delivery .sdd-ghost-link {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+    }
+
+    #same-day-delivery .sdd-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(16px, 7.25vw, 120px);
+        position: relative;
+        z-index: 1;
+    }
+
+    #same-day-delivery .sdd-cta-group {
+        display: flex;
+        align-items: center;
+        gap: clamp(12px, 1.45vw, 24px);
+    }
+
+    /* On desktop, sdd-top-group is transparent — its children flow directly into the parent flex row */
+    #same-day-delivery .sdd-top-group {
+        display: contents;
+    }
+
+    #same-day-delivery .sdd-eyebrow {
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: clamp(10px, 1.21vw, 20px);
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    #same-day-delivery .sdd-main {
+        display: flex;
+        align-items: center;
+        gap: clamp(8px, 1.21vw, 20px);
+    }
+
+    #same-day-delivery .sdd-icon {
+        width: clamp(24px, 3.68vw, 61px);
+        height: auto;
+        flex-shrink: 0;
+    }
+
+    #same-day-delivery .sdd-headline {
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: clamp(18px, 2.42vw, 40px);
+        font-weight: 700;
+        color: #fff;
+        white-space: nowrap;
+    }
+
+    #same-day-delivery .sdd-cta {
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: clamp(10px, 1.21vw, 20px);
+        font-weight: 700;
+        color: #fff;
+        text-decoration: underline;
+        white-space: nowrap;
+    }
+
+    @media (max-width: 767px) {
+        #same-day-delivery .sdd-inner {
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        /* On mobile, sdd-top-group becomes a real column: eyebrow stacked above icon+headline */
+        #same-day-delivery .sdd-top-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        #same-day-delivery .sdd-eyebrow {
+            font-size: clamp(10px, 3.2vw, 12px);
+        }
+
+        #same-day-delivery .sdd-main {
+            gap: 6px;
+        }
+
+        #same-day-delivery .sdd-icon {
+            width: clamp(18px, 6.13vw, 23px);
+        }
+
+        #same-day-delivery .sdd-headline {
+            font-size: clamp(14px, 5.33vw, 20px);
+        }
+
+        #same-day-delivery .sdd-cta {
+            font-size: clamp(10px, 3.2vw, 12px);
+        }
+    }
+</style>
+
+<section data-cname="cs_eb_1click" data-pz-seg-name="cs_default" data-pz-seg-id="cs_default">
+    <div id="same-day-delivery" class="cont-1656 hp-margin my-3">
+        <div class="sdd-banner hp-hover">
+            <a href="https://www.academy.com/same-day-delivery" class="sdd-ghost-link"
+                aria-label="Get $4.99 same-day delivery — limited-time app exclusive."></a>
+            <div class="sdd-inner">
+
+                <div class="sdd-top-group">
+                    <span class="sdd-eyebrow">Limited-time &nbsp;|&nbsp; APP EXCLUSIVE</span>
+                    <div class="sdd-main">
+                        <svg class="sdd-icon" width="61" height="61" viewBox="0 0 61 61" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0 24.3487C0 23.3622 0.812256 22.5625 1.81422 22.5625H22.4156C23.4176 22.5625 24.2298 23.3622 24.2298 24.3487C24.2298 25.3352 23.4176 26.1349 22.4156 26.1349H1.81422C0.812256 26.1349 0 25.3352 0 24.3487ZM2.29133 31.3654C2.29133 30.3789 3.10358 29.5792 4.10555 29.5792H22.4179C23.4198 29.5792 24.2321 30.3789 24.2321 31.3654C24.2321 32.3519 23.4198 33.1516 22.4179 33.1516H4.10555C3.10358 33.1516 2.29133 32.3519 2.29133 31.3654ZM6.39688 36.5924C5.39491 36.5924 4.58265 37.3921 4.58265 38.3786C4.58265 39.3651 5.39491 40.1648 6.39688 40.1648H22.4202C23.4221 40.1648 24.2344 39.3651 24.2344 38.3786C24.2344 37.3921 23.4221 36.5924 22.4202 36.5924H6.39688Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M29.9731 19.1647V31.3348C29.9731 31.9403 30.1734 32.5214 30.5309 32.9473L38.6436 42.6834C39.3839 43.5748 40.5906 43.5748 41.3309 42.6834C42.0737 41.795 42.0737 40.3467 41.3309 39.4583L33.776 30.3886V19.1647C33.776 17.9051 32.9241 16.8828 31.8746 16.8828C30.825 16.8828 29.9731 17.9051 29.9731 19.1647Z"
+                                fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M33.3453 8.23142C25.056 8.23142 17.7848 12.5431 13.7098 19.0295C13.0508 20.0784 11.6555 20.4013 10.5932 19.7507C9.53083 19.1001 9.20382 17.7224 9.86276 16.6735C14.7288 8.92796 23.425 3.76172 33.3453 3.76172C48.5965 3.76172 60.96 15.9688 60.96 31.0269C60.96 46.085 48.5965 58.2921 33.3453 58.2921C24.3475 58.2921 16.3546 54.0408 11.3166 47.4711C10.562 46.4871 10.7582 45.0854 11.7549 44.3403C12.7515 43.5952 14.1712 43.789 14.9258 44.773C19.145 50.2749 25.8251 53.8224 33.3453 53.8224C46.0963 53.8224 56.433 43.6165 56.433 31.0269C56.433 18.4373 46.0963 8.23142 33.3453 8.23142Z"
+                                fill="white" />
+                        </svg>
+                        <span class="sdd-headline">$4.99 SAME DAY DELIVERY</span>
+                    </div>
+                </div>
+
+                <div class="sdd-cta-group">
+                    <a href="https://qrs.ly/mshb5uq" class="sdd-cta only-mobile" aria-label="Download the Academy app.">DOWNLOAD OUR
+                        APP</a>
+                    <a href="https://www.academy.com/same-day-delivery" class="sdd-cta only-desktop"
+                        aria-label="Learn more about same-day delivery.">LEARN MORE</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Same Day Delivery Banner -->

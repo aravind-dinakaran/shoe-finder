@@ -1,0 +1,739 @@
+<style>
+    #suppressors-srp-custom-heading .wcs-heading-row {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 1rem;
+        padding: 8px 0;
+    }
+
+    #suppressors-srp-custom-heading .wcs-heading-title {
+        color: #1946C8;
+        flex: 1 0 0;
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(22px, 1.93vw, 32px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        margin-top: 24px;
+        min-width: 0;
+        text-transform: capitalize;
+    }
+
+    #suppressors-srp-shop-by-category .hlp-header {
+        padding: 0;
+    }
+
+    #suppressors-srp-shop-by-category .hlp-header h2 {
+        margin-bottom: 0;
+    }
+
+    #suppressors-srp-monetate {
+        --ssb-white: #ffffff;
+        --ssb-bg: #272d2c;
+        --ssb-strip-bg: #999999;
+        --ssb-strip-text: #333333;
+        font-family: 'Roboto Flex', sans-serif;
+    }
+
+    #suppressors-srp-monetate .ssb-banner {
+        background-color: var(--ssb-bg);
+        border-radius: 8px;
+        box-sizing: border-box;
+        min-height: clamp(96px, 7.55vw, 125px);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    #suppressors-srp-monetate .ssb-background,
+    #suppressors-srp-monetate .ssb-background img {
+        height: 100%;
+        inset: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    #suppressors-srp-monetate .ssb-background img {
+        object-fit: cover;
+    }
+
+    #suppressors-srp-monetate .ssb-inner {
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        gap: clamp(20px, 3.62vw, 60px);
+        justify-content: center;
+        min-height: clamp(96px, 7.55vw, 125px);
+        padding: clamp(12px, 1.15vw, 19px) clamp(20px, 3.86vw, 64px);
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+
+    #suppressors-srp-monetate .ssb-banner--targeted .ssb-inner {
+        padding: clamp(20px, 1.45vw, 24px) clamp(20px, 3.86vw, 64px) 0;
+    }
+
+    #suppressors-srp-monetate .ssb-logo {
+        flex: 0 1 auto;
+        height: auto;
+        width: clamp(260px, 27.84vw, 461px);
+    }
+
+    #suppressors-srp-monetate .ssb-copy {
+        align-items: center;
+        color: var(--ssb-white);
+        display: flex;
+        flex: 0 1 clamp(360px, 43.66vw, 723px);
+        flex-direction: column;
+        gap: clamp(2px, 0.24vw, 4px);
+        justify-content: flex-start;
+        line-height: 1.1;
+        text-align: center;
+    }
+
+    #suppressors-srp-monetate .ssb-banner--targeted .ssb-copy {
+        flex: 0 1 clamp(360px, 43.24vw, 716px);
+        gap: clamp(2px, 0.12vw, 2px);
+        padding: clamp(4px, 0.48vw, 8px) 0;
+        text-align: left;
+    }
+
+    #suppressors-srp-monetate .ssb-title,
+    #suppressors-srp-monetate .ssb-subtitle {
+        margin: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    #suppressors-srp-monetate .ssb-title {
+        font-size: clamp(20px, 1.69vw, 28px);
+        font-weight: 700;
+        max-width: 661px;
+    }
+
+    #suppressors-srp-monetate .ssb-subtitle {
+        font-size: clamp(14px, 1.21vw, 20px);
+        font-weight: 500;
+        max-width: 717px;
+    }
+
+    #suppressors-srp-monetate .ssb-banner--targeted .ssb-title {
+        max-width: 784px;
+    }
+
+    #suppressors-srp-monetate .ssb-banner--targeted .ssb-subtitle {
+        font-size: clamp(14px, 1.09vw, 18px);
+        max-width: 784px;
+    }
+
+    #suppressors-srp-monetate .ssb-breakline {
+        display: none;
+    }
+
+    #suppressors-srp-monetate .ssb-store-strip {
+        align-items: center;
+        background-color: var(--ssb-strip-bg);
+        display: flex;
+        justify-content: center;
+        left: 50%;
+        min-height: clamp(14px, 0.96vw, 16px);
+        padding: 0 clamp(8px, 0.48vw, 8px);
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        width: 100%;
+        z-index: 2;
+    }
+
+    #suppressors-srp-monetate .ssb-store-note-icon {
+        display: block;
+        height: auto;
+        max-width: 100%;
+        width: clamp(170px, 13.1vw, 217px);
+    }
+
+    #suppressors-srp-monetate .ssb-visually-hidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    #suppressors-srp-monetate .ssb-cta {
+        align-items: center;
+        border: 2px solid var(--ssb-white);
+        border-radius: 4px;
+        color: var(--ssb-white);
+        display: flex;
+        flex: 0 0 auto;
+        font-size: clamp(14px, 0.97vw, 16px);
+        font-weight: 700;
+        justify-content: center;
+        line-height: 1.2;
+        min-height: clamp(40px, 2.9vw, 48px);
+        min-width: 48px;
+        padding: clamp(10px, 0.72vw, 12px);
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    #suppressors-srp-monetate .ssb-cta:hover {
+        color: var(--ssb-white);
+        text-decoration: underline;
+        text-underline-position: from-font;
+    }
+
+    #suppressors-srp-monetate .ssb-cta:focus-visible,
+    #suppressors-srp-monetate .ssb-cta:active {
+        background-color: var(--ssb-white);
+        color: var(--ssb-strip-text);
+        outline: 0;
+        text-decoration: underline;
+        text-underline-position: from-font;
+    }
+
+    @media (max-width: 767px) {
+        #suppressors-srp-monetate .ssb-banner {
+            border-radius: 4px;
+            margin: 0 auto;
+            min-height: 180px;
+        }
+
+        #suppressors-srp-monetate .ssb-banner--targeted {
+            min-height: 177px;
+        }
+
+        #suppressors-srp-monetate .ssb-inner {
+            flex-direction: column;
+            gap: 0;
+            justify-content: center;
+            min-height: 180px;
+            padding: clamp(13px, 3.73vw, 14px) clamp(16px, 5.33vw, 20px);
+        }
+
+        #suppressors-srp-monetate .ssb-banner--targeted .ssb-inner {
+            justify-content: flex-start;
+            min-height: 177px;
+            padding: clamp(8px, 2.93vw, 11px) clamp(16px, 5.33vw, 20px) clamp(12px, 3.2vw, 12px);
+        }
+
+        #suppressors-srp-monetate .ssb-logo {
+            margin-top: 0;
+            width: clamp(160px, 49.6vw, 186px);
+        }
+
+        #suppressors-srp-monetate .ssb-breakline {
+            display: block;
+            height: 4px;
+            margin-top: clamp(5px, 1.6vw, 6px);
+            object-fit: fill;
+            width: clamp(240px, 70.13vw, 263px);
+        }
+
+        #suppressors-srp-monetate .ssb-banner--targeted .ssb-breakline {
+            display: none;
+        }
+
+        #suppressors-srp-monetate .ssb-store-strip {
+            left: auto;
+            margin-top: clamp(8px, 2.28vw, 9px);
+            min-height: clamp(8px, 5.07vw, 19px);
+            padding: 0 clamp(8px, 2.66vw, 10px);
+            position: relative;
+            top: auto;
+            transform: none;
+            width: calc(100% + clamp(32px, 10.66vw, 40px));
+        }
+
+        #suppressors-srp-monetate .ssb-store-note-icon {
+            width: clamp(160px, 49.87vw, 187px);
+        }
+
+        #suppressors-srp-monetate .ssb-copy {
+            align-items: center;
+            flex: 0 1 auto;
+            gap: 4px;
+            margin-top: clamp(5px, 1.33vw, 5px);
+            text-align: center;
+            width: 100%;
+        }
+
+        #suppressors-srp-monetate .ssb-banner--targeted .ssb-copy {
+            flex: 0 1 auto;
+            gap: clamp(4px, 1.07vw, 4px);
+            margin-top: clamp(7px, 1.87vw, 7px);
+            padding: clamp(8px, 2.13vw, 8px) 0;
+            text-align: center;
+        }
+
+        #suppressors-srp-monetate .ssb-title {
+            font-size: clamp(16px, 4.8vw, 18px);
+            max-width: clamp(240px, 71.4vw, 500px);
+        }
+
+        #suppressors-srp-monetate .ssb-subtitle {
+            font-size: clamp(13px, 3.73vw, 14px);
+            max-width: clamp(280px, 81.06vw, 604px);
+        }
+
+        #suppressors-srp-monetate .ssb-cta {
+            border: 0;
+            border-radius: 0;
+            display: block;
+            font-size: clamp(8px, 3.2vw, 12px);
+            line-height: 1.1;
+            margin-top: clamp(4px, 1.07vw, 4px);
+            min-height: 0;
+            max-width: clamp(8px, 78.4vw, 294px);
+            padding: 0;
+            text-decoration: underline;
+            text-underline-position: from-font;
+            width: 100%;
+        }
+
+        #suppressors-srp-monetate .ssb-cta:focus-visible,
+        #suppressors-srp-monetate .ssb-cta:active {
+            background-color: transparent;
+            color: var(--ssb-white);
+        }
+    }
+</style>
+
+<script>
+    (function suppressorsSrpMonetate() {
+        const BANNER_ID = "suppressors-srp-monetate";
+        const CUSTOM_HEADING_ID = "suppressors-srp-custom-heading";
+        const SHOP_BY_CATEGORY_ID = "suppressors-srp-shop-by-category";
+        const INSERTED_ATTR = "data-monetate-suppressors-srp";
+        const INSERTED_VAL = "true";
+        const HEADER_MODIFIED_ATTR = "data-monetate-suppressors-srp-header-modified";
+        const TARGET_HEADING_SELECTOR = "main h1.titleDisplay, main h1";
+        const TARGET_HEADER_SELECTOR = ".contentVerticalMargin--iU1wb";
+        const TARGET_TITLE_CONTAINER_SELECTOR = ".title--uBdU5";
+        const TARGET_TITLE_SPAN_SELECTOR = ".titleLeftColumn--Z4V1W";
+        const OBSERVER_KEY = "suppressorsSrpObserverInstance";
+        const STORAGE_HANDLER_KEY = "suppressorsSrpStorageHandler";
+        const STORE_CHANGE_HANDLER_KEY = "suppressorsSrpStoreChangeHandler";
+        const LOCAL_STORAGE_PATCH_KEY = "suppressorsSrpLocalStoragePatchApplied";
+        const STORE_CHANGE_EVENT = "suppressorsSrpStoreChange";
+        const STORE_TARGETING_ENABLED = true; // Set to false to always render the targeted banner.
+        const LOCAL_STORAGE_KEY = "aso_WC_StLocId_Selected";
+        const STORE_IDS_CSV_URL = "https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt2dbd7663a292e3f6/suppressors-stores.csv?v=1";
+        const STORE_IDS_CSV_COLUMNS = ["Store", "Store #"];
+        const STORE_GO_LIVE_CSV_COLUMN = "Go Live Date";
+        const BANNER_VARIANT_ATTR = "data-suppressors-srp-banner-variant";
+        const DEBOUNCE_MS = 250;
+
+        let isUpdating = false;
+        let debounceTimer;
+        let targetStoreIds = new Set();
+
+        function normalizeStoreId(value) {
+            return value == null ? "" : String(value).trim();
+        }
+
+        function getLocalStorageStoreId() {
+            try {
+                const rawValue = window.localStorage.getItem(LOCAL_STORAGE_KEY);
+                if (!rawValue) return "";
+                const parsedValue = JSON.parse(rawValue);
+                return normalizeStoreId(parsedValue && parsedValue.storeId);
+            } catch (error) {
+                return "";
+            }
+        }
+
+        function isEligibleStore() {
+            return targetStoreIds.has(getLocalStorageStoreId());
+        }
+
+        function shouldDisplayTargetedBanner() {
+            return !STORE_TARGETING_ENABLED || isEligibleStore();
+        }
+
+        function parseCsv(csvText) {
+            const rows = [];
+            let row = [];
+            let field = "";
+            let inQuotes = false;
+
+            for (let index = 0; index < csvText.length; index += 1) {
+                const char = csvText[index];
+                const nextChar = csvText[index + 1];
+
+                if (char === '"') {
+                    if (inQuotes && nextChar === '"') {
+                        field += '"';
+                        index += 1;
+                    } else {
+                        inQuotes = !inQuotes;
+                    }
+                } else if (char === "," && !inQuotes) {
+                    row.push(field);
+                    field = "";
+                } else if ((char === "\n" || char === "\r") && !inQuotes) {
+                    if (char === "\r" && nextChar === "\n") {
+                        index += 1;
+                    }
+                    row.push(field);
+                    rows.push(row);
+                    row = [];
+                    field = "";
+                } else {
+                    field += char;
+                }
+            }
+
+            if (field || row.length) {
+                row.push(field);
+                rows.push(row);
+            }
+
+            const headers = rows.shift();
+            if (!headers || !headers.length) return [];
+
+            return rows.map(function (cells) {
+                return headers.reduce(function (record, header, headerIndex) {
+                    record[header.trim()] = (cells[headerIndex] || "").trim();
+                    return record;
+                }, {});
+            });
+        }
+
+        function parseGoLiveDate(value) {
+            const dateParts = String(value || "").trim().match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+            if (!dateParts) return null;
+
+            const month = Number(dateParts[1]);
+            const day = Number(dateParts[2]);
+            const year = Number(dateParts[3]);
+            const date = new Date(year, month - 1, day);
+
+            if (date.getFullYear() !== year || date.getMonth() !== month - 1 || date.getDate() !== day) {
+                return null;
+            }
+
+            return date;
+        }
+
+        function getToday() {
+            const now = new Date();
+            return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        }
+
+        function loadTargetStoreIds() {
+            fetch(STORE_IDS_CSV_URL)
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error("Store ID CSV request failed.");
+                    }
+                    return response.text();
+                })
+                .then(function (csvText) {
+                    const today = getToday();
+                    const storeIds = parseCsv(csvText)
+                        .filter(function (record) {
+                            const goLiveDate = parseGoLiveDate(record[STORE_GO_LIVE_CSV_COLUMN]);
+                            return goLiveDate && goLiveDate <= today;
+                        })
+                        .map(function (record) {
+                            const column = STORE_IDS_CSV_COLUMNS.find(function (name) {
+                                return normalizeStoreId(record[name]) !== "";
+                            });
+                            return normalizeStoreId(record[column]);
+                        })
+                        .filter(Boolean);
+                    targetStoreIds = new Set(storeIds);
+                    schedulePlacement();
+                })
+                .catch(function () {
+                    // Leave targetStoreIds empty so no store is treated as eligible.
+                });
+        }
+
+        function dispatchStoreChange() {
+            window.dispatchEvent(new Event(STORE_CHANGE_EVENT));
+        }
+
+        function installLocalStorageChangeDetection() {
+            if (window[LOCAL_STORAGE_PATCH_KEY]) return;
+
+            const originalSetItem = Storage.prototype.setItem;
+            const originalRemoveItem = Storage.prototype.removeItem;
+            const originalClear = Storage.prototype.clear;
+
+            Storage.prototype.setItem = function (key) {
+                const result = originalSetItem.apply(this, arguments);
+                if (this === window.localStorage && key === LOCAL_STORAGE_KEY) {
+                    dispatchStoreChange();
+                }
+                return result;
+            };
+
+            Storage.prototype.removeItem = function (key) {
+                const result = originalRemoveItem.apply(this, arguments);
+                if (this === window.localStorage && key === LOCAL_STORAGE_KEY) {
+                    dispatchStoreChange();
+                }
+                return result;
+            };
+
+            Storage.prototype.clear = function () {
+                const result = originalClear.apply(this, arguments);
+                if (this === window.localStorage) {
+                    dispatchStoreChange();
+                }
+                return result;
+            };
+
+            window[LOCAL_STORAGE_PATCH_KEY] = true;
+        }
+
+        function handleStorageChange(event) {
+            if (event.key && event.key !== LOCAL_STORAGE_KEY) return;
+            schedulePlacement();
+        }
+
+        function getTargetHeading() {
+            return document.querySelector(TARGET_HEADING_SELECTOR);
+        }
+
+        function getInsertedBanners() {
+            return Array.from(document.querySelectorAll(`#${BANNER_ID}`));
+        }
+
+        function createCustomHeadingElement(headingText) {
+            const heading = document.createElement("div");
+            heading.id = CUSTOM_HEADING_ID;
+            heading.className = "cont-1656 hp-margin";
+            heading.setAttribute(INSERTED_ATTR, INSERTED_VAL);
+            heading.innerHTML = `
+                <div class="wcs-heading-row">
+                    <h1 class="wcs-heading-title"></h1>
+                </div>
+            `;
+            heading.querySelector(".wcs-heading-title").textContent = headingText;
+            return heading;
+        }
+
+        function createShopByCategoryElement() {
+            const shopByCategory = document.createElement("div");
+            shopByCategory.id = SHOP_BY_CATEGORY_ID;
+            shopByCategory.setAttribute(INSERTED_ATTR, INSERTED_VAL);
+            shopByCategory.innerHTML = `
+                <div class="cont-1656">
+                    <div class="hlp-header" style="padding: 0; margin-bottom: 0;">
+                        <h2>Shop By Category</h2>
+                    </div>
+                </div>
+            `;
+            return shopByCategory;
+        }
+
+        function getDefaultBannerMarkup() {
+            return `
+                <div class="ssb-banner ssb-banner--default corners">
+                    <picture class="ssb-background" aria-hidden="true">
+                        <source media="(max-width: 767px)" srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt727eea31e5111f01/69dc012589cfb432393879ad/Default_Banner-_Mobile.png">
+                        <img loading="lazy" src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8aba371c229b2791/69dc01251654a031f94f760b/Banner-_Desktop.png" alt="">
+                    </picture>
+                    <div class="ssb-inner">
+                        <img class="ssb-logo" loading="lazy" src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7d33c2911ead0afa/69dc01256fe33207af178155/logo-_Silencer_Shop.png" alt="Silencer Shop">
+                        <img class="ssb-breakline" loading="lazy" src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt5048fb234d2865fc/69ea931c1513b51e0cd4a48e/Breakline-_m-_New.png" alt="" aria-hidden="true">
+                        <div class="ssb-copy">
+                            <p class="ssb-title">Firearm Suppressors aren&rsquo;t Available Near You Yet</p>
+                            <p class="ssb-subtitle">We&rsquo;re expanding to more stores soon through our partnership with Silencer Shop.</p>
+                        </div>
+                        <a class="ssb-cta" href="/suppressor-store-locator" aria-label="Learn more about suppressors">Learn More</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getTargetedBannerMarkup() {
+            return `
+                <div class="ssb-banner ssb-banner--targeted corners">
+                    <picture class="ssb-background" aria-hidden="true">
+                        <source media="(max-width: 767px)" srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt06b1ed3f029d8122/69dc012665ddc676946fcfbf/Targeted_Banner-_Mobile.png">
+                        <img loading="lazy" src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8aba371c229b2791/69dc01251654a031f94f760b/Banner-_Desktop.png" alt="">
+                    </picture>
+                    <div class="ssb-inner">
+                        <img class="ssb-logo" loading="lazy" src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7d33c2911ead0afa/69dc01256fe33207af178155/logo-_Silencer_Shop.png" alt="Silencer Shop">
+                        <div class="ssb-store-strip">
+                            <span class="ssb-visually-hidden">More Stores Coming Soon</span>
+                            <svg class="ssb-store-note-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="217" height="16" fill="none" viewBox="0 0 217 16">
+                                <path fill="#333" d="M1.079 4.342h3.51l2.34 5.525h.039l2.327-5.525h3.51V13h-2.379V6.76H10.4L7.748 13H5.954L3.289 6.76h-.026V13H1.079zm18.257-.221c2.938 0 4.77 1.781 4.77 4.55 0 2.782-1.832 4.55-4.77 4.55s-4.784-1.768-4.784-4.55 1.846-4.55 4.784-4.55m0 1.911c-1.34 0-2.314.884-2.314 2.639 0 1.742.975 2.639 2.314 2.639 1.326 0 2.314-.897 2.314-2.639 0-1.755-.988-2.639-2.314-2.639m8.956 4.082V13h-2.444V4.342h5.018c2.236 0 3.484 1.014 3.484 2.886 0 1.365-.793 2.262-1.963 2.652L34.7 13h-2.73l-2.067-2.886zm-.013-3.939v2.184h2.067c1.027 0 1.508-.351 1.508-1.092s-.442-1.092-1.47-1.092zm7.826-1.833h7.722v1.885h-5.33v1.508h4.043V9.49h-4.043v1.625h5.33V13h-7.722zm16.25-.182c2.809 0 4.044 1.274 4.252 2.821l-2.34.247c-.17-.65-.728-1.222-1.937-1.222-1.066 0-1.573.351-1.573.767 0 .507.39.611 2.223.936 3.003.481 3.783 1.118 3.783 2.6 0 1.924-1.73 2.873-4.238 2.873-2.977 0-4.264-1.287-4.42-2.99l2.366-.247c.143 1.001.923 1.378 2.067 1.378s1.742-.299 1.742-.78c0-.52-.364-.65-2.25-.975-2.95-.455-3.756-1.17-3.756-2.6 0-1.677 1.625-2.808 4.082-2.808m5.179.182h8.84v2.041h-3.198V13h-2.431V6.383h-3.211zm14.411-.221c2.938 0 4.771 1.781 4.771 4.55 0 2.782-1.833 4.55-4.771 4.55s-4.784-1.768-4.784-4.55 1.846-4.55 4.784-4.55m0 1.911c-1.339 0-2.314.884-2.314 2.639 0 1.742.975 2.639 2.314 2.639 1.326 0 2.314-.897 2.314-2.639 0-1.755-.988-2.639-2.314-2.639m8.956 4.082V13h-2.444V4.342h5.018c2.236 0 3.484 1.014 3.484 2.886 0 1.365-.793 2.262-1.963 2.652L87.31 13h-2.73l-2.067-2.886zm-.013-3.939v2.184h2.067c1.027 0 1.508-.351 1.508-1.092s-.442-1.092-1.47-1.092zm7.827-1.833h7.722v1.885h-5.33v1.508h4.043V9.49h-4.043v1.625h5.33V13h-7.722zm13.191-.182c2.808 0 4.043 1.274 4.251 2.821l-2.34.247c-.169-.65-.728-1.222-1.937-1.222-1.066 0-1.573.351-1.573.767 0 .507.39.611 2.223.936 3.003.481 3.783 1.118 3.783 2.6 0 1.924-1.729 2.873-4.238 2.873-2.977 0-4.264-1.287-4.42-2.99l2.366-.247c.143 1.001.923 1.378 2.067 1.378s1.742-.299 1.742-.78c0-.52-.364-.65-2.249-.975-2.951-.455-3.757-1.17-3.757-2.6 0-1.677 1.625-2.808 4.082-2.808m13.189-.013c2.834 0 4.095 1.625 4.251 3.263l-2.314.247c-.208-.767-.806-1.534-1.963-1.534-1.534 0-2.236 1.105-2.236 2.548s.702 2.548 2.223 2.548c1.183 0 1.768-.767 1.976-1.534l2.314.247c-.156 1.625-1.417 3.263-4.316 3.263-2.912 0-4.654-1.859-4.654-4.524 0-2.652 1.781-4.524 4.719-4.524m10.183-.026c2.938 0 4.771 1.781 4.771 4.55 0 2.782-1.833 4.55-4.771 4.55s-4.784-1.768-4.784-4.55 1.846-4.55 4.784-4.55m0 1.911c-1.339 0-2.314.884-2.314 2.639 0 1.742.975 2.639 2.314 2.639 1.326 0 2.314-.897 2.314-2.639 0-1.755-.988-2.639-2.314-2.639m6.512-1.69h3.51l2.34 5.525h.039l2.327-5.525h3.51V13h-2.379V6.76h-.026L138.459 13h-1.794L134 6.76h-.026V13h-2.184zm13.954 0h2.444V13h-2.444zm4.67 0h2.431l4.199 5.2h.026l-.013-5.2h2.236V13h-2.405l-4.225-5.317h-.026L152.65 13h-2.236zm18.312 7.254c-.572.858-1.56 1.599-3.276 1.599-2.652 0-4.42-1.573-4.42-4.42 0-2.782 1.742-4.628 4.797-4.628 2.704 0 3.991 1.365 4.199 3.042l-2.379.247c-.195-.754-.689-1.326-1.872-1.326-1.495 0-2.288.975-2.288 2.639 0 1.56.806 2.574 2.249 2.574 1.157 0 1.95-.611 2.08-1.495h-2.119v-1.56h4.407V13h-1.001zm10.037-7.436c2.808 0 4.043 1.274 4.251 2.821l-2.34.247c-.169-.65-.728-1.222-1.937-1.222-1.066 0-1.573.351-1.573.767 0 .507.39.611 2.223.936 3.003.481 3.783 1.118 3.783 2.6 0 1.924-1.729 2.873-4.238 2.873-2.977 0-4.264-1.287-4.42-2.99l2.366-.247c.143 1.001.923 1.378 2.067 1.378s1.742-.299 1.742-.78c0-.52-.364-.65-2.249-.975-2.951-.455-3.757-1.17-3.757-2.6 0-1.677 1.625-2.808 4.082-2.808m10.322-.039c2.938 0 4.771 1.781 4.771 4.55 0 2.782-1.833 4.55-4.771 4.55s-4.784-1.768-4.784-4.55 1.846-4.55 4.784-4.55m0 1.911c-1.339 0-2.314.884-2.314 2.639 0 1.742.975 2.639 2.314 2.639 1.326 0 2.314-.897 2.314-2.639 0-1.755-.988-2.639-2.314-2.639m10.88-1.911c2.938 0 4.771 1.781 4.771 4.55 0 2.782-1.833 4.55-4.771 4.55s-4.784-1.768-4.784-4.55 1.846-4.55 4.784-4.55m0 1.911c-1.339 0-2.314.884-2.314 2.639 0 1.742.975 2.639 2.314 2.639 1.326 0 2.314-.897 2.314-2.639 0-1.755-.988-2.639-2.314-2.639m6.511-1.69h2.431l4.199 5.2h.026l-.013-5.2h2.236V13h-2.405l-4.225-5.317h-.026l.013 5.317h-2.236z" />
+                            </svg>
+                        </div>
+                        <div class="ssb-copy">
+                            <p class="ssb-title">Firearm Suppressors are Now Available at Select Stores</p>
+                            <p class="ssb-subtitle">We&rsquo;ve partnered with Silencer Shop to make purchasing a suppressor simple and secure.</p>
+                        </div>
+                        <a class="ssb-cta" href="/suppressor-store-locator" aria-label="Learn more about suppressors">Learn More</a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function getBannerMarkup(variant) {
+            return `
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link rel="stylesheet"
+                    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+                <link rel="stylesheet"
+                    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+                ${variant === "targeted" ? getTargetedBannerMarkup() : getDefaultBannerMarkup()}
+            `;
+        }
+
+        function updateBannerElement(wrapper, variant) {
+            wrapper.setAttribute(BANNER_VARIANT_ATTR, variant);
+            wrapper.innerHTML = getBannerMarkup(variant);
+        }
+
+        function createBannerElement(variant) {
+            const wrapper = document.createElement("div");
+            wrapper.id = BANNER_ID;
+            wrapper.className = "cont-1656 hp-margin";
+            wrapper.setAttribute(INSERTED_ATTR, INSERTED_VAL);
+            updateBannerElement(wrapper, variant);
+            return wrapper;
+        }
+
+        function getOrCreateBanner(variant) {
+            const existingBanners = getInsertedBanners();
+            const primaryBanner = existingBanners[0] || createBannerElement(variant);
+
+            existingBanners.slice(1).forEach((banner) => banner.remove());
+
+            if (primaryBanner.getAttribute(BANNER_VARIANT_ATTR) !== variant) {
+                updateBannerElement(primaryBanner, variant);
+            }
+
+            return primaryBanner;
+        }
+
+        function hasShopByCategoryListItems() {
+            return Boolean(document.querySelector('.asoUI div[role="listitem"]'));
+        }
+
+        function applyShopByCategoryTitle(titleContainer, titleSpan) {
+            if (!titleContainer || !titleSpan) return;
+
+            const existingShopByCategory = titleContainer.querySelector(`#${SHOP_BY_CATEGORY_ID}`);
+
+            if (hasShopByCategoryListItems()) {
+                if (!existingShopByCategory) {
+                    titleContainer.insertBefore(createShopByCategoryElement(), titleContainer.firstChild);
+                }
+            } else if (existingShopByCategory) {
+                existingShopByCategory.remove();
+            }
+
+            // titleSpan.style.display = "none";
+
+            const headerContainer = titleContainer.closest(TARGET_HEADER_SELECTOR);
+            if (headerContainer) {
+                headerContainer.classList.add("pb-2", "pb-sm-3", "mb-3", "cont-1656", "hp-margin");
+                headerContainer.setAttribute(HEADER_MODIFIED_ATTR, "true");
+                headerContainer.style.display = "none";
+            }
+        }
+
+        function getOrCreateCustomHeading(headingText, headerContainer) {
+            let customHeading = document.getElementById(CUSTOM_HEADING_ID);
+
+            if (!customHeading) {
+                customHeading = createCustomHeadingElement(headingText);
+            } else {
+                const titleNode = customHeading.querySelector(".wcs-heading-title");
+                if (titleNode && titleNode.textContent !== headingText) {
+                    titleNode.textContent = headingText;
+                }
+            }
+
+            if (headerContainer && customHeading.nextElementSibling !== headerContainer) {
+                headerContainer.parentNode.insertBefore(customHeading, headerContainer);
+            }
+
+            return customHeading;
+        }
+
+        function placeBanner() {
+            if (isUpdating) return;
+            isUpdating = true;
+
+            const targetHeading = getTargetHeading();
+            const titleSpan = targetHeading ? targetHeading.closest(TARGET_TITLE_SPAN_SELECTOR) : null;
+            const titleContainer = targetHeading ? targetHeading.closest(TARGET_TITLE_CONTAINER_SELECTOR) : null;
+            const headerContainer = targetHeading ? targetHeading.closest(TARGET_HEADER_SELECTOR) : null;
+
+            if (!targetHeading || !titleSpan || !titleContainer || !headerContainer || !headerContainer.parentNode) {
+                isUpdating = false;
+                return;
+            }
+
+            applyShopByCategoryTitle(titleContainer, titleSpan);
+
+            const customHeading = getOrCreateCustomHeading(targetHeading.textContent.trim(), headerContainer);
+            const banner = getOrCreateBanner(shouldDisplayTargetedBanner() ? "targeted" : "default");
+            if (customHeading.nextElementSibling !== banner) {
+                customHeading.insertAdjacentElement("afterend", banner);
+            }
+
+            isUpdating = false;
+        }
+
+        function schedulePlacement() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(placeBanner, DEBOUNCE_MS);
+        }
+
+        function init() {
+            placeBanner();
+            loadTargetStoreIds();
+
+            if (window[OBSERVER_KEY]) {
+                window[OBSERVER_KEY].disconnect();
+            }
+
+            if (window[STORAGE_HANDLER_KEY]) {
+                window.removeEventListener("storage", window[STORAGE_HANDLER_KEY]);
+            }
+
+            if (window[STORE_CHANGE_HANDLER_KEY]) {
+                window.removeEventListener(STORE_CHANGE_EVENT, window[STORE_CHANGE_HANDLER_KEY]);
+            }
+
+            const observer = new MutationObserver(schedulePlacement);
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+
+            installLocalStorageChangeDetection();
+
+            window[OBSERVER_KEY] = observer;
+            window[STORAGE_HANDLER_KEY] = handleStorageChange;
+            window[STORE_CHANGE_HANDLER_KEY] = schedulePlacement;
+            window.addEventListener("storage", window[STORAGE_HANDLER_KEY]);
+            window.addEventListener(STORE_CHANGE_EVENT, window[STORE_CHANGE_HANDLER_KEY]);
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init, { once: true });
+        } else {
+            init();
+        }
+    })();
+</script>

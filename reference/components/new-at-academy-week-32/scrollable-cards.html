@@ -1,0 +1,497 @@
+<!--
+  OST-16373 — New At Academy week 32 scrollable cards (V1, go-live 9/8)
+
+  Images reuse HP week 32 Contentstack creative (design: "Reuse HP Creative"):
+  cards 1–3 + 5 from outdoor c4_stack_1 (792×1004), card 4 Nike from hero carousel
+  (portrait crop not in CS), cards 6–9 from New Finds c4_stack_2 (792×1004).
+  V1 folder: https://app.contentstack.com/#!/stack/blt964243cdd7810dea/assets/bltc7977c04a5c3a089/browse
+  V2 folder: https://app.contentstack.com/#!/stack/blt964243cdd7810dea/assets/bltd83f7e98d1ffd776/browse
+
+  V2 (9/8 @ 11am): replace card 8 Caitlin Clark x Stanley with Stanley Fall Refresh
+  (new_out_stanleyfallrefreshcollection — NEW / Fall Refresh Collection).
+-->
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+<!--
+  New At Academy week 32 — 9 portrait cards
+  - Desktop: 4 cards fill cont-1656, then the row scrolls
+  - Mobile: same horizontal row (swipe to scroll; arrows hidden)
+-->
+<style>
+    #naa-wk32-cards {
+        --text-card-kicker: clamp(12px, 1.33vw, 22px);
+        --text-card-title: clamp(16px, 1.69vw, 28px);
+    }
+
+    #naa-wk32-cards .scrollable-card-wrapper {
+        --card-gap: clamp(16px, 1.45vw, 24px);
+        --card-count: 4;
+        --card-min-width: 250px;
+        --card-title-gap: 16px;
+        --prev-btn-hover-img: url('https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt85d13c756fd4c87f/6668cc8105319148701f3beb/left-arrow_hover.svg');
+        --next-btn-hover-img: url('https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltc1bb7050ac69c4dc/6668c1d8a70874062b612002/arrow_hover.svg');
+        position: relative;
+    }
+
+    #naa-wk32-cards .scrollable-container {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        gap: var(--card-gap);
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #naa-wk32-cards .scrollable-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    #naa-wk32-cards .scrollable-card {
+        box-sizing: border-box;
+        flex: 0 0 calc((100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count));
+        min-width: var(--card-min-width);
+        max-width: calc((1656px - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count));
+        overflow: hidden;
+        position: relative;
+        color: #000;
+        text-decoration: none;
+    }
+
+    #naa-wk32-cards picture {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    #naa-wk32-cards .scrollable-card-count-based-width {
+        aspect-ratio: 396 / 502;
+        display: block;
+        height: auto;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        object-fit: cover;
+        width: 100% !important;
+    }
+
+    #naa-wk32-cards .text-overlay {
+        pointer-events: none;
+    }
+
+    #naa-wk32-cards .css-scroll-btn {
+        top: 45%;
+        z-index: 2;
+    }
+
+    @media (max-width: 767px) {
+        #naa-wk32-cards {
+            --text-card-kicker: clamp(10px, 3.2vw, 12px);
+            --text-card-title: clamp(14px, 4.26vw, 16px);
+        }
+
+        #naa-wk32-cards .scrollable-card-wrapper {
+            --card-gap: 16px;
+            --card-min-width: 250px;
+        }
+
+        #naa-wk32-cards picture {
+            border-radius: 0.25rem;
+        }
+
+        #naa-wk32-cards .scrollable-container {
+            padding-right: 16px;
+        }
+
+        #naa-wk32-cards .css-scroll-btn {
+            display: none !important;
+        }
+    }
+</style>
+
+<div id="naa-wk32-cards">
+    <div class="scrollable-card-wrapper cont-1656 hp-margin bleed-scroll-right position-relative hlp-content-margin mb-5">
+            <button class="css-scroll-btn css-scroll-btn-prev" id="naa-wk32-prev"
+                type="button" data-slide="prev" aria-label="Scroll to previous cards" style="display: none;">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="16" fill="white"></rect>
+                    <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" fill="white"></rect>
+                    <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" stroke="#333333"></rect>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.5286 16.4717C12.2682 16.2114 12.2682 15.7893 12.5286 15.5289L18.5286 9.52892C18.7889 9.26857 19.211 9.26857 19.4714 9.52892C19.7317 9.78927 19.7317 10.2114 19.4714 10.4717L13.9428 16.0003L19.4714 21.5289C19.7317 21.7893 19.7317 22.2114 19.4714 22.4717C19.211 22.7321 18.7889 22.7321 18.5286 22.4717L12.5286 16.4717Z"
+                        fill="#333333"></path>
+                </svg>
+            </button>
+
+        <div id="naa-wk32-container"
+            class="scrollable-container basic-card hide-horizontal-scrollbar-flex pe-3 pe-md-0">
+            <!-- CARD 1 — Magellan Hispanic Heritage Collection -->
+            <a href="https://www.academy.com/c/shops/hispanic-heritage-month?&orderBy=newArrival"
+                data-omni="new_app_magellanhispanicheritagecollection"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop the new Hispanic Heritage collection from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltaa458f8b22466fbb/6a99ba50805755ec51705615/c4_stack_1_outdoor-enthusiast_card_1_desktop.jpg?auto=webp&format=jpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltac1c26ac46b96f6c/6a99e37d60f7957902d78515/c4_stack_1_outdoor-enthusiast_card_1_mobile.jpg?auto=webp&format=jpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltac1c26ac46b96f6c/6a99e37d60f7957902d78515/c4_stack_1_outdoor-enthusiast_card_1_mobile.jpg?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Shop the new Hispanic Heritage collection from Magellan Outdoors.">
+                </picture>
+                <div class="text-overlay text-overlay-top-left">
+                    <div class="text-card-kicker color-white">NEW + EXCLUSIVE</div>
+                    <div class="text-card-title color-white">Hispanic Heritage<br>Collection</div>
+                </div>
+            </a>
+
+            <!-- CARD 2 — BURLEBO washed camo -->
+            <a href="https://www.academy.com/c/brands/brands-a-to-d/burlebo?&orderBy=newArrival"
+                data-omni="new_app_burlebowashedcamo"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop new washed camo from BURLEBO.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt3039a2ab412071c0/6a99ba82d8a7726df9a992c8/c4_stack_1_outdoor-enthusiast_card_2_desktop.jpg?auto=webp&format=jpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd741f62ab46eb959/6a99e393ee57e55f0e0513dc/c4_stack_1_outdoor-enthusiast_card_2_mobile.jpg?auto=webp&format=jpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd741f62ab46eb959/6a99e393ee57e55f0e0513dc/c4_stack_1_outdoor-enthusiast_card_2_mobile.jpg?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Shop new washed camo from BURLEBO.">
+                </picture>
+                <div class="text-overlay text-overlay-top-left">
+                    <div class="text-card-kicker color-white">Can't Missed Style</div>
+                    <div class="text-card-title color-white">NEW Washed Camo<br>For Him</div>
+                </div>
+            </a>
+
+            <!-- CARD 3 — Wrangler western styles for her -->
+            <a href="https://www.academy.com/c/brands/brands-s-z/wrangler?&orderBy=newArrival"
+                data-omni="new_app_wranglerforher"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop new western styles for women from Wrangler.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb7046855e8eeae8f/6a99bab75c312661fa4400cc/c4_stack_1_outdoor-enthusiast_card_3_desktop.jpg?auto=webp&format=jpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt560f7301e91130bc/6a99e3a8144a151313de5309/c4_stack_1_outdoor-enthusiast_card_3_mobile.jpg?auto=webp&format=jpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt560f7301e91130bc/6a99e3a8144a151313de5309/c4_stack_1_outdoor-enthusiast_card_3_mobile.jpg?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Shop new western styles for women from Wrangler.">
+                </picture>
+                <div class="text-overlay text-overlay-top-left">
+                    <div class="text-card-kicker color-white">Layer Up with</div>
+                    <div class="text-card-title color-white">Western Styles<br>for Her</div>
+                </div>
+            </a>
+
+            <!-- CARD 4 — Fall Nike -->
+            <a href="https://www.academy.com/c/brands/nike-brand-shop/nike-apparel/nike-fleece?&orderBy=newArrival"
+                data-omni="new_app_fallnike"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Two people wearing graphic hoodies in black and burgundy colorways.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte97d99628711b927/6a99b9277f5314d7a7c63534/c2_wcarousel_1_gtm_card_2_5_desktop.jpg?auto=webp&format=jpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltc8a7af370091578c/6a99b94132b53006a26d211f/c2_wcarousel_1_gtm_card_2_5_mobile.jpg?auto=webp&format=jpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltc8a7af370091578c/6a99b94132b53006a26d211f/c2_wcarousel_1_gtm_card_2_5_mobile.jpg?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Shop new fall Nike styles.">
+                </picture>
+                <div class="text-overlay text-overlay-top-left">
+                    <div class="text-card-kicker color-white">Meet Fall's</div>
+                    <div class="text-card-title color-white">NEW Nike</div>
+                </div>
+            </a>
+
+            <!-- CARD 5 — Ariat -->
+            <a href="https://www.academy.com/c/shops/the-rodeo-shop?&facet=%27facet_Brand%27:%27Ariat%27"
+                data-omni="new_app_fallariat"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Person standing beside a horse while wearing a patterned western pullover.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd70c715bc8d12ff3/6a99bae237d7f33a318ea306/c4_stack_1_outdoor-enthusiast_card_4_desktop.jpg?auto=webp&format=jpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8522a61b8a4cd994/6a99e3c28814aa1a8489dd22/c4_stack_1_outdoor-enthusiast_card_4_mobile.jpg?auto=webp&format=jpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8522a61b8a4cd994/6a99e3c28814aa1a8489dd22/c4_stack_1_outdoor-enthusiast_card_4_mobile.jpg?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Shop new western styles from Ariat.">
+                </picture>
+                <div class="text-overlay text-overlay-top-left">
+                    <div class="text-card-title color-white">The West,<br>Well Dressed</div>
+                </div>
+            </a>
+
+            <!-- CARD 6 — Centr x HYROX -->
+            <a href="https://www.academy.com/c/brands/hyrox-training-equipment"
+                data-omni="new_snr_centrxhyrox"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Person exercising on a CENTR HYROX fitness machine outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7f28f87e015ffd24/6a99c42f32b5302db56d2173/c4_stack_2_gtm_card_1_desktop.jpg?auto=webp&format=jpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blta560fe195d516c59/6a99c4461ade6407e542cfcc/c4_stack_2_gtm_card_1_mobile.jpg?auto=webp&format=jpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blta560fe195d516c59/6a99c4461ade6407e542cfcc/c4_stack_2_gtm_card_1_mobile.jpg?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Shop new equipment from Centr x HYROX.">
+                </picture>
+                <div class="text-overlay text-overlay-top-left">
+                    <div class="text-card-kicker color-white">The Right Gear Won't Quit</div>
+                    <div class="text-card-title color-white">NEW from HYROX</div>
+                </div>
+            </a>
+
+            <!-- CARD 7 — BL101 Ice Cream Collection -->
+            <a href="https://www.academy.com/c/out-promo-offer-9"
+                data-omni="new_snr_bl101icecreamcollection"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Model wearing colorful casual Baseball Lifestyle 101 apparel and holding a skateboard in front of a retail storefront.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8ff383d511a24b16/6a99c45cde2395ef83e85070/c4_stack_2_gtm_card_2_desktop.jpg?auto=webp&format=jpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blta56687e9bbb5824b/6a99c47232b5309e936d2179/c4_stack_2_gtm_card_2_mobile.jpg?auto=webp&format=jpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blta56687e9bbb5824b/6a99c47232b5309e936d2179/c4_stack_2_gtm_card_2_mobile.jpg?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Shop the new Baseball Lifestyle 101 ice cream collection.">
+                </picture>
+                <div class="text-overlay text-overlay-top-left">
+                    <div class="text-card-kicker color-white">NEW</div>
+                    <div class="text-card-title color-white">Ice Cream Collection</div>
+                </div>
+            </a>
+
+            <!-- CARD 8 — V1 Caitlin Clark x Stanley (image-only overlay; V2 swaps to Fall Refresh) -->
+            <a href="https://www.academy.com/c/brands/brands-s-z/stanley"
+                data-omni="new_out_caitlinclarkxstanley"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Caitlin Clark seated indoors holding her collaboration's Stanley tumbler.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt63f582ab9d9b3073/6a99c489893681af753deb8f/c4_stack_2_gtm_card_3_desktop.jpg?auto=webp&format=jpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt3bc3f1abe7b1c206/6a99c4a2ee57e533980512f3/c4_stack_2_gtm_card_3_mobile.jpg?auto=webp&format=jpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt3bc3f1abe7b1c206/6a99c4a2ee57e533980512f3/c4_stack_2_gtm_card_3_mobile.jpg?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Shop Stanley x Caitlin Clark drinkware.">
+                </picture>
+            </a>
+
+            <!-- CARD 9 — MeatEater -->
+            <a href="https://www.academy.com/c/outdoors/hunting/hunting-boots-camo-clothing--1/hunting--camo-apparel?&facet=%27facet_Brand%27:%27MEATEATER%27"
+                data-omni="new_out_meateater"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Person outdoors wearing a MeatEater graphic T-shirt. Text promotes featured apparel as seen on MeatEater.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt37b82ebdad5a25cb/6a99c4b6d62e1152d3e39967/c4_stack_2_gtm_card_4_desktop.jpg?auto=webp&format=jpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt59020dc093b9bf19/6a99c4cbee57e51ff10512f7/c4_stack_2_gtm_card_4_mobile.jpg?auto=webp&format=jpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt59020dc093b9bf19/6a99c4cbee57e51ff10512f7/c4_stack_2_gtm_card_4_mobile.jpg?auto=webp&format=jpg"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Shop MeatEater at Academy.">
+                </picture>
+                <div class="text-overlay text-overlay-top-left">
+                    <div class="text-card-kicker color-white">As Seen on TV</div>
+                    <div class="text-card-title color-white">MeatEater</div>
+                </div>
+            </a>
+        </div>
+
+            <button class="css-scroll-btn css-scroll-btn-next" id="naa-wk32-next"
+                type="button" data-slide="next" aria-label="Scroll to next cards" style="display: none;">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="white"></rect>
+                    <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)" fill="white"></rect>
+                    <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)" stroke="#333333"></rect>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M19.4714 16.4717C19.7318 16.2114 19.7318 15.7893 19.4714 15.5289L13.4714 9.52892C13.2111 9.26857 12.789 9.26857 12.5286 9.52892C12.2683 9.78927 12.2683 10.2114 12.5286 10.4717L18.0572 16.0003L12.5286 21.5289C12.2683 21.7893 12.2683 22.2114 12.5286 22.4717C12.789 22.7321 13.2111 22.7321 13.4714 22.4717L19.4714 16.4717Z"
+                        fill="#333333"></path>
+                </svg>
+            </button>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var root = document.getElementById("naa-wk32-cards");
+        if (!root) return;
+
+        function initScrollControls() {
+            var container = root.querySelector(".scrollable-container");
+            var prevButton = root.querySelector(".css-scroll-btn-prev");
+            var nextButton = root.querySelector(".css-scroll-btn-next");
+            if (!container || !prevButton || !nextButton) return;
+
+            function isDesktop() {
+                return window.innerWidth > 767;
+            }
+
+            function getCardCount() {
+                var wrapper = root.querySelector(".scrollable-card-wrapper");
+                var raw = wrapper ? getComputedStyle(wrapper).getPropertyValue("--card-count").trim() : "";
+                var parsed = parseInt(raw, 10);
+                return Number.isFinite(parsed) && parsed > 0 ? parsed : 4;
+            }
+
+            function calculateScrollAmount() {
+                var firstCard = container.querySelector(".scrollable-card");
+                if (!firstCard) return container.clientWidth;
+
+                var styles = getComputedStyle(container);
+                var gap = parseFloat(styles.columnGap || styles.gap) || 16;
+                var cardWidth = firstCard.offsetWidth + gap;
+                var visibleCards = isDesktop() ? getCardCount() : 1;
+
+                return cardWidth * visibleCards;
+            }
+
+            function updateButtonVisibility() {
+                var maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+                if (isDesktop() && maxScrollLeft > 1) {
+                    prevButton.style.display = container.scrollLeft > 1 ? "block" : "none";
+                    nextButton.style.display = container.scrollLeft < maxScrollLeft - 1 ? "block" : "none";
+                } else {
+                    prevButton.style.display = "none";
+                    nextButton.style.display = "none";
+                }
+            }
+
+            nextButton.addEventListener("click", function () {
+                container.scrollBy({ left: calculateScrollAmount(), behavior: "smooth" });
+            });
+
+            prevButton.addEventListener("click", function () {
+                container.scrollBy({ left: -calculateScrollAmount(), behavior: "smooth" });
+            });
+
+            container.addEventListener("scroll", updateButtonVisibility);
+            window.addEventListener("resize", updateButtonVisibility);
+
+            if ("ResizeObserver" in window) {
+                new ResizeObserver(updateButtonVisibility).observe(container);
+            }
+
+            updateButtonVisibility();
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initScrollControls);
+        } else {
+            initScrollControls();
+        }
+    })();
+</script>
+<!-- End New At Academy week 32 scrollable cards -->

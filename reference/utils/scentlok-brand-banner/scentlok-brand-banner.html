@@ -1,0 +1,451 @@
+<!--
+  OST-16347 — PLP Evergreen Brand Page Banner: ScentLok (Monetate)
+
+  Ticket: https://academysports.atlassian.net/browse/OST-16347
+  Design: https://academysports.atlassian.net/browse/OST-16004
+  Placement: https://www.academy.com/c/brands/scentlok
+  Assets: https://app.contentstack.com/#!/stack/blt964243cdd7810dea/assets/bltf2dbadbc3e711e18/browse
+
+  Monetate setup:
+  - Experience name: [PLP][Brand Banner - ScentLok][09/01/26][Evergreen][OST-16347]
+  - Tag: AravindD
+  - Action: Insert Dynamic HTML
+  - Selector: [data-monetate="plpAboveLayoutInject"]
+  - Insert method: BEFORE
+  - Recheck: No
+  - Run Once: Yes
+    Recheck + JS relocation fights React and Monetate (duplicate inserts / flicker).
+    JS MutationObserver handles delayed PLP header and SPA updates.
+  - HTML String: campaign markup below (heading + banner). JS will relocate it once.
+  - Css: rules inside <style> (no wrapping <style> tag)
+  - Javascript: IIFE below
+  - Where (page only, commit each value with + before Save):
+      URL matches regular expression:
+        /c/brands/scentlok/?(\\?|$)
+      To add more destinations later, OR additional regex chips in the action
+      conditions. Banner assets live only in the HTML String.
+  - Schedule: 09/01/26 start, no end (evergreen)
+  - Do not activate until QA on both layouts below.
+
+  Layouts (detected at runtime):
+  1) H1 only (ScentLok today) — hide the native title bar, inject H1 + Shop All,
+     then the banner above the product grid. Banner click scrolls to #filterBarStickyArea.
+  2) Category tiles present — same H1 + banner above the tiles, native H1 hidden,
+     H2 "Shop By Category" inserted above the tile carousel.
+
+  References:
+  - utils/hlp_h1_shopbycategory.html
+  - https://marketer.monetate.net/control/a-682295e7/p/academy.com/experience/2128306
+  - https://marketer.monetate.net/control/a-682295e7/p/academy.com/experience/2122322
+  - https://marketer.monetate.net/control/a-682295e7/p/academy.com/experience/2109240
+-->
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Homepage utilities: cont-1656, hp-margin, hlp-header, corners -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<style>
+    /* CSS-only hides so we do not write attributes onto React-owned nodes. */
+    .contentMargin.contentVerticalMargin--iU1wb > .title--uBdU5 > .titleLeftColumn--Z4V1W {
+        display: none !important;
+    }
+
+    /* H1-only PLPs: hide the native title bar after JS moves our blocks outside it. */
+    .contentMargin.contentVerticalMargin--iU1wb:not(:has([data-auid="subCategoryLinks_PLP"])):not(:has(#scentlok-plp-banner)) {
+        display: none !important;
+    }
+
+    .contentMargin.contentVerticalMargin--iU1wb:has(#scentlok-plp-shop-by-category) {
+        box-sizing: border-box;
+        max-width: 1656px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    @media (min-width: 576px) {
+        .contentMargin.contentVerticalMargin--iU1wb:has(#scentlok-plp-shop-by-category) {
+            padding-bottom: 1rem;
+        }
+    }
+
+    @media (max-width: 1688px) {
+        .contentMargin.contentVerticalMargin--iU1wb:has(#scentlok-plp-shop-by-category) {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    #scentlok-plp-heading,
+    #scentlok-plp-banner,
+    #scentlok-plp-shop-by-category,
+    #scentlok-plp-heading *,
+    #scentlok-plp-banner *,
+    #scentlok-plp-shop-by-category * {
+        box-sizing: border-box;
+    }
+
+    #scentlok-plp-heading,
+    #scentlok-plp-banner,
+    #scentlok-plp-shop-by-category .scentlok-plp-shop-by-category-inner {
+        max-width: 1656px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 1688px) {
+        #scentlok-plp-heading,
+        #scentlok-plp-banner,
+        #scentlok-plp-shop-by-category .scentlok-plp-shop-by-category-inner {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            width: auto;
+        }
+    }
+
+    #scentlok-plp-heading .scentlok-plp-heading-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 8px 0;
+    }
+
+    #scentlok-plp-heading .scentlok-plp-heading-title {
+        color: #1946c8;
+        flex: 1 0 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: clamp(22px, 1.93vw, 32px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        min-width: 0;
+        text-transform: capitalize;
+    }
+
+    #scentlok-plp-heading .scentlok-plp-heading-title-link {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #scentlok-plp-heading .scentlok-plp-heading-cta {
+        color: #1946c8;
+        flex-shrink: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        white-space: nowrap;
+    }
+
+    #scentlok-plp-heading .scentlok-plp-heading-cta:hover {
+        color: #1946c8;
+    }
+
+    #scentlok-plp-banner {
+        margin-bottom: 1rem;
+    }
+
+    #scentlok-plp-banner .scentlok-plp-banner-link {
+        display: block;
+        line-height: 0;
+        text-decoration: none;
+    }
+
+    #scentlok-plp-banner img {
+        border-radius: 0.5rem;
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+
+    @media (max-width: 767px) {
+        #scentlok-plp-banner img {
+            border-radius: 0.25rem;
+        }
+    }
+
+    #scentlok-plp-shop-by-category .hlp-header {
+        align-items: last baseline;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    #scentlok-plp-shop-by-category .hlp-header h2 {
+        color: #1946c8;
+        font-family: "Open Sans", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (max-width: 767px) {
+        #scentlok-plp-shop-by-category .hlp-header h2 {
+            font-size: 21px;
+        }
+    }
+</style>
+
+<!-- Heading + Shop All. JS moves this above the native PLP header. -->
+<div id="scentlok-plp-heading" data-monetate-scentlok-plp="true">
+    <div class="scentlok-plp-heading-row">
+        <h1 class="scentlok-plp-heading-title">
+            <a href="#wrapperProductGrid" class="scentlok-plp-heading-title-link">ScentLok</a>
+        </h1>
+        <a href="#wrapperProductGrid" class="scentlok-plp-heading-cta">Shop All</a>
+    </div>
+</div>
+
+<!-- Evergreen brand banner. Clicking it drops the shopper to the product grid. -->
+<div id="scentlok-plp-banner" data-monetate-scentlok-plp="true">
+    <a class="scentlok-plp-banner-link"
+        data-omni="scentlok_mac_shopall"
+        href="#wrapperProductGrid"
+        aria-label="ScentLok. Shop All.">
+        <picture>
+            <source media="(max-width: 767px)"
+                srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt18a69dd9c21b8c31/6a85cece62f1e25d3eafe1ef/Banner_Scentlok-m.png">
+            <img loading="lazy"
+                src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt722be9fc796d6740/6a85cecfbed19ddb35af95be/Banner_Scentlok.png"
+                alt="ScentLok. Shop All.">
+        </picture>
+    </a>
+</div>
+
+<script>
+    (function scentlokPlpBrandBannerMonetate() {
+        const CONFIG = {
+            campaign: "scentlok-plp",
+            observerKey: "scentlokPlpBrandBannerObserverInstance",
+            headingId: "scentlok-plp-heading",
+            bannerId: "scentlok-plp-banner",
+            shopByCategoryId: "scentlok-plp-shop-by-category",
+            insertedAttr: "data-monetate-scentlok-plp",
+            headerSelector: ".contentVerticalMargin--iU1wb",
+            titleContainerSelector: ".title--uBdU5",
+            categoryTileSelector: "[data-auid='subCategoryLinks_PLP']",
+            debounceMs: 250
+        };
+
+        let isUpdating = false;
+        let debounceTimer;
+        let headingMarkup = null;
+        let bannerMarkup = null;
+
+        function hasCategoryTiles(headerContainer) {
+            return Boolean(headerContainer && headerContainer.querySelector(CONFIG.categoryTileSelector));
+        }
+
+        function isCampaignNode(node) {
+            if (!node || node.nodeType !== 1) return false;
+            if (node.id === CONFIG.headingId || node.id === CONFIG.bannerId || node.id === CONFIG.shopByCategoryId) {
+                return true;
+            }
+            return Boolean(node.closest && node.closest(
+                "#" + CONFIG.headingId + ", #" + CONFIG.bannerId + ", #" + CONFIG.shopByCategoryId
+            ));
+        }
+
+        function mutationsNeedCheck(records) {
+            for (let i = 0; i < records.length; i += 1) {
+                const record = records[i];
+                if (!isCampaignNode(record.target)) return true;
+
+                const added = record.addedNodes;
+                const removed = record.removedNodes;
+                for (let j = 0; j < added.length; j += 1) {
+                    if (added[j].nodeType === 1 && !isCampaignNode(added[j])) return true;
+                }
+                for (let k = 0; k < removed.length; k += 1) {
+                    if (removed[k].nodeType === 1 && isCampaignNode(removed[k])) return true;
+                }
+            }
+            return false;
+        }
+
+        function rememberMarkup(heading, banner) {
+            if (heading && !headingMarkup) headingMarkup = heading.outerHTML;
+            if (banner && !bannerMarkup) bannerMarkup = banner.outerHTML;
+        }
+
+        function recreateFromMarkup(id, markup) {
+            if (!markup) return null;
+            const wrapper = document.createElement("div");
+            wrapper.innerHTML = markup.trim();
+            const element = wrapper.firstElementChild;
+            if (element) element.id = id;
+            return element;
+        }
+
+        function createShopByCategoryElement() {
+            const shopByCategory = document.createElement("div");
+            shopByCategory.id = CONFIG.shopByCategoryId;
+            shopByCategory.setAttribute(CONFIG.insertedAttr, "true");
+            shopByCategory.innerHTML =
+                '<div class="scentlok-plp-shop-by-category-inner">' +
+                    '<div class="hlp-header">' +
+                        "<h2>Shop By Category</h2>" +
+                    "</div>" +
+                "</div>";
+            return shopByCategory;
+        }
+
+        function removeDuplicateIds(id) {
+            const matches = document.querySelectorAll("#" + id);
+            for (let i = 1; i < matches.length; i += 1) {
+                matches[i].remove();
+            }
+            return matches[0] || null;
+        }
+
+        function isPlacedBeforeHeader(heading, banner, headerContainer) {
+            return heading.nextElementSibling === banner && banner.nextElementSibling === headerContainer;
+        }
+
+        function layoutIsCorrect(heading, banner, headerContainer) {
+            if (!heading || !banner || !heading.parentNode || !banner.parentNode) return false;
+            if (!isPlacedBeforeHeader(heading, banner, headerContainer)) return false;
+
+            if (hasCategoryTiles(headerContainer)) {
+                const titleContainer = headerContainer.querySelector(CONFIG.titleContainerSelector);
+                return Boolean(titleContainer && titleContainer.querySelector("#" + CONFIG.shopByCategoryId));
+            }
+
+            return !document.getElementById(CONFIG.shopByCategoryId);
+        }
+
+        function ensureCampaignElements() {
+            let heading = removeDuplicateIds(CONFIG.headingId);
+            let banner = removeDuplicateIds(CONFIG.bannerId);
+
+            rememberMarkup(heading, banner);
+
+            if (!heading) heading = recreateFromMarkup(CONFIG.headingId, headingMarkup);
+            if (!banner) banner = recreateFromMarkup(CONFIG.bannerId, bannerMarkup);
+
+            if (!heading || !banner) return null;
+
+            heading.setAttribute(CONFIG.insertedAttr, "true");
+            banner.setAttribute(CONFIG.insertedAttr, "true");
+
+            return { heading: heading, banner: banner };
+        }
+
+        function placeBeforeHeader(heading, banner, headerContainer) {
+            if (isPlacedBeforeHeader(heading, banner, headerContainer)) return;
+
+            const parent = headerContainer.parentNode;
+            if (!parent) return;
+
+            parent.insertBefore(heading, headerContainer);
+            parent.insertBefore(banner, headerContainer);
+        }
+
+        function applyShopByCategory(headerContainer) {
+            const titleContainer = headerContainer.querySelector(CONFIG.titleContainerSelector);
+            if (!titleContainer || titleContainer.querySelector("#" + CONFIG.shopByCategoryId)) return;
+
+            titleContainer.insertBefore(createShopByCategoryElement(), titleContainer.firstChild);
+            headerContainer.classList.add("pb-2", "pb-sm-3", "mb-3", "cont-1656", "hp-margin");
+        }
+
+        function applyH1Only() {
+            const shopByCategory = document.getElementById(CONFIG.shopByCategoryId);
+            if (shopByCategory) shopByCategory.remove();
+        }
+
+        function applyDOMChanges() {
+            if (isUpdating) return;
+            isUpdating = true;
+
+            const observer = window[CONFIG.observerKey];
+            if (observer) observer.disconnect();
+
+            try {
+                const headerContainer = document.querySelector(CONFIG.headerSelector);
+                const existingHeading = document.getElementById(CONFIG.headingId);
+                const existingBanner = document.getElementById(CONFIG.bannerId);
+
+                if (headerContainer && layoutIsCorrect(existingHeading, existingBanner, headerContainer)) {
+                    removeDuplicateIds(CONFIG.headingId);
+                    removeDuplicateIds(CONFIG.bannerId);
+                    removeDuplicateIds(CONFIG.shopByCategoryId);
+                    return;
+                }
+
+                const elements = ensureCampaignElements();
+                if (!elements) return;
+
+                if (!headerContainer || !headerContainer.parentNode) {
+                    if (document.body && !elements.heading.parentNode) {
+                        document.body.appendChild(elements.heading);
+                        document.body.appendChild(elements.banner);
+                    }
+                    return;
+                }
+
+                placeBeforeHeader(elements.heading, elements.banner, headerContainer);
+
+                if (hasCategoryTiles(headerContainer)) {
+                    applyShopByCategory(headerContainer);
+                } else {
+                    applyH1Only();
+                }
+            } finally {
+                isUpdating = false;
+                if (observer && document.body) {
+                    observer.observe(document.body, {
+                        childList: true,
+                        subtree: true
+                    });
+                }
+            }
+        }
+
+        function scheduleDOMChanges() {
+            window.clearTimeout(debounceTimer);
+            debounceTimer = window.setTimeout(applyDOMChanges, CONFIG.debounceMs);
+        }
+
+        function init() {
+            applyDOMChanges();
+
+            if (window[CONFIG.observerKey]) {
+                window[CONFIG.observerKey].disconnect();
+            }
+
+            if (document.body && "MutationObserver" in window) {
+                const observer = new MutationObserver(function (records) {
+                    if (isUpdating || !mutationsNeedCheck(records)) return;
+                    scheduleDOMChanges();
+                });
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+                window[CONFIG.observerKey] = observer;
+            }
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init, { once: true });
+        } else {
+            init();
+        }
+    })();
+</script>

@@ -1,0 +1,116 @@
+<!--
+  OST-16189 — Pencil Banner: BTS Deals (Monetate)
+
+  Monetate setup:
+  - Selector: #content-main
+  - Insert Method: AFTER
+  - Where (action conditions, OR):
+      URL contains: /c/mens, /c/womens, /c/kids, /c/footwear (cascade)
+      URL matches regex: /c/hot-deals/?(\\?|$) (page only)
+  - Clickthrough: https://www.academy.com/c/shops/back-to-school/back-to-school-deals
+  - data-omni: pb_mac_btsdeals
+
+  Layout:
+  - Wide: Back-to-School | A+ Gear at Undefeatable Prices   Shop Now
+  - Narrow: pipe removed; "A+ Gear..." moves to second line; Shop Now below
+-->
+
+<!-- START: PENCIL BANNER -->
+<div id="pencil-banner-bts-deals">
+    <a data-omni="pb_mac_btsdeals"
+        href="https://www.academy.com/c/shops/back-to-school/back-to-school-deals"
+        aria-label="Back-to-School. A+ Gear at Undefeatable Prices. Shop Now.">
+        <div class="pb-text">
+            <span class="pb-line">Back-to-School</span><span class="pb-pipe">&nbsp;&nbsp;|&nbsp;&nbsp;</span><br class="mobile-only" />
+            <span class="pb-line">A+ Gear at Undefeatable Prices</span>
+        </div>
+        <div class="pb-disclaimer">Shop Now</div>
+    </a>
+</div>
+<!-- END: PENCIL BANNER -->
+
+<style>
+    #pencil-banner-bts-deals {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #E6EDF7;
+        color: #333333;
+        width: 100%;
+        height: auto;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        box-sizing: border-box;
+    }
+
+    #pencil-banner-bts-deals *,
+    #pencil-banner-bts-deals *::before,
+    #pencil-banner-bts-deals *::after {
+        box-sizing: border-box;
+    }
+
+    #pencil-banner-bts-deals a {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        background-color: #E6EDF7 !important;
+        color: #333333 !important;
+        text-decoration: none;
+        font-family: "Open Sans", sans-serif;
+        width: 100%;
+    }
+
+    #pencil-banner-bts-deals .pb-text {
+        font-family: "Open Sans", sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: normal;
+        color: #333333;
+    }
+
+    #pencil-banner-bts-deals .pb-disclaimer {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 14px;
+        color: #333333;
+        text-decoration: underline;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    @media (min-width: 768px) {
+        #pencil-banner-bts-deals .mobile-only {
+            display: none;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #pencil-banner-bts-deals {
+            padding: 0.75rem 1rem;
+        }
+
+        #pencil-banner-bts-deals a {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        #pencil-banner-bts-deals .pb-pipe {
+            display: none;
+        }
+
+        #pencil-banner-bts-deals .pb-text {
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        #pencil-banner-bts-deals .pb-disclaimer {
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+</style>

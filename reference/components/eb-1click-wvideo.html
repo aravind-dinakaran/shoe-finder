@@ -1,0 +1,413 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+
+<!-- Win the Weekend — Pit Boss Video Banner -->
+<style>
+    .svg-win-the-weekend {
+        width: clamp(220px, 31.1vw, 515px);
+    }
+
+    /* Outer border/radius container wraps pencil bar + video */
+    #win-the-weekend .wtw-banner-outer {
+        border: 1px solid #1946c8;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* Pencil bar */
+    #win-the-weekend .wtw-pencil {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(8px, 0.97vw, 16px);
+        background-color: #1946c8;
+        color: #ffffff;
+        text-decoration: none;
+        font-family: 'Roboto Flex', sans-serif;
+        font-size: clamp(13px, 0.97vw, 16px);
+        font-weight: 600;
+        padding: 12px clamp(16px, 2.42vw, 40px);
+        line-height: 1.4;
+    }
+
+    #win-the-weekend .wtw-pencil a {
+        color: #ffffff;
+    }
+
+    #win-the-weekend .wtw-pencil a:hover,
+    #win-the-weekend .wtw-pencil a:focus-visible {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    #win-the-weekend .wtw-pencil strong {
+        font-weight: 700;
+    }
+
+    #win-the-weekend #pz-disclaimer {
+        display: none;
+    }
+
+    #win-the-weekend .wtw-pencil-cta {
+        font-weight: 700;
+        text-decoration: underline;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Video wrap */
+    #win-the-weekend .wtw-video-wrap {
+        position: relative;
+    }
+
+    /* Play/pause button — matches reference pattern */
+    #win-the-weekend .video-control-button {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        width: clamp(1.5rem, 2.17vw, 2.25rem);
+        height: clamp(1.5rem, 2.17vw, 2.25rem);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Disclaimer */
+    #win-the-weekend .wtw-disclaimer {
+        font-family: 'Open Sans', Arial, sans-serif;
+        font-size: 12px;
+        line-height: 14px;
+        color: #333333;
+        text-align: center;
+        margin: 8px 0 0;
+    }
+
+    #win-the-weekend .wtw-disclaimer a {
+        color: #1946c8;
+        text-decoration: underline;
+        font-weight: 400;
+    }
+
+    #win-the-weekend #wtwVideo {
+        display: block;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 767px) {
+        .svg-win-the-weekend {
+            width: clamp(180px, 66.67vw, 250px);
+        }
+
+        #win-the-weekend .wtw-pencil {
+            flex-direction: column;
+            gap: 6px;
+            font-size: clamp(10px, 2.67vw, 12px);
+            padding: 12px 16px;
+            text-align: center;
+        }
+
+        #win-the-weekend .video-control-button {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+</style>
+
+<div id="win-the-weekend" class="cont-1656 hp-margin mb-3">
+
+    <div class="text-center mb-4 pt-3">
+        <svg class="svg-win-the-weekend" viewBox="0 0 515 56" fill="none" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-label="Win the Weekend">
+            <path
+                d="M1.01781 1.03763H13.8978L17.4178 36.9576H17.5778L23.8178 1.03763H34.6978L40.7778 36.9576H40.9378L44.4578 1.03763H56.2178L47.5778 54.5576H34.7778L28.6978 22.2376H28.5378L22.6178 54.5576H9.73781L1.01781 1.03763ZM60.3672 1.03763H73.4072V54.3176H60.3672V1.03763ZM80.3428 1.03763H93.2228L104.983 30.3976H105.143L104.903 1.03763H116.183V54.3176H103.543L91.5428 24.4776H91.3828L91.6228 54.3176H80.3428V1.03763Z"
+                fill="#1946C8" />
+            <path
+                d="M147.156 41.78C144.043 41.9977 141.816 40.4212 141.585 37.1173C141.468 35.4414 141.854 33.3935 142.788 30.9223L143.238 29.7842L145.637 23.5054L143.77 23.636C143.291 23.6695 143.076 23.3477 143.238 22.9034L143.681 21.6695C143.797 21.2764 144.078 21.1605 144.461 21.1337L146.616 20.9831L149.418 13.5696C149.538 13.2243 149.812 13.0127 150.143 12.9414L156.308 11.6442C156.828 11.5116 157.135 11.7788 156.933 12.3223L153.798 20.4808L157.39 20.2297C157.868 20.1962 158.128 20.4668 157.97 20.959L157.527 22.1929C157.41 22.586 157.129 22.7019 156.746 22.7286L152.82 23.0032L149.562 31.4591C148.992 32.9424 148.785 34.1117 148.849 35.0215C148.946 36.4101 149.711 37.0303 150.764 36.9566C152.727 36.8193 155.908 34.1429 158.033 28.7495C158.486 27.6593 160.558 28.3805 160.111 29.5666C157.468 36.4878 151.992 41.4419 147.156 41.78ZM174.095 39.8963C171.126 40.1039 169.055 38.7089 168.858 35.8838C168.774 34.6867 169.057 33.2235 169.754 31.4906L171.895 26.3367C172.263 25.3968 172.452 24.6618 172.412 24.0872C172.358 23.3211 171.9 22.9681 171.086 23.025C168.98 23.1724 165.887 26.42 163.854 31.7588L160.843 39.62C160.723 39.9652 160.446 40.129 160.063 40.1558L154.317 40.5576C153.838 40.591 153.623 40.2693 153.784 39.8249L158.014 28.7509L165.993 7.98372C166.113 7.63849 166.39 7.47476 166.773 7.44797L172.519 7.04617C172.998 7.01269 173.213 7.33448 173.052 7.77882L167.479 22.363C170.041 19.778 172.879 18.3767 175.464 18.1959C178.194 18.0051 179.864 19.1874 180.028 21.5337C180.109 22.6829 179.87 24.0949 179.167 25.732L177.485 29.8914C176.826 31.4773 176.574 32.6978 176.635 33.5597C176.705 34.5652 177.221 35.0585 177.987 35.0049C179.615 34.891 181.79 32.2849 183.775 26.9495C184.225 25.8113 186.299 26.5805 185.853 27.7665C183.035 34.9406 178.931 39.5581 174.095 39.8963ZM190.444 38.9937C184.889 39.3821 182.329 36.4816 182.057 32.6031C181.619 26.3304 187.295 17.3686 195.531 16.7927C199.362 16.5248 201.456 18.255 201.623 20.6491C201.884 24.384 197.547 29.7877 188.998 31.396L189.028 31.8269C189.179 33.9817 190.339 35.4403 193.069 35.2494C196.325 35.0217 199.426 33.2651 201.817 30.3071C202.698 29.1388 204.481 30.5539 203.556 31.7734C200.246 36.0467 195.663 38.6287 190.444 38.9937ZM189.344 28.7735C195.878 27.258 197.707 23.1364 197.57 21.1731C197.483 19.9282 196.625 19.3626 195.668 19.4296C193.082 19.6104 190.393 24.5139 189.344 28.7735Z"
+                fill="#1946C8" />
+            <path
+                d="M150.106 51.5102L145.414 48.087C145.122 47.8457 145.202 47.5968 145.569 47.5495C170.492 42.3193 188.529 42.9488 203.443 43.7479C203.731 43.7836 203.857 43.9896 203.738 44.2386L203.422 44.9854C203.343 45.1905 203.22 45.3168 203.097 45.3212C190.811 44.6428 173.704 45.6031 150.638 51.6298C150.432 51.6727 150.266 51.6375 150.101 51.5145L150.106 51.5102Z"
+                fill="#1946C8" />
+            <path
+                d="M227.422 1.03763H240.302L243.822 36.9576H243.982L250.222 1.03763H261.102L267.182 36.9576H267.342L270.862 1.03763H282.622L273.982 54.5576H261.182L255.102 22.2376H254.942L249.022 54.5576H236.142L227.422 1.03763ZM286.532 1.03763H316.292V12.7976H299.252V21.5176H312.292V32.8776H299.252V42.5576H316.292V54.3176H286.532V1.03763ZM321.982 1.03763H351.742V12.7976H334.702V21.5176H347.742V32.8776H334.702V42.5576H351.742V54.3176H321.982V1.03763ZM380.072 54.3176L373.752 33.8376L370.312 39.9176V54.3176H357.432V1.03763H370.312V25.1976L380.232 1.03763H393.912L383.752 23.7576C387.112 33.9976 393.992 54.3176 393.992 54.3176H380.072ZM397.335 1.03763H427.095V12.7976H410.055V21.5176H423.095V32.8776H410.055V42.5576H427.095V54.3176H397.335V1.03763ZM432.785 1.03763H445.665L457.425 30.3976H457.585L457.345 1.03763H468.625V54.3176H455.985L443.985 24.4776H443.825L444.065 54.3176H432.785V1.03763ZM475.344 1.03763H493.424C504.864 1.03763 511.184 7.27763 511.184 18.4776V36.9576C511.184 48.1576 504.864 54.3176 493.424 54.3176H475.344V1.03763ZM488.384 11.6776V43.6776H492.464C496.304 43.6776 497.984 41.3576 497.984 37.5976V17.7576C497.984 13.9976 496.304 11.6776 492.464 11.6776H488.384Z"
+                fill="#1946C8" />
+        </svg>
+    </div>
+
+    <section id="pitboss-pz" data-cname="cs_eb_1click" data-pz-seg-name="cs_default" data-pz-seg-id="cs_default">
+        <div class="wtw-banner-outer">
+
+            <!-- Pencil bar -->
+            <!-- <div id="base-disclaimer" class="wtw-pencil">
+                <span>Tune In 5/2 on CW to See Academy and Pit Boss Leave Our Mark at the NASCAR Andy's Frozen Custard 340</span>
+            </div>
+            <div id="pz-disclaimer" class="wtw-pencil">
+                <span><strong>Race Day Starts Here!</strong> NASCAR Drivers, BBQ Samples Provided by Pit Boss, and More at Academy Keller on 5/1 11 AM - 2 PM CT</span>
+                <a href="https://www.academy.com/storelocator/texas/fort-worth/store-0141"
+                    data-omni="pitboss_mac_nascarevent"
+                    class="wtw-pencil-cta"
+                    aria-label="Race Day Starts Here! NASCAR Drivers, BBQ, and more at Academy Keller on May 1st. See store details.">SEE STORE DETAILS</a>
+            </div> -->
+
+            <!-- Video banner -->
+            <div class="wtw-video-wrap" id="wtw-video-section">
+                <a href="https://www.academy.com/c/brands/pitboss"
+                    data-omni="pitboss_snr_pitbossgwp"
+                    class="d-block hp-hover"
+                    aria-label="Shop Pit Boss grills and accessories.">
+                    <video id="wtwVideo"
+                        muted
+                        playsinline
+                        preload="metadata"
+                        class="img-fluid w-100"
+                        aria-label="Pit Boss grills promotional video">
+                    </video>
+                </a>
+                <button id="wtwVideoBtn" class="video-control-button" type="button" aria-label="Pause video">
+                    <img id="wtwVideoIcon"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg"
+                        alt="Pause video"
+                        class="play-pause-icon">
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <p class="wtw-disclaimer">
+        While supplies last. <a href="/disclaimers">See Details</a>
+    </p>
+
+</div>
+
+<script>
+(function () {
+    const desktopUrl = 'https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt749e3f4ce20ce924/69e68bd508120b56c414df8b/banner_pitboss.mp4';
+    const mobileUrl  = 'https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt401357a110f8ae9b/69e68bd5fe17be4768f7f0af/banner_pitboss-m.mp4';
+    const maxPlayCount = 1;
+
+    const playIconUrl  = 'https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfb7f6e5f516cd86b/68dbe6f04983061fa4f367e1/button_play_default.svg';
+    const pauseIconUrl = 'https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg';
+
+    const wrap  = document.getElementById('wtw-video-section');
+    const video = document.getElementById('wtwVideo');
+    const btn   = document.getElementById('wtwVideoBtn');
+    const icon  = document.getElementById('wtwVideoIcon');
+
+    let isPlaying = false;
+    let currentUrl = null;
+    let completedPlayCount = 0;
+    let hasEnteredViewport = false;
+    let hasExitedViewportAfterEntry = false;
+
+    function canPlayAgain() {
+        return completedPlayCount < maxPlayCount;
+    }
+
+    function getUrl() {
+        return window.innerWidth < 768 ? mobileUrl : desktopUrl;
+    }
+
+    function setIcon(playing) {
+        if (playing) {
+            icon.src = pauseIconUrl;
+            icon.alt = 'Pause';
+            btn.setAttribute('aria-label', 'Pause video');
+        } else {
+            icon.src = playIconUrl;
+            icon.alt = 'Play';
+            btn.setAttribute('aria-label', 'Play video');
+        }
+    }
+
+    function startVideo() {
+        if (!canPlayAgain()) {
+            pauseVideo();
+            return;
+        }
+        const newUrl = getUrl();
+        if (newUrl !== currentUrl) {
+            currentUrl = newUrl;
+            video.src = currentUrl;
+            video.load();
+        }
+        video.play().catch(function () {});
+        isPlaying = true;
+        setIcon(true);
+    }
+
+    function pauseVideo() {
+        video.pause();
+        isPlaying = false;
+        setIcon(false);
+    }
+
+    function updateSource() {
+        const newUrl = getUrl();
+        if (newUrl === currentUrl) return;
+        currentUrl = newUrl;
+        video.src = currentUrl;
+        video.load();
+        if (isPlaying) {
+            video.play().catch(function () {});
+        }
+    }
+
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateSource, 50);
+    });
+
+    btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (isPlaying) {
+            pauseVideo();
+        } else {
+            completedPlayCount = 0;
+            startVideo();
+        }
+    });
+
+    video.addEventListener('ended', function () {
+        completedPlayCount += 1;
+        isPlaying = false;
+        setIcon(false);
+    });
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            var visible = entry.isIntersecting && entry.intersectionRatio >= 0.25;
+            if (visible) {
+                if (!hasEnteredViewport) {
+                    hasEnteredViewport = true;
+                    startVideo();
+                    return;
+                }
+                if (hasExitedViewportAfterEntry) {
+                    startVideo();
+                    return;
+                }
+            } else {
+                if (hasEnteredViewport) hasExitedViewportAfterEntry = true;
+                if (isPlaying) pauseVideo();
+            }
+        });
+    }, { threshold: [0, 0.25] });
+
+    // Set src immediately so the element has natural dimensions before
+    // the IntersectionObserver fires (a 0-height element never reaches
+    // the 0.25 threshold, so play() would never be called otherwise).
+    currentUrl = getUrl();
+    video.src = currentUrl;
+
+    setIcon(true);
+    observer.observe(wrap);
+})();
+</script>
+<!-- Win the Weekend — Pit Boss Video Banner -->

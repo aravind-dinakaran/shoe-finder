@@ -1,0 +1,132 @@
+<!-- OST-16403 — HOKA Coming Soon (Contentstack richText custom_script) -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<style>
+    #filterBarStickyArea .stickyEl--BIOBe.quickFilterBar--KHVf2 {
+        display: none !important;
+    }
+
+    .hits--dPxRy {
+        display: none !important;
+    }
+
+    .contentMargin.contentVerticalMargin--iU1wb > .title--uBdU5 > .titleLeftColumn--Z4V1W,
+    h1:not(.hoka-coming-soon-heading-title) {
+        display: none !important;
+    }
+
+    #hoka-coming-soon-heading .hoka-coming-soon-heading-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 8px 0;
+    }
+
+    #hoka-coming-soon-heading .hoka-coming-soon-heading-title {
+        color: #1946c8;
+        flex: 1 0 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: clamp(22px, 1.93vw, 32px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+        min-width: 0;
+        text-transform: capitalize;
+    }
+
+    #hoka-coming-soon-heading .hoka-coming-soon-heading-title-link {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #hoka-coming-soon-heading .hoka-coming-soon-heading-cta {
+        color: #1946c8;
+        flex-shrink: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.2;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        white-space: nowrap;
+    }
+
+    #hoka-coming-soon-heading .hoka-coming-soon-heading-cta:hover {
+        color: #1946c8;
+    }
+
+    #hoka-coming-soon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    #hoka-coming-soon .event_banner__link {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #hoka-coming-soon .event_banner__card {
+        background: #ffffff;
+        overflow: hidden;
+    }
+
+    #hoka-coming-soon .event_banner__image {
+        border-radius: 0.5rem;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width: 767px) {
+        #hoka-coming-soon .event_banner__image {
+            border-radius: 0.25rem;
+        }
+    }
+</style>
+
+<div id="hoka-coming-soon-heading" class="cont-1656 hp-margin">
+    <div class="hoka-coming-soon-heading-row">
+        <h1 class="hoka-coming-soon-heading-title">
+            <a href="/c/shops/for-the-runner" class="hoka-coming-soon-heading-title-link">Hoka</a>
+        </h1>
+        <!-- <a href="/c/shops/for-the-runner" class="hoka-coming-soon-heading-cta">Shop All</a> -->
+    </div>
+</div>
+
+<section data-cname="cs_eb_1click" data-pz-seg-name="cs_default" data-pz-seg-id="cs_default">
+    <div id="hoka-coming-soon" class="cont-1656 hp-margin">
+        <a href="/c/shops/for-the-runner"
+            data-omni="eb_mac_hokacomingsoonpr"
+            class="event_banner__link hp-hover"
+            aria-label="Shop running shoes, clothing and more runners' favorites.">
+            <div class="event_banner__card">
+                <picture>
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt3ae09b6b3a3063cd/eb_1click_1_hokacomingsoonpr-mobile">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte8729f786135b359/eb_1click_1_hokacomingsoonpr-desktop"
+                        alt="HOKA coming soon banner. Launching in early October and available in select stores across Arkansas, Georgia, Louisiana, and Texas, plus online at Academy.com."
+                        class="event_banner__image" />
+                </picture>
+            </div>
+        </a>
+    </div>
+</section>
+
+<script>
+    (function () {
+        const heading = document.getElementById("hoka-coming-soon-heading");
+        const banner = document.getElementById("hoka-coming-soon");
+        const header = document.querySelector(".contentVerticalMargin--iU1wb");
+        if (!banner || !header || !header.parentNode) return;
+        if (heading) header.parentNode.insertBefore(heading, header);
+        header.parentNode.insertBefore(banner, header);
+    })();
+</script>

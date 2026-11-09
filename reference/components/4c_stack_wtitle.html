@@ -1,0 +1,270 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+
+<!-- Our Starting Lineup -->
+<style>
+    #our-starting-lineup {
+        --text-card-title: clamp(16px, 1.69vw, 28px);
+        --text-card-kicker: clamp(12px, 1.33vw, 22px);
+    }
+
+    #our-starting-lineup .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    #our-starting-lineup .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .svg-our-starting-lineup {
+        width: clamp(300px, 39.67vw, 657px);
+    }
+
+    .osl-card-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    @media (max-width: 767px) {
+        #our-starting-lineup {
+            --text-card-title: clamp(10px, 4.27vw, 28px);
+            --text-card-kicker: clamp(6px, 3.2vw, 22px);
+        }
+
+        #our-starting-lineup .text-card-title {
+            font-size: var(--text-card-title, clamp(10px, 4.27vw, 28px));
+        }
+
+        #our-starting-lineup .text-card-kicker {
+            font-size: var(--text-card-kicker, clamp(6px, 3.2vw, 22px));
+        }
+
+        .svg-our-starting-lineup {
+            width: clamp(220px, 91.2vw, 657px);
+        }
+
+        .osl-card-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+    }
+</style>
+
+<section
+    data-cname="cs_4c_wtitle_stack"
+    data-pz-seg-name="cs_default"
+    data-pz-seg-id="cs_default"
+>
+
+    <div id="our-starting-lineup" class="cont-1656 hp-margin mb-3">
+        <div class="text-center mb-4 pt-3">
+            <svg class="svg-our-starting-lineup" viewBox="0 0 657 107" fill="none" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Our Starting Lineup">
+                <path
+                    d="M21.5019 25.0626C32.3019 25.0626 39.8219 31.7826 39.8219 43.1426V62.5026C39.8219 73.8626 32.3019 80.5826 21.5019 80.5826C10.7019 80.5826 3.18187 73.8626 3.18187 62.5026V43.1426C3.18187 31.7826 10.7019 25.0626 21.5019 25.0626ZM21.5019 36.5026C18.3819 36.5026 16.3819 38.3426 16.3819 42.7426V62.9026C16.3819 67.3026 18.3819 69.1426 21.5019 69.1426C24.6219 69.1426 26.6219 67.3026 26.6219 62.9026V42.7426C26.6219 38.3426 24.6219 36.5026 21.5019 36.5026ZM45.44 26.1826H58.48V62.0226C58.48 66.2626 59.84 68.7426 63.36 68.7426C66.88 68.7426 68.24 66.2626 68.24 62.0226V26.1826H80.64V62.0226C80.64 73.9426 75.2 80.5826 63.52 80.5826C50.56 80.5826 45.44 74.2626 45.44 62.0226V26.1826ZM100.109 60.9026V79.4626H87.0694V26.1826H106.589C115.709 26.1826 121.309 31.6226 121.309 40.4226V46.6626C121.309 52.2626 118.989 56.5026 114.989 58.8226L122.429 79.4626H109.069L102.509 60.9026H100.109ZM100.109 36.5826V50.7426H103.309C106.829 50.7426 108.269 49.0626 108.269 45.7026V41.7026C108.269 38.2626 106.829 36.5826 103.309 36.5826H100.109Z"
+                    fill="#1946C8" />
+                <path
+                    d="M160.729 83.667C148.838 84.4985 143.9 78.1074 143.42 71.2441C142.929 64.2213 147.221 56.7838 153.844 56.3206C156.957 56.103 158.613 57.9921 158.763 60.1468C158.953 62.8602 156.925 65.9692 153.014 66.2427C152.137 66.3041 151.402 66.1149 150.735 65.7605C150.027 67.0932 149.659 68.7228 149.765 70.2391C150.033 74.0697 153.02 77.7904 158.527 77.4054C165.869 76.892 171.332 71.2972 170.712 62.4389C170.389 57.8102 168.61 54.1654 166.757 50.6059C165.064 47.0354 163.297 43.5502 162.99 39.1609C162.192 27.7487 171.63 20.5127 181.127 19.8487C190.145 19.2181 194.457 24.6906 194.808 29.7183C195.076 33.5489 193.008 37.2222 188.937 37.5068C185.985 37.7133 184.585 36.0469 184.44 33.9719C184.289 31.8172 185.553 29.2428 187.96 28.1121C187.49 25.9797 185.212 24.3747 181.781 24.6146C176.194 25.0053 173.268 30.182 173.609 35.0501C173.838 38.3221 175.765 41.7962 177.794 45.5838C180.352 50.0563 183.109 55.0762 183.516 60.902C184.364 73.0324 174.455 82.7072 160.729 83.667ZM197.957 79.0588C192.77 79.4216 189.058 76.7941 188.673 71.2876C188.477 68.4944 189.121 65.0812 190.677 60.9626L191.427 59.0657L195.427 48.6012L192.314 48.8188C191.516 48.8746 191.158 48.3383 191.427 47.5977L192.165 45.5412C192.36 44.8861 192.828 44.693 193.466 44.6483L197.057 44.3972L201.727 32.0414C201.927 31.466 202.384 31.1133 202.937 30.9944L213.211 28.8325C214.078 28.6115 214.59 29.0568 214.252 29.9626L209.028 43.5601L215.013 43.1416C215.811 43.0858 216.244 43.5367 215.981 44.3571L215.242 46.4136C215.047 47.0688 214.58 47.2619 213.941 47.3065L207.397 47.7641L201.967 61.8572C201.017 64.3295 200.672 66.2783 200.778 67.7946C200.94 70.109 202.216 71.1425 203.971 71.0198C207.243 70.7909 212.545 66.3303 216.087 57.3413C216.842 55.5242 220.294 56.7263 219.55 58.703C215.144 70.2385 206.018 78.4952 197.957 79.0588ZM223.223 77.2921C216.52 77.7608 213.425 73.6467 213.023 67.9007C212.287 57.3664 221.117 41.4317 234.763 40.4774C238.993 40.1816 242.052 41.4915 243.906 43.928L245.671 41.6394C246.036 41.1326 246.424 40.9451 246.983 40.9061L254.724 40.3647C255.522 40.3089 255.88 40.8453 255.611 41.5858L248.979 59.1312C248.029 61.6035 247.679 63.4725 247.779 64.909C247.919 66.9041 248.949 67.8746 250.306 67.7797C253.019 67.59 256.309 63.0294 259.787 54.2854C260.463 52.4739 263.995 53.6705 263.251 55.6472C258.696 67.3534 251.873 75.2887 243.813 75.8523C239.104 76.1816 236.366 73.7266 235.609 69.7698C232.445 73.8404 228.331 76.9349 223.223 77.2921ZM228.159 69.8898C231.91 69.6275 235.378 64.1723 237.878 57.5016L241.335 48.4384C240.466 46.3339 238.957 45.3969 237.121 45.5252C230.577 45.9828 224.213 59.3393 224.688 66.1227C224.855 68.5169 225.924 70.046 228.159 69.8898ZM276.282 73.5819C271.334 73.9279 267.963 71.5973 267.639 66.9686C267.5 64.9735 267.885 62.4605 269.047 59.5724L274.9 44.6478C271.89 45.179 269.564 45.1813 267.456 44.8475L263.239 55.648C262.77 56.9639 259.02 56.1034 259.776 54.2863C262.653 47.2685 263.721 41.9009 263.466 37.107C263.422 36.4685 263.627 35.973 264.255 35.7687C267.768 34.4003 270.376 36.1426 269.532 40.1312C274.062 40.6966 279.753 39.4967 285.101 38C285.728 37.7957 286.218 37.9218 286.577 38.4582L287.646 39.9873C288.004 40.5236 288.032 40.9226 287.832 41.498L281.932 56.9071C280.914 59.5446 280.495 61.5787 280.595 63.0152C280.712 64.6911 281.572 65.5132 282.849 65.4239C285.562 65.2342 288.943 60.8276 292.496 51.9983C293.171 50.1867 296.703 51.3833 295.959 53.36C291.262 65.3168 284.342 73.0182 276.282 73.5819ZM299.039 71.9905C293.851 72.3533 290.139 69.7258 289.754 64.2193C289.559 61.4261 290.202 58.0129 291.759 53.8943L292.508 51.9974L296.508 41.5329L293.395 41.7505C292.597 41.8063 292.239 41.27 292.508 40.5295L293.246 38.4729C293.441 37.8178 293.909 37.6247 294.547 37.58L298.139 37.3289L302.808 24.9731C303.008 24.3977 303.465 24.045 304.018 23.9261L314.292 21.7642C315.159 21.5432 315.671 21.9885 315.334 22.8943L310.109 36.4918L316.095 36.0733C316.893 36.0175 317.325 36.4684 317.062 37.2888L316.324 39.3453C316.129 40.0005 315.661 40.1936 315.023 40.2382L308.479 40.6958L303.048 54.7889C302.099 57.2612 301.754 59.21 301.86 60.7263C302.022 63.0407 303.297 64.0742 305.053 63.9515C308.325 63.7227 313.626 59.262 317.168 50.273C317.923 48.4559 321.375 49.658 320.631 51.6347C316.225 63.1702 307.099 71.4269 299.039 71.9905ZM330.987 30.4608C327.476 30.7063 325.825 28.897 325.664 26.5827C325.407 22.9116 328.743 17.8666 334.09 17.4927C337.522 17.2528 339.177 19.1419 339.345 21.536C339.602 25.2071 336.414 30.0813 330.987 30.4608ZM322.389 70.3577C317.282 70.7149 314.493 67.5416 314.159 62.7533C313.974 60.1198 314.555 56.9516 315.848 53.6533L317.135 50.2753L322.343 36.4383C322.538 35.7831 323.005 35.59 323.644 35.5454L333.22 34.8757C334.018 34.8199 334.377 35.3562 334.108 36.0968L327.476 53.6422C326.6 56.0291 326.255 57.9779 326.35 59.3346C326.495 61.4095 327.525 62.38 328.882 62.2851C331.675 62.0898 335.939 57.7017 339.401 48.7183C340.156 46.9012 343.608 48.1033 342.865 50.08C338.299 61.6266 330.769 69.7718 322.389 70.3577ZM366.226 67.2924C361.278 67.6384 357.827 65.3134 357.498 60.6049C357.359 58.6098 357.83 56.171 358.991 53.2829L362.56 44.693C363.173 43.1265 363.488 41.9015 363.421 40.9438C363.332 39.6669 362.569 39.0787 361.212 39.1736C357.701 39.4191 352.546 44.8319 349.158 53.7299L344.14 66.8319C343.94 67.4073 343.477 67.6802 342.839 67.7248L333.262 68.3945C332.464 68.4503 332.106 67.9139 332.375 67.1734L339.425 48.7167L344.632 34.8797C344.827 34.2245 345.295 34.0314 345.933 33.9868L354.073 33.4176C354.871 33.3618 355.309 33.8925 355.12 34.6275L354.082 39.2712C358.615 34.1425 363.8 31.4543 368.508 31.125C373.057 30.8069 375.842 32.7775 376.115 36.688C376.249 38.6033 375.852 40.9567 374.68 43.6851L371.876 50.6176C370.778 53.2606 370.359 55.2948 370.459 56.7313C370.577 58.4072 371.436 59.2293 372.713 59.14C375.426 58.9502 379.052 54.6067 382.36 45.7143C383.109 43.8174 386.567 45.0994 385.823 47.0761C381.126 59.0329 374.286 66.7287 366.226 67.2924ZM381.622 90.114C374.919 90.5827 371.685 87.9218 371.395 83.7719C371.01 78.2654 377.003 68.7842 396.466 66.1401L397.954 62.1867C395.523 64.121 392.728 65.4391 389.536 65.6624C382.832 66.1311 379.738 62.017 379.336 56.271C378.599 45.7367 387.429 29.802 401.076 28.8477C405.385 28.5463 408.364 29.8617 410.224 32.3781L411.983 30.0096C412.355 29.5827 412.737 29.3154 413.296 29.2763L421.037 28.735C421.835 28.6792 422.193 29.2155 421.924 29.9561L410.806 59.0425C409.993 61.1844 409.106 63.4117 408.14 65.6446C409.588 65.7037 411.041 65.8427 412.494 65.9817C416.05 66.3746 414.807 70.391 411.485 69.9016C409.701 69.6253 408.009 69.5031 406.316 69.3809C401.177 79.6043 393.513 89.2825 381.622 90.114ZM381.213 85.411C387.278 84.9869 391.438 77.9596 394.961 69.8541C385.548 71.7153 377.001 77.9266 377.336 82.715C377.47 84.6303 378.739 85.584 381.213 85.411ZM394.471 58.26C397.823 58.0257 401.135 53.7843 404.191 45.8719L407.727 36.8031C406.784 34.784 405.269 33.7672 403.434 33.8955C396.89 34.3531 390.526 47.7096 391 54.493C391.168 56.8872 392.237 58.4163 394.471 58.26Z"
+                    fill="#1946C8" />
+                <path
+                    d="M235.178 92.5813L225.326 85.3933C224.713 84.8867 224.88 84.3641 225.65 84.2647C277.983 73.2827 315.855 74.6045 347.171 76.2824C347.776 76.3574 348.04 76.79 347.791 77.3127L347.126 78.8809C346.96 79.3115 346.702 79.5768 346.445 79.5859C320.647 78.1614 284.728 80.1777 236.293 92.8323C235.862 92.9224 235.513 92.8484 235.166 92.5901L235.178 92.5813Z"
+                    fill="#1946C8" />
+                <path
+                    d="M448.674 26.1826H461.714V67.4626H476.674V79.4626H448.674V26.1826ZM481.317 26.1826H494.357V79.4626H481.317V26.1826ZM501.292 26.1826H514.172L525.932 55.5426H526.092L525.852 26.1826H537.132V79.4626H524.492L512.492 49.6226H512.332L512.572 79.4626H501.292V26.1826ZM543.852 26.1826H573.612V37.9426H556.572V46.6626H569.612V58.0226H556.572V67.7026H573.612V79.4626H543.852V26.1826ZM578.982 26.1826H592.022V62.0226C592.022 66.2626 593.382 68.7426 596.902 68.7426C600.422 68.7426 601.782 66.2626 601.782 62.0226V26.1826H614.182V62.0226C614.182 73.9426 608.742 80.5826 597.062 80.5826C584.102 80.5826 578.982 74.2626 578.982 62.0226V26.1826ZM620.611 26.1826H639.811C648.931 26.1826 654.611 31.6226 654.611 40.5826V47.5426C654.611 56.5026 648.931 61.9426 639.811 61.9426H633.651V79.4626H620.611V26.1826ZM633.651 36.5826V51.5426H636.531C640.051 51.5426 641.571 49.6226 641.571 46.4226V41.7026C641.571 38.5026 640.051 36.5826 636.531 36.5826H633.651Z"
+                    fill="#1946C8" />
+            </svg>
+        </div>
+
+        <div class="osl-card-grid">
+            <!-- Card 1: Victus Vibe Pencil USA Baseball Bat -->
+            <!-- TODO: Image assets for Our Starting Lineup cards are not yet in assets.txt — replace placeholder URLs below -->
+            <a href="https://www.academy.com/c/sports/baseball/baseball-bats/usa-baseball-bats"
+                class="position-relative hp-hover"
+                data-omni="baseball_snr_victussports"
+                aria-label="Shop Victus Vibe Pencil USA Baseball Bat.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-kicker color-white">Vibe Pencil USA</div>
+                    <div class="text-card-title color-white">Baseball Bat</div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt1f5ed73be8c2545a/69c45c799650c0fdade2ad08/startinglineup_1_victus_pencilbat.png?auto=webp&format=pjpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt1f5ed73be8c2545a/69c45c799650c0fdade2ad08/startinglineup_1_victus_pencilbat.png?auto=webp&format=pjpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt1f5ed73be8c2545a/69c45c799650c0fdade2ad08/startinglineup_1_victus_pencilbat.png?auto=webp&format=pjpg"
+                        alt="Three yellow and black Victus baseball bats leaning against a chain-link fence next to a black equipment bag on a baseball field."
+                        class="img-fluid corners">
+                </picture>
+            </a>
+
+            <!-- Card 2: Rawlings Heart of the Hide Fielding Gloves -->
+            <a href="https://www.academy.com/c/brands/brands-m-r/rawlings/baseball-by-rawlings/baseball-gloves-mitts-by-rawlings"
+                class="position-relative hp-hover"
+                data-omni="baseball_snr_rawlingsheartofthehide"
+                aria-label="Shop Rawlings Heart of the Hide fielding gloves.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-kicker color-white">Heart of the Hide</div>
+                    <div class="text-card-title color-white">Fielding Gloves</div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt06337dc1534f23e7/69c45c792c930c86f5eaebbd/startinglineup_2_rawlings_heartofhide.png?auto=webp&format=pjpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt06337dc1534f23e7/69c45c792c930c86f5eaebbd/startinglineup_2_rawlings_heartofhide.png?auto=webp&format=pjpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt06337dc1534f23e7/69c45c792c930c86f5eaebbd/startinglineup_2_rawlings_heartofhide.png?auto=webp&format=pjpg"
+                        alt="A person wearing a light blue Rawlings Heart of the Hide baseball glove while standing on a baseball field."
+                        class="img-fluid corners">
+                </picture>
+            </a>
+
+            <!-- Card 3: Baseball Lifestyle 101 — Only at Academy -->
+            <a href="https://www.academy.com/c/sports/baseball/baseball-apparel-and-uniforms/baseball-lifestyle-apparel"
+                class="position-relative hp-hover"
+                data-omni="baseball_snr_baseballlifestyle101"
+                aria-label="Shop Baseball Lifestyle 101 Swing Into Spring collection.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-kicker color-white">Only at</div>
+                    <div class="text-card-title color-white">Academy</div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt016bad2e2344e993/69c45c79191b6b1e387c8586/startinglineup_3_baseballlifestyle101.png?auto=webp&format=pjpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt016bad2e2344e993/69c45c79191b6b1e387c8586/startinglineup_3_baseballlifestyle101.png?auto=webp&format=pjpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt016bad2e2344e993/69c45c79191b6b1e387c8586/startinglineup_3_baseballlifestyle101.png?auto=webp&format=pjpg"
+                        alt="Three children standing along a chain-link fence wearing colorful Baseball Lifestyle 101 shirts and shorts."
+                        class="img-fluid corners">
+                </picture>
+            </a>
+
+            <!-- Card 4: Cleats — adidas, Nike + More -->
+            <a href="https://www.academy.com/c/kids/kids-shoes/kids-shop-by-sport/kids-baseball-cleats?&orderBy=newArrival"
+                class="position-relative hp-hover"
+                data-omni="baseball_fw_adidasnikecleats"
+                aria-label="Shop baseball cleats from adidas, Nike and more top brands.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-kicker color-white">Own the Diamond</div>
+                    <div class="text-card-title color-white">Youth Cleats</div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd169abc0662a4b4e/69c45c796d493f7ad79c1921/startinglineup_4_adidasnikecleats.png?auto=webp&format=pjpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd169abc0662a4b4e/69c45c796d493f7ad79c1921/startinglineup_4_adidasnikecleats.png?auto=webp&format=pjpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltd169abc0662a4b4e/69c45c796d493f7ad79c1921/startinglineup_4_adidasnikecleats.png?auto=webp&format=pjpg"
+                        alt="A pair of white adidas baseball cleats with red and navy accents placed on grass near a baseball field."
+                        class="img-fluid corners">
+                </picture>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Our Starting Lineup -->

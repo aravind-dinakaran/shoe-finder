@@ -1,0 +1,343 @@
+<style id="pdp-suppressor-message-monetate-styles">
+    /* Scoped PDP message styles. The root ID keeps Monetate styles from leaking into the React PDP. */
+    #pdp-suppressor-message-monetate {
+        box-sizing: border-box;
+        margin: 16px 0;
+        width: 100%;
+    }
+
+    #pdp-suppressor-message-monetate *,
+    #pdp-suppressor-message-monetate *::before,
+    #pdp-suppressor-message-monetate *::after {
+        box-sizing: border-box;
+    }
+
+    #pdp-suppressor-message-monetate .pdp-suppressor-message {
+        align-items: flex-start;
+        background-color: #ffffff;
+        border: 1px solid #0749aa;
+        border-left-width: 5px;
+        border-radius: 4px;
+        color: #333333;
+        display: flex;
+        font-family: "Open Sans", Arial, sans-serif;
+        gap: 8px;
+        padding: 8px 12px;
+        width: 100%;
+    }
+
+    #pdp-suppressor-message-monetate .pdp-suppressor-message__icon {
+        color: #0749aa;
+        flex: 0 0 16px;
+        height: 16px;
+        margin-top: 0;
+        width: 16px;
+    }
+
+    #pdp-suppressor-message-monetate .pdp-suppressor-message__content {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    #pdp-suppressor-message-monetate .pdp-suppressor-message__copy {
+        color: #333333;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+
+    #pdp-suppressor-message-monetate .pdp-suppressor-message__emphasis {
+        font-weight: 700;
+    }
+</style>
+
+<script>
+    (function pdpSuppressorMessageMonetate() {
+        /*
+         * Flow:
+         * 1. Check whether the selected store is eligible.
+         * 2. If eligible, insert or move the message directly above .bottomContent--eCxW2.
+         * 3. If ineligible, remove any message previously inserted by this action.
+         * 4. Re-run the same placement check when React re-renders or store data changes.
+         */
+        const MESSAGE_ID = "pdp-suppressor-message-monetate";
+        const TARGET_SELECTOR = ".bottomContent--eCxW2";
+        const INSERTED_ATTR = "data-monetate-pdp-suppressor-message";
+        const INSERTED_VAL = "true";
+        const OBSERVER_KEY = "pdpSuppressorMessageObserverInstance";
+        const STORAGE_HANDLER_KEY = "pdpSuppressorMessageStorageHandler";
+        const STORE_CHANGE_HANDLER_KEY = "pdpSuppressorMessageStoreChangeHandler";
+        const COOKIE_STORE_HANDLER_KEY = "pdpSuppressorMessageCookieStoreHandler";
+        const LOCAL_STORAGE_PATCH_KEY = "pdpSuppressorMessageLocalStoragePatchApplied";
+        const COOKIE_PATCH_KEY = "pdpSuppressorMessageCookiePatchApplied";
+        const STORE_CHANGE_EVENT = "pdpSuppressorMessageStoreChange";
+        const STORE_TARGETING_ENABLED = true; // Set to false to bypass localStorage/cookie store targeting.
+        const LOCAL_STORAGE_KEY = "aso_WC_StLocId_Selected";
+        const COOKIE_KEY = "sddStoreId";
+        const TARGET_STORE_IDS = new Set(["22", "24", "39", "43", "45", "114", "239", "20", "36", "40", "42", "46", "47", "319", "33", "31", "123"]);
+        const DEBOUNCE_MS = 150;
+
+        let isUpdating = false;
+        let debounceTimer;
+
+        /* Normalize localStorage/cookie values before comparing them with the store allowlist. */
+        function normalizeStoreId(value) {
+            return value == null ? "" : String(value).trim();
+        }
+
+        /* LocalStorage value is expected to be JSON with a storeId property. */
+        function getLocalStorageStoreId() {
+            try {
+                const rawValue = window.localStorage.getItem(LOCAL_STORAGE_KEY);
+                if (!rawValue) return "";
+                const parsedValue = JSON.parse(rawValue);
+                return normalizeStoreId(parsedValue && parsedValue.storeId);
+            } catch (error) {
+                return "";
+            }
+        }
+
+        /* Cookie value is a plain store ID string. */
+        function getCookieValue(name) {
+            const cookieParts = document.cookie ? document.cookie.split(";") : [];
+            for (let i = 0; i < cookieParts.length; i += 1) {
+                const cookie = cookieParts[i].trim();
+                if (cookie.indexOf(name + "=") === 0) {
+                    return normalizeStoreId(decodeURIComponent(cookie.substring(name.length + 1)));
+                }
+            }
+            return "";
+        }
+
+        /* Either localStorage or cookie eligibility is enough to show the message. */
+        function isEligibleStore() {
+            return TARGET_STORE_IDS.has(getLocalStorageStoreId()) || TARGET_STORE_IDS.has(getCookieValue(COOKIE_KEY));
+        }
+
+        function shouldDisplayMessage() {
+            return !STORE_TARGETING_ENABLED || isEligibleStore();
+        }
+
+        /* Custom event used by the same-tab localStorage/cookie hooks below. */
+        function dispatchStoreChange() {
+            window.dispatchEvent(new Event(STORE_CHANGE_EVENT));
+        }
+
+        /*
+         * Native "storage" events do not fire in the same tab that calls localStorage.setItem().
+         * Wrap Storage methods so same-tab changes to the selected store key trigger the same placement check.
+         */
+        function installLocalStorageChangeDetection() {
+            if (window[LOCAL_STORAGE_PATCH_KEY]) return;
+
+            const originalSetItem = Storage.prototype.setItem;
+            const originalRemoveItem = Storage.prototype.removeItem;
+            const originalClear = Storage.prototype.clear;
+
+            Storage.prototype.setItem = function (key) {
+                const result = originalSetItem.apply(this, arguments);
+                if (this === window.localStorage && key === LOCAL_STORAGE_KEY) {
+                    dispatchStoreChange();
+                }
+                return result;
+            };
+
+            Storage.prototype.removeItem = function (key) {
+                const result = originalRemoveItem.apply(this, arguments);
+                if (this === window.localStorage && key === LOCAL_STORAGE_KEY) {
+                    dispatchStoreChange();
+                }
+                return result;
+            };
+
+            Storage.prototype.clear = function () {
+                const result = originalClear.apply(this, arguments);
+                if (this === window.localStorage) {
+                    dispatchStoreChange();
+                }
+                return result;
+            };
+
+            window[LOCAL_STORAGE_PATCH_KEY] = true;
+        }
+
+        /*
+         * Cookies do not have a universal change event. This catches same-tab JavaScript writes
+         * such as document.cookie = "sddStoreId=22; path=/".
+         */
+        function installCookieChangeDetection() {
+            if (window[COOKIE_PATCH_KEY]) return;
+
+            const cookieDescriptor =
+                Object.getOwnPropertyDescriptor(Document.prototype, "cookie") ||
+                Object.getOwnPropertyDescriptor(HTMLDocument.prototype, "cookie");
+
+            if (!cookieDescriptor || typeof cookieDescriptor.get !== "function" || typeof cookieDescriptor.set !== "function") {
+                return;
+            }
+
+            Object.defineProperty(document, "cookie", {
+                configurable: true,
+                enumerable: true,
+                get: function () {
+                    return cookieDescriptor.get.call(document);
+                },
+                set: function (value) {
+                    cookieDescriptor.set.call(document, value);
+                    const cookieName = String(value).split("=")[0].trim();
+                    if (cookieName === COOKIE_KEY) {
+                        dispatchStoreChange();
+                    }
+                }
+            });
+
+            window[COOKIE_PATCH_KEY] = true;
+        }
+
+        /* Cross-tab localStorage changes still arrive through the browser's native storage event. */
+        function handleStorageChange(event) {
+            if (event.key && event.key !== LOCAL_STORAGE_KEY) return;
+            schedulePlacementCheck();
+        }
+
+        /* cookieStore is supported in some browsers and catches cookie changes more directly. */
+        function handleCookieStoreChange(event) {
+            const changedCookies = Array.from(event.changed || []);
+            const deletedCookies = Array.from(event.deleted || []);
+            const hasStoreCookieChange = changedCookies.concat(deletedCookies).some((cookie) => cookie.name === COOKIE_KEY);
+
+            if (hasStoreCookieChange) {
+                schedulePlacementCheck();
+            }
+        }
+
+        /* Creates the Figma-matched info callout as plain HTML for Monetate injection. */
+        function createMessageElement() {
+            const wrapper = document.createElement("div");
+            wrapper.id = MESSAGE_ID;
+            wrapper.setAttribute(INSERTED_ATTR, INSERTED_VAL);
+            wrapper.innerHTML = `
+                <div class="pdp-suppressor-message" role="note" aria-label="Suppressor availability information">
+                    <svg class="pdp-suppressor-message__icon" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                        <path d="M8 7.1v4.15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        <circle cx="8" cy="4.75" r="0.85" fill="currentColor"></circle>
+                    </svg>
+                    <div class="pdp-suppressor-message__content">
+                        <p class="pdp-suppressor-message__copy">Suppressors are now available at select stores. We&rsquo;ve partnered with Silencer Shop to make purchasing a suppressor simple and secure. Visit our Silencer Shop in-store kiosk to make the purchase. <span class="pdp-suppressor-message__emphasis">More stores coming soon!</span></p>
+                    </div>
+                </div>
+            `;
+            return wrapper;
+        }
+
+        function getTarget() {
+            return document.querySelector(TARGET_SELECTOR);
+        }
+
+        function getMessageElements() {
+            return Array.from(document.querySelectorAll(`#${MESSAGE_ID}`));
+        }
+
+        function removeInsertedMessages() {
+            getMessageElements().forEach((message) => {
+                message.remove();
+            });
+        }
+
+        /* Reuse an existing message when present and remove duplicates from repeated Monetate runs. */
+        function getOrCreateMessage() {
+            const messages = getMessageElements();
+            const primaryMessage = messages[0] || createMessageElement();
+
+            messages.slice(1).forEach((message) => {
+                message.remove();
+            });
+
+            return primaryMessage;
+        }
+
+        /* Central placement routine: eligibility check, target lookup, duplicate cleanup, and insertion. */
+        function ensureMessagePlacement() {
+            if (isUpdating) return;
+            isUpdating = true;
+
+            if (!shouldDisplayMessage()) {
+                removeInsertedMessages();
+                isUpdating = false;
+                return;
+            }
+
+            const target = getTarget();
+            if (!target || !target.parentNode) {
+                isUpdating = false;
+                return;
+            }
+
+            const message = getOrCreateMessage();
+            if (message.nextElementSibling !== target) {
+                target.parentNode.insertBefore(message, target);
+            }
+
+            isUpdating = false;
+        }
+
+        /* Debounce frequent React DOM mutations so placement checks stay cheap. */
+        function schedulePlacementCheck() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(ensureMessagePlacement, DEBOUNCE_MS);
+        }
+
+        function init() {
+            ensureMessagePlacement();
+
+            /* Disconnect listeners from older executions before registering this run's handlers. */
+            if (window[OBSERVER_KEY]) {
+                window[OBSERVER_KEY].disconnect();
+            }
+
+            if (window[STORAGE_HANDLER_KEY]) {
+                window.removeEventListener("storage", window[STORAGE_HANDLER_KEY]);
+            }
+
+            if (window[STORE_CHANGE_HANDLER_KEY]) {
+                window.removeEventListener(STORE_CHANGE_EVENT, window[STORE_CHANGE_HANDLER_KEY]);
+            }
+
+            if (window.cookieStore && window[COOKIE_STORE_HANDLER_KEY]) {
+                window.cookieStore.removeEventListener("change", window[COOKIE_STORE_HANDLER_KEY]);
+            }
+
+            /* React can remove or move injected nodes during re-render, so observe the PDP subtree. */
+            const observer = new MutationObserver(schedulePlacementCheck);
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+
+            /* Install store-change detection once, then attach this action's event handlers. */
+            installLocalStorageChangeDetection();
+            installCookieChangeDetection();
+
+            window[OBSERVER_KEY] = observer;
+            window[STORAGE_HANDLER_KEY] = handleStorageChange;
+            window[STORE_CHANGE_HANDLER_KEY] = schedulePlacementCheck;
+            window.addEventListener("storage", window[STORAGE_HANDLER_KEY]);
+            window.addEventListener(STORE_CHANGE_EVENT, window[STORE_CHANGE_HANDLER_KEY]);
+
+            if (window.cookieStore) {
+                window[COOKIE_STORE_HANDLER_KEY] = handleCookieStoreChange;
+                window.cookieStore.addEventListener("change", window[COOKIE_STORE_HANDLER_KEY]);
+            }
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init, { once: true });
+        } else {
+            init();
+        }
+    })();
+</script>

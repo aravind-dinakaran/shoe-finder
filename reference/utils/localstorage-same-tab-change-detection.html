@@ -1,0 +1,81 @@
+<script>
+
+    // Copy implementOnSignIn() and implementOnSignOut() (the entire commented block of code) into a separate contentstack module and call or execute sign-in sign-out PZ 
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // window.myCustomFunctions = window.myCustomFunctions || {};
+
+    // // On sign in
+    // window.myCustomFunctions.implementOnSignIn = function () {
+    //     try {
+    //         console.log(`The user has signed-in!`);
+
+    //         // PZ-1 : Define and execute PZ functions for signed-in status here
+    //         // if (window.location.pathname === '/academy-credit-card') {
+    //         //     // Define and execute PZ functions for signed-in status for the defined url endpoint here.
+    //         // }
+
+    //     } catch (error) {
+    //         console.log(`[SIGN-IN-SIGN-OUT-PZ] Error while executing signed-in PZ: ${error}`);
+    //     }
+    // };
+
+    // // On Sign out
+    // window.myCustomFunctions.implementOnSignOut = function () {
+    //     try {
+    //         console.log(`The user has signed-out!`);
+
+    //         // PZ-1 : Define and execute PZ functions for signed-in status here
+    //         // if (window.location.pathname === '/academy-credit-card') {
+    //         //     // Define and execute PZ functions for signed-in status for the defined url endpoint here.
+    //         // }
+
+    //     } catch (error) {
+    //         console.log(`[SIGN-IN-SIGN-OUT-PZ] Error while executing signed-out PZ: ${error}`);
+    //     }
+    // };
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    function executePZ() {
+        try {
+            let userProfileData = localStorage.getItem("aso_userProfileData");
+            if (userProfileData && JSON.parse(userProfileData)?.emailId) {
+                // Call the globally available function
+                if (window.myCustomFunctions && typeof window.myCustomFunctions.implementOnSignIn === 'function') {
+                    window.myCustomFunctions.implementOnSignIn();
+                } else {
+                    console.warn("implementOnSignIn not found or not a function.");
+                }
+            } else {
+                // Call the globally available function
+                if (window.myCustomFunctions && typeof window.myCustomFunctions.implementOnSignOut === 'function') {
+                    window.myCustomFunctions.implementOnSignOut();
+                } else {
+                    console.warn("implementOnSignOut not found or not a function.");
+                }
+            }
+        } catch (error) {
+            console.log(`Error while executing PZ: ${error}`);
+        }
+    }
+
+    function applyLocalStorageSetMethod() {
+        // Store the original setItem to avoid infinite recursion
+        const originalSetItem = Storage.prototype.setItem;
+
+        Storage.prototype.setItem = function (key, newValue) {
+            originalSetItem.apply(this, arguments);
+
+            if (window.location.hostname.endsWith('academy.com') && this === window.localStorage && key === 'aso_userProfileData') {
+                executePZ();
+            }
+        };
+    }
+
+
+    executePZ();
+
+    applyLocalStorageSetMethod();
+
+</script>

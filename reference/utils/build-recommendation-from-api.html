@@ -1,0 +1,947 @@
+<style id="optimus-rec-styles">
+    #optimus-rec,
+    #optimus-rec * {
+        box-sizing: border-box;
+    }
+
+    #optimus-rec {
+        width: 100%;
+        margin-top: clamp(8px, 1.4493vw, 24px);
+        padding: clamp(8px, 0.9662vw, 16px) clamp(8px, 0.9662vw, 16px) clamp(8px, 1.0870vw, 18px);
+        border: 1px solid #c7c7c7;
+        border-radius: 4px;
+        background: #fff;
+        color: #333;
+        font-family: "Open Sans", Arial, sans-serif;
+    }
+
+    #optimus-rec .optimus-rec__heading {
+        margin: 0 0 clamp(8px, 1.8116vw, 30px);
+        color: #1946C8;
+        font-size: clamp(20px, 1.3285vw, 22px);
+        font-weight: 800;
+        line-height: 1.2;
+        text-align: center;
+        letter-spacing: 0;
+    }
+
+    #optimus-rec .optimus-rec__rail {
+        display: flex;
+        align-items: stretch;
+        gap: clamp(8px, 0.8454vw, 14px);
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #optimus-rec .optimus-rec__rail-wrap {
+        position: relative;
+    }
+
+    #optimus-rec .optimus-rec__scroll-btn {
+        position: absolute;
+        top: 35%;
+        z-index: 2;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        transform: translateY(-50%);
+    }
+
+    #optimus-rec .optimus-rec__scroll-btn--prev {
+        left: -8px;
+    }
+
+    #optimus-rec .optimus-rec__scroll-btn--next {
+        right: -8px;
+    }
+
+    #optimus-rec .optimus-rec__scroll-btn--prev svg {
+        transform: rotate(180deg);
+    }
+
+    #optimus-rec .optimus-rec__scroll-btn:disabled {
+        cursor: default;
+    }
+
+    #optimus-rec .optimus-rec__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        flex: 0 0 31%;
+        max-width: 132px;
+        min-width: 120px;
+        scroll-snap-align: start;
+    }
+
+    #optimus-rec .optimus-rec__card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 0;
+    }
+
+    #optimus-rec .optimus-rec__link {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    #optimus-rec .optimus-rec__image-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        min-height: clamp(88px, 6.6425vw, 110px);
+        margin-bottom: clamp(8px, 0.4831vw, 8px);
+    }
+
+    #optimus-rec .optimus-rec__badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 16px;
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-size: 8px;
+        font-weight: 800;
+        line-height: 1;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    #optimus-rec .optimus-rec__badge--hot-deal {
+        background: #e81111;
+        color: #fff;
+    }
+
+    #optimus-rec .optimus-rec__badge--clearance {
+        gap: 4px;
+        background: #ffe700;
+        color: #333333;
+    }
+
+    #optimus-rec .optimus-rec__badge-icon {
+        display: inline-flex;
+        width: 9px;
+        height: 9px;
+    }
+
+    #optimus-rec .optimus-rec__image {
+        display: block;
+        max-width: 100%;
+        max-height: clamp(88px, 6.6425vw, 110px);
+        object-fit: contain;
+    }
+
+    #optimus-rec .optimus-rec__rating {
+        display: flex;
+        align-items: center;
+        gap: clamp(4px, 0.2415vw, 4px);
+        min-height: clamp(16px, 1.2077vw, 20px);
+        margin-bottom: clamp(4px, 0.3623vw, 6px);
+        color: #333333;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    #optimus-rec .optimus-rec__star {
+        color: #f2cf56;
+        font-size: clamp(12px, 0.7246vw, 12px);
+        line-height: 1;
+    }
+
+    #optimus-rec .optimus-rec__rating-count {
+        color: #1946C8;
+        font-size: 10px;
+    }
+
+    #optimus-rec .optimus-rec__title {
+        display: -webkit-box;
+        min-height: clamp(40px, 2.8986vw, 48px);
+        margin-bottom: clamp(8px, 0.4831vw, 8px);
+        overflow: hidden;
+        color: #333;
+        font-size: clamp(12px, 0.8454vw, 14px);
+        font-weight: 500;
+        line-height: 1.2;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+    }
+
+    #optimus-rec .optimus-rec__price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+        min-height: clamp(36px, 2.8986vw, 48px);
+        margin-bottom: 0;
+        font-size: clamp(12px, 0.8454vw, 14px);
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    #optimus-rec .optimus-rec__price-row {
+        display: flex;
+        align-items: baseline;
+        gap: 4px;
+        min-width: 0;
+    }
+
+    #optimus-rec .optimus-rec__price-main {
+        color: #333333;
+    }
+
+    #optimus-rec .optimus-rec__price-main--sale {
+        color: #e81111;
+    }
+
+    #optimus-rec .optimus-rec__price-main--in-cart {
+        font-size: clamp(12px, 0.7850vw, 13px);
+    }
+
+    #optimus-rec .optimus-rec__price-strike {
+        color: #333333;
+        font-size: clamp(12px, 0.7246vw, 12px);
+        font-weight: 500;
+        line-height: 1.2;
+        text-decoration: line-through;
+    }
+
+    #optimus-rec .optimus-rec__price-info {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        width: 12px;
+        height: 12px;
+        border: 0;
+        padding: 0;
+        background: transparent;
+        color: #1946C8;
+        cursor: help;
+    }
+
+    #optimus-rec .optimus-rec__price-info-tooltip {
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 8px);
+        z-index: 3;
+        display: none;
+        width: 240px;
+        padding: 8px;
+        border: 1px solid #c7c7c7;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+        color: #333333;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.3;
+        text-align: left;
+        white-space: normal;
+        transform: translateX(-50%);
+    }
+
+    #optimus-rec .optimus-rec__price-info:hover .optimus-rec__price-info-tooltip,
+    #optimus-rec .optimus-rec__price-info:focus .optimus-rec__price-info-tooltip {
+        display: block;
+    }
+
+    #optimus-rec .optimus-rec__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: clamp(30px, 1.8116vw, 30px);
+        padding: clamp(6px, 0.4831vw, 8px) clamp(8px, 0.6039vw, 10px);
+        border: 1px solid #1946C8;
+        border-radius: 4px;
+        color: #1946C8;
+        font-size: clamp(12px, 1.5vw, 14px);
+        font-weight: 800;
+        line-height: 1.2;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    #optimus-rec .optimus-rec__button:hover {
+        border-color: #004080;
+        color: #004080;
+    }
+
+</style>
+
+<script>
+    //Version B: Test B: Optimus Recommendations
+    console.log(`Test B: Optimus Recommendations`);
+    (function optimusRecommendationMonetate() {
+
+        const PRODUCT_LIMIT = 15;
+        const HEADER_TEXT = "CUSTOMERS ALSO BOUGHT";
+        const DEBUG = true;
+        const SKU_OVERRIDE = "";
+        // Set to "" for same-origin production API calls.
+        const API_ORIGIN = "https://uat6www.academy.com";
+        const API_PATH = "/api/productinfo/recommendations?partNumber=";
+        const TARGET_SELECTOR = '#pdpContentWrapper[data-monetate="pdpContentWrapperInject"], #pdpContentWrapper';
+        const OTHER_RECOMMENDATION_SELECTOR = 'div[id^="mt-slider"]';
+        const ROOT_ID = "optimus-rec";
+        const ROOT_ATTR = "data-optimus-rec-root";
+        const OBSERVER_KEY = "optimusRecommendationObserverInstance";
+        const RESIZE_HANDLER_KEY = "optimusRecommendationResizeHandler";
+        const RAIL_RESIZE_OBSERVER_KEY = "optimusRecommendationRailResizeObserver";
+        const STATE_KEY = "optimusRecommendationState";
+        const DEBOUNCE_MS = 150;
+        const SCROLL_EDGE_TOLERANCE = 1;
+
+        let debounceTimer;
+        let isUpdating = false;
+
+        const state = window[STATE_KEY] || {
+            sku: "",
+            products: [],
+            isFetching: false,
+            lastRenderedSku: ""
+        };
+
+        window[STATE_KEY] = state;
+
+        function debugLog(message, data) {
+            if (!DEBUG || !window.console) return;
+            if (data !== undefined) {
+                console.log("[Optimus Recommendations] " + message, data);
+            } else {
+                console.log("[Optimus Recommendations] " + message);
+            }
+        }
+
+        function getSku() {
+            if (SKU_OVERRIDE) return SKU_OVERRIDE;
+
+            return String(
+                window.ASOData &&
+                window.ASOData.pageInfo &&
+                window.ASOData.pageInfo.itemId || ""
+            ).trim();
+        }
+
+        function getTarget() {
+            return document.querySelector(TARGET_SELECTOR);
+        }
+
+        function normalizeUrl(value) {
+            if (!value) return "";
+            if (value.indexOf("//") === 0) return "https:" + value;
+            return value;
+        }
+
+        function formatPrice(value) {
+            const numberValue = Number(value);
+            if (!Number.isFinite(numberValue)) return "";
+            return "$" + numberValue.toFixed(2);
+        }
+
+        function toNumber(value) {
+            const numberValue = Number(value);
+            return Number.isFinite(numberValue) ? numberValue : null;
+        }
+
+        function buildPriceDisplay(item) {
+            const parentProduct = item.parentProduct || {};
+            const price = item.price || {};
+            const salePrice = toNumber(price.salePrice);
+            const listPrice = toNumber(price.listPrice);
+            const mapPrice = toNumber(item.mapPrice !== undefined && item.mapPrice !== null ? item.mapPrice : parentProduct.mapPrice);
+            const mapPriceFlag = parentProduct.mapPriceFlag;
+            const salePriceText = formatPrice(salePrice);
+            const listPriceText = formatPrice(listPrice);
+            const logData = {
+                childSku: item.objectID || item.partNumber || "",
+                parentSku: item.parentPartNumber || "",
+                mapPriceFlag: mapPriceFlag,
+                rawCardMapPriceFlag: item.mapPriceFlag,
+                rawParentMapPriceFlag: parentProduct.mapPriceFlag,
+                salePrice: salePrice,
+                listPrice: listPrice,
+                mapPrice: mapPrice,
+                rawCardMapPrice: item.mapPrice,
+                rawParentMapPrice: parentProduct.mapPrice
+            };
+
+            if (salePrice === null) {
+                debugLog("Pricing decision: missing salePrice", logData);
+                return null;
+            }
+
+            if (mapPriceFlag === "Y" && mapPrice !== null && salePrice < mapPrice) {
+                debugLog("Pricing decision: MAP price in cart", Object.assign({}, logData, {
+                    branch: "mapPriceFlag=Y and salePrice < mapPrice",
+                    display: "Our Price In Cart"
+                }));
+                return {
+                    above: listPriceText,
+                    main: "Our Price In Cart",
+                    mainIsSale: true,
+                    isPriceInCart: true,
+                    hasInfo: true,
+                    right: ""
+                };
+            }
+
+            if (listPrice !== null && salePrice < listPrice) {
+                debugLog("Pricing decision: sale with strikethrough list price", Object.assign({}, logData, {
+                    branch: "salePrice < listPrice",
+                    display: salePriceText
+                }));
+                return {
+                    above: "",
+                    main: salePriceText,
+                    mainIsSale: true,
+                    isPriceInCart: false,
+                    hasInfo: false,
+                    right: listPriceText
+                };
+            }
+
+            debugLog("Pricing decision: regular price", Object.assign({}, logData, {
+                branch: "default",
+                mapBranchSkippedBecause: {
+                    mapPriceFlagIsY: mapPriceFlag === "Y",
+                    hasMapPrice: mapPrice !== null,
+                    salePriceLessThanMapPrice: mapPrice !== null ? salePrice < mapPrice : false
+                },
+                display: salePriceText
+            }));
+
+            return {
+                above: "",
+                main: salePriceText,
+                mainIsSale: false,
+                isPriceInCart: false,
+                hasInfo: false,
+                right: ""
+            };
+        }
+
+        function formatRating(value) {
+            const numberValue = Number(value);
+            if (!Number.isFinite(numberValue)) return "";
+            return numberValue.toFixed(1);
+        }
+
+        function buildProductUrl(item) {
+            if (!item || !item.seoURL || !item.skuIdentifier) return "";
+            return "/p/" + encodeURIComponent(item.seoURL).replace(/%2F/g, "/") + "?sku=" + encodeURIComponent(item.skuIdentifier);
+        }
+
+        function firstArrayValue(value) {
+            return Array.isArray(value) && value.length ? value[0] : "";
+        }
+
+        function getProductBadge(item) {
+            if (firstArrayValue(item.HOTDEAL) === "Y") {
+                return {
+                    label: "Hot Deal",
+                    type: "hot-deal"
+                };
+            }
+
+            if (firstArrayValue(item.CLEARANCE) === "Y") {
+                return {
+                    label: "Clearance",
+                    type: "clearance"
+                };
+            }
+
+            return null;
+        }
+
+        function normalizeProducts(response) {
+            if (!response || !Array.isArray(response.cabSKUs)) return [];
+
+            return response.cabSKUs.map(function (item) {
+                const parentProduct = item.parentProduct || {};
+                const url = buildProductUrl(item);
+                const priceDisplay = buildPriceDisplay(item);
+                const rating = formatRating(parentProduct.rating);
+                const reviewCount = parentProduct.reviewCount ? String(parentProduct.reviewCount) : "";
+
+                const product = {
+                    image: normalizeUrl(item.thumbnail),
+                    rating: rating,
+                    reviewCount: reviewCount,
+                    title: parentProduct.name || item.name || "",
+                    priceDisplay: priceDisplay,
+                    badge: getProductBadge(item),
+                    url: url,
+                    childSku: item.objectID || "",
+                    parentSku: item.parentPartNumber || "",
+                    productId: item.uniqueId || ""
+                };
+
+                return product;
+            }).filter(function (product) {
+                return product.image && product.title && product.priceDisplay && product.priceDisplay.main && product.url;
+            }).slice(0, PRODUCT_LIMIT);
+        }
+
+        function removeComponent() {
+            document.querySelectorAll("[" + ROOT_ATTR + '="true"]').forEach(function (root) {
+                root.remove();
+            });
+
+            if (window[RAIL_RESIZE_OBSERVER_KEY]) {
+                window[RAIL_RESIZE_OBSERVER_KEY].disconnect();
+                window[RAIL_RESIZE_OBSERVER_KEY] = null;
+            }
+
+            state.lastRenderedSku = "";
+        }
+
+        function removeOtherRecommendations(target) {
+            if (!target) return;
+
+            target.querySelectorAll(OTHER_RECOMMENDATION_SELECTOR).forEach(function (recommendation) {
+                recommendation.remove();
+            });
+        }
+
+        function createTextElement(tagName, className, text) {
+            const element = document.createElement(tagName);
+            element.className = className;
+            element.textContent = text;
+            return element;
+        }
+
+        function createScrollButton(direction) {
+            const button = document.createElement("button");
+            button.className = "optimus-rec__scroll-btn optimus-rec__scroll-btn--" + direction;
+            button.type = "button";
+            button.setAttribute("aria-label", direction === "prev" ? "Scroll recommendations left" : "Scroll recommendations right");
+            button.innerHTML = '<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="white"></rect><rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)" fill="white"></rect><rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)" stroke="#333333"></rect><path fill-rule="evenodd" clip-rule="evenodd" d="M19.4714 16.4717C19.7318 16.2114 19.7318 15.7893 19.4714 15.5289L13.4714 9.52892C13.2111 9.26857 12.789 9.26857 12.5286 9.52892C12.2683 9.78927 12.2683 10.2114 12.5286 10.4717L18.0572 16.0003L12.5286 21.5289C12.2683 21.7893 12.2683 22.2114 12.5286 22.4717C12.789 22.7321 13.2111 22.7321 13.4714 22.4717L19.4714 16.4717Z" fill="#333333"></path></svg>';
+            return button;
+        }
+
+        function updateScrollButtons(root) {
+            if (!root) return;
+
+            const rail = root.querySelector(".optimus-rec__rail");
+            const prevButton = root.querySelector(".optimus-rec__scroll-btn--prev");
+            const nextButton = root.querySelector(".optimus-rec__scroll-btn--next");
+
+            if (!rail || !prevButton || !nextButton) return;
+
+            const maxScrollLeft = rail.scrollWidth - rail.clientWidth;
+            const hasOverflow = maxScrollLeft > SCROLL_EDGE_TOLERANCE;
+            const canScrollPrev = hasOverflow && rail.scrollLeft > SCROLL_EDGE_TOLERANCE;
+            const canScrollNext = hasOverflow && rail.scrollLeft < maxScrollLeft - SCROLL_EDGE_TOLERANCE;
+
+            prevButton.style.display = canScrollPrev ? "flex" : "none";
+            nextButton.style.display = canScrollNext ? "flex" : "none";
+            prevButton.disabled = !canScrollPrev;
+            nextButton.disabled = !canScrollNext;
+        }
+
+        function scrollRail(rail, direction) {
+            rail.scrollBy({
+                left: direction * rail.clientWidth,
+                behavior: "smooth"
+            });
+        }
+
+        function createPriceElement(priceDisplay) {
+            const price = document.createElement("div");
+            price.className = "optimus-rec__price";
+
+            if (priceDisplay.above) {
+                price.appendChild(createTextElement("div", "optimus-rec__price-strike", priceDisplay.above));
+            }
+
+            const row = document.createElement("div");
+            row.className = "optimus-rec__price-row";
+            row.appendChild(createTextElement(
+                "span",
+                "optimus-rec__price-main" +
+                (priceDisplay.mainIsSale ? " optimus-rec__price-main--sale" : "") +
+                (priceDisplay.isPriceInCart ? " optimus-rec__price-main--in-cart" : ""),
+                priceDisplay.main
+            ));
+
+            if (priceDisplay.hasInfo) {
+                const info = document.createElement("span");
+                info.className = "optimus-rec__price-info";
+                info.setAttribute("tabindex", "0");
+                info.setAttribute("aria-label", "The manufacturer asked us not to share the price until it's in your cart. It's just too good of a deal.");
+                info.innerHTML = '<svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none"><g stroke="currentColor" stroke-linecap="round" clip-rule="evenodd"><circle cx="6" cy="6" r="5.4" stroke-width="1.2"></circle><circle cx="6" cy="3.5" r="0.25"></circle><path d="M6 5.5l0 3" stroke-width="1.3"></path></g></svg>';
+
+                const tooltip = createTextElement(
+                    "span",
+                    "optimus-rec__price-info-tooltip",
+                    "The manufacturer asked us not to share the price until it's in your cart. It's just too good of a deal."
+                );
+
+                info.appendChild(tooltip);
+                row.appendChild(info);
+            }
+
+            if (priceDisplay.right) {
+                row.appendChild(createTextElement("span", "optimus-rec__price-strike", priceDisplay.right));
+            }
+
+            price.appendChild(row);
+            return price;
+        }
+
+        function createBadgeElement(badge) {
+            if (!badge) return null;
+
+            const element = createTextElement("span", "optimus-rec__badge optimus-rec__badge--" + badge.type, badge.label);
+
+            if (badge.type === "clearance") {
+                element.textContent = "";
+
+                const icon = document.createElement("span");
+                icon.className = "optimus-rec__badge-icon";
+                icon.setAttribute("aria-hidden", "true");
+                icon.innerHTML = '<svg width="9" height="9" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 2.5V7.2L8.8 14.5L14.5 8.8L7.2 1.5H2.5C1.95 1.5 1.5 1.95 1.5 2.5Z" fill="#333333"></path><circle cx="5" cy="5" r="1.2" fill="#ffd600"></circle></svg>';
+
+                element.appendChild(icon);
+                element.appendChild(document.createTextNode(badge.label));
+            }
+
+            return element;
+        }
+
+        function applyProductDataAttributes(element, product) {
+            element.setAttribute("data-childsku", product.childSku);
+            element.setAttribute("data-parentsku", product.parentSku);
+            element.setAttribute("data-productid", product.productId);
+        }
+
+        function launchQuickView(event, product) {
+            const parent_sku = product.parentSku;
+            const child_sku = product.childSku;
+
+            if (!parent_sku || !child_sku) {
+                debugLog("Quick View SKU attributes are missing.", product);
+                return;
+            }
+
+            if (typeof window.launchASOQuickView !== "function") {
+                debugLog("window.launchASOQuickView is not available. Falling back to PDP link.");
+                return;
+            }
+
+            event.preventDefault();
+
+            debugLog("Launching Quick View", {
+                parent_sku: parent_sku,
+                child_sku: child_sku
+            });
+
+            try {
+                window.launchASOQuickView({
+                    item: {
+                        other_client_item_ids: {
+                            identifiers: {
+                                parent_sku: parent_sku,
+                                sku: child_sku,
+                                skus: [child_sku],
+                            }
+                        },
+                        sku: child_sku,
+                        skus: [child_sku],
+                    }
+                });
+            } catch (error) {
+                debugLog("Quick View launch failed. Falling back to PDP link.", error);
+                window.location.href = product.url;
+            }
+        }
+
+        function createProductCard(product) {
+            const item = document.createElement("div");
+            item.className = "optimus-rec__item";
+            applyProductDataAttributes(item, product);
+
+            const card = document.createElement("article");
+            card.className = "optimus-rec__card";
+
+            const productLink = document.createElement("a");
+            productLink.className = "optimus-rec__link";
+            productLink.href = product.url;
+            productLink.rel = "nofollow";
+            applyProductDataAttributes(productLink, product);
+
+            const imageWrap = document.createElement("div");
+            imageWrap.className = "optimus-rec__image-wrap";
+
+            const badge = createBadgeElement(product.badge);
+
+            const image = document.createElement("img");
+            image.className = "optimus-rec__image";
+            image.src = product.image;
+            image.alt = product.childSku ? product.childSku + " - " + product.title : product.title;
+            image.loading = "lazy";
+
+            const rating = document.createElement("div");
+            rating.className = "optimus-rec__rating";
+
+            if (product.rating) {
+                const star = createTextElement("span", "optimus-rec__star", "★");
+                star.setAttribute("aria-hidden", "true");
+                rating.appendChild(star);
+                rating.appendChild(createTextElement("span", "optimus-rec__rating-text", product.rating));
+
+                if (product.reviewCount) {
+                    rating.appendChild(createTextElement("span", "optimus-rec__rating-count", "(" + product.reviewCount + ")"));
+                }
+            }
+
+            const title = createTextElement("div", "optimus-rec__title", product.title);
+            const price = createPriceElement(product.priceDisplay);
+
+            if (badge) {
+                imageWrap.appendChild(badge);
+            }
+            imageWrap.appendChild(image);
+            productLink.appendChild(imageWrap);
+            productLink.appendChild(rating);
+            productLink.appendChild(title);
+            productLink.appendChild(price);
+
+            const button = document.createElement("a");
+            button.className = "optimus-rec__button";
+            button.href = product.url;
+            button.rel = "nofollow";
+            button.textContent = "Add To Cart";
+            applyProductDataAttributes(button, product);
+            button.addEventListener("click", function (event) {
+                launchQuickView(event, product);
+            });
+
+            card.appendChild(productLink);
+            card.appendChild(button);
+            item.appendChild(card);
+
+            return item;
+        }
+
+        function renderComponent(root, products, sku) {
+            root.textContent = "";
+            root.id = ROOT_ID;
+            root.className = "optimus-rec";
+            root.setAttribute(ROOT_ATTR, "true");
+            root.setAttribute("data-optimus-rec-sku", sku);
+
+            const heading = createTextElement("h2", "optimus-rec__heading", HEADER_TEXT);
+            const railWrap = document.createElement("div");
+            railWrap.className = "optimus-rec__rail-wrap";
+            const prevButton = createScrollButton("prev");
+            const nextButton = createScrollButton("next");
+            const rail = document.createElement("div");
+            rail.className = "optimus-rec__rail";
+
+            products.forEach(function (product) {
+                rail.appendChild(createProductCard(product));
+            });
+
+            prevButton.addEventListener("click", function () {
+                scrollRail(rail, -1);
+            });
+
+            nextButton.addEventListener("click", function () {
+                scrollRail(rail, 1);
+            });
+
+            rail.addEventListener("scroll", function () {
+                updateScrollButtons(root);
+            });
+
+            railWrap.appendChild(prevButton);
+            railWrap.appendChild(rail);
+            railWrap.appendChild(nextButton);
+            root.appendChild(heading);
+            root.appendChild(railWrap);
+            state.lastRenderedSku = sku;
+
+            window.requestAnimationFrame(function () {
+                updateScrollButtons(root);
+            });
+        }
+
+        function ensurePlacement() {
+            if (isUpdating) return;
+
+            const sku = getSku();
+            const target = getTarget();
+
+            if (target) {
+                removeOtherRecommendations(target);
+            }
+
+            if (!sku) {
+                debugLog("Missing SKU. window.ASOData.pageInfo.itemId is not available yet.");
+                removeComponent();
+                return;
+            }
+
+            if (!target) {
+                debugLog("Missing PDP target. Selector not found: " + TARGET_SELECTOR);
+                return;
+            }
+
+            if (state.sku !== sku) {
+                fetchRecommendations(sku);
+                return;
+            }
+
+            if (!state.products.length) {
+                debugLog("No valid products available to render for SKU: " + sku);
+                removeComponent();
+                return;
+            }
+
+            isUpdating = true;
+
+            const roots = Array.from(document.querySelectorAll("[" + ROOT_ATTR + '="true"]'));
+            const root = roots[0] || document.createElement("section");
+
+            roots.slice(1).forEach(function (duplicate) {
+                duplicate.remove();
+            });
+
+            if (state.lastRenderedSku !== sku || root.getAttribute("data-optimus-rec-sku") !== sku) {
+                renderComponent(root, state.products, sku);
+            }
+
+            if (target.lastElementChild !== root) {
+                target.appendChild(root);
+            }
+
+            const rail = root.querySelector(".optimus-rec__rail");
+            if (rail && "ResizeObserver" in window) {
+                if (window[RAIL_RESIZE_OBSERVER_KEY]) {
+                    window[RAIL_RESIZE_OBSERVER_KEY].disconnect();
+                }
+
+                window[RAIL_RESIZE_OBSERVER_KEY] = new ResizeObserver(function () {
+                    updateScrollButtons(root);
+                });
+                window[RAIL_RESIZE_OBSERVER_KEY].observe(rail);
+            }
+
+            updateScrollButtons(root);
+
+            isUpdating = false;
+        }
+
+        function fetchRecommendations(sku) {
+            if (state.isFetching && state.sku === sku) return;
+
+            state.sku = sku;
+            state.products = [];
+            state.isFetching = true;
+            state.lastRenderedSku = "";
+            removeComponent();
+
+            debugLog("Fetching recommendations", API_ORIGIN + API_PATH + encodeURIComponent(sku));
+
+            fetch(API_ORIGIN + API_PATH + encodeURIComponent(sku), {
+                method: "GET",
+                credentials: "same-origin"
+            }).then(function (response) {
+                if (!response.ok) throw new Error("Optimus recommendation request failed");
+                return response.json();
+            }).then(function (data) {
+                if (state.sku !== sku) return;
+                state.products = normalizeProducts(data);
+                state.isFetching = false;
+                debugLog("Recommendation response received", {
+                    rawCount: data && Array.isArray(data.cabSKUs) ? data.cabSKUs.length : 0,
+                    validCount: state.products.length
+                });
+                ensurePlacement();
+            }).catch(function (error) {
+                if (state.sku !== sku) return;
+                debugLog("Recommendation request failed. Check CORS/network/API response.", error);
+                state.products = [];
+                state.isFetching = false;
+                removeComponent();
+            });
+        }
+
+        function isOptimusMutation(mutation) {
+            const target = mutation.target;
+            if (target && target.nodeType === 1 && target.closest && target.closest("#" + ROOT_ID)) {
+                return true;
+            }
+
+            return Array.from(mutation.addedNodes).concat(Array.from(mutation.removedNodes)).some(function (node) {
+                if (!node || node.nodeType !== 1) return false;
+                return node.id === ROOT_ID || Boolean(node.querySelector && node.querySelector("#" + ROOT_ID));
+            });
+        }
+
+        function schedulePlacementCheck(mutations) {
+            if (isUpdating) return;
+            if (mutations && mutations.length && mutations.every(isOptimusMutation)) return;
+
+            window.clearTimeout(debounceTimer);
+            debounceTimer = window.setTimeout(ensurePlacement, DEBOUNCE_MS);
+        }
+
+        function init() {
+            ensurePlacement();
+
+            if (window[OBSERVER_KEY]) {
+                window[OBSERVER_KEY].disconnect();
+            }
+
+            if (document.body && "MutationObserver" in window) {
+                const observer = new MutationObserver(schedulePlacementCheck);
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+                window[OBSERVER_KEY] = observer;
+            }
+
+            window.setTimeout(ensurePlacement, 1000);
+            window.setTimeout(ensurePlacement, 3000);
+            window.setTimeout(ensurePlacement, 6000);
+            window.setTimeout(ensurePlacement, 10000);
+            if (window[RESIZE_HANDLER_KEY]) {
+                window.removeEventListener("resize", window[RESIZE_HANDLER_KEY]);
+            }
+
+            window[RESIZE_HANDLER_KEY] = function () {
+                updateScrollButtons(document.getElementById(ROOT_ID));
+            };
+
+            window.addEventListener("resize", window[RESIZE_HANDLER_KEY]);
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init, { once: true });
+        } else {
+            init();
+        }
+    })();
+</script>

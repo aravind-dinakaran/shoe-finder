@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Fish</title>
+</head>
+
+<body>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Font Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=11">
+
+    <!-- Global Imports -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=140">
+
+    <!-- Module Imports -->
+    <!-- Ticker -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=15">
+
+    <!-- Featured Categories -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=113">
+
+    <!-- Banner with featured categories -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=13">
+
+    <!-- Scrollable cards -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=18">
+
+    <!-- Hero Banner -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=17">
+
+    <!-- New and Upcoming Component -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=113">
+
+    <!-- Holiday Season (Green) Component -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=15">
+
+    <!-- Evergreen ACC -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=12">
+
+    <!-- Trending / Keep Shopping Banner -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=15">
+
+    <!-- Promo Banner -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=11">
+
+    <!-- Evergreen - Customers are Shopping - Featured Categories -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=16">
+
+    <!-- New Scrollable Cards -->
+    <link rel="stylesheet"
+        href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=12">
+
+
+    <!-- Let's Fish -->
+    <style>
+        #lets-fish {
+            --text-card-title: clamp(16px, 1.69vw, 28px);
+            --text-card-kicker: clamp(12px, 1.33vw, 22px);
+            --text-card-disclaimer: clamp(14px, 1.33vw, 22px);
+            --text-card-cta: clamp(14px, 1.33vw, 22px);
+        }
+
+        #lets-fish .text-card-title {
+            font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+        }
+
+        #lets-fish .text-card-kicker {
+            font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+        }
+
+        #lets-fish .text-card-disclaimer {
+            font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+        }
+
+        #lets-fish .text-card-cta {
+            font-family: "Roboto Flex";
+            font-weight: 600;
+            font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+            text-decoration: underline;
+        }
+
+        #lets-fish .headline-svg {
+            height: clamp(36px, 2.5vw, 53px);
+        }
+
+        .ocd-card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .grid-card-wide {
+            grid-column: 1 / -1;
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        .svg-lets-fish {
+            width: clamp(142px, 19.20vw, 318px);
+        }
+
+        @media (max-width: 767px) {
+            .ocd-card-grid {
+                gap: 1rem;
+            }
+
+            .svg-lets-fish {
+                width: clamp(142px, 37.87vw, 767px);
+            }
+
+            #lets-fish {
+                --text-card-title: clamp(10px, 4.26vw, 28px);
+                --text-card-kicker: clamp(6px, 3.2vw, 22px);
+                --text-card-disclaimer: clamp(8px, 3.2vw, 22px);
+                --text-card-cta: clamp(8px, 3.2vw, 22px);
+            }
+
+            #lets-fish .text-card-title {
+                font-size: var(--text-card-title, clamp(10px, 4.26vw, 28px));
+            }
+
+            #lets-fish .text-card-kicker {
+                font-size: var(--text-card-kicker, clamp(6px, 3.2vw, 22px));
+            }
+
+            #lets-fish .text-card-disclaimer {
+                font-size: var(--text-card-disclaimer, clamp(8px, 3.2vw, 22px));
+            }
+
+            #lets-fish .text-card-cta {
+                font-size: var(--text-card-cta, clamp(8px, 3.2vw, 22px));
+                text-decoration: underline;
+            }
+        }
+    </style>
+    <div id="lets-fish" class="cont-1656 hp-margin mb-3">
+        <div class="text-center mb-4 pt-3">
+            <svg class="svg-lets-fish" viewBox="0 0 319 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M18.357 69.7047C16.0334 70.6063 13.5035 71.1989 10.7148 71.3939C6.36318 71.6982 4.0844 69.7173 3.92368 67.4189C3.75118 64.952 6.11687 62.2306 10.9588 61.892C12.7669 61.7656 14.5208 61.9663 16.2723 62.3519C18.9579 59.3618 20.7347 55.2649 22.609 50.3607C14.5202 49.1864 10.9701 43.3372 10.5683 37.5912C10.1258 31.263 13.5628 24.9253 18.9004 24.629C19.7278 24.5711 20.0957 25.2075 19.7388 26.0485C18.4864 29.2772 17.9531 32.4402 18.1545 35.3208C18.4706 39.841 20.7054 43.3955 24.7355 44.4379C30.8189 28.384 40.7428 8.45861 53.8742 7.54037C59.0532 7.17821 61.5584 9.97475 61.8509 14.1578C62.5463 24.1022 51.4559 42.5386 35.7877 48.5769C33.1152 55.2769 29.9821 61.1161 25.4814 65.234C30.036 66.7324 35.0846 68.0269 41.2442 67.5962C43.7878 67.4183 45.393 66.8133 47.3118 65.8477C48.1167 65.4681 48.689 65.505 48.7233 65.9953C48.5372 70.3812 44.9958 76.326 37.2732 76.866C28.8151 77.4574 23.4237 73.4615 18.3713 69.6883L18.357 69.7047ZM56.5846 14.3721C56.4699 12.7326 55.818 11.7773 54.5156 11.8684C49.9188 12.1898 44.1016 25.8847 38.3513 41.6381C50.1056 35.1191 57.0035 20.3632 56.5835 14.3568L56.5846 14.3721Z"
+                    fill="#1946C8" />
+                <path
+                    d="M53.5497 58.1589C52.7976 47.4024 62.5318 32.0325 76.6593 31.0446C83.2327 30.585 86.8276 33.5517 87.1147 37.6581C87.5626 44.063 80.1268 53.3287 65.4616 56.0941L65.513 56.8296C65.7712 60.5223 67.7636 63.0314 72.437 62.7046C80.7265 62.1249 88.2807 55.6533 91.9776 45.9869C92.7552 44.1156 96.3067 45.3608 95.5399 47.3853C90.5634 60.1129 80.2478 68.2712 67.9285 69.1327C58.3978 69.7991 54.0158 64.8242 53.5508 58.1742L53.5497 58.1589ZM80.1555 38.5451C80.0065 36.4152 78.5372 35.4402 76.8977 35.5548C72.4694 35.8645 67.8529 44.271 66.0549 51.5873C77.2672 48.9864 80.4065 41.915 80.1708 38.544L80.1555 38.5451Z"
+                    fill="#1946C8" />
+                <path
+                    d="M87.4157 58.6859C87.2142 55.8052 87.8772 52.2944 89.4747 48.0562L90.247 46.1083L94.3592 35.335L91.1568 35.559C90.3294 35.6168 89.9669 35.0571 90.2373 34.2991L90.9977 32.1826C91.1968 31.5066 91.6753 31.3038 92.3342 31.2577L96.0269 30.9995L100.835 18.2837C101.039 17.6843 101.507 17.3282 102.084 17.2109L112.661 14.9931C113.553 14.7614 114.078 15.2174 113.727 16.1504L108.346 30.138L114.506 29.7073C115.333 29.6494 115.766 30.1119 115.502 30.9618L114.742 33.0783C114.543 33.7543 114.064 33.9571 113.405 34.0032L106.663 34.4746L101.072 48.9851C100.096 51.5324 99.7425 53.528 99.8518 55.0909C100.018 57.4659 101.325 58.5447 103.133 58.4182C106.504 58.1825 111.958 53.5977 115.606 44.335C116.383 42.4637 119.935 43.7089 119.168 45.7335C114.639 57.5983 105.241 66.1082 96.952 66.6878C91.6197 67.0607 87.7968 64.3563 87.4004 58.6869L87.4157 58.6859Z"
+                    fill="#1946C8" />
+                <path
+                    d="M120.005 27.7676L119.643 27.2079C119.28 26.6481 119.317 26.0758 119.855 25.6225C122.501 23.3742 125.251 20.2102 126.789 16.2225C123.908 16.4239 121.897 14.7476 121.714 12.1275C121.467 8.58793 124.596 4.90463 128.121 4.6582C131.645 4.41176 133.28 6.43767 133.487 9.39493C133.854 14.6506 129.711 22.7776 121.581 28.0578C120.944 28.4256 120.367 28.3121 119.989 27.7534L120.005 27.7676Z"
+                    fill="#1946C8" />
+                <path
+                    d="M119.458 52.9654C119.096 47.7864 121.469 42.7548 125.297 41.9944C128.448 35.0916 134.398 28.1469 145.564 24.8871C146.211 24.6725 146.714 24.8067 147.076 25.3665L149.173 28.2686C149.452 28.7418 149.65 29.1437 149.598 29.7171C149.471 33.8524 150.003 36.6176 150.707 39.6325C151.194 41.985 151.71 44.5203 151.934 47.7227C152.119 50.3582 151.859 52.5936 151.18 54.5504C156.135 50.9858 159.016 46.1651 160.975 41.1471C161.676 39.2812 165.304 40.521 164.537 42.5455C159.367 56.0257 148.452 63.9796 135.397 64.8925C124.395 65.6618 119.894 59.2017 119.458 52.9654ZM140.565 49.1798C140.427 47.2032 139.956 45.0959 139.47 42.9896C138.71 39.1626 137.852 35.2654 138.694 31.896C134.432 34.5807 131.445 38.1001 129.298 42.6231C130.761 43.5062 131.535 45.115 131.65 46.7545C131.903 50.3707 129.525 52.9235 125.419 53.2107C125.748 56.8214 128.117 59.8739 132.637 59.5578C138.721 59.1324 140.914 53.9441 140.58 49.1787L140.565 49.1798Z"
+                    fill="#1946C8" />
+                <path
+                    d="M186.507 12.7903H215.867V24.6303H199.387V34.7103H211.707V46.2303H199.387V66.0703H186.507V12.7903ZM220.791 12.7903H233.831V66.0703H220.791V12.7903ZM256.606 11.6703C268.366 11.6703 273.326 18.0703 273.326 26.8703V29.9103H261.246V27.1103C261.246 24.1503 259.886 22.1503 256.686 22.1503C253.566 22.1503 252.126 23.9103 252.126 26.1503C252.126 29.0303 253.966 30.7103 261.166 34.4703C269.966 39.1103 273.726 42.9503 273.726 51.3503C273.726 61.0303 267.806 67.1903 256.046 67.1903C243.566 67.1903 238.926 60.6303 238.926 51.9903V48.2303H251.246V50.7903C251.246 54.3103 252.526 56.7103 256.126 56.7103C259.486 56.7103 261.006 54.8703 261.006 52.3103C261.006 49.1903 259.246 47.7503 251.886 43.8303C243.166 39.1903 239.406 34.8703 239.406 27.0303C239.406 18.4703 245.246 11.6703 256.606 11.6703ZM278.404 12.7903H291.444V33.1103H301.364V12.7903H314.404V66.0703H301.364V44.9503H291.444V66.0703H278.404V12.7903Z"
+                    fill="#1946C8" />
+            </svg>
+        </div>
+
+        <div class="ocd-card-grid">
+            <!-- Top (wide): Fishing Hero -->
+            <a href="https://www.academy.com/c/outdoors/fishing" class="position-relative hp-hover grid-card-wide"
+                data-omni="fish_out_newfishinggear" aria-label="Shop new fishing gear.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-title color-dark-blue">New Gear to Get You<br>on the Water</div>
+                    <div class="text-card-cta color-dark-blue">Shop Fishing</div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blted7ed2eea2f79b82/6978f680e514c76f5369b9d4/letsfish_banner_newgear.png?auto=webp&format=pjpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb99be8b2b49c330/6978f680da79061643721a55/letsfish_banner_newgear-m.png?auto=webp&format=pjpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb99be8b2b49c330/6978f680da79061643721a55/letsfish_banner_newgear-m.png?auto=webp&format=pjpg"
+                        alt="Father and son fishing fishing on a lake in a boat, wearing life vests and netting a big fish."
+                        class="img-fluid corners">
+                </picture>
+            </a>
+
+            <!-- Bottom-left: Shimano -->
+            <a href="https://www.academy.com/c/outdoors/fishing" class="position-relative hp-hover"
+                data-omni="fish_out_reelsbuiltforanglers"
+                aria-label="Explore fishing reels and more fishing gear built for anglers.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-title color-dark-blue">Built for Anglers</div>
+                    <div class="text-card-cta color-dark-blue">Shop Fishing Gear</div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7eb127bd9a9a2059/6978f680ce74ee5661809705/letsfish_builtforanglers.png?auto=webp&format=pjpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt6fd31bbcb03a776e/6978f680efa0524499d27b2c/letsfish_builtforanglers-m.png?auto=webp&format=pjpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt6fd31bbcb03a776e/6978f680efa0524499d27b2c/letsfish_builtforanglers-m.png?auto=webp&format=pjpg"
+                        alt="Close-up of a Shimano Nasci fishing reel resting on a wooden dock, photographed in natural outdoor light."
+                        class="img-fluid corners">
+                </picture>
+            </a>
+
+            <!-- Bottom-right: Columbia PFG -->
+            <a href="https://www.academy.com/c/brands/columbia/columbia-pfg" class="position-relative hp-hover"
+                data-omni="fish_app_pfggear" aria-label="Shop Columbia Fishing PFG Gear.">
+                <div class="card-overlay" aria-hidden="true"></div>
+                <div class="position-absolute top-0 left-0 padding-header">
+                    <div class="text-card-title color-dark-blue">Comfort to Keep You Casting</div>
+                    <div class="text-card-cta color-dark-blue">Shop PFG Clothing</div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4315ddaec4c8a9a5/69803e3769244c40d48dcd87/letsfish_PFGgear_(1).png?auto=webp&format=pjpg">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte782c182e8d38d8c/6978f680e4b27aa2e037c60a/letsfish_PFGgear-m.png?auto=webp&format=pjpg">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blte782c182e8d38d8c/6978f680e4b27aa2e037c60a/letsfish_PFGgear-m.png?auto=webp&format=pjpg"
+                        alt="Person kayaking on a calm body of water while fishing, wearing outdoor gear and a life vest, with another kayaker in the background. Columbia logo in the corner."
+                        class="img-fluid corners">
+                </picture>
+            </a>
+        </div>
+    </div>
+    <!-- Let's Fish -->
+
+</body>
+
+</html>

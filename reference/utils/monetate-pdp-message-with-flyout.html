@@ -1,0 +1,714 @@
+<style id="pdp-suppressor-flyout-message-monetate-styles">
+    /* Scoped PDP message styles. The root ID keeps Monetate styles from leaking into the React PDP. */
+    #pdp-suppressor-flyout-message-monetate {
+        box-sizing: border-box;
+        margin: 16px 0;
+        width: 100%;
+    }
+
+    #pdp-suppressor-flyout-message-monetate *,
+    #pdp-suppressor-flyout-message-monetate *::before,
+    #pdp-suppressor-flyout-message-monetate *::after,
+    #pdp-suppressor-how-to-buy-backdrop-monetate,
+    #pdp-suppressor-how-to-buy-flyout-monetate,
+    #pdp-suppressor-how-to-buy-flyout-monetate *,
+    #pdp-suppressor-how-to-buy-flyout-monetate *::before,
+    #pdp-suppressor-how-to-buy-flyout-monetate *::after {
+        box-sizing: border-box;
+    }
+
+    #pdp-suppressor-flyout-message-monetate .pdp-suppressor-message {
+        align-items: flex-start;
+        background-color: #ffffff;
+        border: 1px solid #0749aa;
+        border-left-width: 5px;
+        border-radius: 4px;
+        color: #333333;
+        display: flex;
+        font-family: "Open Sans", Arial, sans-serif;
+        gap: 8px;
+        padding: 8px 12px;
+        width: 100%;
+    }
+
+    #pdp-suppressor-flyout-message-monetate .pdp-suppressor-message__icon,
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__message-icon {
+        color: #0749aa;
+        flex: 0 0 16px;
+        height: 16px;
+        margin-top: 0;
+        width: 16px;
+    }
+
+    #pdp-suppressor-flyout-message-monetate .pdp-suppressor-message__content,
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__message-content {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    #pdp-suppressor-flyout-message-monetate .pdp-suppressor-message__copy,
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__message-copy {
+        color: #333333;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.2;
+        margin: 0;
+        overflow-wrap: anywhere;
+    }
+
+    #pdp-suppressor-flyout-message-monetate .pdp-suppressor-message__link,
+    #pdp-suppressor-flyout-message-monetate .pdp-suppressor-message__button,
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__message-link {
+        background: none;
+        border: 0;
+        color: #1946c8;
+        cursor: pointer;
+        display: inline;
+        font: inherit;
+        font-weight: 600;
+        line-height: 1.2;
+        padding: 0;
+        text-decoration: underline;
+    }
+
+    #pdp-suppressor-flyout-message-monetate .pdp-suppressor-message__button {
+        vertical-align: baseline;
+    }
+
+    #pdp-suppressor-how-to-buy-backdrop-monetate {
+        background-color: rgba(0, 0, 0, 0.35);
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transition: opacity 180ms ease;
+        visibility: hidden;
+        z-index: 2147483645;
+    }
+
+    #pdp-suppressor-how-to-buy-backdrop-monetate.is-open {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate {
+        background-color: #ffffff;
+        bottom: 0;
+        box-shadow: -4px 0 16px rgba(0, 0, 0, 0.2);
+        color: #333333;
+        font-family: "Open Sans", Arial, sans-serif;
+        max-width: 100vw;
+        overflow-y: auto;
+        pointer-events: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: transform 220ms ease, visibility 0s linear 220ms;
+        visibility: hidden;
+        width: 400px;
+        z-index: 2147483646;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate.is-open {
+        pointer-events: auto;
+        transform: translateX(0);
+        transition: transform 220ms ease;
+        visibility: visible;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__header {
+        align-items: center;
+        background-color: #1946c8;
+        color: #ffffff;
+        display: flex;
+        height: 50px;
+        justify-content: space-between;
+        padding: 0 16px;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__title {
+        color: #ffffff;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.2;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__close {
+        align-items: center;
+        background: none;
+        border: 0;
+        color: #ffffff;
+        cursor: pointer;
+        display: flex;
+        height: 32px;
+        justify-content: center;
+        padding: 0;
+        width: 32px;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__close svg {
+        display: block;
+        height: 14px;
+        width: 14px;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__body {
+        padding: 18px 12px 32px 18px;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__steps {
+        color: #333333;
+        font-family: "Open Sans", Arial, sans-serif;
+        font-size: clamp(12px, 1.9vw, 14px);
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0 0 20px;
+        padding-left: 12px;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__steps li {
+        margin-bottom: 8px;
+        padding-left: 0;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__steps li:last-child {
+        margin-bottom: 0;
+    }
+
+    #pdp-suppressor-how-to-buy-flyout-monetate .pdp-suppressor-flyout__message {
+        align-items: flex-start;
+        background-color: #ffffff;
+        border: 1px solid #0749aa;
+        border-left-width: 5px;
+        border-radius: 4px;
+        display: flex;
+        gap: 8px;
+        padding: 8px 12px;
+        width: 100%;
+    }
+
+    @media (max-width: 399px) {
+        #pdp-suppressor-how-to-buy-flyout-monetate {
+            width: 100vw;
+        }
+    }
+</style>
+
+<script>
+    (function pdpSuppressorFlyoutMessageMonetate() {
+        /*
+         * Flow:
+         * 1. Always hide non-kiosk fulfillment options and keep the In Store Only option selected.
+         * 2. Separately check whether the selected store is eligible for the message.
+         * 3. If eligible, insert or move the message directly above .bottomContent--eCxW2.
+         * 4. If ineligible, remove any message/flyout previously inserted by this action.
+         * 5. Re-run the same placement check when React re-renders or store data changes.
+         */
+        const MESSAGE_ID = "pdp-suppressor-flyout-message-monetate";
+        const FLYOUT_ID = "pdp-suppressor-how-to-buy-flyout-monetate";
+        const BACKDROP_ID = "pdp-suppressor-how-to-buy-backdrop-monetate";
+        const TARGET_SELECTOR = ".bottomContent--eCxW2";
+        const INSERTED_ATTR = "data-monetate-pdp-suppressor-message";
+        const INSERTED_VAL = "flyout";
+        const FULFILLMENT_WRAPPER_SELECTOR = ".wrapper--VuqBA";
+        const FULFILLMENT_BUTTON_SELECTOR = ".optBtn";
+        const FULFILLMENT_LABELS_TO_HIDE = new Set(["shipping", "next day delivery", "same day delivery"]);
+        const IN_STORE_ONLY_LABEL = "in store only";
+        const OUT_OF_STOCK_LABEL = "out of stock";
+        const VISIT_STORE_TO_PURCHASE_LABEL = "Visit Store to Purchase";
+        const VISIT_STORE_TO_PURCHASE_COLOR = "#1946c8";
+        const PRODUCT_CTA_LABEL_SELECTOR = ".productCTAs--mtZuw [data-auid=\"PDP_DSK_AddToCart\"]";
+        const FULFILLMENT_SELECTED_CLASS = "selected";
+        const FULFILLMENT_CLICKED_ATTR = "data-monetate-pdp-suppressor-clicked";
+        const FULFILLMENT_LAST_CLICK_ATTR = "data-monetate-pdp-suppressor-last-click";
+        const FULFILLMENT_CLICK_ATTEMPTS_ATTR = "data-monetate-pdp-suppressor-click-attempts";
+        const FULFILLMENT_MAX_CLICK_ATTEMPTS = 3;
+        const OBSERVER_KEY = "pdpSuppressorFlyoutMessageObserverInstance";
+        const STORAGE_HANDLER_KEY = "pdpSuppressorFlyoutMessageStorageHandler";
+        const STORE_CHANGE_HANDLER_KEY = "pdpSuppressorFlyoutMessageStoreChangeHandler";
+        const CLICK_HANDLER_KEY = "pdpSuppressorFlyoutMessageClickHandler";
+        const KEYDOWN_HANDLER_KEY = "pdpSuppressorFlyoutMessageKeydownHandler";
+        const LOCAL_STORAGE_PATCH_KEY = "pdpSuppressorFlyoutMessageLocalStoragePatchApplied";
+        const STORE_CHANGE_EVENT = "pdpSuppressorFlyoutMessageStoreChange";
+        const STORE_TARGETING_ENABLED = false; // Set to false to bypass localStorage store targeting.
+        const LOCAL_STORAGE_KEY = "aso_WC_StLocId_Selected";
+        const TARGET_STORE_IDS = new Set(["22", "24", "39", "43", "45", "114", "239", "20", "36", "40", "42", "46", "47", "319", "33", "31", "123"]);
+        const DEBOUNCE_MS = 150;
+        const OPEN_CLASS = "is-open";
+        const BODY_PREV_OVERFLOW_ATTR = "data-pdp-suppressor-prev-overflow";
+
+        let isUpdating = false;
+        let debounceTimer;
+        let lastOpenTrigger;
+
+        /* Normalize localStorage values before comparing them with the store allowlist. */
+        function normalizeStoreId(value) {
+            return value == null ? "" : String(value).trim();
+        }
+
+        /* LocalStorage value is expected to be JSON with a storeId property. */
+        function getLocalStorageStoreId() {
+            try {
+                const rawValue = window.localStorage.getItem(LOCAL_STORAGE_KEY);
+                if (!rawValue) return "";
+                const parsedValue = JSON.parse(rawValue);
+                return normalizeStoreId(parsedValue && parsedValue.storeId);
+            } catch (error) {
+                return "";
+            }
+        }
+
+        /* The localStorage store ID must be in the allowlist to show the message. */
+        function isEligibleStore() {
+            return TARGET_STORE_IDS.has(getLocalStorageStoreId());
+        }
+
+        function shouldDisplayMessage() {
+            return !STORE_TARGETING_ENABLED || isEligibleStore();
+        }
+
+        function getNormalizedText(value) {
+            return String(value || "").trim().replace(/\s+/g, " ").toLowerCase();
+        }
+
+        /* Custom event used by the same-tab localStorage hooks below. */
+        function dispatchStoreChange() {
+            window.dispatchEvent(new Event(STORE_CHANGE_EVENT));
+        }
+
+        /*
+         * Native "storage" events do not fire in the same tab that calls localStorage.setItem().
+         * Wrap Storage methods so same-tab changes to the selected store key trigger the same placement check.
+         */
+        function installLocalStorageChangeDetection() {
+            if (window[LOCAL_STORAGE_PATCH_KEY]) return;
+
+            const originalSetItem = Storage.prototype.setItem;
+            const originalRemoveItem = Storage.prototype.removeItem;
+            const originalClear = Storage.prototype.clear;
+
+            Storage.prototype.setItem = function (key) {
+                const result = originalSetItem.apply(this, arguments);
+                if (this === window.localStorage && key === LOCAL_STORAGE_KEY) {
+                    dispatchStoreChange();
+                }
+                return result;
+            };
+
+            Storage.prototype.removeItem = function (key) {
+                const result = originalRemoveItem.apply(this, arguments);
+                if (this === window.localStorage && key === LOCAL_STORAGE_KEY) {
+                    dispatchStoreChange();
+                }
+                return result;
+            };
+
+            Storage.prototype.clear = function () {
+                const result = originalClear.apply(this, arguments);
+                if (this === window.localStorage) {
+                    dispatchStoreChange();
+                }
+                return result;
+            };
+
+            window[LOCAL_STORAGE_PATCH_KEY] = true;
+        }
+
+        /* Cross-tab localStorage changes still arrive through the browser's native storage event. */
+        function handleStorageChange(event) {
+            if (event.key && event.key !== LOCAL_STORAGE_KEY) return;
+            schedulePlacementCheck();
+        }
+
+        function getInfoIconSvg(className) {
+            return `
+                <svg class="${className}" aria-hidden="true" focusable="false" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="8" cy="8" r="7.25" fill="none" stroke="currentColor" stroke-width="1.5"></circle>
+                    <path d="M8 7.1v4.15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    <circle cx="8" cy="4.75" r="0.85" fill="currentColor"></circle>
+                </svg>
+            `;
+        }
+
+        /* Creates the Figma-matched info callout as plain HTML for Monetate injection. */
+        function createMessageElement() {
+            const wrapper = document.createElement("div");
+            wrapper.id = MESSAGE_ID;
+            wrapper.setAttribute(INSERTED_ATTR, INSERTED_VAL);
+            wrapper.innerHTML = `
+                <div class="pdp-suppressor-message" role="note" aria-label="Suppressor availability information">
+                    ${getInfoIconSvg("pdp-suppressor-message__icon")}
+                    <div class="pdp-suppressor-message__content">
+                        <p class="pdp-suppressor-message__copy">Suppressors are now available at select stores. <a class="pdp-suppressor-message__link" href="/suppressor-store-locator">Find a Store</a> We&rsquo;ve partnered with Silencer Shop to make purchasing a suppressor simple and secure. <button class="pdp-suppressor-message__button" type="button" data-pdp-suppressor-flyout-open aria-controls="${FLYOUT_ID}" aria-expanded="false">How to Buy a Suppressor</button></p>
+                    </div>
+                </div>
+            `;
+            return wrapper;
+        }
+
+        function createFlyoutElement() {
+            const fragment = document.createDocumentFragment();
+            const backdrop = document.createElement("div");
+            const flyout = document.createElement("aside");
+
+            backdrop.id = BACKDROP_ID;
+            backdrop.setAttribute(INSERTED_ATTR, INSERTED_VAL);
+            backdrop.setAttribute("data-pdp-suppressor-flyout-close", "true");
+
+            flyout.id = FLYOUT_ID;
+            flyout.setAttribute(INSERTED_ATTR, INSERTED_VAL);
+            flyout.setAttribute("aria-modal", "true");
+            flyout.setAttribute("aria-hidden", "true");
+            flyout.setAttribute("aria-labelledby", "pdp-suppressor-flyout-title");
+            flyout.setAttribute("role", "dialog");
+            flyout.innerHTML = `
+                <div class="pdp-suppressor-flyout__header">
+                    <h2 id="pdp-suppressor-flyout-title" class="pdp-suppressor-flyout__title">How to Buy a Suppressor</h2>
+                    <button class="pdp-suppressor-flyout__close" type="button" aria-label="Close How to Buy a Suppressor" data-pdp-suppressor-flyout-close>
+                        <svg aria-hidden="true" focusable="false" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1l12 12M13 1L1 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="pdp-suppressor-flyout__body">
+                    <ol class="pdp-suppressor-flyout__steps">
+                        <li>Choose a Suppressor at a participating Academy Sports + Outdoors location.</li>
+                        <li>Create Silencer Shop profile on the Silencer Shop Kiosk located in-store near the gun counter.</li>
+                        <li>Submit your fingerprints using the Kiosk.</li>
+                        <li>Submit a passport style photo using the Kiosk, your Cell Phone, or Firearm Counter Tablet.</li>
+                        <li>Select &ldquo;Individual&rdquo; or a &ldquo;Trust&rdquo; type to register your suppressor.</li>
+                        <li>Create your ATF eForms profile with the exact <strong>same name and email used for</strong> your Silencer Shop profile.</li>
+                        <li>Certify the National Firearm Act (NFA) Form 4 via the certified link sent by Silencer Shop.</li>
+                        <li>Wait for your Form 4 to be approved by the ATF. Approval wait time is in line with current ATF processing times.</li>
+                        <li>Return to the store once you have been notified of your Form 4 ATF approval.</li>
+                        <li>Complete the standard ATF Form 4473.</li>
+                        <li>Purchase the suppressor.</li>
+                    </ol>
+                    <div class="pdp-suppressor-flyout__message" role="note" aria-label="Suppressor store availability information">
+                        ${getInfoIconSvg("pdp-suppressor-flyout__message-icon")}
+                        <div class="pdp-suppressor-flyout__message-content">
+                            <p class="pdp-suppressor-flyout__message-copy">Suppressors are now available at select stores at Academy Sports + Outdoors. In store only. <a class="pdp-suppressor-flyout__message-link" href="/suppressor-store-locator">Find a Store</a></p>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            fragment.appendChild(backdrop);
+            fragment.appendChild(flyout);
+            document.body.appendChild(fragment);
+            return flyout;
+        }
+
+        function getTarget() {
+            return document.querySelector(TARGET_SELECTOR);
+        }
+
+        function getMessageElements() {
+            return Array.from(document.querySelectorAll(`#${MESSAGE_ID}`));
+        }
+
+        function getFlyout() {
+            return document.getElementById(FLYOUT_ID);
+        }
+
+        function getBackdrop() {
+            return document.getElementById(BACKDROP_ID);
+        }
+
+        function getOrCreateFlyout() {
+            return getFlyout() || createFlyoutElement();
+        }
+
+        function removeInsertedElements() {
+            closeFlyout({ restoreFocus: false });
+            getMessageElements().forEach((message) => {
+                message.remove();
+            });
+
+            const flyout = getFlyout();
+            const backdrop = getBackdrop();
+            if (flyout) flyout.remove();
+            if (backdrop) backdrop.remove();
+        }
+
+        /* Hide Shipping, Next Day Delivery, and Same Day Delivery option wrappers by descendant span text. */
+        function hideFulfillmentOptions() {
+            document.querySelectorAll(FULFILLMENT_WRAPPER_SELECTOR).forEach((wrapper) => {
+                const hasHiddenLabel = Array.from(wrapper.querySelectorAll("span")).some((span) => {
+                    return FULFILLMENT_LABELS_TO_HIDE.has(getNormalizedText(span.textContent));
+                });
+
+                if (hasHiddenLabel) {
+                    wrapper.style.display = "none";
+                    wrapper.setAttribute("aria-hidden", "true");
+                    wrapper.setAttribute("data-monetate-pdp-suppressor-hidden", "true");
+                }
+            });
+        }
+
+        function replaceOutOfStockLabels() {
+            document.querySelectorAll(FULFILLMENT_WRAPPER_SELECTOR).forEach((wrapper) => {
+                const spans = Array.from(wrapper.querySelectorAll("span"));
+                const hasInStoreOnlyLabel = spans.some((span) => {
+                    return getNormalizedText(span.textContent) === IN_STORE_ONLY_LABEL;
+                });
+
+                if (!hasInStoreOnlyLabel) return;
+
+                spans.forEach((span) => {
+                    if (getNormalizedText(span.textContent) !== OUT_OF_STOCK_LABEL) return;
+
+                    span.textContent = VISIT_STORE_TO_PURCHASE_LABEL;
+                    span.style.color = VISIT_STORE_TO_PURCHASE_COLOR;
+                });
+
+                wrapper.querySelectorAll("[aria-label]").forEach((element) => {
+                    const ariaLabel = element.getAttribute("aria-label");
+                    if (!ariaLabel) return;
+
+                    element.setAttribute("aria-label", ariaLabel.replace(/out of stock/gi, VISIT_STORE_TO_PURCHASE_LABEL));
+                });
+            });
+
+            document.querySelectorAll(PRODUCT_CTA_LABEL_SELECTOR).forEach((label) => {
+                if (getNormalizedText(label.textContent) === OUT_OF_STOCK_LABEL) {
+                    label.textContent = VISIT_STORE_TO_PURCHASE_LABEL;
+                }
+            });
+        }
+
+        function buttonHasInStoreOnlySibling(button) {
+            if (!button.parentElement) return false;
+
+            return Array.from(button.parentElement.children).some((sibling) => {
+                if (sibling === button) return false;
+
+                return Array.from(sibling.querySelectorAll("span")).some((span) => {
+                    return getNormalizedText(span.textContent) === IN_STORE_ONLY_LABEL;
+                });
+            });
+        }
+
+        function getInStoreOnlyFulfillmentButton() {
+            return Array.from(document.querySelectorAll(FULFILLMENT_BUTTON_SELECTOR)).find(buttonHasInStoreOnlySibling);
+        }
+
+        function isInStoreOnlyFulfillmentSelected(button) {
+            return Boolean(button && button.parentElement && button.parentElement.classList.contains(FULFILLMENT_SELECTED_CLASS));
+        }
+
+        /*
+         * Select the in-store fulfillment option, then keep verifying the selected state.
+         * React can re-render the fulfillment controls after an early click, so the
+         * MutationObserver re-runs this function and clicks again if the button's parent
+         * is not carrying the selected class.
+         */
+        function clickInStoreOnlyFulfillmentOption() {
+            const inStoreButton = getInStoreOnlyFulfillmentButton();
+            if (!inStoreButton || inStoreButton.disabled) return;
+
+            if (isInStoreOnlyFulfillmentSelected(inStoreButton)) {
+                inStoreButton.setAttribute(FULFILLMENT_CLICKED_ATTR, "true");
+                return;
+            }
+
+            const lastClickTime = Number(inStoreButton.getAttribute(FULFILLMENT_LAST_CLICK_ATTR) || 0);
+            const clickAttempts = Number(inStoreButton.getAttribute(FULFILLMENT_CLICK_ATTEMPTS_ATTR) || 0);
+            const now = Date.now();
+            if (clickAttempts >= FULFILLMENT_MAX_CLICK_ATTEMPTS || now - lastClickTime < DEBOUNCE_MS) return;
+
+            inStoreButton.setAttribute(FULFILLMENT_CLICKED_ATTR, "true");
+            inStoreButton.setAttribute(FULFILLMENT_LAST_CLICK_ATTR, String(now));
+            inStoreButton.setAttribute(FULFILLMENT_CLICK_ATTEMPTS_ATTR, String(clickAttempts + 1));
+            inStoreButton.click();
+            window.setTimeout(schedulePlacementCheck, DEBOUNCE_MS);
+        }
+
+        /* These fulfillment changes are intentionally not gated by store eligibility. */
+        function applyFulfillmentChanges() {
+            hideFulfillmentOptions();
+            clickInStoreOnlyFulfillmentOption();
+            replaceOutOfStockLabels();
+        }
+
+        /* Reuse an existing message when present and remove duplicates from repeated Monetate runs. */
+        function getOrCreateMessage() {
+            const messages = getMessageElements();
+            const primaryMessage = messages[0] || createMessageElement();
+
+            messages.slice(1).forEach((message) => {
+                message.remove();
+            });
+
+            return primaryMessage;
+        }
+
+        function setOpenButtonState(isOpen) {
+            document.querySelectorAll("[data-pdp-suppressor-flyout-open]").forEach((button) => {
+                button.setAttribute("aria-expanded", isOpen ? "true" : "false");
+            });
+        }
+
+        function openFlyout(trigger) {
+            const flyout = getOrCreateFlyout();
+            const backdrop = getBackdrop();
+            lastOpenTrigger = trigger || document.activeElement;
+
+            if (!document.body.hasAttribute(BODY_PREV_OVERFLOW_ATTR)) {
+                document.body.setAttribute(BODY_PREV_OVERFLOW_ATTR, document.body.style.overflow || "");
+            }
+
+            document.body.style.overflow = "hidden";
+            flyout.setAttribute("aria-hidden", "false");
+            flyout.classList.add(OPEN_CLASS);
+            if (backdrop) backdrop.classList.add(OPEN_CLASS);
+            setOpenButtonState(true);
+
+            const closeButton = flyout.querySelector("[data-pdp-suppressor-flyout-close]");
+            if (closeButton) closeButton.focus();
+        }
+
+        function closeFlyout(options) {
+            const shouldRestoreFocus = !options || options.restoreFocus !== false;
+            const flyout = getFlyout();
+            const backdrop = getBackdrop();
+            if (!flyout) {
+                restoreBodyOverflow(shouldRestoreFocus);
+                return;
+            }
+
+            flyout.setAttribute("aria-hidden", "true");
+            flyout.classList.remove(OPEN_CLASS);
+            if (backdrop) backdrop.classList.remove(OPEN_CLASS);
+            setOpenButtonState(false);
+
+            restoreBodyOverflow(shouldRestoreFocus);
+        }
+
+        function restoreBodyOverflow(shouldRestoreFocus) {
+            if (document.body.hasAttribute(BODY_PREV_OVERFLOW_ATTR)) {
+                document.body.style.overflow = document.body.getAttribute(BODY_PREV_OVERFLOW_ATTR) || "";
+                document.body.removeAttribute(BODY_PREV_OVERFLOW_ATTR);
+            }
+
+            if (shouldRestoreFocus && lastOpenTrigger && document.contains(lastOpenTrigger)) {
+                lastOpenTrigger.focus();
+            }
+            lastOpenTrigger = null;
+        }
+
+        function handleDocumentClick(event) {
+            const openTrigger = event.target.closest("[data-pdp-suppressor-flyout-open]");
+            if (openTrigger) {
+                event.preventDefault();
+                openFlyout(openTrigger);
+                return;
+            }
+
+            if (event.target.closest("[data-pdp-suppressor-flyout-close]")) {
+                event.preventDefault();
+                closeFlyout();
+            }
+        }
+
+        function handleDocumentKeydown(event) {
+            if (event.key === "Escape") {
+                closeFlyout();
+            }
+        }
+
+        /* Central routine: always apply fulfillment changes, then store-gate only the message. */
+        function ensureMessagePlacement() {
+            if (isUpdating) return;
+            isUpdating = true;
+
+            applyFulfillmentChanges();
+
+            if (!shouldDisplayMessage()) {
+                removeInsertedElements();
+                isUpdating = false;
+                return;
+            }
+
+            const target = getTarget();
+            if (!target || !target.parentNode) {
+                isUpdating = false;
+                return;
+            }
+
+            const message = getOrCreateMessage();
+            getOrCreateFlyout();
+            if (message.nextElementSibling !== target) {
+                target.parentNode.insertBefore(message, target);
+            }
+
+            isUpdating = false;
+        }
+
+        /* Debounce frequent React DOM mutations so placement checks stay cheap. */
+        function schedulePlacementCheck() {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(ensureMessagePlacement, DEBOUNCE_MS);
+        }
+
+        function init() {
+            ensureMessagePlacement();
+
+            /* Disconnect listeners from older executions before registering this run's handlers. */
+            if (window[OBSERVER_KEY]) {
+                window[OBSERVER_KEY].disconnect();
+            }
+
+            if (window[STORAGE_HANDLER_KEY]) {
+                window.removeEventListener("storage", window[STORAGE_HANDLER_KEY]);
+            }
+
+            if (window[STORE_CHANGE_HANDLER_KEY]) {
+                window.removeEventListener(STORE_CHANGE_EVENT, window[STORE_CHANGE_HANDLER_KEY]);
+            }
+
+            if (window[CLICK_HANDLER_KEY]) {
+                document.removeEventListener("click", window[CLICK_HANDLER_KEY]);
+            }
+
+            if (window[KEYDOWN_HANDLER_KEY]) {
+                document.removeEventListener("keydown", window[KEYDOWN_HANDLER_KEY]);
+            }
+
+            /* React can remove or move injected nodes during re-render, so observe the PDP subtree. */
+            const observer = new MutationObserver(schedulePlacementCheck);
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+
+            /* Install store-change detection once, then attach this action's event handlers. */
+            installLocalStorageChangeDetection();
+
+            window[OBSERVER_KEY] = observer;
+            window[STORAGE_HANDLER_KEY] = handleStorageChange;
+            window[STORE_CHANGE_HANDLER_KEY] = schedulePlacementCheck;
+            window[CLICK_HANDLER_KEY] = handleDocumentClick;
+            window[KEYDOWN_HANDLER_KEY] = handleDocumentKeydown;
+            window.addEventListener("storage", window[STORAGE_HANDLER_KEY]);
+            window.addEventListener(STORE_CHANGE_EVENT, window[STORE_CHANGE_HANDLER_KEY]);
+            document.addEventListener("click", window[CLICK_HANDLER_KEY]);
+            document.addEventListener("keydown", window[KEYDOWN_HANDLER_KEY]);
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init, { once: true });
+        } else {
+            init();
+        }
+    })();
+</script>

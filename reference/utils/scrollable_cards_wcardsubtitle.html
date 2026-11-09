@@ -1,0 +1,556 @@
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+<style>
+    #magellan-category-cards .scrollable-card-wrapper {
+        --card-gap: clamp(14px, 0.97vw, 16px);
+        --card-count: 5;
+        --card-title-gap: 16px;
+    }
+
+    #magellan-category-cards .scrollable-container {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--card-gap);
+        overflow-x: auto;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #magellan-category-cards .scrollable-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    #magellan-category-cards .scrollable-card {
+        flex: 0 0 calc((100% - (var(--card-gap) * 4)) / 5);
+        min-width: 225px;
+        overflow: hidden;
+        color: #000;
+        text-decoration: none;
+    }
+
+    #magellan-category-cards picture {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    #magellan-category-cards .scrollable-card-count-based-width {
+        aspect-ratio: 318 / 438;
+        display: block;
+        height: auto;
+        max-width: 100%;
+        min-width: 0;
+        object-fit: cover;
+        width: 100% !important;
+    }
+
+    #magellan-category-cards .card-subtitle {
+        margin-top: var(--card-title-gap);
+        padding-top: 0;
+        text-align: center;
+    }
+
+    #magellan-category-cards .text-card-subtitle {
+        color: #000;
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(16px, 1.21vw, 20px);
+        font-weight: 600;
+        line-height: 1.2;
+    }
+
+    #magellan-category-cards .scrollable-card:hover .text-card-subtitle {
+        text-decoration: underline;
+    }
+
+    #magellan-category-cards .magellan-category-scroll-btn {
+        align-items: center;
+        background: transparent;
+        border: 0;
+        display: none;
+        height: 32px;
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        top: 45%;
+        transform: translateY(-50%);
+        width: 32px;
+        z-index: 2;
+    }
+
+    #magellan-category-cards .magellan-category-scroll-btn svg {
+        display: block;
+        height: 32px;
+        width: 32px;
+    }
+
+    #magellan-category-cards .magellan-category-scroll-btn-prev {
+        left: 8px;
+    }
+
+    #magellan-category-cards .magellan-category-scroll-btn-next {
+        right: 8px;
+    }
+
+    #magellan-category-cards .magellan-category-scroll-btn:disabled {
+        cursor: default;
+    }
+
+    @media (max-width: 767px) {
+        #magellan-category-cards .scrollable-card-wrapper {
+            --card-gap: 16px;
+            --card-title-gap: 8.72px;
+        }
+
+        #magellan-category-cards .scrollable-container {
+            column-gap: 16px;
+            padding-right: 16px;
+        }
+
+        #magellan-category-cards .scrollable-card {
+            flex: 0 0 225px !important;
+            max-width: 225px;
+            min-width: 225px;
+            width: 225px !important;
+        }
+
+        #magellan-category-cards .scrollable-card-count-based-width {
+            aspect-ratio: 225 / 310;
+        }
+
+        #magellan-category-cards .text-card-subtitle {
+            font-size: 16px;
+        }
+
+        #magellan-category-cards .magellan-category-scroll-btn {
+            display: none !important;
+        }
+    }
+</style>
+
+<!-- Magellan Category Cards -->
+<div id="magellan-category-cards">
+    <div class="scrollable-card-wrapper cont-1656 hp-margin bleed-scroll-right position-relative hlp-content-margin">
+        <button class="magellan-category-scroll-btn magellan-category-scroll-btn-prev" id="magellan-category-slider-prev"
+            type="button" aria-label="Scroll Magellan categories left">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" fill="white"></rect>
+                <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" fill="white"></rect>
+                <rect x="2.5" y="2.5" width="27" height="27" rx="13.5" stroke="#333333"></rect>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5286 16.4717C12.2682 16.2114 12.2682 15.7893 12.5286 15.5289L18.5286 9.52892C18.7889 9.26857 19.211 9.26857 19.4714 9.52892C19.7317 9.78927 19.7317 10.2114 19.4714 10.4717L13.9428 16.0003L19.4714 21.5289C19.7317 21.7893 19.7317 22.2114 19.4714 22.4717C19.211 22.7321 18.7889 22.7321 18.5286 22.4717L12.5286 16.4717Z" fill="#333333"></path>
+            </svg>
+        </button>
+
+        <div id="magellan-category-card-container" class="scrollable-container basic-card hide-horizontal-scrollbar-flex">
+            <a href="https://www.academy.com/c/brands/magellan/magellan-men"
+                data-omni="magellan_mac_mens"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Explore men's clothing and shoes from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8bb8efa702408972/69fa2ea4508297463c8cb16e/5card_1_mens.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8bb8efa702408972/69fa2ea4508297463c8cb16e/5card_1_mens.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt8bb8efa702408972/69fa2ea4508297463c8cb16e/5card_1_mens.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Person wearing a Magellan Outdoors dark short-sleeve fishing shirt and cap standing outdoors near tall grass.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Men's</span>
+                </div>
+            </a>
+
+            <a href="https://www.academy.com/c/brands/magellan/magellan-women"
+                data-omni="magellan_mac_womens"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Explore women's clothing and shoes from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt0470df98cf0a559b/69fa2ea49e74d53e9cc7e8d7/5card_2_womens.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt0470df98cf0a559b/69fa2ea49e74d53e9cc7e8d7/5card_2_womens.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt0470df98cf0a559b/69fa2ea49e74d53e9cc7e8d7/5card_2_womens.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Person outdoors wearing a Magellan Outdoors long-sleeve performance shirt, leaning over a cooler near a rocky shoreline.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Women's</span>
+                </div>
+            </a>
+
+            <a href="https://www.academy.com/c/brands/magellan/magellan-kids"
+                data-omni="magellan_mac_kids"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Explore kids' clothing and shoes from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4a4841ac22ec1db5/69fa2ea4145514b5bdf3a6ae/5card_3_kids.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4a4841ac22ec1db5/69fa2ea4145514b5bdf3a6ae/5card_3_kids.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt4a4841ac22ec1db5/69fa2ea4145514b5bdf3a6ae/5card_3_kids.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Two people standing outdoors near water, one seated on a cooler wearing a cap and casual outdoor clothing.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Kids'</span>
+                </div>
+            </a>
+
+            <a href="https://www.academy.com/c/brands/magellan/magellan-shoes-boots"
+                data-omni="magellan_fw_shoesboots"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop shoes and boots from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt3f99b0bccabbab05/69fa2ea4cfd6c77fe7e0c3e7/5card_4_shoesboots.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt3f99b0bccabbab05/69fa2ea4cfd6c77fe7e0c3e7/5card_4_shoesboots.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt3f99b0bccabbab05/69fa2ea4cfd6c77fe7e0c3e7/5card_4_shoesboots.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Close-up of a gray slip-on shoe worn on a boat deck next to fishing line and rod holder.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Shoes + Boots</span>
+                </div>
+            </a>
+
+            <a href="https://www.academy.com/c/brands/magellan/magellan-outdoors-hats-accessories"
+                data-omni="magellan_mac_accessories"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop hats and more accessories from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Back view of a person wearing a brown Magellan Outdoors cap outdoors.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Accessories</span>
+                </div>
+            </a>
+            <a href="https://www.academy.com/c/brands/magellan/magellan-outdoors-hats-accessories"
+                data-omni="magellan_mac_accessories"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop hats and more accessories from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Back view of a person wearing a brown Magellan Outdoors cap outdoors.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Accessories</span>
+                </div>
+            </a>
+            <a href="https://www.academy.com/c/brands/magellan/magellan-outdoors-hats-accessories"
+                data-omni="magellan_mac_accessories"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop hats and more accessories from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Back view of a person wearing a brown Magellan Outdoors cap outdoors.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Accessories</span>
+                </div>
+            </a>
+            <a href="https://www.academy.com/c/brands/magellan/magellan-outdoors-hats-accessories"
+                data-omni="magellan_mac_accessories"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop hats and more accessories from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Back view of a person wearing a brown Magellan Outdoors cap outdoors.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Accessories</span>
+                </div>
+            </a>
+            <a href="https://www.academy.com/c/brands/magellan/magellan-outdoors-hats-accessories"
+                data-omni="magellan_mac_accessories"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop hats and more accessories from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Back view of a person wearing a brown Magellan Outdoors cap outdoors.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Accessories</span>
+                </div>
+            </a>
+            <a href="https://www.academy.com/c/brands/magellan/magellan-outdoors-hats-accessories"
+                data-omni="magellan_mac_accessories"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop hats and more accessories from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Back view of a person wearing a brown Magellan Outdoors cap outdoors.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Accessories</span>
+                </div>
+            </a>
+            <a href="https://www.academy.com/c/brands/magellan/magellan-outdoors-hats-accessories"
+                data-omni="magellan_mac_accessories"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop hats and more accessories from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Back view of a person wearing a brown Magellan Outdoors cap outdoors.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Accessories</span>
+                </div>
+            </a>
+            <a href="https://www.academy.com/c/brands/magellan/magellan-outdoors-hats-accessories"
+                data-omni="magellan_mac_accessories"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop hats and more accessories from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Back view of a person wearing a brown Magellan Outdoors cap outdoors.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Accessories</span>
+                </div>
+            </a>
+            <a href="https://www.academy.com/c/brands/magellan/magellan-outdoors-hats-accessories"
+                data-omni="magellan_mac_accessories"
+                class="position-relative scrollable-card hp-hover"
+                aria-label="Shop hats and more accessories from Magellan Outdoors.">
+                <picture>
+                    <source media="(min-width: 768px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <source media="(max-width: 767px)"
+                        srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png">
+                    <img loading="lazy"
+                        src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfe83ba137ce08163/69fa2ea878906464d3813bb1/5card_5_accessories.png"
+                        class="scrollable-card-count-based-width position-relative corners"
+                        alt="Back view of a person wearing a brown Magellan Outdoors cap outdoors.">
+                </picture>
+                <div class="card-subtitle">
+                    <span class="text-card-subtitle">Accessories</span>
+                </div>
+            </a>
+        </div>
+
+        <button class="magellan-category-scroll-btn magellan-category-scroll-btn-next" id="magellan-category-slider-next"
+            type="button" aria-label="Scroll Magellan categories right">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="16" transform="matrix(-1 0 0 1 32 0)" fill="white"></rect>
+                <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)" fill="white"></rect>
+                <rect x="-0.5" y="0.5" width="27" height="27" rx="13.5" transform="matrix(-1 0 0 1 29 2)" stroke="#333333"></rect>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.4714 16.4717C19.7318 16.2114 19.7318 15.7893 19.4714 15.5289L13.4714 9.52892C13.2111 9.26857 12.789 9.26857 12.5286 9.52892C12.2683 9.78927 12.2683 10.2114 12.5286 10.4717L18.0572 16.0003L12.5286 21.5289C12.2683 21.7893 12.2683 22.2114 12.5286 22.4717C12.789 22.7321 13.2111 22.7321 13.4714 22.4717L19.4714 16.4717Z" fill="#333333"></path>
+            </svg>
+        </button>
+    </div>
+</div>
+
+<script>
+    (function () {
+        function initMagellanCategoryScroll() {
+            const carousel = document.getElementById("magellan-category-card-container");
+            const prevButton = document.getElementById("magellan-category-slider-prev");
+            const nextButton = document.getElementById("magellan-category-slider-next");
+
+            if (!carousel || !prevButton || !nextButton) return;
+
+            function isDesktop() {
+                return window.innerWidth > 767;
+            }
+
+            function getMaxScrollLeft() {
+                return carousel.scrollWidth - carousel.clientWidth;
+            }
+
+            function updateButtonVisibility() {
+                const maxScrollLeft = getMaxScrollLeft();
+                const hasDesktopOverflow = isDesktop() && maxScrollLeft > 1;
+                const canScrollPrev = hasDesktopOverflow && carousel.scrollLeft > 1;
+                const canScrollNext = hasDesktopOverflow && carousel.scrollLeft < maxScrollLeft - 1;
+
+                prevButton.style.display = canScrollPrev ? "flex" : "none";
+                nextButton.style.display = canScrollNext ? "flex" : "none";
+                prevButton.disabled = !canScrollPrev;
+                nextButton.disabled = !canScrollNext;
+            }
+
+            function scrollByPage(direction) {
+                carousel.scrollBy({
+                    left: direction * carousel.clientWidth,
+                    behavior: "smooth"
+                });
+            }
+
+            prevButton.addEventListener("click", function () {
+                scrollByPage(-1);
+            });
+
+            nextButton.addEventListener("click", function () {
+                scrollByPage(1);
+            });
+
+            carousel.addEventListener("scroll", updateButtonVisibility);
+            window.addEventListener("resize", updateButtonVisibility);
+
+            if ("ResizeObserver" in window) {
+                new ResizeObserver(updateButtonVisibility).observe(carousel);
+            }
+
+            requestAnimationFrame(updateButtonVisibility);
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initMagellanCategoryScroll);
+        } else {
+            initMagellanCategoryScroll();
+        }
+    })();
+</script>

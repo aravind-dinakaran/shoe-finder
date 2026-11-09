@@ -1,0 +1,747 @@
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<!-- Font Imports -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8c2b98098e8575d5/fonts.css?v=1">
+
+<!-- Global Imports -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt962bf393a9d818eb/homepage.css?v=39">
+
+<!-- Module Imports -->
+<!-- Ticker -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab827885b96db789/hp-ticker.css?v=5">
+
+<!-- Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt41784e241a330d70/hp-featured-categories.css?v=13">
+
+<!-- Banner with featured categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt15151bae612fd250/hp-banner-with-feat-cat.css?v=3">
+
+<!-- Scrollable cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt54e14b4437cf1046/hp-scrollable-cards.css?v=8">
+
+<!-- Hero Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltab5dcd466b4a5dbd/hp-hero-banner.css?v=7">
+
+<!-- New and Upcoming Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt9e5beb1eb235cc7c/hp-new-upcoming.css?v=13">
+
+<!-- Holiday Season (Green) Component -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltfc55f84563d4bc13/hp-holiday-season.css?v=5">
+
+<!-- Evergreen ACC -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltb71a20c9b424a2ae/hp-acc-evergreen.css?v=2">
+
+<!-- Trending / Keep Shopping Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt16a51b81740f9aff/hp-trending-keep-shopping-banner.css?v=5">
+
+<!-- Promo Banner -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt1c6ea5528dfec86f/hp-promo-banner.css?v=1">
+
+<!-- Evergreen - Customers are Shopping - Featured Categories -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt21f8241412f60d18/hp-customers-are-shopping.css?v=6">
+
+<!-- New Scrollable Cards -->
+<link rel="stylesheet"
+    href="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltdb8836383bbcc5b5/hp-scrollable-cards-new.css?v=24">
+
+<!-- Common size styles -->
+
+<style>
+    .headline-svg {
+        height: clamp(32px, 2.5vw, 53px);
+        width: auto;
+    }
+
+    .text-card-title {
+        font-size: var(--text-card-title, clamp(16px, 1.69vw, 28px));
+    }
+
+    .text-card-promo {
+        /*font-size: var(--text-card-title, clamp(18px, 1.75vw, 48px));*/
+
+    }
+
+    .color-red {
+        color: #e81111;
+    }
+
+    .text-card-kicker {
+        font-size: var(--text-card-kicker, clamp(12px, 1.33vw, 22px));
+    }
+
+    .text-card-disclaimer {
+        font-size: var(--text-card-disclaimer, clamp(14px, 1.33vw, 22px));
+    }
+
+    .text-card-cta {
+        font-size: var(--text-card-cta, clamp(14px, 1.33vw, 22px));
+        text-decoration: underline;
+        font-weight: 700;
+    }
+</style>
+
+<!-- End of Common Imports -->
+
+
+<!-- Slider 5050 -->
+
+<style>
+	.right-static-container {
+		text-align: center;
+		width: 100%
+	}
+
+	.right-static {
+		display: flex;
+		gap: 1.5rem;
+		height: 100%;
+	}
+
+	.slider-wrapper {
+		gap: 1.5vw;
+		display: flex;
+	}
+
+	@media (max-width:767px) {
+		.right-static {
+			height: auto;
+			width: 100%;
+			gap: 1rem;
+			overflow-x: auto;
+			scroll-behavior: smooth;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.slider-wrapper {
+			gap: 1.5vw;
+			display: block;
+			/*width: calc(100% - 2rem);*/
+		}
+
+		.right-static::-webkit-scrollbar {
+			display: none;
+		}
+	}
+
+
+
+	/*Slider Styles*/
+	/* Force the carousel to always fill its flex column immediately */
+	.slider {
+		width: 100%;
+		aspect-ratio: 816 / 600;
+
+	}
+
+	/* Lock the inner container to a stable aspect ratio */
+	.slider .carousel-inner {
+		width: 100%;
+		aspect-ratio: 816 / 550;
+		/* adjust as needed */
+		overflow: hidden;
+	}
+
+	/* Ensure slides fill the box */
+	.slider .carousel-item {
+		height: 100%;
+		position: relative;
+	}
+
+	/* Prevent natural-size flash */
+	/*.slider .carousel-item img {*/
+	.slider-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+
+	.slider {
+		border: 1px solid #cccccc;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		/* match your layout */
+	}
+
+	.wk14-slide-link {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.wk14-slide-link img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		transform: translate(-50%, calc(-50% - clamp(20px, 2.62vw, 60px)/2));
+	}
+
+	.slide-video {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		z-index: 0;
+		background: #000000;
+	}
+
+	.wk14-slide-content {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background: #000000;
+	}
+
+	.wk14-slide-content picture,
+	.wk14-slide-content .wk14-slide-link {
+		position: absolute;
+		inset: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.wk14-slide-content .slider-img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform: none;
+	}
+
+	.wk14-slide-overlay-link {
+		position: absolute;
+		inset: 0;
+		z-index: 2;
+	}
+
+	.wk14-promo-copy {
+		position: absolute;
+		top: clamp(16px, 1.45vw, 24px);
+		left: clamp(16px, 1.45vw, 24px);
+		z-index: 3;
+		color: #ffffff;
+		font-family: "Roboto Flex", Roboto, Arial, sans-serif;
+		line-height: 1.1;
+		text-align: left;
+		pointer-events: none;
+	}
+
+	.wk14-promo-kicker {
+		font-size: clamp(16px, 1.45vw, 24px);
+		font-weight: 600;
+	}
+
+	.wk14-promo-value {
+		font-size: clamp(32px, 2.9vw, 48px);
+		font-weight: 700;
+	}
+
+	.wk14-promo-title {
+		font-size: clamp(20px, 1.69vw, 28px);
+		font-weight: 700;
+	}
+
+	.wk14-slide-overlay-link:hover + .wk14-promo-copy > *,
+	.wk14-slide-overlay-link:focus-visible + .wk14-promo-copy > *,
+	.wk14-slide-link:hover .wk14-promo-copy > *,
+	.wk14-slide-link:focus-visible .wk14-promo-copy > * {
+		text-decoration: underline;
+		text-underline-offset: 0.12em;
+	}
+
+	.indicator-wrapper {
+		flex: 1;
+		min-height: 27px;
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.carousel-indicators {
+		position: relative;
+		margin: 0.25rem;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.carousel-indicators [data-bs-target] {
+		width: 0.75rem;
+		height: 0.75rem;
+		border-radius: 50%;
+		background: #fff;
+		border: 2px solid #1946C8;
+		margin: 0 0.75rem;
+	}
+
+	.carousel-indicators .active {
+		background: #1946C8;
+		border: 2px solid #1946C8;
+	}
+
+	#playPauseBtn {
+		border: none;
+		background: none;
+	}
+
+	.corners-d-top {
+		border-radius: 0.5rem 0.5rem 0 0;
+	}
+
+	.carousel-cta-group {
+		position: absolute;
+		left: 50%;
+		bottom: clamp(20px, 2.62vw, 60px);
+		transform: translateX(-50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: clamp(12px, 0.97vw, 16px);
+		width: 100%;
+		padding: 0 clamp(12px, 1.2vw, 20px);
+	}
+
+
+	.carousel-cta {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: clamp(8px, 0.73vw, 12px) clamp(16px, 1.45vw, 24px);
+		border-radius: clamp(4px, 0.48vw, 8px);
+		background: #1946c8;
+		color: #ffffff;
+		font-family: "Open Sans", Arial, sans-serif;
+		font-size: clamp(10px, 1.33vw, 22px);
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		white-space: nowrap;
+	}
+
+	.carousel-cta:hover,
+	.carousel-cta:focus-visible {
+		color: #ffffff;
+		background: #0f35a8;
+		text-decoration: none;
+	}
+
+
+	@media (max-width: 767px) {
+		.slider {
+			max-width: 100%;
+			margin-bottom: 1rem;
+			aspect-ratio: 375 / 327;
+			min-height: 327px;
+		}
+
+		.slider .carousel-inner {
+			aspect-ratio: 375 / 300;
+			overflow: hidden;
+		}
+
+		.slider .carousel-item {
+			min-height: 300px;
+		}
+
+		.carousel-item .slide-video,
+		.carousel-item picture {
+			width: 100%;
+			height: 100%;
+		}
+
+		.corners-d-top {
+			border-radius: 0;
+		}
+
+		.carousel-cta-group {
+			bottom: clamp(18px, 7.47vw, 28px);
+			gap: 16px;
+			padding: 0 12px;
+		}
+
+		.carousel-cta {
+			font-size: clamp(8px, 4.26vw, 32px);
+			padding: 2.13vw 4.26vw;
+			border-radius: 4px;
+		}
+
+	}
+</style>
+
+<style>
+	/*Pink Countdown Banner*/
+	.pink-banner-row {
+		background-color: #DDB6F2;
+		z-index: 1;
+		position: absolute;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.md-countdown {
+		padding: 0.5rem;
+		font-family: Roboto;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 110%;
+		letter-spacing: 0%;
+		text-align: center;
+		vertical-align: middle;
+		text-transform: uppercase;
+	}
+
+	
+	@media (max-width: 767px) {
+		.md-countdown{
+			font-size: 16px;
+		}
+	}
+</style>
+
+<section data-cname="cs_2c_wcarousel" data-pz-seg-name="cs_default" data-pz-seg-id="cs_default">
+	<div class="slider-wrapper cont-1656 hp-margin bleed-scroll-left-right my-3">
+		<div id="defaultSlider" class="carousel slide slider corners-d" data-bs-ride="carousel">
+			<!-- Slides -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="pink-banner-row corners-top">
+						<div class="d-flex">
+							<img
+								src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt32028fbe7e6314ee/69f122b36a2c0a1aa4c18cb1/momsday_flower_tulip.svg" />
+							<img
+								src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb0d8f85aa24f26e7/69f122b3fe0e3466e706d7d3/momsday_flower_daisy.svg" />
+						</div>
+						<div class="md-countdown">
+							<span class="countdown">It's Mother's Day</span>
+						</div>
+
+						<div class="d-flex">
+							<img
+								src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltb0d8f85aa24f26e7/69f122b3fe0e3466e706d7d3/momsday_flower_daisy.svg" />
+							<img
+								src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt32028fbe7e6314ee/69f122b36a2c0a1aa4c18cb1/momsday_flower_tulip.svg" />
+						</div>
+					</div>
+					<video class="slide-video corners-d-top" muted loop playsinline preload="metadata"
+						aria-hidden="true">
+						<source media="(min-width: 768px)"
+							src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltff068eb0b8ab74d2/69efc1966466600c3168d0a1/Carousel-MD-Desktop-Comp.mp4"
+							type="video/mp4" />
+						<source media="(max-width: 767px)"
+							src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt8233b91c77230a20/69efc196edcdda45c3fa528b/Carousel-MD-Mobile-Comp.mp4"
+							type="video/mp4" />
+					</video>
+					<picture class="wk14-slide-link">
+						<source media="(min-width: 768px)"
+							srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7bbe163d72a738bb/69f0e17874f87173e64b77a7/MothersDayCarousel-GiveFun-Gifts1Hour.svg" />
+							<source media="(max-width: 767px)"
+								srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7bbe163d72a738bb/69f0e17874f87173e64b77a7/MothersDayCarousel-GiveFun-Gifts1Hour.svg" />
+							<img
+								alt="Mother's Day promotional graphic for last-minute gifts, gift ideas, and gift cards."
+								class="corners-d-top img-fluid" loading="lazy"
+								srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt7bbe163d72a738bb/69f0e17874f87173e64b77a7/MothersDayCarousel-GiveFun-Gifts1Hour.svg" />
+						</picture>
+
+						<div class="carousel-cta-group">
+							<a class="carousel-cta carousel-cta--ideas"
+								href="/c/shops/mothers-day-gifts?&facet=deliveryFilter:inventory_pick%3A19%20OR%20inventory_sts%3A19&bopisEligible=1&isSTS1=1"
+							data-omni="momsday_mac_dayonthewater" aria-label="Explore gift ideas for Mom's day on the water.">Gift
+							Ideas</a>
+							<a class="carousel-cta carousel-cta--cards" href="/c/shops/gift-card-shop"
+								data-omni="momsday_mac_giftcards" aria-label="Shop gift cards for Mother's Day.">Gift Cards</a>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="wk14-slide-content corners-d-top">
+							<video class="slide-video corners-d-top" muted loop playsinline preload="metadata"
+								aria-hidden="true">
+								<source media="(min-width: 768px)"
+									src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltbe65c1cfadbe64ec/69fa1573aac936decf6e7908/Carousel-Freely-Maggi-Desktop-Comp.mp4"
+									type="video/mp4" />
+								<source media="(max-width: 767px)"
+									src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt3454257bb900b1c5/69fa1573f406deca51008ed8/Carousel-Freely-Maggi-Mobile-Comp.mp4"
+									type="video/mp4" />
+							</video>
+							<a class="wk14-slide-overlay-link"
+								href="https://www.academy.com/c/shops/promo-offers/apparel-promo-offer-4"
+								data-omni="momsday_app_academyexclusivebrandsbogo50p"
+								aria-label="Shop Academy-exclusive brands for mom, buy one get one 50% off."></a>
+							<div class="wk14-promo-copy" aria-hidden="true">
+								<div class="wk14-promo-kicker">BOGO</div>
+								<div class="wk14-promo-value">50% OFF</div>
+								<div class="wk14-promo-title">Select Styles</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="wk14-slide-content corners-d-top">
+							<video class="slide-video corners-d-top" muted loop playsinline preload="metadata"
+								aria-hidden="true">
+								<source media="(min-width: 768px)"
+									src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/bltd5ab22a281087bd2/69efc183d51e8d14f405d579/Carousel-Desktop-Carhartt-Comp.mp4"
+									type="video/mp4" />
+								<source media="(max-width: 767px)"
+									src="https://assets.contentstack.io/v3/assets/blt964243cdd7810dea/blt949a81d6ac183537/69efc18301b5007847af9d62/Carousel-Mobile-Carhartt-Comp.mp4"
+									type="video/mp4" />
+							</video>
+							<a class="wk14-slide-overlay-link"
+								href="https://www.academy.com/c/brands/carhartt-brand-shop/womens-carhartt&facet=%27facet_Deals%27:%27Hot%20Deal%27"
+								data-omni="momsday_app_carharttforher25p"
+								aria-label="Shop 25% off Carhartt styles for mom."></a>
+							<div class="wk14-promo-copy" aria-hidden="true">
+								<div class="wk14-promo-value">25% OFF</div>
+								<div class="wk14-promo-title">Styles for Her</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="wk14-slide-content corners-d-top">
+							<a class="wk14-slide-link" href="https://www.academy.com/c/brands/skechers"
+								data-omni="momsday_fw_skechers20p"
+								aria-label="Shop up to 20% off SKECHERS for mom.">
+								<picture>
+									<source media="(min-width: 768px)"
+										srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt02f487e299d5860b/69efc8c2e0947c80c4c909d7/Carousel-Skechers.png" />
+									<source media="(max-width: 767px)"
+										srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt27812869c5f68fcc/69efc8c2fd3d4c1d9170d436/Carousel-Skechers-m.png" />
+									<img alt="Skechers shoes worn outdoors, promoting up to 20% off Skechers."
+										class="corners-d-top slider-img" loading="lazy"
+										srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt27812869c5f68fcc/69efc8c2fd3d4c1d9170d436/Carousel-Skechers-m.png" />
+								</picture>
+								<div class="wk14-promo-copy" aria-hidden="true">
+									<div class="wk14-promo-kicker">Up to</div>
+									<div class="wk14-promo-value">20% OFF</div>
+									<div class="wk14-promo-title">Skechers</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			<!-- Pagination Dots -->
+			<div class="indicator-wrapper">
+				<div class="carousel-indicators">
+
+						<button type="button" data-bs-target="#defaultSlider" data-bs-slide-to="0" class="active"
+							aria-label="Go to slide 1"></button>
+						<button type="button" data-bs-target="#defaultSlider" data-bs-slide-to="1"
+							aria-label="Go to slide 2"></button>
+						<button type="button" data-bs-target="#defaultSlider" data-bs-slide-to="2"
+							aria-label="Go to slide 3"></button>
+						<button type="button" data-bs-target="#defaultSlider" data-bs-slide-to="3"
+							aria-label="Go to slide 4"></button>
+
+					</div>
+
+					<button id="playPauseBtn" type="button" aria-label="Pause carousel and video">
+						<img class="play-pause-icon" alt="Pause carousel and video"
+							src="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg">
+					</button>
+			</div>
+
+		</div>
+
+
+
+		<div class="right-static-container corners-d" id="acc-right">
+			<div class="right-static">
+				<a href="/myacademy-rewards-credit-card" data-omni="eb_mac_myacademyrewards_noncardholder"
+					aria-label="Learn more about the myAcademy Rewards credit cards.">
+					<picture>
+						<source media="(min-width: 768px)"
+							srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/blt94eecc01c3cb7ab4/69baae4900c6f0b4df874f0b/banner_marcc_noncardholder.png">
+						<source media="(max-width: 767px)"
+							srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltda82aec05c05b917/69baae49b5128f320230c089/banner_marcc_noncardholder-m.png">
+						<img loading="lazy" height="auto"
+							srcset="https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltda82aec05c05b917/69baae49b5128f320230c089/banner_marcc_noncardholder-m.png"
+							class="img-fluid corners"
+							alt="myAcademy Rewards graphic promoting $30 off a purchase over $30 when opening and using a myAcademy Rewards credit card, with an image of the myAcademy Rewards Credit Card and an image of the myAcademy Rewards Mastercard Credit Card.">
+					</picture>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+
+<!--slider Functionality-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+
+<script>
+	(function () {
+		const sliderEl = document.getElementById('defaultSlider');
+		const playPauseBtn = document.getElementById('playPauseBtn');
+
+		if (!sliderEl || !playPauseBtn || typeof bootstrap === 'undefined') {
+			return;
+		}
+
+		const pauseSrc = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltbb12959797e4cc5a/68dbe6f05b98db396064ec16/button_pause_default.svg";
+		const playSrc = "https://images.contentstack.io/v3/assets/blt964243cdd7810dea/bltfb7f6e5f516cd86b/68dbe6f04983061fa4f367e1/button_play_default.svg";
+		const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		let isPaused = reduceMotion;
+
+		const bsCarousel = bootstrap.Carousel.getOrCreateInstance(sliderEl, {
+			interval: 5000,
+			ride: isPaused ? false : 'carousel'
+		});
+
+		function setPlayPauseIcon(paused) {
+			const icon = playPauseBtn.querySelector('.play-pause-icon');
+			const action = paused ? 'Play' : 'Pause';
+			const label = action + ' carousel and video';
+			if (icon) {
+				icon.src = paused ? playSrc : pauseSrc;
+				icon.alt = label;
+			}
+			playPauseBtn.setAttribute('aria-label', label);
+		}
+
+		function getActiveSlide() {
+			return sliderEl.querySelector('.carousel-item.active');
+		}
+
+		function setVideoPaused(video, paused) {
+			if (!video) return;
+
+			if (paused) {
+				video.pause();
+			} else {
+				const playPromise = video.play();
+				if (playPromise && typeof playPromise.catch === 'function') {
+					playPromise.catch(function () {});
+				}
+			}
+		}
+
+		function syncVideos() {
+			const activeSlide = getActiveSlide();
+			sliderEl.querySelectorAll('video').forEach(function (video) {
+				if (activeSlide && activeSlide.contains(video) && !isPaused) {
+					setVideoPaused(video, false);
+				} else {
+					setVideoPaused(video, true);
+				}
+			});
+		}
+
+		if (isPaused) {
+			bsCarousel.pause();
+		}
+
+		setPlayPauseIcon(isPaused);
+
+		sliderEl.addEventListener('slide.bs.carousel', function () {
+			sliderEl.querySelectorAll('video').forEach(function (video) {
+				video.pause();
+			});
+		});
+
+		sliderEl.addEventListener('slid.bs.carousel', syncVideos);
+
+		playPauseBtn.addEventListener('click', function () {
+			isPaused = !isPaused;
+
+			if (isPaused) {
+				bsCarousel.pause();
+			} else {
+				bsCarousel.cycle();
+			}
+
+			setPlayPauseIcon(isPaused);
+			syncVideos();
+		});
+
+		syncVideos();
+	})();
+</script>
+
+<!--Mother's Day Countdown-->
+
+<script>
+	// Target: May 11, 2026 at 00:00 CST
+	const endTime3 = new Date("2026-05-11T00:00:00-05:00");
+
+	function updateCountdown() {
+		const now = new Date().getTime();
+		const distance = endTime3 - now;
+
+		const el = document.querySelector(".countdown");
+
+		if (distance <= 0) {
+			el.textContent = "00h";
+			return;
+		}
+
+		const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		/*const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		const mm = minutes < 10 ? "0" + minutes : minutes;
+		const ss = seconds < 10 ? "0" + seconds : seconds;*/
+
+		let output = "";
+
+		// Show days only if >= 1
+		if (days > 1) {
+			output += `${days} Days Until Mother's Day`;
+		} else if (days === 1) {
+			output += `Tomorrow is Mother's Day`;
+		} else {
+			output += `It's Mother's Day`;
+		}
+
+
+		/*// Show hours only if > 0
+		if (hours > 0) output += `${hours}h `;
+
+		// Show minutes only if > 0
+		if (minutes > 0) output += `${mm}m `;
+
+		// Show seconds only if > 0
+		if (seconds > 0) output += `${ss}s `;*/
+
+		/*output += "LEFT TO SAVE | ONLINE + IN-STORE";*/
+
+		el.textContent = output.trim();
+	}
+
+	setInterval(updateCountdown, 1000);
+	updateCountdown();
+</script>
